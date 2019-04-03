@@ -1,8 +1,8 @@
 ---
 name: Feature
 about: Feature for this project
-title: "[FEATURE]"
-labels: feature, backend
+title: ''
+labels: backend, feature
 assignees: ''
 
 ---
