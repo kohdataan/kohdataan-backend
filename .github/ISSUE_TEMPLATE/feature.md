@@ -2,7 +2,7 @@
 name: Feature
 about: Feature for this project
 title: "[FEATURE]"
-labels: feature
+labels: feature, backend
 assignees: ''
 
 ---
