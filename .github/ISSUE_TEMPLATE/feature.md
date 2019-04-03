@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Descrie the feature**
+**Describe the feature**
 A clear and concise description of what the feature needs to do.
 
 **Describe the solution you'd like**
