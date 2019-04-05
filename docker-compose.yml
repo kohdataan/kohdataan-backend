@@ -1,0 +1,46 @@
+version: "2"
+
+services:
+
+  db:
+    build: docker/db
+    read_only: true
+    restart: unless-stopped
+    volumes:
+      - ./docker/volumes/db/var/lib/postgresql/data:/var/lib/postgresql/data
+      #- /etc/localtime:/etc/localtime:ro
+    environment:
+      - POSTGRES_USER=mmuser
+      - POSTGRES_PASSWORD=mmuser_password
+      - POSTGRES_DB=mattermost
+
+  mattermost:
+    build:
+      context: docker/mattermost
+    restart: unless-stopped
+    volumes:
+      - ./docker/volumes/mattermost/config:/mattermost/config:rw
+      - ./docker/volumes/mattermost/data:/mattermost/data:rw
+      - ./docker/volumes/mattermost/logs:/mattermost/logs:rw
+      - ./docker/volumes/mattermost/plugins:/mattermost/plugins:rw
+      - ./docker/volumes/mattermost/client-plugins:/mattermost/client/plugins:rw
+      #- /etc/localtime:/etc/localtime:ro
+    environment:
+      # set same as db credentials and dbname
+      - MM_USERNAME=mmuser
+      - MM_PASSWORD=mmuser_password
+      - MM_DBNAME=mattermost
+      # in case your config is not in default location
+      #- MM_CONFIG=/mattermost/config/config.json
+
+  nginx:
+    build: docker/nginx
+    ports:
+      - "9090:9090"
+      - "443:443"
+    read_only: true
+    restart: unless-stopped
+    volumes:
+      # This directory must have cert files if you want to enable SSL
+      - ./docker/volumes/nginx/cert:/cert:ro
+      #- /etc/localtime:/etc/localtime:ro
