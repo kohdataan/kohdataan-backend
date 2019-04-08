@@ -11,7 +11,7 @@ Client4.setUrl('http://mattermost:8000')
 const app = express()
 app.get('/', (req, res) => {
   res.send('Hello world\n')
-  Client4.login('pinjak', 'coCOCOco')
+  Client4.login('username', 'password')
   .then((me) => {
     console.log(me)
   })
