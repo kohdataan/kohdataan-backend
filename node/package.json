@@ -8,7 +8,8 @@
         "start:prod": "node index.js"
     },
     "dependencies": {
-      "express": "^4.16.1",
-      "nodemon": "*"
+        "express": "^4.16.1",
+        "mattermost-redux": "^5.9.0",
+        "nodemon": "*"
     }
-  }
+}
