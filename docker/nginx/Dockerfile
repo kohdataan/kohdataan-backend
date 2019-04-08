@@ -4,13 +4,13 @@ FROM nginx:mainline-alpine
 RUN rm /etc/nginx/conf.d/default.conf \
     && apk add --no-cache curl
 
-COPY ["./mattermost", "./mattermost-ssl", "/etc/nginx/sites-available/"]
+COPY ["./nginx", "./nginx-ssl", "/etc/nginx/sites-available/"]
 COPY ./security.conf /etc/nginx/conf.d/
 
 # Add and setup entrypoint
 COPY entrypoint.sh /
 
-#Healthcheck to make sure container is ready
+# Healthcheck to make sure container is ready
 HEALTHCHECK CMD curl --fail http://localhost:9090 || exit 1
 
 ENTRYPOINT ["/entrypoint.sh"]
