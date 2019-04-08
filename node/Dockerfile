@@ -3,7 +3,7 @@ FROM node:10-alpine
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 
-WORKDIR /node
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 RUN npm install

@@ -3,11 +3,11 @@ version: "2"
 services:
 
   db:
-    build: docker/db
+    build: db
     read_only: true
     restart: unless-stopped
     volumes:
-      - ./docker/volumes/db/var/lib/postgresql/data:/var/lib/postgresql/data
+      - ./volumes/db/var/lib/postgresql/data:/var/lib/postgresql/data
       #- /etc/localtime:/etc/localtime:ro
     environment:
       - POSTGRES_USER=mmuser
@@ -16,14 +16,14 @@ services:
 
   mattermost:
     build:
-      context: docker/mattermost
+      context: mattermost
     restart: unless-stopped
     volumes:
-      - ./docker/volumes/mattermost/config:/mattermost/config:rw
-      - ./docker/volumes/mattermost/data:/mattermost/data:rw
-      - ./docker/volumes/mattermost/logs:/mattermost/logs:rw
-      - ./docker/volumes/mattermost/plugins:/mattermost/plugins:rw
-      - ./docker/volumes/mattermost/client-plugins:/mattermost/client/plugins:rw
+      - ./volumes/mattermost/config:/mattermost/config:rw
+      - ./volumes/mattermost/data:/mattermost/data:rw
+      - ./volumes/mattermost/logs:/mattermost/logs:rw
+      - ./volumes/mattermost/plugins:/mattermost/plugins:rw
+      - ./volumes/mattermost/client-plugins:/mattermost/client/plugins:rw
       #- /etc/localtime:/etc/localtime:ro
     environment:
       # set same as db credentials and dbname
@@ -34,7 +34,7 @@ services:
       #- MM_CONFIG=/mattermost/config/config.json
 
   nginx:
-    build: docker/nginx
+    build: nginx
     ports:
       - "9090:9090"
       - "443:443"
@@ -42,14 +42,15 @@ services:
     restart: unless-stopped
     volumes:
       # This directory must have cert files if you want to enable SSL
-      - ./docker/volumes/nginx/cert:/cert:ro
+      - ./volumes/nginx/cert:/cert:ro
       #- /etc/localtime:/etc/localtime:ro
 
   node:
-    build: docker/node
+    build: node
     ports:
       - "8080:8080"
     read_only: true
-    restart: unless-stopped
+    command: "npm start"
     volumes:
-      - ./src:/src
+      - ./node/:/usr/src/app
+      - /usr/src/app/node_modules/

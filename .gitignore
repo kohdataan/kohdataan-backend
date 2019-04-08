@@ -1,1 +1,2 @@
-docker/volumes/*
+volumes/*
+*/node_modules/
