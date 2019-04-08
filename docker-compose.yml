@@ -44,3 +44,12 @@ services:
       # This directory must have cert files if you want to enable SSL
       - ./docker/volumes/nginx/cert:/cert:ro
       #- /etc/localtime:/etc/localtime:ro
+
+  node:
+    build: docker/node
+    ports:
+      - "8080:8080"
+    read_only: true
+    restart: unless-stopped
+    volumes:
+      - ./src:/src
