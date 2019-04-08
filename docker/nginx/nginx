@@ -6,7 +6,7 @@ map $http_x_forwarded_proto $proxy_x_forwarded_proto {
 server {
     listen 9090;
 
-    location ~ /mattermost/api/v[0-9]+/(users/)?websocket$ {
+    location ~ /api/v[0-9]+/(users/)?websocket$ {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
         client_max_body_size 50M;
@@ -21,7 +21,7 @@ server {
         proxy_pass http://{%MATTERMOST_HOST%}:{%MATTERMOST_PORT%};
     }
 
-    location /mattermost/ {
+    location / {
         gzip on;
 
         client_max_body_size 50M;
@@ -37,8 +37,8 @@ server {
         proxy_pass http://{%MATTERMOST_HOST%}:{%MATTERMOST_PORT%};
     }
 
-    location /node/api/ {
-        proxy_pass http://{%NODE_HOST%}:{%NODE_PORT%};
+    location /node_api/ {
+        proxy_pass http://{%NODE_HOST%}:{%NODE_PORT%}/;
         proxy_set_header Host $http_host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;

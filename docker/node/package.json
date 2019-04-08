@@ -4,7 +4,7 @@
     "description": "Node.js on Docker",
     "main": "server.js",
     "scripts": {
-        "start": "nodemon --inspect=0.0.0.0 index.js",
+        "start": "nodemon --inspect=0.0.0.0:9090/api/ index.js",
         "start:prod": "node index.js"
     },
     "dependencies": {
