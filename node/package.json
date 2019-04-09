@@ -8,8 +8,15 @@
         "start:prod": "node index.js"
     },
     "dependencies": {
-        "express": "^4.16.1",
+        "body-parser": "^1.18.3",
+        "cors": "^2.8.4",
+        "dotenv": "^7.0.0",
+        "express": "^4.16.4",
         "mattermost-redux": "^5.9.0",
-        "nodemon": "*"
+        "nodemon": "*",
+        "pg": "^7.9.0",
+        "pg-hstore": "^2.3.2",
+        "request": "^2.88.0",
+        "sequelize": "^5.2.15"
     }
 }
