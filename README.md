@@ -11,7 +11,7 @@ Saadaksesi projektin kehitysympäristön pystyyn, sinun täytyy asentaa [Docker 
 Asennuksen jälkeen projekti lähtee käyntiin ajamalla seuraavat komennot:
 
 ```bash
-git@github.com:kohdataan/kohdataan-backend.git
+git clone git@github.com:kohdataan/kohdataan-backend.git
 cd kohdataan-backend
 docker-compose build
 docker-compose up
@@ -56,9 +56,9 @@ Testaamisen lähtökohta on, että saavutettavuus testataan aina, kun joku asia 
   * jne.
 * 
 
-Automaattisen saavutettavuustestauksen työkalut eivät kuitenkaan ole täydellisiä. Ennen Pull Requestin tekoa tarkistathan, että toteuttamasi ominaisuudet eivät ole ristiriidassa <insert sopiva saavutettavuuden checklist> kanssa.
+Automaattisen saavutettavuustestauksen työkalut eivät kuitenkaan ole täydellisiä. Ennen pull requestin tekoa tarkistathan, että toteuttamasi ominaisuudet eivät ole ristiriidassa <insert sopiva saavutettavuuden checklist> kanssa.
 
-### Pull Request käytännöt
+### Pull Request -käytännöt
 
 Kaikki kehitystyö tulee tehdä issuekohtaisissa brancheissa. Kun kehitystyösi on valmis, tee omasta branchistasi pull request `development`-branchiin. `master`-branchi sisältää viimeisimmän julkaisuversion ohjelmistosta.
 
