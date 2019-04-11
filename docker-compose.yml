@@ -52,5 +52,5 @@ services:
     read_only: true
     command: "npm start"
     volumes:
-      - ./node/:/usr/src/app
+      - ./node/:/usr/src/app/
       - /usr/src/app/node_modules/
