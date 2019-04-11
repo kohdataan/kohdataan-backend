@@ -4,15 +4,17 @@
     "description": "Node.js on Docker",
     "main": "server.js",
     "scripts": {
-        "start": "nodemon index.js",
-        "start:prod": "node index.js"
+        "start": "nodemon ./bin/www",
+        "start:prod": "node ./bin/www"
     },
     "dependencies": {
         "body-parser": "^1.18.3",
         "cors": "^2.8.4",
+        "debug": "~2.6.9",
         "dotenv": "^7.0.0",
         "express": "^4.16.4",
         "mattermost-redux": "^5.9.0",
+        "morgan": "^1.9.1",
         "nodemon": "*",
         "pg": "^7.9.0",
         "pg-hstore": "^2.3.2",

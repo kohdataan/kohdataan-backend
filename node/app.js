@@ -3,6 +3,7 @@ const request = require('request')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const http = require('http')
+
 const { Client4 } = require('mattermost-redux/client')
 require('isomorphic-fetch')
 
@@ -13,6 +14,8 @@ Client4.setUrl('http://mattermost:8000')
 
 // App
 const app = express()
+
+app.use(require('./routes'));
 
 app.get('/', (req, res) => {
   res.send('Hello world\n')
@@ -26,8 +29,10 @@ app.get('/', (req, res) => {
 })
 
 //app.listen(PORT, HOST)
-app.set('port', PORT)
+/*app.set('port', PORT)
 const server = http.createServer(app);
-server.listen(port);
+server.listen(PORT);
 
-console.log(`Running on http://${HOST}:${PORT}`)
+console.log(`Running on http://${HOST}:${PORT}`)*/
+
+module.exports = app;
