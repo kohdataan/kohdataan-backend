@@ -2,6 +2,24 @@
 
 ## Projektin tausta ja tavoitteet
 
+Projektissa kehitämme ja toteutamme yhdessä uutta saavutettavaa somepalvelua, jossa on helppo tutustua uusiin ihmisiin. 
+
+Tavoitteena on luoda palvelu, jossa on turvallinen ja myönteinen ilmapiiri, jossa ketään ei kiusata, ja jossa ketään ei jätetä yksin. Palvelussa tuetaan kohtaamista ja vuorovaikutusta, jotta kaikilla olisi mahdollisuus tutustua omanhenkisiin ihmisiin, ja myös ylläpitää kaverisuhteitaan.
+
+Palvelu on avoin kaikille yli 15-vuotiaille nuorille ja aikuisille. Palvelun toteutuksessa otetaan huomioon käyttäjien erilaiset tarpeet saavutettavuuden ja helppokäyttöisyyden osalta, ja palvelussa voi myös viestiä erilaisin keinoin. Palvelu toteutetaan web-sovelluksena ensisijaisesti mobiililaitteille, mutta palvelua voi käyttää myös muilla laitteilla.
+
+Palvelu ja sen tekninen yhteiskehittäminen liittyy Somettamalla uutta kohtaamista eli Kohdataan-hankkeeseen, jossa tavoitteena on yksinäisyyden vähentäminen somen keinoin. 
+
+Palvelun kehittäminen käynnistettiin keväällä 2018 Kohdataan-hackathonissa, jossa haastettiin eri alojen osaajia innovoimaan ja ideoimaan tulevaisuuden somepalvelua. Ideoista on työstetty yhdessä käyttäjien ja kumppaneiden kanssa konsepti, jonka kehittämistä ja toteuttamista on jatkettu keväällä 2019. Palvelu julkaistaan syksyllä 2019.
+
+Palvelua on toteutettu käyttäjälähtöisesti, sitä on suunniteltu, kehitetty ja testattu yhdessä käyttäjien kanssa. Myös palvelun tekniseen toteutukseen on luotu yhteiskehittämisen malli. Yhteiskehittäminen paitsi käyttäjien myös kaikkien palvelusta kiinnostuneiden kehittäjien kanssa on luontevaa, sillä avoimuus ja yhdessä tekeminen, samoin uusien toimintatapojen kokeileminen on hankkeen ytimessä.  Yhteiskehittämisestä saadaan myös tärkeää lisäresurssia ja -apua palvelun toteutukseen.
+
+Kohdataan-hanke on Kehitysvammaliiton ja Mielenterveysseuran yhteishanke. 
+
+Hanketta rahoittaa Sosiaali- ja terveysjärjestöjen avustuskeskus STEA.
+
+Teknisenä kumppanina ja yhteiskehittämisen koordinaattorina hankkeessa toimii Perfektio.
+
 ## Projektin asennus ja kehitysympäristön pystytys
 
 ### Backend
