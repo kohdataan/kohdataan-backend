@@ -3,6 +3,7 @@ const request = require('request')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const http = require('http')
+const morgan = require('morgan')
 
 const { Client4 } = require('mattermost-redux/client')
 require('isomorphic-fetch')
