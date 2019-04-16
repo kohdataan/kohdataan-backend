@@ -35,9 +35,17 @@ docker-compose build
 docker-compose up
 ```
 
+Jos lisäät projektiin uusia npm-paketteja: 
+* Lisää paketti `node/package.json`-tiedostoon
+* Aja `docker-compose build && docker-compose up` asentaaksesi uudet npm-paketit
+* Kun palvelu on pystyssä, aja `docker-compose run node license-checker > npm-license-list.txt
+  * Tämä päivittää käytettyjen npm-pakettien ja niiden lisenssien listan 
+
 ### Tunnukset testaamiseen
 
 ## Dokumentaatio ja arkkitehtuuri
+
+![Kohdataan arkkitehtuuri](documentation/kohdataan-architecture.png?raw=true "Kohdataan arkkitehtuuri")
 
 ## Ulkoasu
 

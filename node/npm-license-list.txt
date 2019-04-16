@@ -1,0 +1,2437 @@
+├─ @types/node@11.13.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
+│  ├─ path: /usr/src/app/node_modules/@types/node
+│  └─ licenseFile: /usr/src/app/node_modules/@types/node/LICENSE
+├─ abbrev@1.1.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/abbrev-js
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ path: /usr/src/app/node_modules/abbrev
+│  └─ licenseFile: /usr/src/app/node_modules/abbrev/LICENSE
+├─ accepts@1.3.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/accepts
+│  ├─ path: /usr/src/app/node_modules/accepts
+│  └─ licenseFile: /usr/src/app/node_modules/accepts/LICENSE
+├─ ajv@6.10.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/epoberezkin/ajv
+│  ├─ publisher: Evgeny Poberezkin
+│  ├─ path: /usr/src/app/node_modules/ajv
+│  └─ licenseFile: /usr/src/app/node_modules/ajv/LICENSE
+├─ ansi-align@2.0.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/nexdrew/ansi-align
+│  ├─ publisher: nexdrew
+│  ├─ path: /usr/src/app/node_modules/ansi-align
+│  └─ licenseFile: /usr/src/app/node_modules/ansi-align/LICENSE
+├─ ansi-regex@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/ansi-regex
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/ansi-regex
+│  └─ licenseFile: /usr/src/app/node_modules/ansi-regex/license
+├─ ansi-styles@3.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/ansi-styles
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/ansi-styles
+│  └─ licenseFile: /usr/src/app/node_modules/ansi-styles/license
+├─ any-promise@1.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/kevinbeaty/any-promise
+│  ├─ publisher: Kevin Beaty
+│  ├─ path: /usr/src/app/node_modules/any-promise
+│  └─ licenseFile: /usr/src/app/node_modules/any-promise/LICENSE
+├─ anymatch@2.0.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/micromatch/anymatch
+│  ├─ publisher: Elan Shanker
+│  ├─ url: http://github.com/es128
+│  ├─ path: /usr/src/app/node_modules/anymatch
+│  └─ licenseFile: /usr/src/app/node_modules/anymatch/LICENSE
+├─ arr-diff@4.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/arr-diff
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/arr-diff
+│  └─ licenseFile: /usr/src/app/node_modules/arr-diff/LICENSE
+├─ arr-flatten@1.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/arr-flatten
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/arr-flatten
+│  └─ licenseFile: /usr/src/app/node_modules/arr-flatten/LICENSE
+├─ arr-union@3.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/arr-union
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/arr-union
+│  └─ licenseFile: /usr/src/app/node_modules/arr-union/LICENSE
+├─ array-flatten@1.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/blakeembrey/array-flatten
+│  ├─ publisher: Blake Embrey
+│  ├─ email: hello@blakeembrey.com
+│  ├─ url: http://blakeembrey.me
+│  ├─ path: /usr/src/app/node_modules/array-flatten
+│  └─ licenseFile: /usr/src/app/node_modules/array-flatten/LICENSE
+├─ array-unique@0.3.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/array-unique
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/array-unique
+│  └─ licenseFile: /usr/src/app/node_modules/array-unique/LICENSE
+├─ asn1@0.2.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/joyent/node-asn1
+│  ├─ publisher: Joyent
+│  ├─ url: joyent.com
+│  ├─ path: /usr/src/app/node_modules/asn1
+│  └─ licenseFile: /usr/src/app/node_modules/asn1/LICENSE
+├─ assert-plus@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mcavage/node-assert-plus
+│  ├─ publisher: Mark Cavage
+│  ├─ email: mcavage@gmail.com
+│  ├─ path: /usr/src/app/node_modules/assert-plus
+│  └─ licenseFile: /usr/src/app/node_modules/assert-plus/README.md
+├─ assign-symbols@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/assign-symbols
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/assign-symbols
+│  └─ licenseFile: /usr/src/app/node_modules/assign-symbols/LICENSE
+├─ async-each@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/paulmillr/async-each
+│  ├─ publisher: Paul Miller
+│  ├─ url: http://paulmillr.com/
+│  ├─ path: /usr/src/app/node_modules/async-each
+│  └─ licenseFile: /usr/src/app/node_modules/async-each/README.md
+├─ asynckit@0.4.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/alexindigo/asynckit
+│  ├─ publisher: Alex Indigo
+│  ├─ email: iam@alexindigo.com
+│  ├─ path: /usr/src/app/node_modules/asynckit
+│  └─ licenseFile: /usr/src/app/node_modules/asynckit/LICENSE
+├─ atob@2.1.2
+│  ├─ licenses: (MIT OR Apache-2.0)
+│  ├─ repository: git://git.coolaj86.com/coolaj86/atob.js
+│  ├─ publisher: AJ ONeal
+│  ├─ email: coolaj86@gmail.com
+│  ├─ url: https://coolaj86.com
+│  ├─ path: /usr/src/app/node_modules/atob
+│  └─ licenseFile: /usr/src/app/node_modules/atob/LICENSE
+├─ aws-sign2@0.7.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/aws-sign
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ url: http://www.futurealoof.com
+│  ├─ path: /usr/src/app/node_modules/aws-sign2
+│  └─ licenseFile: /usr/src/app/node_modules/aws-sign2/LICENSE
+├─ aws4@1.8.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mhart/aws4
+│  ├─ publisher: Michael Hart
+│  ├─ email: michael.hart.au@gmail.com
+│  ├─ url: http://github.com/mhart
+│  ├─ path: /usr/src/app/node_modules/aws4
+│  └─ licenseFile: /usr/src/app/node_modules/aws4/LICENSE
+├─ babel-runtime@6.26.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-runtime
+│  ├─ publisher: Sebastian McKenzie
+│  ├─ email: sebmck@gmail.com
+│  ├─ path: /usr/src/app/node_modules/babel-runtime
+│  └─ licenseFile: /usr/src/app/node_modules/babel-runtime/README.md
+├─ balanced-match@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/juliangruber/balanced-match
+│  ├─ publisher: Julian Gruber
+│  ├─ email: mail@juliangruber.com
+│  ├─ url: http://juliangruber.com
+│  ├─ path: /usr/src/app/node_modules/balanced-match
+│  └─ licenseFile: /usr/src/app/node_modules/balanced-match/LICENSE.md
+├─ base@0.11.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/node-base/base
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/base
+│  └─ licenseFile: /usr/src/app/node_modules/base/LICENSE
+├─ basic-auth@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/basic-auth
+│  ├─ path: /usr/src/app/node_modules/basic-auth
+│  └─ licenseFile: /usr/src/app/node_modules/basic-auth/LICENSE
+├─ bcrypt-pbkdf@1.0.2
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/joyent/node-bcrypt-pbkdf
+│  ├─ path: /usr/src/app/node_modules/bcrypt-pbkdf
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt-pbkdf/LICENSE
+├─ binary-extensions@1.13.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/binary-extensions
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/binary-extensions
+│  └─ licenseFile: /usr/src/app/node_modules/binary-extensions/license
+├─ bluebird@3.5.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/petkaantonov/bluebird
+│  ├─ publisher: Petka Antonov
+│  ├─ email: petka_antonov@hotmail.com
+│  ├─ url: http://github.com/petkaantonov/
+│  ├─ path: /usr/src/app/node_modules/bluebird
+│  └─ licenseFile: /usr/src/app/node_modules/bluebird/LICENSE
+├─ body-parser@1.18.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/expressjs/body-parser
+│  ├─ path: /usr/src/app/node_modules/body-parser
+│  └─ licenseFile: /usr/src/app/node_modules/body-parser/LICENSE
+├─ boxen@1.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/boxen
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/boxen
+│  └─ licenseFile: /usr/src/app/node_modules/boxen/license
+├─ brace-expansion@1.1.11
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/juliangruber/brace-expansion
+│  ├─ publisher: Julian Gruber
+│  ├─ email: mail@juliangruber.com
+│  ├─ url: http://juliangruber.com
+│  ├─ path: /usr/src/app/node_modules/brace-expansion
+│  └─ licenseFile: /usr/src/app/node_modules/brace-expansion/LICENSE
+├─ braces@2.3.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/braces
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/braces
+│  └─ licenseFile: /usr/src/app/node_modules/braces/LICENSE
+├─ buffer-writer@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/brianc/node-buffer-writer
+│  ├─ publisher: Brian M. Carlson
+│  ├─ path: /usr/src/app/node_modules/buffer-writer
+│  └─ licenseFile: /usr/src/app/node_modules/buffer-writer/LICENSE
+├─ bytes@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/visionmedia/bytes.js
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ url: http://tjholowaychuk.com
+│  ├─ path: /usr/src/app/node_modules/bytes
+│  └─ licenseFile: /usr/src/app/node_modules/bytes/LICENSE
+├─ cache-base@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/cache-base
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/cache-base
+│  └─ licenseFile: /usr/src/app/node_modules/cache-base/LICENSE
+├─ camelcase@4.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/camelcase
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/camelcase
+│  └─ licenseFile: /usr/src/app/node_modules/camelcase/license
+├─ capture-stack-trace@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/floatdrop/capture-stack-trace
+│  ├─ publisher: Vsevolod Strukchinsky
+│  ├─ email: floatdrop@gmail.com
+│  ├─ url: github.com/floatdrop
+│  ├─ path: /usr/src/app/node_modules/capture-stack-trace
+│  └─ licenseFile: /usr/src/app/node_modules/capture-stack-trace/license
+├─ caseless@0.12.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/caseless
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ path: /usr/src/app/node_modules/caseless
+│  └─ licenseFile: /usr/src/app/node_modules/caseless/LICENSE
+├─ chalk@2.4.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/chalk
+│  ├─ path: /usr/src/app/node_modules/chalk
+│  └─ licenseFile: /usr/src/app/node_modules/chalk/license
+├─ chokidar@2.1.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/paulmillr/chokidar
+│  ├─ publisher: Paul Miller
+│  ├─ url: https://paulmillr.com
+│  ├─ path: /usr/src/app/node_modules/chokidar
+│  └─ licenseFile: /usr/src/app/node_modules/chokidar/README.md
+├─ ci-info@1.6.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/watson/ci-info
+│  ├─ publisher: Thomas Watson Steen
+│  ├─ email: w@tson.dk
+│  ├─ url: https://twitter.com/wa7son
+│  ├─ path: /usr/src/app/node_modules/ci-info
+│  └─ licenseFile: /usr/src/app/node_modules/ci-info/LICENSE
+├─ class-utils@0.3.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/class-utils
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/class-utils
+│  └─ licenseFile: /usr/src/app/node_modules/class-utils/LICENSE
+├─ cli-boxes@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/cli-boxes
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/cli-boxes
+│  └─ licenseFile: /usr/src/app/node_modules/cli-boxes/license
+├─ cls-bluebird@2.1.0
+│  ├─ licenses: BSD-2-Clause
+│  ├─ repository: https://github.com/TimBeyer/cls-bluebird
+│  ├─ publisher: Tim Beyer
+│  ├─ email: tim.beyer@gmail.com
+│  ├─ path: /usr/src/app/node_modules/cls-bluebird
+│  └─ licenseFile: /usr/src/app/node_modules/cls-bluebird/README.md
+├─ collection-visit@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/collection-visit
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/collection-visit
+│  └─ licenseFile: /usr/src/app/node_modules/collection-visit/LICENSE
+├─ color-convert@1.9.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Qix-/color-convert
+│  ├─ publisher: Heather Arthur
+│  ├─ email: fayearthur@gmail.com
+│  ├─ path: /usr/src/app/node_modules/color-convert
+│  └─ licenseFile: /usr/src/app/node_modules/color-convert/LICENSE
+├─ color-name@1.1.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/dfcreative/color-name
+│  ├─ publisher: DY
+│  ├─ email: dfcreative@gmail.com
+│  ├─ path: /usr/src/app/node_modules/color-name
+│  └─ licenseFile: /usr/src/app/node_modules/color-name/LICENSE
+├─ combined-stream@1.0.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/felixge/node-combined-stream
+│  ├─ publisher: Felix Geisendörfer
+│  ├─ email: felix@debuggable.com
+│  ├─ url: http://debuggable.com/
+│  ├─ path: /usr/src/app/node_modules/combined-stream
+│  └─ licenseFile: /usr/src/app/node_modules/combined-stream/License
+├─ component-emitter@1.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/component/emitter
+│  ├─ path: /usr/src/app/node_modules/component-emitter
+│  └─ licenseFile: /usr/src/app/node_modules/component-emitter/LICENSE
+├─ concat-map@0.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/substack/node-concat-map
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: /usr/src/app/node_modules/concat-map
+│  └─ licenseFile: /usr/src/app/node_modules/concat-map/LICENSE
+├─ configstore@3.1.2
+│  ├─ licenses: BSD-2-Clause
+│  ├─ repository: https://github.com/yeoman/configstore
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/configstore
+│  └─ licenseFile: /usr/src/app/node_modules/configstore/license
+├─ content-disposition@0.5.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/content-disposition
+│  ├─ path: /usr/src/app/node_modules/content-disposition
+│  └─ licenseFile: /usr/src/app/node_modules/content-disposition/LICENSE
+├─ content-type@1.0.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/content-type
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/content-type
+│  └─ licenseFile: /usr/src/app/node_modules/content-type/LICENSE
+├─ cookie-signature@1.0.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/visionmedia/node-cookie-signature
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@learnboost.com
+│  ├─ path: /usr/src/app/node_modules/cookie-signature
+│  └─ licenseFile: /usr/src/app/node_modules/cookie-signature/Readme.md
+├─ cookie@0.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/cookie
+│  ├─ publisher: Roman Shtylman
+│  ├─ email: shtylman@gmail.com
+│  ├─ path: /usr/src/app/node_modules/cookie
+│  └─ licenseFile: /usr/src/app/node_modules/cookie/LICENSE
+├─ copy-descriptor@0.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/copy-descriptor
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/copy-descriptor
+│  └─ licenseFile: /usr/src/app/node_modules/copy-descriptor/LICENSE
+├─ core-js@2.6.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/zloirock/core-js
+│  ├─ path: /usr/src/app/node_modules/core-js
+│  └─ licenseFile: /usr/src/app/node_modules/core-js/LICENSE
+├─ core-util-is@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/isaacs/core-util-is
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/core-util-is
+│  └─ licenseFile: /usr/src/app/node_modules/core-util-is/LICENSE
+├─ cors@2.8.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/expressjs/cors
+│  ├─ publisher: Troy Goode
+│  ├─ email: troygoode@gmail.com
+│  ├─ url: https://github.com/troygoode/
+│  ├─ path: /usr/src/app/node_modules/cors
+│  └─ licenseFile: /usr/src/app/node_modules/cors/LICENSE
+├─ create-error-class@3.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/floatdrop/create-error-class
+│  ├─ publisher: Vsevolod Strukchinsky
+│  ├─ email: floatdrop@gmail.com
+│  ├─ url: github.com/floatdrop
+│  ├─ path: /usr/src/app/node_modules/create-error-class
+│  └─ licenseFile: /usr/src/app/node_modules/create-error-class/license
+├─ cross-spawn@5.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/IndigoUnited/node-cross-spawn
+│  ├─ publisher: IndigoUnited
+│  ├─ email: hello@indigounited.com
+│  ├─ url: http://indigounited.com
+│  ├─ path: /usr/src/app/node_modules/cross-spawn
+│  └─ licenseFile: /usr/src/app/node_modules/cross-spawn/LICENSE
+├─ crypto-random-string@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/crypto-random-string
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/crypto-random-string
+│  └─ licenseFile: /usr/src/app/node_modules/crypto-random-string/license
+├─ dashdash@1.14.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/trentm/node-dashdash
+│  ├─ publisher: Trent Mick
+│  ├─ email: trentm@gmail.com
+│  ├─ url: http://trentm.com
+│  ├─ path: /usr/src/app/node_modules/dashdash
+│  └─ licenseFile: /usr/src/app/node_modules/dashdash/LICENSE.txt
+├─ debug@2.6.9
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/visionmedia/debug
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ path: /usr/src/app/node_modules/debug
+│  └─ licenseFile: /usr/src/app/node_modules/debug/LICENSE
+├─ debug@3.2.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/visionmedia/debug
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ path: /usr/src/app/node_modules/nodemon/node_modules/debug
+│  └─ licenseFile: /usr/src/app/node_modules/nodemon/node_modules/debug/LICENSE
+├─ debug@4.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/visionmedia/debug
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ path: /usr/src/app/node_modules/sequelize/node_modules/debug
+│  └─ licenseFile: /usr/src/app/node_modules/sequelize/node_modules/debug/LICENSE
+├─ decode-uri-component@0.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/SamVerschueren/decode-uri-component
+│  ├─ publisher: Sam Verschueren
+│  ├─ email: sam.verschueren@gmail.com
+│  ├─ url: github.com/SamVerschueren
+│  ├─ path: /usr/src/app/node_modules/decode-uri-component
+│  └─ licenseFile: /usr/src/app/node_modules/decode-uri-component/license
+├─ deep-equal@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/substack/node-deep-equal
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: /usr/src/app/node_modules/deep-equal
+│  └─ licenseFile: /usr/src/app/node_modules/deep-equal/LICENSE
+├─ deep-extend@0.6.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/unclechu/node-deep-extend
+│  ├─ publisher: Viacheslav Lotsmanov
+│  ├─ email: lotsmanov89@gmail.com
+│  ├─ path: /usr/src/app/node_modules/deep-extend
+│  └─ licenseFile: /usr/src/app/node_modules/deep-extend/LICENSE
+├─ define-property@0.2.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/define-property
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/class-utils/node_modules/define-property
+│  └─ licenseFile: /usr/src/app/node_modules/class-utils/node_modules/define-property/LICENSE
+├─ define-property@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/define-property
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/base/node_modules/define-property
+│  └─ licenseFile: /usr/src/app/node_modules/base/node_modules/define-property/LICENSE
+├─ define-property@2.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/define-property
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/define-property
+│  └─ licenseFile: /usr/src/app/node_modules/define-property/LICENSE
+├─ delayed-stream@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/felixge/node-delayed-stream
+│  ├─ publisher: Felix Geisendörfer
+│  ├─ email: felix@debuggable.com
+│  ├─ url: http://debuggable.com/
+│  ├─ path: /usr/src/app/node_modules/delayed-stream
+│  └─ licenseFile: /usr/src/app/node_modules/delayed-stream/License
+├─ depd@1.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/dougwilson/nodejs-depd
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/depd
+│  └─ licenseFile: /usr/src/app/node_modules/depd/LICENSE
+├─ destroy@1.0.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/stream-utils/destroy
+│  ├─ publisher: Jonathan Ong
+│  ├─ email: me@jongleberry.com
+│  ├─ url: http://jongleberry.com
+│  ├─ path: /usr/src/app/node_modules/destroy
+│  └─ licenseFile: /usr/src/app/node_modules/destroy/LICENSE
+├─ docker_web_app@1.0.0
+│  ├─ licenses: UNKNOWN
+│  └─ path: /usr/src/app
+├─ dot-prop@4.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/dot-prop
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/dot-prop
+│  └─ licenseFile: /usr/src/app/node_modules/dot-prop/license
+├─ dotenv@7.0.0
+│  ├─ licenses: BSD-2-Clause
+│  ├─ repository: https://github.com/motdotla/dotenv
+│  ├─ path: /usr/src/app/node_modules/dotenv
+│  └─ licenseFile: /usr/src/app/node_modules/dotenv/LICENSE
+├─ dottie@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mickhansen/dottie.js
+│  ├─ publisher: Mick Hansen
+│  ├─ email: maker@mhansen.io
+│  ├─ path: /usr/src/app/node_modules/dottie
+│  └─ licenseFile: /usr/src/app/node_modules/dottie/LICENSE
+├─ duplexer3@0.1.4
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/floatdrop/duplexer3
+│  ├─ publisher: Conrad Pankoff
+│  ├─ email: deoxxa@fknsrs.biz
+│  ├─ url: http://www.fknsrs.biz/
+│  ├─ path: /usr/src/app/node_modules/duplexer3
+│  └─ licenseFile: /usr/src/app/node_modules/duplexer3/LICENSE.md
+├─ ecc-jsbn@0.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/quartzjer/ecc-jsbn
+│  ├─ publisher: Jeremie Miller
+│  ├─ email: jeremie@jabber.org
+│  ├─ url: http://jeremie.com/
+│  ├─ path: /usr/src/app/node_modules/ecc-jsbn
+│  └─ licenseFile: /usr/src/app/node_modules/ecc-jsbn/LICENSE
+├─ ee-first@1.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonathanong/ee-first
+│  ├─ publisher: Jonathan Ong
+│  ├─ email: me@jongleberry.com
+│  ├─ url: http://jongleberry.com
+│  ├─ path: /usr/src/app/node_modules/ee-first
+│  └─ licenseFile: /usr/src/app/node_modules/ee-first/LICENSE
+├─ encodeurl@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/pillarjs/encodeurl
+│  ├─ path: /usr/src/app/node_modules/encodeurl
+│  └─ licenseFile: /usr/src/app/node_modules/encodeurl/LICENSE
+├─ encoding@0.1.12
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/andris9/encoding
+│  ├─ publisher: Andris Reinman
+│  ├─ path: /usr/src/app/node_modules/encoding
+│  └─ licenseFile: /usr/src/app/node_modules/encoding/LICENSE
+├─ escape-html@1.0.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/component/escape-html
+│  ├─ path: /usr/src/app/node_modules/escape-html
+│  └─ licenseFile: /usr/src/app/node_modules/escape-html/LICENSE
+├─ escape-string-regexp@1.0.5
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/escape-string-regexp
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/escape-string-regexp
+│  └─ licenseFile: /usr/src/app/node_modules/escape-string-regexp/license
+├─ eslint-plugin-header@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Stuk/eslint-plugin-header
+│  ├─ publisher: Stuart Knightley
+│  ├─ path: /usr/src/app/node_modules/eslint-plugin-header
+│  └─ licenseFile: /usr/src/app/node_modules/eslint-plugin-header/README.md
+├─ etag@1.8.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/etag
+│  ├─ path: /usr/src/app/node_modules/etag
+│  └─ licenseFile: /usr/src/app/node_modules/etag/LICENSE
+├─ execa@0.7.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/execa
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/execa
+│  └─ licenseFile: /usr/src/app/node_modules/execa/license
+├─ expand-brackets@2.1.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/expand-brackets
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/expand-brackets
+│  └─ licenseFile: /usr/src/app/node_modules/expand-brackets/LICENSE
+├─ express@4.16.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/expressjs/express
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ path: /usr/src/app/node_modules/express
+│  └─ licenseFile: /usr/src/app/node_modules/express/LICENSE
+├─ extend-shallow@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/extend-shallow
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/braces/node_modules/extend-shallow
+│  └─ licenseFile: /usr/src/app/node_modules/braces/node_modules/extend-shallow/LICENSE
+├─ extend-shallow@3.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/extend-shallow
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/extend-shallow
+│  └─ licenseFile: /usr/src/app/node_modules/extend-shallow/LICENSE
+├─ extend@3.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/justmoon/node-extend
+│  ├─ publisher: Stefan Thomas
+│  ├─ email: justmoon@members.fsf.org
+│  ├─ url: http://www.justmoon.net
+│  ├─ path: /usr/src/app/node_modules/extend
+│  └─ licenseFile: /usr/src/app/node_modules/extend/LICENSE
+├─ extglob@2.0.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/extglob
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/extglob
+│  └─ licenseFile: /usr/src/app/node_modules/extglob/LICENSE
+├─ extsprintf@1.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/davepacheco/node-extsprintf
+│  ├─ path: /usr/src/app/node_modules/extsprintf
+│  └─ licenseFile: /usr/src/app/node_modules/extsprintf/LICENSE
+├─ fast-deep-equal@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/epoberezkin/fast-deep-equal
+│  ├─ publisher: Evgeny Poberezkin
+│  ├─ path: /usr/src/app/node_modules/fast-deep-equal
+│  └─ licenseFile: /usr/src/app/node_modules/fast-deep-equal/LICENSE
+├─ fast-json-stable-stringify@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/epoberezkin/fast-json-stable-stringify
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: /usr/src/app/node_modules/fast-json-stable-stringify
+│  └─ licenseFile: /usr/src/app/node_modules/fast-json-stable-stringify/LICENSE
+├─ fill-range@4.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/fill-range
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/fill-range
+│  └─ licenseFile: /usr/src/app/node_modules/fill-range/LICENSE
+├─ finalhandler@1.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/pillarjs/finalhandler
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/finalhandler
+│  └─ licenseFile: /usr/src/app/node_modules/finalhandler/LICENSE
+├─ for-in@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/for-in
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/for-in
+│  └─ licenseFile: /usr/src/app/node_modules/for-in/LICENSE
+├─ forever-agent@0.6.1
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/forever-agent
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ url: http://www.futurealoof.com
+│  ├─ path: /usr/src/app/node_modules/forever-agent
+│  └─ licenseFile: /usr/src/app/node_modules/forever-agent/LICENSE
+├─ form-data@2.3.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/form-data/form-data
+│  ├─ publisher: Felix Geisendörfer
+│  ├─ email: felix@debuggable.com
+│  ├─ url: http://debuggable.com/
+│  ├─ path: /usr/src/app/node_modules/form-data
+│  └─ licenseFile: /usr/src/app/node_modules/form-data/License
+├─ forwarded@0.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/forwarded
+│  ├─ path: /usr/src/app/node_modules/forwarded
+│  └─ licenseFile: /usr/src/app/node_modules/forwarded/LICENSE
+├─ fragment-cache@0.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/fragment-cache
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/fragment-cache
+│  └─ licenseFile: /usr/src/app/node_modules/fragment-cache/LICENSE
+├─ fresh@0.5.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/fresh
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ url: http://tjholowaychuk.com
+│  ├─ path: /usr/src/app/node_modules/fresh
+│  └─ licenseFile: /usr/src/app/node_modules/fresh/LICENSE
+├─ get-stream@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/get-stream
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/get-stream
+│  └─ licenseFile: /usr/src/app/node_modules/get-stream/license
+├─ get-value@2.0.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/get-value
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/get-value
+│  └─ licenseFile: /usr/src/app/node_modules/get-value/LICENSE
+├─ getpass@0.1.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/arekinath/node-getpass
+│  ├─ publisher: Alex Wilson
+│  ├─ email: alex.wilson@joyent.com
+│  ├─ path: /usr/src/app/node_modules/getpass
+│  └─ licenseFile: /usr/src/app/node_modules/getpass/LICENSE
+├─ gfycat-sdk@1.4.18
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/gfycat/gfycat-sdk
+│  ├─ publisher: Josh Kang, josh@gfycat.com
+│  ├─ path: /usr/src/app/node_modules/gfycat-sdk
+│  └─ licenseFile: /usr/src/app/node_modules/gfycat-sdk/LICENSE
+├─ glob-parent@3.1.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/es128/glob-parent
+│  ├─ publisher: Elan Shanker
+│  ├─ url: https://github.com/es128
+│  ├─ path: /usr/src/app/node_modules/glob-parent
+│  └─ licenseFile: /usr/src/app/node_modules/glob-parent/LICENSE
+├─ global-dirs@0.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/global-dirs
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/global-dirs
+│  └─ licenseFile: /usr/src/app/node_modules/global-dirs/license
+├─ got@6.7.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/got
+│  ├─ path: /usr/src/app/node_modules/got
+│  └─ licenseFile: /usr/src/app/node_modules/got/license
+├─ graceful-fs@4.1.15
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/node-graceful-fs
+│  ├─ path: /usr/src/app/node_modules/graceful-fs
+│  └─ licenseFile: /usr/src/app/node_modules/graceful-fs/LICENSE
+├─ har-schema@2.0.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/ahmadnassri/har-schema
+│  ├─ publisher: Ahmad Nassri
+│  ├─ email: ahmad@ahmadnassri.com
+│  ├─ url: https://www.ahmadnassri.com/
+│  ├─ path: /usr/src/app/node_modules/har-schema
+│  └─ licenseFile: /usr/src/app/node_modules/har-schema/LICENSE
+├─ har-validator@5.1.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ahmadnassri/node-har-validator
+│  ├─ publisher: Ahmad Nassri
+│  ├─ email: ahmad@ahmadnassri.com
+│  ├─ url: https://www.ahmadnassri.com/
+│  ├─ path: /usr/src/app/node_modules/har-validator
+│  └─ licenseFile: /usr/src/app/node_modules/har-validator/LICENSE
+├─ harmony-reflect@1.6.1
+│  ├─ licenses: (Apache-2.0 OR MPL-1.1)
+│  ├─ repository: git+https://tvcutsem@github.com/tvcutsem/harmony-reflect
+│  ├─ path: /usr/src/app/node_modules/harmony-reflect
+│  └─ licenseFile: /usr/src/app/node_modules/harmony-reflect/README.md
+├─ has-flag@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/has-flag
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/has-flag
+│  └─ licenseFile: /usr/src/app/node_modules/has-flag/license
+├─ has-value@0.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/has-value
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/unset-value/node_modules/has-value
+│  └─ licenseFile: /usr/src/app/node_modules/unset-value/node_modules/has-value/LICENSE
+├─ has-value@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/has-value
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/has-value
+│  └─ licenseFile: /usr/src/app/node_modules/has-value/LICENSE
+├─ has-values@0.1.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/has-values
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/unset-value/node_modules/has-values
+│  └─ licenseFile: /usr/src/app/node_modules/unset-value/node_modules/has-values/LICENSE
+├─ has-values@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/has-values
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/has-values
+│  └─ licenseFile: /usr/src/app/node_modules/has-values/LICENSE
+├─ http-errors@1.6.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/http-errors
+│  ├─ publisher: Jonathan Ong
+│  ├─ email: me@jongleberry.com
+│  ├─ url: http://jongleberry.com
+│  ├─ path: /usr/src/app/node_modules/http-errors
+│  └─ licenseFile: /usr/src/app/node_modules/http-errors/LICENSE
+├─ http-signature@1.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/joyent/node-http-signature
+│  ├─ publisher: Joyent, Inc
+│  ├─ path: /usr/src/app/node_modules/http-signature
+│  └─ licenseFile: /usr/src/app/node_modules/http-signature/LICENSE
+├─ iconv-lite@0.4.24
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ashtuchkin/iconv-lite
+│  ├─ publisher: Alexander Shtuchkin
+│  ├─ email: ashtuchkin@gmail.com
+│  ├─ path: /usr/src/app/node_modules/iconv-lite
+│  └─ licenseFile: /usr/src/app/node_modules/iconv-lite/LICENSE
+├─ ignore-by-default@1.0.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/novemberborn/ignore-by-default
+│  ├─ publisher: Mark Wubben
+│  ├─ url: https://novemberborn.net/
+│  ├─ path: /usr/src/app/node_modules/ignore-by-default
+│  └─ licenseFile: /usr/src/app/node_modules/ignore-by-default/LICENSE
+├─ import-lazy@2.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/import-lazy
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/import-lazy
+│  └─ licenseFile: /usr/src/app/node_modules/import-lazy/license
+├─ imurmurhash@0.1.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jensyt/imurmurhash-js
+│  ├─ publisher: Jens Taylor
+│  ├─ email: jensyt@gmail.com
+│  ├─ url: https://github.com/homebrewing
+│  ├─ path: /usr/src/app/node_modules/imurmurhash
+│  └─ licenseFile: /usr/src/app/node_modules/imurmurhash/README.md
+├─ inflection@1.12.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/dreamerslab/node.inflection
+│  ├─ publisher: dreamerslab
+│  ├─ email: ben@dreamerslab.com
+│  ├─ path: /usr/src/app/node_modules/inflection
+│  └─ licenseFile: /usr/src/app/node_modules/inflection/Readme.md
+├─ inherits@2.0.3
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/inherits
+│  ├─ path: /usr/src/app/node_modules/inherits
+│  └─ licenseFile: /usr/src/app/node_modules/inherits/LICENSE
+├─ ini@1.3.5
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/ini
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/ini
+│  └─ licenseFile: /usr/src/app/node_modules/ini/LICENSE
+├─ ipaddr.js@1.8.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/whitequark/ipaddr.js
+│  ├─ publisher: whitequark
+│  ├─ email: whitequark@whitequark.org
+│  ├─ path: /usr/src/app/node_modules/ipaddr.js
+│  └─ licenseFile: /usr/src/app/node_modules/ipaddr.js/README.md
+├─ is-accessor-descriptor@0.1.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-accessor-descriptor
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-accessor-descriptor
+│  └─ licenseFile: /usr/src/app/node_modules/is-accessor-descriptor/LICENSE
+├─ is-accessor-descriptor@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-accessor-descriptor
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/base/node_modules/is-accessor-descriptor
+│  └─ licenseFile: /usr/src/app/node_modules/base/node_modules/is-accessor-descriptor/LICENSE
+├─ is-binary-path@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-binary-path
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/is-binary-path
+│  └─ licenseFile: /usr/src/app/node_modules/is-binary-path/license
+├─ is-bluebird@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/overlookmotel/is-bluebird
+│  ├─ publisher: Overlook Motel
+│  ├─ path: /usr/src/app/node_modules/is-bluebird
+│  └─ licenseFile: /usr/src/app/node_modules/is-bluebird/License
+├─ is-buffer@1.1.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/feross/is-buffer
+│  ├─ publisher: Feross Aboukhadijeh
+│  ├─ email: feross@feross.org
+│  ├─ url: http://feross.org/
+│  ├─ path: /usr/src/app/node_modules/is-buffer
+│  └─ licenseFile: /usr/src/app/node_modules/is-buffer/LICENSE
+├─ is-ci@1.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/watson/is-ci
+│  ├─ publisher: Thomas Watson Steen
+│  ├─ email: w@tson.dk
+│  ├─ url: https://twitter.com/wa7son
+│  ├─ path: /usr/src/app/node_modules/is-ci
+│  └─ licenseFile: /usr/src/app/node_modules/is-ci/LICENSE
+├─ is-data-descriptor@0.1.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-data-descriptor
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-data-descriptor
+│  └─ licenseFile: /usr/src/app/node_modules/is-data-descriptor/LICENSE
+├─ is-data-descriptor@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-data-descriptor
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/base/node_modules/is-data-descriptor
+│  └─ licenseFile: /usr/src/app/node_modules/base/node_modules/is-data-descriptor/LICENSE
+├─ is-descriptor@0.1.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-descriptor
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-descriptor
+│  └─ licenseFile: /usr/src/app/node_modules/is-descriptor/LICENSE
+├─ is-descriptor@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-descriptor
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/base/node_modules/is-descriptor
+│  └─ licenseFile: /usr/src/app/node_modules/base/node_modules/is-descriptor/LICENSE
+├─ is-extendable@0.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-extendable
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-extendable
+│  └─ licenseFile: /usr/src/app/node_modules/is-extendable/LICENSE
+├─ is-extendable@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-extendable
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/extend-shallow/node_modules/is-extendable
+│  └─ licenseFile: /usr/src/app/node_modules/extend-shallow/node_modules/is-extendable/LICENSE
+├─ is-extglob@2.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-extglob
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-extglob
+│  └─ licenseFile: /usr/src/app/node_modules/is-extglob/LICENSE
+├─ is-fullwidth-code-point@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-fullwidth-code-point
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/is-fullwidth-code-point
+│  └─ licenseFile: /usr/src/app/node_modules/is-fullwidth-code-point/license
+├─ is-glob@3.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-glob
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/glob-parent/node_modules/is-glob
+│  └─ licenseFile: /usr/src/app/node_modules/glob-parent/node_modules/is-glob/LICENSE
+├─ is-glob@4.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/is-glob
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-glob
+│  └─ licenseFile: /usr/src/app/node_modules/is-glob/LICENSE
+├─ is-installed-globally@0.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-installed-globally
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/is-installed-globally
+│  └─ licenseFile: /usr/src/app/node_modules/is-installed-globally/license
+├─ is-npm@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-npm
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: http://sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/is-npm
+│  └─ licenseFile: /usr/src/app/node_modules/is-npm/readme.md
+├─ is-number@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-number
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-number
+│  └─ licenseFile: /usr/src/app/node_modules/is-number/LICENSE
+├─ is-obj@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-obj
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/is-obj
+│  └─ licenseFile: /usr/src/app/node_modules/is-obj/license
+├─ is-path-inside@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-path-inside
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/is-path-inside
+│  └─ licenseFile: /usr/src/app/node_modules/is-path-inside/license
+├─ is-plain-object@2.0.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-plain-object
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-plain-object
+│  └─ licenseFile: /usr/src/app/node_modules/is-plain-object/LICENSE
+├─ is-redirect@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-redirect
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/is-redirect
+│  └─ licenseFile: /usr/src/app/node_modules/is-redirect/license
+├─ is-retry-allowed@1.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/floatdrop/is-retry-allowed
+│  ├─ publisher: Vsevolod Strukchinsky
+│  ├─ email: floatdrop@gmail.com
+│  ├─ url: github.com/floatdrop
+│  ├─ path: /usr/src/app/node_modules/is-retry-allowed
+│  └─ licenseFile: /usr/src/app/node_modules/is-retry-allowed/license
+├─ is-stream@1.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-stream
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/is-stream
+│  └─ licenseFile: /usr/src/app/node_modules/is-stream/license
+├─ is-typedarray@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/hughsk/is-typedarray
+│  ├─ publisher: Hugh Kennedy
+│  ├─ email: hughskennedy@gmail.com
+│  ├─ url: http://hughsk.io/
+│  ├─ path: /usr/src/app/node_modules/is-typedarray
+│  └─ licenseFile: /usr/src/app/node_modules/is-typedarray/LICENSE.md
+├─ is-windows@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-windows
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-windows
+│  └─ licenseFile: /usr/src/app/node_modules/is-windows/LICENSE
+├─ isarray@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/juliangruber/isarray
+│  ├─ publisher: Julian Gruber
+│  ├─ email: mail@juliangruber.com
+│  ├─ url: http://juliangruber.com
+│  ├─ path: /usr/src/app/node_modules/isarray
+│  └─ licenseFile: /usr/src/app/node_modules/isarray/README.md
+├─ isexe@2.0.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/isexe
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/isexe
+│  └─ licenseFile: /usr/src/app/node_modules/isexe/LICENSE
+├─ isobject@2.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/isobject
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/unset-value/node_modules/has-value/node_modules/isobject
+│  └─ licenseFile: /usr/src/app/node_modules/unset-value/node_modules/has-value/node_modules/isobject/LICENSE
+├─ isobject@3.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/isobject
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/isobject
+│  └─ licenseFile: /usr/src/app/node_modules/isobject/LICENSE
+├─ isomorphic-fetch@2.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/matthew-andrews/isomorphic-fetch
+│  ├─ publisher: Matt Andrews
+│  ├─ email: matt@mattandre.ws
+│  ├─ path: /usr/src/app/node_modules/isomorphic-fetch
+│  └─ licenseFile: /usr/src/app/node_modules/isomorphic-fetch/LICENSE
+├─ isstream@0.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/rvagg/isstream
+│  ├─ publisher: Rod Vagg
+│  ├─ email: rod@vagg.org
+│  ├─ path: /usr/src/app/node_modules/isstream
+│  └─ licenseFile: /usr/src/app/node_modules/isstream/LICENSE.md
+├─ js-tokens@4.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lydell/js-tokens
+│  ├─ publisher: Simon Lydell
+│  ├─ path: /usr/src/app/node_modules/js-tokens
+│  └─ licenseFile: /usr/src/app/node_modules/js-tokens/LICENSE
+├─ jsbn@0.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/andyperlitch/jsbn
+│  ├─ publisher: Tom Wu
+│  ├─ path: /usr/src/app/node_modules/jsbn
+│  └─ licenseFile: /usr/src/app/node_modules/jsbn/LICENSE
+├─ json-schema-traverse@0.4.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/epoberezkin/json-schema-traverse
+│  ├─ publisher: Evgeny Poberezkin
+│  ├─ path: /usr/src/app/node_modules/json-schema-traverse
+│  └─ licenseFile: /usr/src/app/node_modules/json-schema-traverse/LICENSE
+├─ json-schema@0.2.3
+│  ├─ licenses
+│  │  ├─ 0: AFLv2.1
+│  │  └─ 1: BSD
+│  ├─ repository: https://github.com/kriszyp/json-schema
+│  ├─ publisher: Kris Zyp
+│  ├─ path: /usr/src/app/node_modules/json-schema
+│  └─ licenseFile: /usr/src/app/node_modules/json-schema/README.md
+├─ json-stringify-safe@5.0.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/json-stringify-safe
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me
+│  ├─ path: /usr/src/app/node_modules/json-stringify-safe
+│  └─ licenseFile: /usr/src/app/node_modules/json-stringify-safe/LICENSE
+├─ jsprim@1.4.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/joyent/node-jsprim
+│  ├─ path: /usr/src/app/node_modules/jsprim
+│  └─ licenseFile: /usr/src/app/node_modules/jsprim/LICENSE
+├─ kind-of@3.2.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/kind-of
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-number/node_modules/kind-of
+│  └─ licenseFile: /usr/src/app/node_modules/is-number/node_modules/kind-of/LICENSE
+├─ kind-of@4.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/kind-of
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/has-values/node_modules/kind-of
+│  └─ licenseFile: /usr/src/app/node_modules/has-values/node_modules/kind-of/LICENSE
+├─ kind-of@5.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/kind-of
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/is-descriptor/node_modules/kind-of
+│  └─ licenseFile: /usr/src/app/node_modules/is-descriptor/node_modules/kind-of/LICENSE
+├─ kind-of@6.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/kind-of
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/kind-of
+│  └─ licenseFile: /usr/src/app/node_modules/kind-of/LICENSE
+├─ latest-version@3.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/latest-version
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/latest-version
+│  └─ licenseFile: /usr/src/app/node_modules/latest-version/license
+├─ lodash-es@4.17.11
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lodash/lodash
+│  ├─ publisher: John-David Dalton
+│  ├─ email: john.david.dalton@gmail.com
+│  ├─ url: http://allyoucanleet.com/
+│  ├─ path: /usr/src/app/node_modules/lodash-es
+│  └─ licenseFile: /usr/src/app/node_modules/lodash-es/LICENSE
+├─ lodash@4.17.11
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lodash/lodash
+│  ├─ publisher: John-David Dalton
+│  ├─ email: john.david.dalton@gmail.com
+│  ├─ url: http://allyoucanleet.com/
+│  ├─ path: /usr/src/app/node_modules/lodash
+│  └─ licenseFile: /usr/src/app/node_modules/lodash/LICENSE
+├─ loose-envify@1.4.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/zertosh/loose-envify
+│  ├─ publisher: Andres Suarez
+│  ├─ email: zertosh@gmail.com
+│  ├─ path: /usr/src/app/node_modules/loose-envify
+│  └─ licenseFile: /usr/src/app/node_modules/loose-envify/LICENSE
+├─ lowercase-keys@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/lowercase-keys
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/lowercase-keys
+│  └─ licenseFile: /usr/src/app/node_modules/lowercase-keys/license
+├─ lru-cache@4.1.5
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/node-lru-cache
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ path: /usr/src/app/node_modules/lru-cache
+│  └─ licenseFile: /usr/src/app/node_modules/lru-cache/LICENSE
+├─ make-dir@1.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/make-dir
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/make-dir
+│  └─ licenseFile: /usr/src/app/node_modules/make-dir/license
+├─ map-cache@0.2.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/map-cache
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/map-cache
+│  └─ licenseFile: /usr/src/app/node_modules/map-cache/LICENSE
+├─ map-visit@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/map-visit
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/map-visit
+│  └─ licenseFile: /usr/src/app/node_modules/map-visit/LICENSE
+├─ mattermost-redux@5.9.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mattermost/mattermost-redux
+│  ├─ path: /usr/src/app/node_modules/mattermost-redux
+│  ├─ licenseFile: /usr/src/app/node_modules/mattermost-redux/LICENSE.txt
+│  └─ noticeFile: /usr/src/app/node_modules/mattermost-redux/NOTICE.txt
+├─ media-typer@0.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/media-typer
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/media-typer
+│  └─ licenseFile: /usr/src/app/node_modules/media-typer/LICENSE
+├─ merge-descriptors@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/component/merge-descriptors
+│  ├─ publisher: Jonathan Ong
+│  ├─ email: me@jongleberry.com
+│  ├─ url: http://jongleberry.com
+│  ├─ path: /usr/src/app/node_modules/merge-descriptors
+│  └─ licenseFile: /usr/src/app/node_modules/merge-descriptors/LICENSE
+├─ methods@1.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/methods
+│  ├─ path: /usr/src/app/node_modules/methods
+│  └─ licenseFile: /usr/src/app/node_modules/methods/LICENSE
+├─ micromatch@3.1.10
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/micromatch
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/micromatch
+│  └─ licenseFile: /usr/src/app/node_modules/micromatch/LICENSE
+├─ mime-db@1.37.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/mime-db
+│  ├─ path: /usr/src/app/node_modules/mime-db
+│  └─ licenseFile: /usr/src/app/node_modules/mime-db/LICENSE
+├─ mime-db@1.38.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/mime-db
+│  ├─ path: /usr/src/app/node_modules/mime-types/node_modules/mime-db
+│  └─ licenseFile: /usr/src/app/node_modules/mime-types/node_modules/mime-db/LICENSE
+├─ mime-types@2.1.22
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/mime-types
+│  ├─ path: /usr/src/app/node_modules/mime-types
+│  └─ licenseFile: /usr/src/app/node_modules/mime-types/LICENSE
+├─ mime@1.4.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/broofa/node-mime
+│  ├─ publisher: Robert Kieffer
+│  ├─ email: robert@broofa.com
+│  ├─ url: http://github.com/broofa
+│  ├─ path: /usr/src/app/node_modules/mime
+│  └─ licenseFile: /usr/src/app/node_modules/mime/LICENSE
+├─ minimatch@3.0.4
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/minimatch
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me
+│  ├─ path: /usr/src/app/node_modules/minimatch
+│  └─ licenseFile: /usr/src/app/node_modules/minimatch/LICENSE
+├─ minimist@1.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/substack/minimist
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: /usr/src/app/node_modules/minimist
+│  └─ licenseFile: /usr/src/app/node_modules/minimist/LICENSE
+├─ mixin-deep@1.3.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/mixin-deep
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/mixin-deep
+│  └─ licenseFile: /usr/src/app/node_modules/mixin-deep/LICENSE
+├─ moment-timezone@0.5.23
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/moment/moment-timezone
+│  ├─ publisher: Tim Wood
+│  ├─ email: washwithcare@gmail.com
+│  ├─ url: http://timwoodcreates.com/
+│  ├─ path: /usr/src/app/node_modules/moment-timezone
+│  └─ licenseFile: /usr/src/app/node_modules/moment-timezone/LICENSE
+├─ moment@2.24.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/moment/moment
+│  ├─ publisher: Iskren Ivov Chernev
+│  ├─ email: iskren.chernev@gmail.com
+│  ├─ url: https://github.com/ichernev
+│  ├─ path: /usr/src/app/node_modules/moment
+│  └─ licenseFile: /usr/src/app/node_modules/moment/LICENSE
+├─ morgan@1.9.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/expressjs/morgan
+│  ├─ path: /usr/src/app/node_modules/morgan
+│  └─ licenseFile: /usr/src/app/node_modules/morgan/LICENSE
+├─ ms@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/zeit/ms
+│  ├─ path: /usr/src/app/node_modules/ms
+│  └─ licenseFile: /usr/src/app/node_modules/ms/license.md
+├─ ms@2.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/zeit/ms
+│  ├─ path: /usr/src/app/node_modules/nodemon/node_modules/ms
+│  └─ licenseFile: /usr/src/app/node_modules/nodemon/node_modules/ms/license.md
+├─ nanomatch@1.2.13
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/nanomatch
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/nanomatch
+│  └─ licenseFile: /usr/src/app/node_modules/nanomatch/LICENSE
+├─ negotiator@0.6.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/negotiator
+│  ├─ path: /usr/src/app/node_modules/negotiator
+│  └─ licenseFile: /usr/src/app/node_modules/negotiator/LICENSE
+├─ node-fetch@1.7.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/bitinn/node-fetch
+│  ├─ publisher: David Frank
+│  ├─ path: /usr/src/app/node_modules/node-fetch
+│  └─ licenseFile: /usr/src/app/node_modules/node-fetch/LICENSE.md
+├─ nodemon@1.18.11
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/remy/nodemon
+│  ├─ publisher: Remy Sharp
+│  ├─ url: http://github.com/remy
+│  ├─ path: /usr/src/app/node_modules/nodemon
+│  └─ licenseFile: /usr/src/app/node_modules/nodemon/README.md
+├─ nopt@1.0.10
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/isaacs/nopt
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/nopt
+│  └─ licenseFile: /usr/src/app/node_modules/nopt/LICENSE
+├─ normalize-path@2.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/normalize-path
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/anymatch/node_modules/normalize-path
+│  └─ licenseFile: /usr/src/app/node_modules/anymatch/node_modules/normalize-path/LICENSE
+├─ normalize-path@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/normalize-path
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/normalize-path
+│  └─ licenseFile: /usr/src/app/node_modules/normalize-path/LICENSE
+├─ npm-run-path@2.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/npm-run-path
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/npm-run-path
+│  └─ licenseFile: /usr/src/app/node_modules/npm-run-path/license
+├─ oauth-sign@0.9.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/oauth-sign
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ url: http://www.futurealoof.com
+│  ├─ path: /usr/src/app/node_modules/oauth-sign
+│  └─ licenseFile: /usr/src/app/node_modules/oauth-sign/LICENSE
+├─ object-assign@4.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/object-assign
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/object-assign
+│  └─ licenseFile: /usr/src/app/node_modules/object-assign/license
+├─ object-copy@0.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/object-copy
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/object-copy
+│  └─ licenseFile: /usr/src/app/node_modules/object-copy/LICENSE
+├─ object-visit@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/object-visit
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/object-visit
+│  └─ licenseFile: /usr/src/app/node_modules/object-visit/LICENSE
+├─ object.pick@1.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/object.pick
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/object.pick
+│  └─ licenseFile: /usr/src/app/node_modules/object.pick/LICENSE
+├─ on-finished@2.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/on-finished
+│  ├─ path: /usr/src/app/node_modules/on-finished
+│  └─ licenseFile: /usr/src/app/node_modules/on-finished/LICENSE
+├─ on-headers@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/on-headers
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/on-headers
+│  └─ licenseFile: /usr/src/app/node_modules/on-headers/LICENSE
+├─ p-finally@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/p-finally
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/p-finally
+│  └─ licenseFile: /usr/src/app/node_modules/p-finally/license
+├─ package-json@4.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/package-json
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/package-json
+│  └─ licenseFile: /usr/src/app/node_modules/package-json/license
+├─ packet-reader@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/brianc/node-packet-reader
+│  ├─ publisher: Brian M. Carlson
+│  ├─ path: /usr/src/app/node_modules/packet-reader
+│  └─ licenseFile: /usr/src/app/node_modules/packet-reader/README.md
+├─ parseurl@1.3.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/pillarjs/parseurl
+│  ├─ path: /usr/src/app/node_modules/parseurl
+│  └─ licenseFile: /usr/src/app/node_modules/parseurl/LICENSE
+├─ pascalcase@0.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/pascalcase
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/pascalcase
+│  └─ licenseFile: /usr/src/app/node_modules/pascalcase/LICENSE
+├─ path-dirname@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/es128/path-dirname
+│  ├─ publisher: Elan Shanker
+│  ├─ path: /usr/src/app/node_modules/path-dirname
+│  └─ licenseFile: /usr/src/app/node_modules/path-dirname/license
+├─ path-is-absolute@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/path-is-absolute
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/path-is-absolute
+│  └─ licenseFile: /usr/src/app/node_modules/path-is-absolute/license
+├─ path-is-inside@1.0.2
+│  ├─ licenses: (WTFPL OR MIT)
+│  ├─ repository: https://github.com/domenic/path-is-inside
+│  ├─ publisher: Domenic Denicola
+│  ├─ email: d@domenic.me
+│  ├─ url: https://domenic.me
+│  ├─ path: /usr/src/app/node_modules/path-is-inside
+│  └─ licenseFile: /usr/src/app/node_modules/path-is-inside/LICENSE.txt
+├─ path-key@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/path-key
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/path-key
+│  └─ licenseFile: /usr/src/app/node_modules/path-key/license
+├─ path-to-regexp@0.1.7
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/component/path-to-regexp
+│  ├─ path: /usr/src/app/node_modules/path-to-regexp
+│  └─ licenseFile: /usr/src/app/node_modules/path-to-regexp/LICENSE
+├─ performance-now@2.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/braveg1rl/performance-now
+│  ├─ publisher: Braveg1rl
+│  ├─ email: braveg1rl@outlook.com
+│  ├─ path: /usr/src/app/node_modules/performance-now
+│  └─ licenseFile: /usr/src/app/node_modules/performance-now/license.txt
+├─ pg-connection-string@0.1.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/iceddev/pg-connection-string
+│  ├─ publisher: Blaine Bublitz
+│  ├─ email: blaine@iceddev.com
+│  ├─ url: http://iceddev.com/
+│  ├─ path: /usr/src/app/node_modules/pg-connection-string
+│  └─ licenseFile: /usr/src/app/node_modules/pg-connection-string/LICENSE
+├─ pg-hstore@2.3.2
+│  ├─ licenses: MIT*
+│  ├─ repository: https://github.com/scarney81/pg-hstore
+│  ├─ publisher: Seth Carney
+│  ├─ email: scarney81@gmail.com
+│  ├─ url: https://github.com/scarney81
+│  ├─ path: /usr/src/app/node_modules/pg-hstore
+│  └─ licenseFile: /usr/src/app/node_modules/pg-hstore/LICENSE
+├─ pg-int8@1.0.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/charmander/pg-int8
+│  ├─ path: /usr/src/app/node_modules/pg-int8
+│  └─ licenseFile: /usr/src/app/node_modules/pg-int8/LICENSE
+├─ pg-pool@2.0.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/brianc/node-pg-pool
+│  ├─ publisher: Brian M. Carlson
+│  ├─ path: /usr/src/app/node_modules/pg-pool
+│  └─ licenseFile: /usr/src/app/node_modules/pg-pool/LICENSE
+├─ pg-types@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/brianc/node-pg-types
+│  ├─ publisher: Brian M. Carlson
+│  ├─ path: /usr/src/app/node_modules/pg-types
+│  └─ licenseFile: /usr/src/app/node_modules/pg-types/README.md
+├─ pg@7.9.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/brianc/node-postgres
+│  ├─ publisher: Brian Carlson
+│  ├─ email: brian.m.carlson@gmail.com
+│  ├─ path: /usr/src/app/node_modules/pg
+│  └─ licenseFile: /usr/src/app/node_modules/pg/LICENSE
+├─ pgpass@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/hoegaarden/pgpass
+│  ├─ publisher: Hannes Hörl
+│  ├─ email: hannes.hoerl+pgpass@snowreporter.com
+│  ├─ path: /usr/src/app/node_modules/pgpass
+│  └─ licenseFile: /usr/src/app/node_modules/pgpass/README.md
+├─ pify@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/pify
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/pify
+│  └─ licenseFile: /usr/src/app/node_modules/pify/license
+├─ posix-character-classes@0.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/posix-character-classes
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/posix-character-classes
+│  └─ licenseFile: /usr/src/app/node_modules/posix-character-classes/LICENSE
+├─ postgres-array@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/bendrucker/postgres-array
+│  ├─ publisher: Ben Drucker
+│  ├─ email: bvdrucker@gmail.com
+│  ├─ url: bendrucker.me
+│  ├─ path: /usr/src/app/node_modules/postgres-array
+│  └─ licenseFile: /usr/src/app/node_modules/postgres-array/license
+├─ postgres-bytea@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/bendrucker/postgres-bytea
+│  ├─ publisher: Ben Drucker
+│  ├─ email: bvdrucker@gmail.com
+│  ├─ url: bendrucker.me
+│  ├─ path: /usr/src/app/node_modules/postgres-bytea
+│  └─ licenseFile: /usr/src/app/node_modules/postgres-bytea/license
+├─ postgres-date@1.0.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/bendrucker/postgres-date
+│  ├─ publisher: Ben Drucker
+│  ├─ email: bvdrucker@gmail.com
+│  ├─ url: bendrucker.me
+│  ├─ path: /usr/src/app/node_modules/postgres-date
+│  └─ licenseFile: /usr/src/app/node_modules/postgres-date/license
+├─ postgres-interval@1.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/bendrucker/postgres-interval
+│  ├─ publisher: Ben Drucker
+│  ├─ email: bvdrucker@gmail.com
+│  ├─ url: bendrucker.me
+│  ├─ path: /usr/src/app/node_modules/postgres-interval
+│  └─ licenseFile: /usr/src/app/node_modules/postgres-interval/license
+├─ prepend-http@1.0.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/prepend-http
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/prepend-http
+│  └─ licenseFile: /usr/src/app/node_modules/prepend-http/license
+├─ process-nextick-args@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/calvinmetcalf/process-nextick-args
+│  ├─ path: /usr/src/app/node_modules/process-nextick-args
+│  └─ licenseFile: /usr/src/app/node_modules/process-nextick-args/license.md
+├─ proxy-addr@2.0.4
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/proxy-addr
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/proxy-addr
+│  └─ licenseFile: /usr/src/app/node_modules/proxy-addr/LICENSE
+├─ pseudomap@1.0.2
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/pseudomap
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/pseudomap
+│  └─ licenseFile: /usr/src/app/node_modules/pseudomap/LICENSE
+├─ psl@1.1.31
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/wrangr/psl
+│  ├─ publisher: Lupo Montero
+│  ├─ path: /usr/src/app/node_modules/psl
+│  └─ licenseFile: /usr/src/app/node_modules/psl/LICENSE
+├─ pstree.remy@1.1.6
+│  ├─ licenses: MIT
+│  ├─ publisher: Remy Sharp
+│  └─ path: /usr/src/app/node_modules/pstree.remy
+├─ punycode@1.4.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/bestiejs/punycode.js
+│  ├─ publisher: Mathias Bynens
+│  ├─ url: https://mathiasbynens.be/
+│  ├─ path: /usr/src/app/node_modules/tough-cookie/node_modules/punycode
+│  └─ licenseFile: /usr/src/app/node_modules/tough-cookie/node_modules/punycode/LICENSE-MIT.txt
+├─ punycode@2.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/bestiejs/punycode.js
+│  ├─ publisher: Mathias Bynens
+│  ├─ url: https://mathiasbynens.be/
+│  ├─ path: /usr/src/app/node_modules/punycode
+│  └─ licenseFile: /usr/src/app/node_modules/punycode/LICENSE-MIT.txt
+├─ qs@6.5.2
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/ljharb/qs
+│  ├─ path: /usr/src/app/node_modules/qs
+│  └─ licenseFile: /usr/src/app/node_modules/qs/LICENSE
+├─ range-parser@1.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/range-parser
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ url: http://tjholowaychuk.com
+│  ├─ path: /usr/src/app/node_modules/range-parser
+│  └─ licenseFile: /usr/src/app/node_modules/range-parser/LICENSE
+├─ raw-body@2.3.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/stream-utils/raw-body
+│  ├─ publisher: Jonathan Ong
+│  ├─ email: me@jongleberry.com
+│  ├─ url: http://jongleberry.com
+│  ├─ path: /usr/src/app/node_modules/raw-body
+│  └─ licenseFile: /usr/src/app/node_modules/raw-body/LICENSE
+├─ rc@1.2.8
+│  ├─ licenses: (BSD-2-Clause OR MIT OR Apache-2.0)
+│  ├─ repository: https://github.com/dominictarr/rc
+│  ├─ publisher: Dominic Tarr
+│  ├─ email: dominic.tarr@gmail.com
+│  ├─ url: dominictarr.com
+│  ├─ path: /usr/src/app/node_modules/rc
+│  └─ licenseFile: /usr/src/app/node_modules/rc/LICENSE.APACHE2
+├─ readable-stream@2.3.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nodejs/readable-stream
+│  ├─ path: /usr/src/app/node_modules/readable-stream
+│  └─ licenseFile: /usr/src/app/node_modules/readable-stream/LICENSE
+├─ readdirp@2.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/paulmillr/readdirp
+│  ├─ publisher: Thorsten Lorenz
+│  ├─ email: thlorenz@gmx.de
+│  ├─ url: thlorenz.com
+│  ├─ path: /usr/src/app/node_modules/readdirp
+│  └─ licenseFile: /usr/src/app/node_modules/readdirp/LICENSE
+├─ redux-action-buffer@1.2.0
+│  ├─ licenses: MIT
+│  ├─ publisher: rt2zz
+│  ├─ email: zack@root-two.com
+│  ├─ path: /usr/src/app/node_modules/redux-action-buffer
+│  └─ licenseFile: /usr/src/app/node_modules/redux-action-buffer/LICENSE
+├─ redux-batched-actions@0.4.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/tshelburne/redux-batched-actions
+│  ├─ publisher: Tim Shelburne
+│  ├─ email: shelburt02@gmail.com
+│  ├─ path: /usr/src/app/node_modules/redux-batched-actions
+│  └─ licenseFile: /usr/src/app/node_modules/redux-batched-actions/LICENSE.txt
+├─ redux-persist@4.9.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/rt2zz/redux-persist
+│  ├─ publisher: rt2zz
+│  ├─ email: zack@root-two.com
+│  ├─ path: /usr/src/app/node_modules/redux-persist
+│  └─ licenseFile: /usr/src/app/node_modules/redux-persist/LICENSE.md
+├─ redux-thunk@2.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/reduxjs/redux-thunk
+│  ├─ publisher: Dan Abramov
+│  ├─ email: dan.abramov@me.com
+│  ├─ path: /usr/src/app/node_modules/redux-thunk
+│  └─ licenseFile: /usr/src/app/node_modules/redux-thunk/LICENSE.md
+├─ redux@4.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/reduxjs/redux
+│  ├─ path: /usr/src/app/node_modules/redux
+│  └─ licenseFile: /usr/src/app/node_modules/redux/LICENSE.md
+├─ regenerator-runtime@0.11.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime
+│  ├─ publisher: Ben Newman
+│  ├─ email: bn@cs.stanford.edu
+│  ├─ path: /usr/src/app/node_modules/regenerator-runtime
+│  └─ licenseFile: /usr/src/app/node_modules/regenerator-runtime/README.md
+├─ regex-not@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/regex-not
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/regex-not
+│  └─ licenseFile: /usr/src/app/node_modules/regex-not/LICENSE
+├─ registry-auth-token@3.4.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/rexxars/registry-auth-token
+│  ├─ publisher: Espen Hovlandsdal
+│  ├─ email: espen@hovlandsdal.com
+│  ├─ path: /usr/src/app/node_modules/registry-auth-token
+│  └─ licenseFile: /usr/src/app/node_modules/registry-auth-token/LICENSE
+├─ registry-url@3.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/registry-url
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/registry-url
+│  └─ licenseFile: /usr/src/app/node_modules/registry-url/license
+├─ remove-trailing-separator@1.1.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/darsain/remove-trailing-separator
+│  ├─ publisher: darsain
+│  ├─ path: /usr/src/app/node_modules/remove-trailing-separator
+│  └─ licenseFile: /usr/src/app/node_modules/remove-trailing-separator/license
+├─ repeat-element@1.1.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/repeat-element
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/repeat-element
+│  └─ licenseFile: /usr/src/app/node_modules/repeat-element/LICENSE
+├─ repeat-string@1.6.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/repeat-string
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: http://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/repeat-string
+│  └─ licenseFile: /usr/src/app/node_modules/repeat-string/LICENSE
+├─ request@2.88.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/request/request
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ path: /usr/src/app/node_modules/request
+│  └─ licenseFile: /usr/src/app/node_modules/request/LICENSE
+├─ reselect@4.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/reduxjs/reselect
+│  ├─ path: /usr/src/app/node_modules/reselect
+│  └─ licenseFile: /usr/src/app/node_modules/reselect/LICENSE
+├─ resolve-url@0.2.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lydell/resolve-url
+│  ├─ publisher: Simon Lydell
+│  ├─ path: /usr/src/app/node_modules/resolve-url
+│  └─ licenseFile: /usr/src/app/node_modules/resolve-url/LICENSE
+├─ ret@0.1.15
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/fent/ret.js
+│  ├─ publisher: Roly Fentanes
+│  ├─ url: https://github.com/fent
+│  ├─ path: /usr/src/app/node_modules/ret
+│  └─ licenseFile: /usr/src/app/node_modules/ret/LICENSE
+├─ retry-as-promised@3.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mickhansen/retry-as-promised
+│  ├─ publisher: Mick Hansen
+│  ├─ email: maker@mhansen.io
+│  ├─ path: /usr/src/app/node_modules/retry-as-promised
+│  └─ licenseFile: /usr/src/app/node_modules/retry-as-promised/LICENSE
+├─ safe-buffer@5.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/feross/safe-buffer
+│  ├─ publisher: Feross Aboukhadijeh
+│  ├─ email: feross@feross.org
+│  ├─ url: http://feross.org
+│  ├─ path: /usr/src/app/node_modules/safe-buffer
+│  └─ licenseFile: /usr/src/app/node_modules/safe-buffer/LICENSE
+├─ safe-regex@1.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/substack/safe-regex
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: /usr/src/app/node_modules/safe-regex
+│  └─ licenseFile: /usr/src/app/node_modules/safe-regex/LICENSE
+├─ safer-buffer@2.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/ChALkeR/safer-buffer
+│  ├─ publisher: Nikita Skovoroda
+│  ├─ email: chalkerx@gmail.com
+│  ├─ url: https://github.com/ChALkeR
+│  ├─ path: /usr/src/app/node_modules/safer-buffer
+│  └─ licenseFile: /usr/src/app/node_modules/safer-buffer/LICENSE
+├─ semver-diff@2.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/semver-diff
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: http://sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/semver-diff
+│  └─ licenseFile: /usr/src/app/node_modules/semver-diff/license
+├─ semver@4.3.2
+│  ├─ licenses: BSD*
+│  ├─ repository: https://github.com/npm/node-semver
+│  ├─ path: /usr/src/app/node_modules/pg/node_modules/semver
+│  └─ licenseFile: /usr/src/app/node_modules/pg/node_modules/semver/LICENSE
+├─ semver@5.7.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/npm/node-semver
+│  ├─ path: /usr/src/app/node_modules/semver
+│  └─ licenseFile: /usr/src/app/node_modules/semver/LICENSE
+├─ send@0.16.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/pillarjs/send
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ path: /usr/src/app/node_modules/send
+│  └─ licenseFile: /usr/src/app/node_modules/send/LICENSE
+├─ sequelize-pool@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sushantdhiman/sequelize-pool
+│  ├─ publisher: Sushant
+│  ├─ email: sushantdhiman@outlook.com
+│  ├─ path: /usr/src/app/node_modules/sequelize-pool
+│  └─ licenseFile: /usr/src/app/node_modules/sequelize-pool/LICENSE
+├─ sequelize@5.6.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sequelize/sequelize
+│  ├─ publisher: Sascha Depold
+│  ├─ email: sascha@depold.com
+│  ├─ path: /usr/src/app/node_modules/sequelize
+│  └─ licenseFile: /usr/src/app/node_modules/sequelize/LICENSE
+├─ serialize-error@2.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/serialize-error
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/serialize-error
+│  └─ licenseFile: /usr/src/app/node_modules/serialize-error/license
+├─ serve-static@1.13.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/expressjs/serve-static
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/serve-static
+│  └─ licenseFile: /usr/src/app/node_modules/serve-static/LICENSE
+├─ set-value@0.4.3
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/set-value
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/union-value/node_modules/set-value
+│  └─ licenseFile: /usr/src/app/node_modules/union-value/node_modules/set-value/LICENSE
+├─ set-value@2.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/set-value
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/set-value
+│  └─ licenseFile: /usr/src/app/node_modules/set-value/LICENSE
+├─ setprototypeof@1.1.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/wesleytodd/setprototypeof
+│  ├─ publisher: Wes Todd
+│  ├─ path: /usr/src/app/node_modules/setprototypeof
+│  └─ licenseFile: /usr/src/app/node_modules/setprototypeof/LICENSE
+├─ shallow-equals@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/hughsk/shallow-equals
+│  ├─ publisher: Hugh Kennedy
+│  ├─ email: hughskennedy@gmail.com
+│  ├─ url: http://hughsk.io/
+│  ├─ path: /usr/src/app/node_modules/shallow-equals
+│  └─ licenseFile: /usr/src/app/node_modules/shallow-equals/LICENSE.md
+├─ shebang-command@1.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/kevva/shebang-command
+│  ├─ publisher: Kevin Martensson
+│  ├─ email: kevinmartensson@gmail.com
+│  ├─ url: github.com/kevva
+│  ├─ path: /usr/src/app/node_modules/shebang-command
+│  └─ licenseFile: /usr/src/app/node_modules/shebang-command/license
+├─ shebang-regex@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/shebang-regex
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/shebang-regex
+│  └─ licenseFile: /usr/src/app/node_modules/shebang-regex/license
+├─ shimmer@1.2.1
+│  ├─ licenses: BSD-2-Clause
+│  ├─ repository: https://github.com/othiym23/shimmer
+│  ├─ publisher: Forrest L Norvell
+│  ├─ email: ogd@aoaioxxysz.net
+│  ├─ path: /usr/src/app/node_modules/shimmer
+│  └─ licenseFile: /usr/src/app/node_modules/shimmer/LICENSE
+├─ signal-exit@3.0.2
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/tapjs/signal-exit
+│  ├─ publisher: Ben Coe
+│  ├─ email: ben@npmjs.com
+│  ├─ path: /usr/src/app/node_modules/signal-exit
+│  └─ licenseFile: /usr/src/app/node_modules/signal-exit/LICENSE.txt
+├─ snapdragon-node@2.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/snapdragon-node
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/snapdragon-node
+│  └─ licenseFile: /usr/src/app/node_modules/snapdragon-node/LICENSE
+├─ snapdragon-util@3.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/snapdragon-util
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/snapdragon-util
+│  └─ licenseFile: /usr/src/app/node_modules/snapdragon-util/LICENSE
+├─ snapdragon@0.8.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/snapdragon
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/snapdragon
+│  └─ licenseFile: /usr/src/app/node_modules/snapdragon/LICENSE
+├─ source-map-resolve@0.5.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lydell/source-map-resolve
+│  ├─ publisher: Simon Lydell
+│  ├─ path: /usr/src/app/node_modules/source-map-resolve
+│  └─ licenseFile: /usr/src/app/node_modules/source-map-resolve/LICENSE
+├─ source-map-url@0.4.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lydell/source-map-url
+│  ├─ publisher: Simon Lydell
+│  ├─ path: /usr/src/app/node_modules/source-map-url
+│  └─ licenseFile: /usr/src/app/node_modules/source-map-url/LICENSE
+├─ source-map@0.5.7
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/mozilla/source-map
+│  ├─ publisher: Nick Fitzgerald
+│  ├─ email: nfitzgerald@mozilla.com
+│  ├─ path: /usr/src/app/node_modules/source-map
+│  └─ licenseFile: /usr/src/app/node_modules/source-map/LICENSE
+├─ split-string@3.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/split-string
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/split-string
+│  └─ licenseFile: /usr/src/app/node_modules/split-string/LICENSE
+├─ split@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/dominictarr/split
+│  ├─ publisher: Dominic Tarr
+│  ├─ email: dominic.tarr@gmail.com
+│  ├─ url: http://bit.ly/dominictarr
+│  ├─ path: /usr/src/app/node_modules/split
+│  └─ licenseFile: /usr/src/app/node_modules/split/LICENCE
+├─ sshpk@1.16.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/joyent/node-sshpk
+│  ├─ publisher: Joyent, Inc
+│  ├─ path: /usr/src/app/node_modules/sshpk
+│  └─ licenseFile: /usr/src/app/node_modules/sshpk/LICENSE
+├─ static-extend@0.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/static-extend
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/static-extend
+│  └─ licenseFile: /usr/src/app/node_modules/static-extend/LICENSE
+├─ statuses@1.4.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/statuses
+│  ├─ path: /usr/src/app/node_modules/finalhandler/node_modules/statuses
+│  └─ licenseFile: /usr/src/app/node_modules/finalhandler/node_modules/statuses/LICENSE
+├─ statuses@1.5.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/statuses
+│  ├─ path: /usr/src/app/node_modules/statuses
+│  └─ licenseFile: /usr/src/app/node_modules/statuses/LICENSE
+├─ string-width@2.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/string-width
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/string-width
+│  └─ licenseFile: /usr/src/app/node_modules/string-width/license
+├─ string_decoder@1.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nodejs/string_decoder
+│  ├─ path: /usr/src/app/node_modules/string_decoder
+│  └─ licenseFile: /usr/src/app/node_modules/string_decoder/LICENSE
+├─ strip-ansi@4.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/strip-ansi
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/strip-ansi
+│  └─ licenseFile: /usr/src/app/node_modules/strip-ansi/license
+├─ strip-eof@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/strip-eof
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/strip-eof
+│  └─ licenseFile: /usr/src/app/node_modules/strip-eof/license
+├─ strip-json-comments@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/strip-json-comments
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/strip-json-comments
+│  └─ licenseFile: /usr/src/app/node_modules/strip-json-comments/license
+├─ supports-color@5.5.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/supports-color
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/supports-color
+│  └─ licenseFile: /usr/src/app/node_modules/supports-color/license
+├─ symbol-observable@1.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/blesh/symbol-observable
+│  ├─ publisher: Ben Lesh
+│  ├─ email: ben@benlesh.com
+│  ├─ path: /usr/src/app/node_modules/symbol-observable
+│  └─ licenseFile: /usr/src/app/node_modules/symbol-observable/license
+├─ term-size@1.2.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/term-size
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/term-size
+│  └─ licenseFile: /usr/src/app/node_modules/term-size/license
+├─ through@2.3.8
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/dominictarr/through
+│  ├─ publisher: Dominic Tarr
+│  ├─ email: dominic.tarr@gmail.com
+│  ├─ url: dominictarr.com
+│  ├─ path: /usr/src/app/node_modules/through
+│  └─ licenseFile: /usr/src/app/node_modules/through/LICENSE.APACHE2
+├─ timed-out@4.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/floatdrop/timed-out
+│  ├─ publisher: Vsevolod Strukchinsky
+│  ├─ email: floatdrop@gmail.com
+│  ├─ path: /usr/src/app/node_modules/timed-out
+│  └─ licenseFile: /usr/src/app/node_modules/timed-out/license
+├─ to-object-path@0.3.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/to-object-path
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/to-object-path
+│  └─ licenseFile: /usr/src/app/node_modules/to-object-path/LICENSE
+├─ to-regex-range@2.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/to-regex-range
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/to-regex-range
+│  └─ licenseFile: /usr/src/app/node_modules/to-regex-range/LICENSE
+├─ to-regex@3.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/to-regex
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/to-regex
+│  └─ licenseFile: /usr/src/app/node_modules/to-regex/LICENSE
+├─ toposort-class@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/gustavohenke/toposort
+│  ├─ path: /usr/src/app/node_modules/toposort-class
+│  └─ licenseFile: /usr/src/app/node_modules/toposort-class/LICENSE
+├─ touch@3.1.0
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/node-touch
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/touch
+│  └─ licenseFile: /usr/src/app/node_modules/touch/LICENSE
+├─ tough-cookie@2.4.3
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/salesforce/tough-cookie
+│  ├─ publisher: Jeremy Stashewsky
+│  ├─ email: jstash@gmail.com
+│  ├─ path: /usr/src/app/node_modules/tough-cookie
+│  └─ licenseFile: /usr/src/app/node_modules/tough-cookie/LICENSE
+├─ tunnel-agent@0.6.0
+│  ├─ licenses: Apache-2.0
+│  ├─ repository: https://github.com/mikeal/tunnel-agent
+│  ├─ publisher: Mikeal Rogers
+│  ├─ email: mikeal.rogers@gmail.com
+│  ├─ url: http://www.futurealoof.com
+│  ├─ path: /usr/src/app/node_modules/tunnel-agent
+│  └─ licenseFile: /usr/src/app/node_modules/tunnel-agent/LICENSE
+├─ tweetnacl@0.14.5
+│  ├─ licenses: Unlicense
+│  ├─ repository: https://github.com/dchest/tweetnacl-js
+│  ├─ publisher: TweetNaCl-js contributors
+│  ├─ path: /usr/src/app/node_modules/tweetnacl
+│  └─ licenseFile: /usr/src/app/node_modules/tweetnacl/LICENSE
+├─ type-is@1.6.16
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/type-is
+│  ├─ path: /usr/src/app/node_modules/type-is
+│  └─ licenseFile: /usr/src/app/node_modules/type-is/LICENSE
+├─ undefsafe@2.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/remy/undefsafe
+│  ├─ publisher: Remy Sharp
+│  ├─ path: /usr/src/app/node_modules/undefsafe
+│  └─ licenseFile: /usr/src/app/node_modules/undefsafe/LICENSE
+├─ underscore@1.9.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jashkenas/underscore
+│  ├─ publisher: Jeremy Ashkenas
+│  ├─ email: jeremy@documentcloud.org
+│  ├─ path: /usr/src/app/node_modules/underscore
+│  └─ licenseFile: /usr/src/app/node_modules/underscore/LICENSE
+├─ union-value@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/union-value
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/union-value
+│  └─ licenseFile: /usr/src/app/node_modules/union-value/LICENSE
+├─ unique-string@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/unique-string
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/unique-string
+│  └─ licenseFile: /usr/src/app/node_modules/unique-string/license
+├─ unpipe@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/stream-utils/unpipe
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/unpipe
+│  └─ licenseFile: /usr/src/app/node_modules/unpipe/LICENSE
+├─ unset-value@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/unset-value
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/unset-value
+│  └─ licenseFile: /usr/src/app/node_modules/unset-value/LICENSE
+├─ unzip-response@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/unzip-response
+│  ├─ path: /usr/src/app/node_modules/unzip-response
+│  └─ licenseFile: /usr/src/app/node_modules/unzip-response/license
+├─ upath@1.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/anodynos/upath
+│  ├─ publisher: Angelos Pikoulas
+│  ├─ email: agelos.pikoulas@gmail.com
+│  ├─ path: /usr/src/app/node_modules/upath
+│  └─ licenseFile: /usr/src/app/node_modules/upath/LICENSE
+├─ update-notifier@2.5.0
+│  ├─ licenses: BSD-2-Clause
+│  ├─ repository: https://github.com/yeoman/update-notifier
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: https://sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/update-notifier
+│  └─ licenseFile: /usr/src/app/node_modules/update-notifier/license
+├─ uri-js@4.2.2
+│  ├─ licenses: BSD-2-Clause
+│  ├─ repository: https://github.com/garycourt/uri-js
+│  ├─ publisher: Gary Court
+│  ├─ email: gary.court@gmail.com
+│  ├─ path: /usr/src/app/node_modules/uri-js
+│  └─ licenseFile: /usr/src/app/node_modules/uri-js/README.md
+├─ urix@0.1.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/lydell/urix
+│  ├─ publisher: Simon Lydell
+│  ├─ path: /usr/src/app/node_modules/urix
+│  └─ licenseFile: /usr/src/app/node_modules/urix/LICENSE
+├─ url-parse-lax@1.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/url-parse-lax
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/url-parse-lax
+│  └─ licenseFile: /usr/src/app/node_modules/url-parse-lax/license
+├─ use@3.1.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/use
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/use
+│  └─ licenseFile: /usr/src/app/node_modules/use/LICENSE
+├─ util-deprecate@1.0.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/TooTallNate/util-deprecate
+│  ├─ publisher: Nathan Rajlich
+│  ├─ email: nathan@tootallnate.net
+│  ├─ url: http://n8.io/
+│  ├─ path: /usr/src/app/node_modules/util-deprecate
+│  └─ licenseFile: /usr/src/app/node_modules/util-deprecate/LICENSE
+├─ utils-merge@1.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jaredhanson/utils-merge
+│  ├─ publisher: Jared Hanson
+│  ├─ email: jaredhanson@gmail.com
+│  ├─ url: http://www.jaredhanson.net/
+│  ├─ path: /usr/src/app/node_modules/utils-merge
+│  └─ licenseFile: /usr/src/app/node_modules/utils-merge/LICENSE
+├─ uuid@3.3.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/kelektiv/node-uuid
+│  ├─ path: /usr/src/app/node_modules/uuid
+│  └─ licenseFile: /usr/src/app/node_modules/uuid/LICENSE.md
+├─ validator@10.11.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chriso/validator.js
+│  ├─ publisher: Chris O'Hara
+│  ├─ email: cohara87@gmail.com
+│  ├─ path: /usr/src/app/node_modules/validator
+│  └─ licenseFile: /usr/src/app/node_modules/validator/LICENSE
+├─ vary@1.1.2
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jshttp/vary
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/vary
+│  └─ licenseFile: /usr/src/app/node_modules/vary/LICENSE
+├─ verror@1.10.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/davepacheco/node-verror
+│  ├─ path: /usr/src/app/node_modules/verror
+│  └─ licenseFile: /usr/src/app/node_modules/verror/LICENSE
+├─ whatwg-fetch@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/github/fetch
+│  ├─ path: /usr/src/app/node_modules/whatwg-fetch
+│  └─ licenseFile: /usr/src/app/node_modules/whatwg-fetch/LICENSE
+├─ which@1.3.1
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/node-which
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me
+│  ├─ path: /usr/src/app/node_modules/which
+│  └─ licenseFile: /usr/src/app/node_modules/which/LICENSE
+├─ widest-line@2.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/widest-line
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/widest-line
+│  └─ licenseFile: /usr/src/app/node_modules/widest-line/license
+├─ wkx@0.4.6
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/cschwarz/wkx
+│  ├─ publisher: Christian Schwarz
+│  ├─ path: /usr/src/app/node_modules/wkx
+│  └─ licenseFile: /usr/src/app/node_modules/wkx/LICENSE.txt
+├─ write-file-atomic@2.4.2
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/iarna/write-file-atomic
+│  ├─ publisher: Rebecca Turner
+│  ├─ email: me@re-becca.org
+│  ├─ url: http://re-becca.org
+│  ├─ path: /usr/src/app/node_modules/write-file-atomic
+│  └─ licenseFile: /usr/src/app/node_modules/write-file-atomic/LICENSE
+├─ xdg-basedir@3.0.0
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/xdg-basedir
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/xdg-basedir
+│  └─ licenseFile: /usr/src/app/node_modules/xdg-basedir/license
+├─ xtend@4.0.1
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/Raynos/xtend
+│  ├─ publisher: Raynos
+│  ├─ email: raynos2@gmail.com
+│  ├─ path: /usr/src/app/node_modules/xtend
+│  └─ licenseFile: /usr/src/app/node_modules/xtend/LICENCE
+└─ yallist@2.1.2
+   ├─ licenses: ISC
+   ├─ repository: https://github.com/isaacs/yallist
+   ├─ publisher: Isaac Z. Schlueter
+   ├─ email: i@izs.me
+   ├─ url: http://blog.izs.me/
+   ├─ path: /usr/src/app/node_modules/yallist
+   └─ licenseFile: /usr/src/app/node_modules/yallist/LICENSE
+

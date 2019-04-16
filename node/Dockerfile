@@ -8,6 +8,8 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 
+RUN npm install -g license-checker
+
 COPY . .
 
 CMD [ "npm", "run", "start:prod" ]
