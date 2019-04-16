@@ -49,6 +49,10 @@ Jos lisäät projektiin uusia npm-paketteja:
 
 ## Ulkoasu
 
+Projektin ulkoasu ja tyyliohjeet löytyvät osoitteesta https://app.zeplin.io/project/5cb591097f5deba21424eb89/
+
+Tutustuaksesi designiin sinun täytyy rekisteröityä Zeplinin käyttäjäksi. Rekisteröitymisen jälkeen sinulla on pääsy ajantasaiseen näkymäkohtaiseen designiin. Projektin issueista linkataan suoraan yksittäisten näkymien designiin, jotta pääset helposti kiinni tekemiseen ulkoasunkin puolesta.
+
 ## Projektiin osallistuminen
 
 ### Backlog ja kehityksen kulku
