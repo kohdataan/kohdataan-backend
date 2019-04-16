@@ -1,4 +1,4 @@
-# Somettamalla Uutta Kohtaamista -backend
+# Somettamalla uutta kohtaamista -backend
 
 ## Projektin tausta ja tavoitteet
 
@@ -12,7 +12,7 @@ Palvelu ja sen tekninen yhteiskehittäminen liittyy Somettamalla uutta kohtaamis
 
 Palvelun kehittäminen käynnistettiin keväällä 2018 Kohdataan-hackathonissa, jossa haastettiin eri alojen osaajia innovoimaan ja ideoimaan tulevaisuuden somepalvelua. Ideoista on työstetty yhdessä käyttäjien ja kumppaneiden kanssa konsepti, jonka kehittämistä ja toteuttamista on jatkettu keväällä 2019. Palvelu julkaistaan syksyllä 2019.
 
-Palvelua on toteutettu käyttäjälähtöisesti, sitä on suunniteltu, kehitetty ja testattu yhdessä käyttäjien kanssa. Myös palvelun tekniseen toteutukseen on luotu yhteiskehittämisen malli. Yhteiskehittäminen paitsi käyttäjien myös kaikkien palvelusta kiinnostuneiden kehittäjien kanssa on luontevaa, sillä avoimuus ja yhdessä tekeminen, samoin uusien toimintatapojen kokeileminen on hankkeen ytimessä.  Yhteiskehittämisestä saadaan myös tärkeää lisäresurssia ja -apua palvelun toteutukseen.
+Palvelun toteutuksessa keskeistä on käyttäjälähtöisyys. Myös tekniseen toteutukseen on luotu yhteiskehittämisen malli, jossa palvelua kehitetään yhteistyössä paitsi käyttäjien, myös kaikkien palvelusta kiinnostuneiden ohjelmistokehittäjien ja muiden osaajien kanssa. Avoimuus ja yhdessä tekeminen, samoin uusien toimintatapojen kokeileminen on koko hankkeen ytimessä.
 
 Kohdataan-hanke on Kehitysvammaliiton ja Mielenterveysseuran yhteishanke. 
 
