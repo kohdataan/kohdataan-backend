@@ -14,11 +14,11 @@ Palvelun kehittäminen käynnistettiin keväällä 2018 Kohdataan-hackathonissa,
 
 Palvelun toteutuksessa keskeistä on käyttäjälähtöisyys. Myös tekniseen toteutukseen on luotu yhteiskehittämisen malli, jossa palvelua kehitetään yhteistyössä paitsi käyttäjien, myös kaikkien palvelusta kiinnostuneiden ohjelmistokehittäjien ja muiden osaajien kanssa. Avoimuus ja yhdessä tekeminen, samoin uusien toimintatapojen kokeileminen on koko hankkeen ytimessä. Yhteiskehittämisestä saadaan myös tärkeää lisäresurssia palvelun toteutukseen.
 
-Kohdataan-hanke on Kehitysvammaliiton ja Mielenterveysseuran yhteishanke. 
+Kohdataan-hanke on [Kehitysvammaliiton](https://www.kehitysvammaliitto.fi/) ja [Mielenterveysseuran](https://www.mielenterveysseura.fi/) yhteishanke. 
 
-Hanketta rahoittaa Sosiaali- ja terveysjärjestöjen avustuskeskus STEA.
+Hanketta rahoittaa Sosiaali- ja terveysjärjestöjen avustuskeskus [STEA](https://www.stea.fi/).
 
-Teknisenä kumppanina ja yhteiskehittämisen koordinaattorina hankkeessa toimii Perfektio.
+Teknisenä kumppanina ja yhteiskehittämisen koordinaattorina hankkeessa toimii [Perfektio](https://www.perfektio.fi/).
 
 ## Projektin asennus ja kehitysympäristön pystytys
 
