@@ -8,7 +8,7 @@ Tavoitteena on luoda palvelu, jossa on turvallinen ja myönteinen ilmapiiri, jos
 
 Palvelu on avoin kaikille yli 15-vuotiaille nuorille ja aikuisille. Palvelun toteutuksessa otetaan huomioon käyttäjien erilaiset tarpeet saavutettavuuden ja helppokäyttöisyyden osalta, ja palvelussa voi myös viestiä erilaisin keinoin. Palvelu toteutetaan web-sovelluksena ensisijaisesti mobiililaitteille, mutta palvelua voi käyttää myös muilla laitteilla.
 
-Palvelu ja sen tekninen yhteiskehittäminen liittyy [Somettamalla uutta kohtaamista eli Kohdataan-hankkeeseen] (https://kohdataan.fi/), jossa tavoitteena on yksinäisyyden vähentäminen somen keinoin. 
+Palvelu ja sen tekninen yhteiskehittäminen liittyy [Somettamalla uutta kohtaamista eli Kohdataan-hankkeeseen] (https://kohdataan.fi), jossa tavoitteena on yksinäisyyden vähentäminen somen keinoin. 
 
 Palvelun kehittäminen käynnistettiin keväällä 2018 Kohdataan-hackathonissa, jossa haastettiin eri alojen osaajia innovoimaan ja ideoimaan tulevaisuuden somepalvelua. Ideoista on työstetty yhdessä käyttäjien ja kumppaneiden kanssa konsepti, jonka kehittämistä ja toteuttamista on jatkettu keväällä 2019. Palvelu julkaistaan syksyllä 2019.
 
