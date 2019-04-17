@@ -67,9 +67,19 @@ Projektiin liittyvä kommunikaatio tapahtuu [Kohdataan Development Slackissa](ht
 
 Slackin lisäksi projektiin liittyvää kommunikaatiota on myös GitHubissa Pull Requestien ja Issueiden osalta. Pidäthän näihin liittyvän keskustelun kommentteina GitHubissa.
 
-### Tyyliohjeet
+### Lähdekoodin tyyliohjeet
 
 Projektissa on käytössä [ESLint](https://github.com/eslint/eslint) ja [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) pienin muutoksin. 
+
+#### Backend
+
+
+
+#### Frontend
+
+Noudata containereiden ja componentien hierarkiassa [tätä ohjetta](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0).
+
+Projektissa on käytössä SASS, jokaiselle komponentille on oma .scss-tiedostonsa komponentin kansiossa.
 
 ### Testaaminen
 
@@ -103,4 +113,5 @@ Jos löydät projektista bugeja tee uusi issue [projektin issueihin](https://git
 Voit myös tehdä ehdotuksia uusiksi toteutettaviksi ominaisuuksiksi projektiin käyttäen samalta sivulta löytyvää "Feature"-pohjaa. Hankkeen henkilökunta arvioi ominaisuusehdotuksen tarpeellisuuden ja tarkoituksenmukaisuuden isommassa mittakaavassa, päättää otetaanko se projektin työlistalle, priorisoi sen sopivalle tasolle ja tarkentaa ominaisuuden kuvausta tarvittaessa.
 
 ## Kehitystyötä tukevaa materiaalia
+[Mattermost API documentation](https://api.mattermost.com/)
 
