@@ -1,16 +1,16 @@
-const express = require('express');
-const router = express.Router();
-const interestCtrl = require('../../controllers/interest');
+import express from 'express'
+import * as interestCtrl from '../../controllers/interest'
 
+const router = express.Router()
 
-router.get('/', interestCtrl.getInterests);
+router.get('/', interestCtrl.getInterests)
 
-router.post('/', interestCtrl.addInterest);
+router.post('/', interestCtrl.addInterest)
 
-router.get('/:id', interestCtrl.getInterest);
+router.get('/:id', interestCtrl.getInterest)
 
-router.put('/:id', interestCtrl.updateInterest);
+router.put('/:id', interestCtrl.updateInterest)
 
-router.delete('/:id', interestCtrl.deleteInterest);
+router.delete('/:id', interestCtrl.deleteInterest)
 
-module.exports = router;
+export default router

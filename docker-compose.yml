@@ -1,7 +1,6 @@
-version: "2"
+version: '2'
 
 services:
-
   db:
     build: db
     read_only: true
@@ -36,8 +35,8 @@ services:
   nginx:
     build: nginx
     ports:
-      - "9090:9090"
-      - "443:443"
+      - '9090:9090'
+      - '443:443'
     read_only: true
     restart: unless-stopped
     volumes:
@@ -48,9 +47,9 @@ services:
   node:
     build: node
     ports:
-      - "8080:8080"
+      - '8080:8080'
     read_only: true
-    command: "npm start"
+    command: 'npm start'
     volumes:
       - ./node/:/usr/src/app/
       - /usr/src/app/node_modules/

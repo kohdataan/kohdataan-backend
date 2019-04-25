@@ -1,12 +1,20 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express'
+import channel from './channel'
+import channelInvitation from './channelInvitation'
+import interest from './interest'
+import question from './question'
+import user from './user'
+import userInterest from './userInterest'
+import userQuestion from './userQuestion'
 
-router.use('/channel', require('./channel'))
-router.use('/channelInvitation', require('./channel-invitation'))
-router.use('/interest', require('./interest'));
-router.use('/question', require('./question'));
-router.use('/user', require('./user'));
-router.use('/userInterest', require('./user-interest'));
-router.use('/userQuestion', require('./user-question'));
+const router = express.Router()
 
-module.exports = router;
+router.use('/channel', channel)
+router.use('/channelInvitation', channelInvitation)
+router.use('/interest', interest)
+router.use('/question', question)
+router.use('/user', user)
+router.use('/userInterest', userInterest)
+router.use('/userQuestion', userQuestion)
+
+export default router

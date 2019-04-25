@@ -1,11 +1,11 @@
-exports.sendImageToChannel = (req, res, next) => {
-  res.status(501).send('send image to channel');
-};
+export const sendImageToChannel = (req, res) => {
+  res.status(501).send('send image to channel')
+}
 
-exports.sendAudioToChannel = (req, res, next) => {
-  res.status(501).send('send audio to channel');
-};
+export const sendAudioToChannel = (req, res) => {
+  res.status(501).send('send audio to channel')
+}
 
-exports.leaveChannel = (req, res, next) => {
-  res.status(501).send('leave channel');
-};
+export const leaveChannel = (req, res) => {
+  res.status(501).send('leave channel')
+}
