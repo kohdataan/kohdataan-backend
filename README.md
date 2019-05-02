@@ -1,5 +1,5 @@
 # Somettamalla uutta kohtaamista -backend
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 ## Projektin tausta ja tavoitteet
 
@@ -123,7 +123,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://github.com/synyker"><img src="https://avatars2.githubusercontent.com/u/1566005?v=4" width="100px;" alt="Jonne Airaksinen"/><br /><sub><b>Jonne Airaksinen</b></sub></a><br /><a href="#infra-synyker" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td><td align="center"><a href="https://github.com/petrutsi"><img src="https://avatars1.githubusercontent.com/u/671675?v=4" width="100px;" alt="petrutsi"/><br /><sub><b>petrutsi</b></sub></a><br /><a href="#infra-petrutsi" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=petrutsi" title="Code">💻</a></td></tr></table>
+<table><tr><td align="center"><a href="https://github.com/synyker"><img src="https://avatars2.githubusercontent.com/u/1566005?v=4" width="100px;" alt="Jonne Airaksinen"/><br /><sub><b>Jonne Airaksinen</b></sub></a><br /><a href="#infra-synyker" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td><td align="center"><a href="https://github.com/petrutsi"><img src="https://avatars1.githubusercontent.com/u/671675?v=4" width="100px;" alt="petrutsi"/><br /><sub><b>petrutsi</b></sub></a><br /><a href="#infra-petrutsi" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=petrutsi" title="Code">💻</a></td><td align="center"><a href="https://github.com/Miapurho"><img src="https://avatars3.githubusercontent.com/u/49512615?v=4" width="100px;" alt="Mia Purho"/><br /><sub><b>Mia Purho</b></sub></a><br /><a href="#ideas-Miapurho" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=Miapurho" title="Documentation">📖</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
