@@ -33,6 +33,15 @@
         "ideas",
         "doc"
       ]
+    },
+    {
+      "login": "tanjarasanen",
+      "name": "tanjarasanen",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/49152094?v=4",
+      "profile": "https://github.com/tanjarasanen",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
