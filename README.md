@@ -1,4 +1,5 @@
 # Somettamalla uutta kohtaamista -backend
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 ## Projektin tausta ja tavoitteet
 
@@ -115,3 +116,15 @@ Voit myös tehdä ehdotuksia uusiksi toteutettaviksi ominaisuuksiksi projektiin 
 ## Kehitystyötä tukevaa materiaalia
 [Mattermost API documentation](https://api.mattermost.com/)
 
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://github.com/synyker"><img src="https://avatars2.githubusercontent.com/u/1566005?v=4" width="100px;" alt="Jonne Airaksinen"/><br /><sub><b>Jonne Airaksinen</b></sub></a><br /><a href="#infra-synyker" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
