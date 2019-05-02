@@ -1,4 +1,5 @@
 # Somettamalla uutta kohtaamista -backend
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
 ## Projektin tausta ja tavoitteet
 
@@ -13,6 +14,8 @@ Palvelu ja sen tekninen yhteiskehittäminen liittyy Somettamalla uutta kohtaamis
 Palvelun kehittäminen käynnistettiin keväällä 2018 Kohdataan-hackathonissa, jossa haastettiin eri alojen osaajia innovoimaan ja ideoimaan tulevaisuuden somepalvelua. Ideoista on työstetty yhdessä käyttäjien ja kumppaneiden kanssa konsepti, jonka kehittämistä ja toteuttamista on jatkettu keväällä 2019. Palvelu julkaistaan syksyllä 2019.
 
 Palvelun toteutuksessa keskeistä on käyttäjälähtöisyys. Myös tekniseen toteutukseen on luotu yhteiskehittämisen malli, jossa palvelua kehitetään yhteistyössä paitsi käyttäjien, myös kaikkien palvelusta kiinnostuneiden ohjelmistokehittäjien ja muiden osaajien kanssa. Avoimuus ja yhdessä tekeminen, samoin uusien toimintatapojen kokeileminen on koko hankkeen ytimessä. Yhteiskehittämisestä saadaan myös tärkeää lisäresurssia palvelun toteutukseen.
+
+Pääset tutustumaan projektin ajantasaiseen designiin [Zeplinissä](https://app.zeplin.io/project/5cb591097f5deba21424eb89/). Saat tämän avulla kokonaisvaltaisen kuvan hankkeen tavoittelemasta lopputuloksesta.
 
 Kohdataan-hanke on [Kehitysvammaliiton](https://www.kehitysvammaliitto.fi/) ja [Mielenterveysseuran](https://www.mielenterveysseura.fi/) yhteishanke.
 
@@ -46,6 +49,29 @@ Jos lisäät projektiin uusia npm-paketteja:
 - Kun palvelu on pystyssä, aja `docker-compose run node license-checker > npm-license-list.txt`
   - Tämä päivittää käytettyjen npm-pakettien ja niiden lisenssien listan
 
+## Dokumentaatio ja arkkitehtuuri
+
+![Kohdataan arkkitehtuuri](documentation/kohdataan-architecture.png?raw=true 'Kohdataan arkkitehtuuri')
+
+
+## Projektiin osallistuminen
+
+### Backlog ja kehityksen kulku
+
+Jos haluat osallistua projektin toteutukseen, valitse [projektin työlistalta](https://github.com/orgs/kohdataan/projects/1) backlog-sarakkeesta kiinnostavan kuuloinen ominaisuus (jota ei ole assignattu jollekin muulle), assignaa se itsellesi ja siirrä se työlistalla "In progress"-sarakkeeseen. Projektin työlista koostuu hankkeen henkilökunnan ja teknisen toteutuskumppanin yhdessä suunnittelemista ominaisuuksista ja projektista löytyneistä bugeista. Kun aloitat ominaisuuden kehittämisen tai bugin korjauksen, tee kehitystyö omassa feature-branchissa, jonka nimeät muotoon `/<backend/frontend>/<issuen numero>/<lyhyt kuvaus issuen/issuen otsikko>`, esimerksi `/backend/2/LoginEndpoints`.
+
+Hanketiimi huolehtii, että projektin työlistalla on jatkuvasti runsaasti priorisoitua ja hyvin määriteltyä tekemistä eri tasoisille ja osaamistaustaisille ohjelmistokehittäjille.
+
+### Kommunikaatio
+
+Projektiin liittyvä kommunikaatio tapahtuu [Kohdataan Development Slackissa](https://join.slack.com/t/kohdataan-dev/shared_invite/enQtNjIwMTc4NzA4MjE0LWMzMDZmMmI1NjEwMjcyMDA2YjJiZTlhMmJiZTk5N2JiMGE2YTRjZDViNGVjNGM1NzYwNThkZjBkMzhlYzExMGU). Rekisteröidyttyäsi voit kysyä mitä tahansa projektiin liittyvää, hanketiimi vastailee kysymyksiin aktiivisesti ja auttaa mielellään alkuun projektin kanssa!
+
+Slackin lisäksi projektiin liittyvää kommunikaatiota on myös GitHubissa Pull Requestien ja Issueiden osalta. Pidäthän näihin liittyvän keskustelun kommentteina GitHubissa.
+
+### Lähdekoodin tyyliohjeet
+
+Projektissa on käytössä [ESLint](https://github.com/eslint/eslint) ja [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) pienin muutoksin.
+
 #### Linting
 
 Jos halaut ajaa lintterin docker-kontin sisällä, aja seuraava komento:
@@ -60,56 +86,8 @@ Jos haluat, että eslint toimii omassa editorissasi, niin tällöin npm-pakettie
 npm ci
 ```
 
-## Dokumentaatio ja arkkitehtuuri
-
-![Kohdataan arkkitehtuuri](documentation/kohdataan-architecture.png?raw=true 'Kohdataan arkkitehtuuri')
-
-## Ulkoasu
-
-Projektin ulkoasu ja tyyliohjeet löytyvät osoitteesta https://app.zeplin.io/project/5cb591097f5deba21424eb89/
-
-Tutustuaksesi designiin sinun täytyy rekisteröityä Zeplinin käyttäjäksi. Rekisteröitymisen jälkeen sinulla on pääsy ajantasaiseen näkymäkohtaiseen designiin. Projektin issueista linkataan suoraan yksittäisten näkymien designiin, jotta pääset helposti kiinni tekemiseen ulkoasunkin puolesta.
-
-## Projektiin osallistuminen
-
-### Backlog ja kehityksen kulku
-
-Jos haluat osallistua projektin toteutukseen, valitse [projektin työlistalta](https://github.com/orgs/kohdataan/projects/1) kiinnostavan kuuloinen ominaisuus, assignaa se itsellesi ja siirrä se työlistalla "In progress"-sarakkeeseen. Projektin työlista koostuu hankkeen henkilökunnan ja teknisen toteutuskumppanin yhdessä suunnittelemista ominaisuuksista ja projektista löytyneistä bugeista. Kun aloitat ominaisuuden kehittämisen tai bugin korjauksen, tee kehitystyö omassa feature-branchissa, jonka nimeät muotoon `/<backend/frontend>/<issuen numero>/<lyhyt kuvaus issuen/issuen otsikko>`, esimerksi `/backend/2/LoginEndpoints`.
-
-Hanketiimi huolehtii, että projektin työlistalla on jatkuvasti runsaasti priorisoitua ja hyvin määriteltyä tekemistä eri tasoisille ja osaamistaustaisille ohjelmistokehittäjille.
-
-### Kommunikaatio
-
-Projektiin liittyvä kommunikaatio tapahtuu [Kohdataan Development Slackissa](https://kohdataan-dev.slack.com/). Rekisteröidyttyäsi voit kysyä mitä tahansa projektiin liittyvää, hanketiimi vastailee kysymyksiin aktiivisesti ja auttaa mielellään alkuun projektin kanssa!
-
-Slackin lisäksi projektiin liittyvää kommunikaatiota on myös GitHubissa Pull Requestien ja Issueiden osalta. Pidäthän näihin liittyvän keskustelun kommentteina GitHubissa.
-
-### Lähdekoodin tyyliohjeet
-
-Projektissa on käytössä [ESLint](https://github.com/eslint/eslint) ja [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) pienin muutoksin.
-
-#### Frontend
-
-Noudata containereiden ja componentien hierarkiassa [tätä ohjetta](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0).
-
-Projektissa on käytössä SASS, jokaiselle komponentille on oma .scss-tiedostonsa komponentin kansiossa.
-
 ### Testaaminen
 
-Projektin tavoittelema lopputulos on sosiaalisen median alusta, jolla voit tutustua uusiin ihmisiin turvallisesti ja saavutettavasti. Kattava testaus on luonnollisesti osa tämän tavoitteen saavuttamista.
-
-Projekti noudattaa Web Content Accessibility Guidelines (WCAG) 2.1 -saavutettavuusstandardia. Kun osallistut projektin kehittämiseen, oleellinen osa on myös kattavien saavutettavuutta mittaavien automaatiotestien tekeminen. Projektissa käytetään [axe-core](https://github.com/dequelabs/axe-core)-pohjaista saavutettavuustestaukseen tarkoitettua kirjastoa _(jest-axe, cypress-axe tms, pitää valita)_.
-
-Testaamisen lähtökohta on, että saavutettavuus testataan aina, kun joku asia näkymässä muuttuu:
-
-- Toiseen näkymään navigointi
-- Viestit:
-  - Uuden viestin lähettäminen
-  - Uuden viestin vastaanottaminen
-  - jne.
--
-
-Automaattisen saavutettavuustestauksen työkalut eivät kuitenkaan ole täydellisiä. Ennen pull requestin tekoa tarkistathan, että toteuttamasi ominaisuudet eivät ole ristiriidassa <insert sopiva saavutettavuuden checklist> kanssa.
 
 ### Pull Request -käytännöt
 
@@ -128,3 +106,15 @@ Voit myös tehdä ehdotuksia uusiksi toteutettaviksi ominaisuuksiksi projektiin 
 ## Kehitystyötä tukevaa materiaalia
 
 [Mattermost API documentation](https://api.mattermost.com/)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://github.com/synyker"><img src="https://avatars2.githubusercontent.com/u/1566005?v=4" width="100px;" alt="Jonne Airaksinen"/><br /><sub><b>Jonne Airaksinen</b></sub></a><br /><a href="#infra-synyker" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td><td align="center"><a href="https://github.com/petrutsi"><img src="https://avatars1.githubusercontent.com/u/671675?v=4" width="100px;" alt="petrutsi"/><br /><sub><b>petrutsi</b></sub></a><br /><a href="#infra-petrutsi" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=petrutsi" title="Code">💻</a></td><td align="center"><a href="https://github.com/Miapurho"><img src="https://avatars3.githubusercontent.com/u/49512615?v=4" width="100px;" alt="Mia Purho"/><br /><sub><b>Mia Purho</b></sub></a><br /><a href="#ideas-Miapurho" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=Miapurho" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/tanjarasanen"><img src="https://avatars2.githubusercontent.com/u/49152094?v=4" width="100px;" alt="tanjarasanen"/><br /><sub><b>tanjarasanen</b></sub></a><br /><a href="#ideas-tanjarasanen" title="Ideas, Planning, & Feedback">🤔</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

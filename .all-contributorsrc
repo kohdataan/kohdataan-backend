@@ -1,0 +1,52 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "synyker",
+      "name": "Jonne Airaksinen",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1566005?v=4",
+      "profile": "https://github.com/synyker",
+      "contributions": [
+        "infra"
+      ]
+    },
+    {
+      "login": "petrutsi",
+      "name": "petrutsi",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/671675?v=4",
+      "profile": "https://github.com/petrutsi",
+      "contributions": [
+        "infra",
+        "code"
+      ]
+    },
+    {
+      "login": "Miapurho",
+      "name": "Mia Purho",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/49512615?v=4",
+      "profile": "https://github.com/Miapurho",
+      "contributions": [
+        "ideas",
+        "doc"
+      ]
+    },
+    {
+      "login": "tanjarasanen",
+      "name": "tanjarasanen",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/49152094?v=4",
+      "profile": "https://github.com/tanjarasanen",
+      "contributions": [
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "kohdataan-backend",
+  "projectOwner": "kohdataan",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
