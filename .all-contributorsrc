@@ -13,6 +13,16 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "petrutsi",
+      "name": "petrutsi",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/671675?v=4",
+      "profile": "https://github.com/petrutsi",
+      "contributions": [
+        "infra",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
