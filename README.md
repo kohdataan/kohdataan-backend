@@ -3,19 +3,21 @@
 
 ## Projektin tausta ja tavoitteet
 
-Projektissa kehitämme ja toteutamme yhdessä uutta saavutettavaa somepalvelua, jossa on helppo tutustua uusiin ihmisiin. 
+Projektissa kehitämme ja toteutamme yhdessä uutta saavutettavaa somepalvelua, jossa on helppo tutustua uusiin ihmisiin.
 
 Tavoitteena on luoda palvelu, jossa on turvallinen ja myönteinen ilmapiiri, jossa ketään ei kiusata, ja jossa ketään ei jätetä yksin. Palvelussa tuetaan kohtaamista ja vuorovaikutusta, jotta kaikilla olisi mahdollisuus tutustua omanhenkisiin ihmisiin, ja myös ylläpitää kaverisuhteitaan.
 
 Palvelu on avoin kaikille yli 15-vuotiaille nuorille ja aikuisille. Palvelun toteutuksessa otetaan huomioon käyttäjien erilaiset tarpeet saavutettavuuden ja helppokäyttöisyyden osalta, ja palvelussa voi myös viestiä erilaisin keinoin. Palvelu toteutetaan web-sovelluksena ensisijaisesti mobiililaitteille, mutta palvelua voi käyttää myös muilla laitteilla.
 
-Palvelu ja sen tekninen yhteiskehittäminen liittyy Somettamalla uutta kohtaamista eli [Kohdataan-hankkeeseen](https://kohdataan.fi/), jossa tavoitteena on yksinäisyyden vähentäminen somen keinoin. 
+Palvelu ja sen tekninen yhteiskehittäminen liittyy Somettamalla uutta kohtaamista eli [Kohdataan-hankkeeseen](https://kohdataan.fi/), jossa tavoitteena on yksinäisyyden vähentäminen somen keinoin.
 
 Palvelun kehittäminen käynnistettiin keväällä 2018 Kohdataan-hackathonissa, jossa haastettiin eri alojen osaajia innovoimaan ja ideoimaan tulevaisuuden somepalvelua. Ideoista on työstetty yhdessä käyttäjien ja kumppaneiden kanssa konsepti, jonka kehittämistä ja toteuttamista on jatkettu keväällä 2019. Palvelu julkaistaan syksyllä 2019.
 
 Palvelun toteutuksessa keskeistä on käyttäjälähtöisyys. Myös tekniseen toteutukseen on luotu yhteiskehittämisen malli, jossa palvelua kehitetään yhteistyössä paitsi käyttäjien, myös kaikkien palvelusta kiinnostuneiden ohjelmistokehittäjien ja muiden osaajien kanssa. Avoimuus ja yhdessä tekeminen, samoin uusien toimintatapojen kokeileminen on koko hankkeen ytimessä. Yhteiskehittämisestä saadaan myös tärkeää lisäresurssia palvelun toteutukseen.
 
-Kohdataan-hanke on [Kehitysvammaliiton](https://www.kehitysvammaliitto.fi/) ja [Mielenterveysseuran](https://www.mielenterveysseura.fi/) yhteishanke. 
+Pääset tutustumaan projektin ajantasaiseen designiin [Zeplinissä](https://app.zeplin.io/project/5cb591097f5deba21424eb89/). Saat tämän avulla kokonaisvaltaisen kuvan hankkeen tavoittelemasta lopputuloksesta.
+
+Kohdataan-hanke on [Kehitysvammaliiton](https://www.kehitysvammaliitto.fi/) ja [Mielenterveysseuran](https://www.mielenterveysseura.fi/) yhteishanke.
 
 Hanketta rahoittaa Sosiaali- ja terveysjärjestöjen avustuskeskus [STEA](https://www.stea.fi/).
 
@@ -24,6 +26,8 @@ Teknisenä kumppanina ja yhteiskehittämisen koordinaattorina hankkeessa toimii 
 ## Projektin asennus ja kehitysympäristön pystytys
 
 ### Backend
+
+#### Asennus
 
 Saadaksesi projektin kehitysympäristön pystyyn, sinun täytyy asentaa [Docker Compose](https://docs.docker.com/compose/install/).
 
@@ -36,23 +40,19 @@ docker-compose build
 docker-compose up
 ```
 
-Jos lisäät projektiin uusia npm-paketteja: 
-* Lisää paketti `node/package.json`-tiedostoon
-* Aja `docker-compose build && docker-compose up` asentaaksesi uudet npm-paketit
-* Kun palvelu on pystyssä, aja `docker-compose run node license-checker > npm-license-list.txt`
-  * Tämä päivittää käytettyjen npm-pakettien ja niiden lisenssien listan 
+#### Pakettien lisäys
 
-### Tunnukset testaamiseen
+Jos lisäät projektiin uusia npm-paketteja:
+
+- Lisää paketti `node/package.json`-tiedostoon
+- Aja `docker-compose build && docker-compose up` asentaaksesi uudet npm-paketit
+- Kun palvelu on pystyssä, aja `docker-compose run node license-checker > npm-license-list.txt`
+  - Tämä päivittää käytettyjen npm-pakettien ja niiden lisenssien listan
 
 ## Dokumentaatio ja arkkitehtuuri
 
-![Kohdataan arkkitehtuuri](documentation/kohdataan-architecture.png?raw=true "Kohdataan arkkitehtuuri")
+![Kohdataan arkkitehtuuri](documentation/kohdataan-architecture.png?raw=true 'Kohdataan arkkitehtuuri')
 
-## Ulkoasu
-
-Projektin ulkoasu ja tyyliohjeet löytyvät osoitteesta https://app.zeplin.io/project/5cb591097f5deba21424eb89/
-
-Tutustuaksesi designiin sinun täytyy rekisteröityä Zeplinin käyttäjäksi. Rekisteröitymisen jälkeen sinulla on pääsy ajantasaiseen näkymäkohtaiseen designiin. Projektin issueista linkataan suoraan yksittäisten näkymien designiin, jotta pääset helposti kiinni tekemiseen ulkoasunkin puolesta.
 
 ## Projektiin osallistuminen
 
@@ -70,34 +70,24 @@ Slackin lisäksi projektiin liittyvää kommunikaatiota on myös GitHubissa Pull
 
 ### Lähdekoodin tyyliohjeet
 
-Projektissa on käytössä [ESLint](https://github.com/eslint/eslint) ja [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) pienin muutoksin. 
+Projektissa on käytössä [ESLint](https://github.com/eslint/eslint) ja [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) pienin muutoksin.
 
-#### Backend
+#### Linting
 
+Jos halaut ajaa lintterin docker-kontin sisällä, aja seuraava komento:
 
+```bash
+docker-compose run --rm node npm run lint
+```
 
-#### Frontend
+Jos haluat, että eslint toimii omassa editorissasi, niin tällöin npm-pakettien pitää olla asennettuna koneellesi. Koneellesi pitää myös olla asennettuna `npm` ja `node.js`. Tämän jälkeen voit asentaa paketit seuraavalla komennolla. Muista myös asentaa prettier- ja eslint- plugin editoriisi.
 
-Noudata containereiden ja componentien hierarkiassa [tätä ohjetta](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0).
-
-Projektissa on käytössä SASS, jokaiselle komponentille on oma .scss-tiedostonsa komponentin kansiossa.
+```bash
+npm ci
+```
 
 ### Testaaminen
 
-Projektin tavoittelema lopputulos on sosiaalisen median alusta, jolla voit tutustua uusiin ihmisiin turvallisesti ja saavutettavasti. Kattava testaus on luonnollisesti osa tämän tavoitteen saavuttamista.
-
-Projekti noudattaa Web Content Accessibility Guidelines (WCAG) 2.1 -saavutettavuusstandardia. Kun osallistut projektin kehittämiseen, oleellinen osa on myös kattavien saavutettavuutta mittaavien automaatiotestien tekeminen. Projektissa käytetään [axe-core](https://github.com/dequelabs/axe-core)-pohjaista saavutettavuustestaukseen tarkoitettua kirjastoa *(jest-axe, cypress-axe tms, pitää valita)*.
-
-Testaamisen lähtökohta on, että saavutettavuus testataan aina, kun joku asia näkymässä muuttuu: 
-
-* Toiseen näkymään navigointi
-* Viestit:
-  * Uuden viestin lähettäminen
-  * Uuden viestin vastaanottaminen
-  * jne.
-* 
-
-Automaattisen saavutettavuustestauksen työkalut eivät kuitenkaan ole täydellisiä. Ennen pull requestin tekoa tarkistathan, että toteuttamasi ominaisuudet eivät ole ristiriidassa <insert sopiva saavutettavuuden checklist> kanssa.
 
 ### Pull Request -käytännöt
 
@@ -114,8 +104,8 @@ Jos löydät projektista bugeja tee uusi issue [projektin issueihin](https://git
 Voit myös tehdä ehdotuksia uusiksi toteutettaviksi ominaisuuksiksi projektiin käyttäen samalta sivulta löytyvää "Feature"-pohjaa. Hankkeen henkilökunta arvioi ominaisuusehdotuksen tarpeellisuuden ja tarkoituksenmukaisuuden isommassa mittakaavassa, päättää otetaanko se projektin työlistalle, priorisoi sen sopivalle tasolle ja tarkentaa ominaisuuden kuvausta tarvittaessa.
 
 ## Kehitystyötä tukevaa materiaalia
-[Mattermost API documentation](https://api.mattermost.com/)
 
+[Mattermost API documentation](https://api.mattermost.com/)
 
 ## Contributors
 

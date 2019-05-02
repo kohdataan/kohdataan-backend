@@ -1,15 +1,12 @@
-const express = require('express');
-const router = express.Router();
-const channelCtrl = require('../../controllers/channel');
+import express from 'express'
+import * as channelCtrl from '../../controllers/channel'
 
+const router = express.Router()
 
+router.post('/sendImageToChannel', channelCtrl.sendImageToChannel)
 
+router.post('/sendAudioToChannel', channelCtrl.sendAudioToChannel)
 
-router.post('/sendImageToChannel', channelCtrl.sendImageToChannel);
+router.post('/leaveChannel', channelCtrl.leaveChannel)
 
-router.post('/sendAudioToChannel', channelCtrl.sendAudioToChannel);
-
-router.post('/leaveChannel', channelCtrl.leaveChannel);
-
-
-module.exports = router;
+export default router

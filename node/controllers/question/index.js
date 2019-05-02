@@ -1,19 +1,19 @@
-exports.getQuestions = (req, res, next) => {
-  res.status(501).send('get all questions');
-};
+export const getQuestions = (req, res) => {
+  res.status(501).send('get all questions')
+}
 
-exports.getQuestion = (req, res, next) => {
-  res.status(501).send('get question');
-};
+export const getQuestion = (req, res) => {
+  res.status(501).send('get question')
+}
 
-exports.addQuestion = (req, res, next) => {
-  res.status(501).send('add question');
-};
+export const addQuestion = (req, res) => {
+  res.status(501).send('add question')
+}
 
-exports.updateQuestion = (req, res, next) => {
-  res.status(501).send('put question');
-};
+export const updateQuestion = (req, res) => {
+  res.status(501).send('put question')
+}
 
-exports.deleteQuestion = (req, res, next) => {
-  res.status(501).send('delete question');
-};
+export const deleteQuestion = (req, res) => {
+  res.status(501).send('delete question')
+}

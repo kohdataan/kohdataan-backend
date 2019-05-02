@@ -1,16 +1,16 @@
-const express = require('express');
-const router = express.Router();
-const questionCtrl = require('../../controllers/question');
+import express from 'express'
+import * as questionCtrl from '../../controllers/question'
 
+const router = express.Router()
 
-router.get('/', questionCtrl.getQuestions);
+router.get('/', questionCtrl.getQuestions)
 
-router.post('/', questionCtrl.addQuestion);
+router.post('/', questionCtrl.addQuestion)
 
-router.get('/:id', questionCtrl.getQuestion);
+router.get('/:id', questionCtrl.getQuestion)
 
-router.put('/:id', questionCtrl.updateQuestion);
+router.put('/:id', questionCtrl.updateQuestion)
 
-router.delete('/:id', questionCtrl.deleteQuestion);
+router.delete('/:id', questionCtrl.deleteQuestion)
 
-module.exports = router;
+export default router

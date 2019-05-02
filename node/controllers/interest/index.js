@@ -1,19 +1,19 @@
-exports.getInterests = (req, res, next) => {
-  res.status(501).send('get all interests');
-};
+export const getInterests = (req, res) => {
+  res.status(501).send('get all interests')
+}
 
-exports.getInterest = (req, res, next) => {
-  res.status(501).send('get interest');
-};
+export const getInterest = (req, res) => {
+  res.status(501).send('get interest')
+}
 
-exports.addInterest = (req, res, next) => {
-  res.status(501).send('add interest');
-};
+export const addInterest = (req, res) => {
+  res.status(501).send('add interest')
+}
 
-exports.updateInterest = (req, res, next) => {
-  res.status(501).send('put interest');
-};
+export const updateInterest = (req, res) => {
+  res.status(501).send('put interest')
+}
 
-exports.deleteInterest = (req, res, next) => {
-  res.status(501).send('delete interest');
-};
+export const deleteInterest = (req, res) => {
+  res.status(501).send('delete interest')
+}
