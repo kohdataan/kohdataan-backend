@@ -14,8 +14,7 @@ passport.use(
       usernameField: 'email',
       passwordField: 'password',
     },
-    function(email, password, cb) {
-      // Assume there is a DB module pproviding a global UserModel
+    (email, password, cb) => {
       return User.findOne({
         where: {
           email,
@@ -27,18 +26,14 @@ passport.use(
               message: 'Incorrect email or password.',
             })
           }
-          bcrypt.compare(password, user.password).then(response => {
+          return bcrypt.compare(password, user.password).then(response => {
             if (response !== true) {
-              console.log('passwords do not match')
               return cb(null, false, {
                 message: 'passwords do not match',
               })
             }
-            console.log('user found & authenticated')
-            // note the return needed with passport local - remove this return for passport JWT
             return cb(null, user)
           })
-          return cb(null, false)
         })
         .catch(err => {
           return cb(err)
@@ -53,20 +48,14 @@ passport.use(
       jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
       secretOrKey: 'your_jwt_secret',
     },
-    function(jwtPayload, cb) {
-      console.log(jwtPayload)
-      // find the user in db if needed
+    (jwtPayload, cb) => {
       return User.findOne({
         where: {
           id: jwtPayload.id,
         },
       })
         .then(user => {
-          return cb(null, {
-            id: user.id,
-            email: user.email,
-            username: user.username,
-          })
+          return cb(null, user)
         })
         .catch(err => {
           return cb(err)
@@ -75,10 +64,10 @@ passport.use(
   )
 )
 
-passport.serializeUser(function(user, done) {
+passport.serializeUser((user, done) => {
   done(null, user)
 })
 
-passport.deserializeUser(function(user, done) {
+passport.deserializeUser((user, done) => {
   done(null, user)
 })

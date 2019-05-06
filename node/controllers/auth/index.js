@@ -8,7 +8,6 @@ export const login = (req, res) => {
       session: false,
     },
     (err, user, info) => {
-      console.log(err)
       if (err || !user) {
         return res.status(400).json({
           message: info ? info.message : 'Login failed',
@@ -16,7 +15,7 @@ export const login = (req, res) => {
         })
       }
 
-      req.login(
+      return req.login(
         user,
         {
           session: false,
@@ -25,7 +24,6 @@ export const login = (req, res) => {
           if (error) {
             res.send(error)
           }
-          console.log(user.dataValues)
           const token = jwt.sign(user.dataValues, 'your_jwt_secret')
 
           return res.json({
@@ -38,10 +36,6 @@ export const login = (req, res) => {
           })
         }
       )
-      return res.status(400).json({
-        message: info ? info.message : 'Login failed',
-        user,
-      })
     }
   )(req, res)
 }

@@ -43,9 +43,8 @@ export default (sequelize, DataTypes) => {
     },
     {}
   )
-  User.associate = models => {
-    // associations can be defined here
-    console.log(models)
-  }
+  // User.associate = models => {
+  // associations can be defined here
+  //
   return User
 }

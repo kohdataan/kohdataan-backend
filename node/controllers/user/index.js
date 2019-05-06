@@ -16,7 +16,6 @@ export const getUser = (req, res) => {
 }
 
 export const addUser = async (req, res) => {
-  console.log(req.body)
   const { username, email, password } = req.body
 
   const hashed = bcrypt.hashSync(password, 12)
@@ -46,8 +45,6 @@ export const updateUser = (req, res) => {
 }
 
 export const deleteUser = (req, res) => {
-  console.log(req.params)
-  console.log(req.body)
   const { id } = req.params
 
   return User.destroy({
@@ -55,7 +52,6 @@ export const deleteUser = (req, res) => {
       id,
     },
   }).then(affectedRows => {
-    console.log(affectedRows)
     res.status(200).send({
       success: true,
       deleted: affectedRows,

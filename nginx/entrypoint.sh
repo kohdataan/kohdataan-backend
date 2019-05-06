@@ -22,7 +22,5 @@ sed -i "s/{%MATTERMOST_PORT%}/${MATTERMOST_PORT_NUMBER}/g" /etc/nginx/conf.d/ngi
 sed -i "s/{%NODE_HOST%}/${NODE_HOST}/g" /etc/nginx/conf.d/nginx.conf
 sed -i "s/{%NODE_PORT%}/${NODE_PORT_NUMBER}/g" /etc/nginx/conf.d/nginx.conf
 
-cat /etc/nginx/conf.d/nginx.conf
-
 # Run Nginx
 exec nginx -g 'daemon off;'
