@@ -3,6 +3,8 @@ import http from 'http'
 import debug from 'debug'
 import app from './app'
 
+require('./passportConfig')
+
 debug('docker_web_app:server')
 
 const normalizePort = val => {
@@ -24,7 +26,7 @@ app.set('port', port)
 
 const onError = error => {
   if (error.syscall !== 'listen') {
-    throw error
+    // res.status(500).json({ error: error.toString() })
   }
 
   const bind = typeof port === 'string' ? `Pipe ${port}` : `Portis ${port}`
@@ -39,7 +41,7 @@ const onError = error => {
       process.exit(1)
       break
     default:
-      throw error
+    // res.status(500).json({ error: error.toString() })
   }
 }
 

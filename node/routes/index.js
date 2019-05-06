@@ -6,6 +6,7 @@ import question from './question'
 import user from './user'
 import userInterest from './userInterest'
 import userQuestion from './userQuestion'
+import auth from './auth'
 
 const router = express.Router()
 
@@ -16,5 +17,6 @@ router.use('/question', question)
 router.use('/user', user)
 router.use('/userInterest', userInterest)
 router.use('/userQuestion', userQuestion)
+router.use('/auth', auth)
 
 export default router

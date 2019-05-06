@@ -1,9 +1,10 @@
 import express from 'express'
+import passport from 'passport'
 import * as userCtrl from '../../controllers/user'
 
 const router = express.Router()
 
-router.get('/', userCtrl.getUsers)
+router.get('/', passport.authenticate('jwt'), userCtrl.getUsers)
 
 router.post('/', userCtrl.addUser)
 
