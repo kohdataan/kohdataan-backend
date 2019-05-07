@@ -1,1 +1,41 @@
-GET http://localhost:9090/api/v4/websocket
+POST http://localhost:9090/api/v4/users/login
+
+{
+    "login_id": "jonne.airaksinen@perfektio.fi",
+    "password": "password"
+}
+
+
+###
+
+OPTIONS http://localhost:9090/api/users/login/
+Origin: http://www.example.com
+Access-Control-Request-Method: GET
+Access-Control-Request-Headers: X-Requested-With
+
+###
+
+POST http://localhost:9090/node_api/user/
+Content-Type: application/json
+
+{
+    "username": "synyker",
+    "email": "jonne.airaksinen@perfektio.com",
+    "password": "password123"
+}
+
+###
+GET http://localhost:9090/node_api/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInVzZXJuYW1lIjoic3lueWtlciIsImVtYWlsIjoiam9ubmUuYWlyYWtzaW5lbkBwZXJmZWt0aW8uZmkiLCJwYXNzd29yZCI6IiQyYiQxMiRqT1JhR0hMMkY2Vk1mQUZDNEJMUE1PRjlMWlRDQUV3OHZnUlY0V0lyUGNBemtVZG4vLkhWaSIsImNyZWF0ZWRBdCI6IjIwMTktMDUtMDNUMTU6MzA6NTEuNDg4WiIsInVwZGF0ZWRBdCI6IjIwMTktMDUtMDNUMTU6MzA6NTEuNDg4WiIsImlhdCI6MTU1NzEzNjYwM30.OZ3U0HhFYvWk7HF35NJanVAYFqy0qFqmkcVfhuqYI3M
+
+###
+DELETE http://localhost:9090/node_api/user/8
+
+###
+POST http://localhost:9090/node_api/auth/login
+Content-Type: application/json
+
+{
+    "email": "jonne.airaksinen@perfektio.fi",
+    "password": "password123"
+}

@@ -1,4 +1,7 @@
 import express from 'express'
+import logger from 'morgan'
+import bodyParser from 'body-parser'
+import passport from 'passport'
 import { Client4 } from 'mattermost-redux/client'
 import routes from './routes'
 
@@ -6,6 +9,14 @@ Client4.setUrl('http://mattermost:8000')
 
 const app = express()
 
+app.use(logger('dev'))
+app.use(passport.initialize())
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  })
+)
 app.use(routes)
 
 app.get('/', (req, res) => {
