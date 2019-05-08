@@ -1,6 +1,5 @@
 import bcrypt from 'bcrypt'
 import model from '../../models'
-import fs from 'fs'
 
 const { User } = model
 
@@ -33,7 +32,8 @@ export const addUser = async (req, res) => {
     password: hashed,
     nickname,
     description,
-    profileReady
+    profileReady,
+    tutorialWatched
   })
     .then(userData =>
       res.status(201).send({
@@ -66,8 +66,10 @@ export const updateUser = (req, res) => {
       }
     })
       .then(rows => {
-        console.log("rows",rows)
-        res.status(200).send()
+        res.status(200).send({
+          success,
+          updated: rows
+        })
       })
       .catch(error =>
         res.status(400).send({

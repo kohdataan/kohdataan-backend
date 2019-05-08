@@ -52,6 +52,7 @@ Content-Type: application/json
     "username": "woland",
     "email": "janne.timonen@perfektio.com",
     "nickname": "woland",
+    "location": "Helsinki",
     "description": "Testikuvaus",
     "profileReady": "false",
     "tutorialWatched": "false"
