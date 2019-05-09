@@ -22,8 +22,7 @@ Content-Type: application/json
     "username": "woland",
     "email": "janne.timonen@perfektio.com",
     "password": "passwordtesti",
-    "profileReady": false,
-    "tutorialWatched": false
+    "profileReady": true
 }
 
 ###
@@ -42,18 +41,19 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:9090/node_api/user/1
+PATCH http://localhost:9090/node_api/user/5
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU
 Content-Type: application/json
 
 {
     "username": "woland",
-    "email": "plupplssup@perfektio.com",
+    "email": "jrolli@perfektio.com",
     "nickname": "woland",
     "location": "Helsinki",
+    "kakka": "kakka",
     "description": "Testikuvaus",
     "profileReady": false,
-    "tutorialWatched": false
+    "tutorialWatched": true
 }
 
 ###

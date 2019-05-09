@@ -29,8 +29,8 @@ export const addUser = async (req, res) => {
     nickname,
     location,
     description,
-    profileReady = false,
-    tutorialWatched = false,
+    profileReady,
+    tutorialWatched,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
 
@@ -66,8 +66,8 @@ export const updateUser = (req, res) => {
     nickname,
     location,
     description,
-    profileReady = false,
-    tutorialWatched = false,
+    profileReady,
+    tutorialWatched,
   } = req.body
   const { id } = req.user.dataValues
   const queryId = req.params.id
