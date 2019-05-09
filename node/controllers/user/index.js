@@ -70,36 +70,44 @@ export const updateUser = (req, res) => {
     tutorialWatched = false,
   } = req.body
   const { id } = req.user.dataValues
-
-  return User.update(
-    {
-      username,
-      email,
-      nickname,
-      location,
-      description,
-      profileReady,
-      tutorialWatched,
-    },
-    {
-      where: {
-        id,
+  const queryId = req.params.id
+  // eslint-disable-next-line radix
+  if (parseInt(id) !== parseInt(queryId)) {
+    res.status(401).send({
+      success: false,
+      message: 'Action forbidden',
+    })
+  } else {
+    User.update(
+      {
+        username,
+        email,
+        nickname,
+        location,
+        description,
+        profileReady,
+        tutorialWatched,
       },
-    }
-  )
-    .then(rows =>
-      res.status(200).send({
-        success: true,
-        message: 'User succesfully updated',
-        updated: rows,
-      })
+      {
+        where: {
+          id,
+        },
+      }
     )
-    .catch(error =>
-      res.status(400).send({
-        success: false,
-        error,
-      })
-    )
+      .then(rows =>
+        res.status(200).send({
+          success: true,
+          message: 'User succesfully updated',
+          updated: rows,
+        })
+      )
+      .catch(error =>
+        res.status(400).send({
+          success: false,
+          error,
+        })
+      )
+  }
 }
 
 export const deleteUser = (req, res) => {
