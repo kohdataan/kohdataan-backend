@@ -46,12 +46,14 @@ module.exports = {
       .then(() => {
         return queryInterface.removeColumn('Users', 'profileReady', {
           allowNull: false,
+          defaultValue: false,
           type: Sequelize.BOOLEAN,
         })
       })
       .then(() => {
         return queryInterface.removeColumn('Users', 'tutorialWatched', {
           allowNull: false,
+          defaultValue: false,
           type: Sequelize.BOOLEAN,
         })
       })
