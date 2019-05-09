@@ -13,17 +13,25 @@ export const getUsers = (req, res) => {
 
 export const getUser = (req, res) => {
   const { id } = req.params
-  
-  return User.findByPk(id).then(user => 
+
+  return User.findByPk(id).then(user =>
     res.status(200).send({
-      user
+      user,
     })
   )
-  
 }
 
 export const addUser = async (req, res) => {
-  const { username, email, password, nickname, description, profileReady } = req.body
+  const {
+    username,
+    email,
+    password,
+    nickname,
+    location,
+    description,
+    profileReady = false,
+    tutorialWatched = false,
+  } = req.body
   const hashed = bcrypt.hashSync(password, 12)
 
   return User.create({
@@ -31,9 +39,10 @@ export const addUser = async (req, res) => {
     email,
     password: hashed,
     nickname,
+    location,
     description,
     profileReady,
-    tutorialWatched
+    tutorialWatched,
   })
     .then(userData =>
       res.status(201).send({
@@ -51,36 +60,46 @@ export const addUser = async (req, res) => {
 }
 
 export const updateUser = (req, res) => {
-  const { username, email, nickname, description, profileReady } = req.body
-  const sessionUsername = req.user.dataValues.username
-  if (username === sessionUsername) {
-    User.update({
+  const {
+    username,
+    email,
+    nickname,
+    location,
+    description,
+    profileReady = false,
+    tutorialWatched = false,
+  } = req.body
+  const { id } = req.user.dataValues
+
+  return User.update(
+    {
       username,
       email,
       nickname,
+      location,
       description,
-      profileReady
-    }, {
+      profileReady,
+      tutorialWatched,
+    },
+    {
       where: {
-        username
-      }
-    })
-      .then(rows => {
-        res.status(200).send({
-          success,
-          updated: rows
-        })
+        id,
+      },
+    }
+  )
+    .then(rows =>
+      res.status(200).send({
+        success: true,
+        message: 'User succesfully updated',
+        updated: rows,
       })
-      .catch(error =>
-        res.status(400).send({
-          success: false,
-          error,
-        })
-      )
-  }
-  else {
-    res.status(401).send("Action forbidden")
-  }
+    )
+    .catch(error =>
+      res.status(400).send({
+        success: false,
+        error,
+      })
+    )
 }
 
 export const deleteUser = (req, res) => {

@@ -12,7 +12,6 @@ router.get('/:id', passport.authenticate('jwt'), userCtrl.getUser)
 
 router.patch('/:id', passport.authenticate('jwt'), userCtrl.updateUser)
 
-//router.delete('/:id', passport.authenticate('jwt'), userCtrl.deleteUser)
-router.delete('/:id', userCtrl.deleteUser)
+router.delete('/:id', passport.authenticate('jwt'), userCtrl.deleteUser)
 
 export default router

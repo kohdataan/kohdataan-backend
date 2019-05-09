@@ -22,18 +22,16 @@ Content-Type: application/json
     "username": "woland",
     "email": "janne.timonen@perfektio.com",
     "password": "passwordtesti",
-    "nickname": null,
-    "description": null,
     "profileReady": false,
-    "tutorialWatched": "false"
+    "tutorialWatched": false
 }
 
 ###
 GET http://localhost:9090/node_api/user/5
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU
 ###
-DELETE http://localhost:9090/node_api/user/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDAsInVzZXJuYW1lIjoid29sYW5kIiwiZW1haWwiOiJqYW5uZS50aW1vbmVuQHBlcmZla3Rpby5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRrUkNLZXhIR203aC9xbWR2Ynp4cnZ1bUtwWG93R3lKVWF6SDZEc1NUU0xRWG5nSlBtaS9JLiIsImNyZWF0ZWRBdCI6IjIwMTktMDUtMDdUMTY6MDQ6NTEuMTYxWiIsInVwZGF0ZWRBdCI6IjIwMTktMDUtMDdUMTY6MDQ6NTEuMTYxWiIsImlhdCI6MTU1NzI0NzQyOH0.C_jdx9u6yVldlYddvyL9qsDWIOXm1iNTPxAjgmDywuE
+DELETE http://localhost:9090/node_api/user/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU
 ###
 POST http://localhost:9090/node_api/auth/login
 Content-Type: application/json
@@ -50,12 +48,12 @@ Content-Type: application/json
 
 {
     "username": "woland",
-    "email": "janne.timonen@perfektio.com",
+    "email": "plupplssup@perfektio.com",
     "nickname": "woland",
     "location": "Helsinki",
     "description": "Testikuvaus",
-    "profileReady": "false",
-    "tutorialWatched": "false"
+    "profileReady": false,
+    "tutorialWatched": false
 }
 
 ###

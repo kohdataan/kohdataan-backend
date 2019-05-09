@@ -3,3 +3,4 @@ volumes/*
 .vscode/
 
 .DS_Store
+node_modules
