@@ -50,7 +50,6 @@ Content-Type: application/json
     "email": "jrolli@perfektio.com",
     "nickname": "woland",
     "location": "Helsinki",
-    "kakka": "kakka",
     "description": "Testikuvaus",
     "profileReady": false,
     "tutorialWatched": true
