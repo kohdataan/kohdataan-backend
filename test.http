@@ -1,8 +1,8 @@
 POST http://localhost:9090/api/v4/users/login
 
 {
-    "login_id": "jonne.airaksinen@perfektio.fi",
-    "password": "password"
+    "login_id": "janne.timonen@perfektio.fi",
+    "password": "passwordtesti"
 }
 
 
@@ -19,23 +19,46 @@ POST http://localhost:9090/node_api/user/
 Content-Type: application/json
 
 {
-    "username": "synyker",
-    "email": "jonne.airaksinen@perfektio.com",
-    "password": "password123"
+    "username": "woland",
+    "email": "janne.timonen@perfektio.com",
+    "password": "passwordtesti",
+    "profileReady": true
 }
 
 ###
-GET http://localhost:9090/node_api/user/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsInVzZXJuYW1lIjoic3lueWtlciIsImVtYWlsIjoiam9ubmUuYWlyYWtzaW5lbkBwZXJmZWt0aW8uZmkiLCJwYXNzd29yZCI6IiQyYiQxMiRqT1JhR0hMMkY2Vk1mQUZDNEJMUE1PRjlMWlRDQUV3OHZnUlY0V0lyUGNBemtVZG4vLkhWaSIsImNyZWF0ZWRBdCI6IjIwMTktMDUtMDNUMTU6MzA6NTEuNDg4WiIsInVwZGF0ZWRBdCI6IjIwMTktMDUtMDNUMTU6MzA6NTEuNDg4WiIsImlhdCI6MTU1NzEzNjYwM30.OZ3U0HhFYvWk7HF35NJanVAYFqy0qFqmkcVfhuqYI3M
-
+GET http://localhost:9090/node_api/user/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU
 ###
-DELETE http://localhost:9090/node_api/user/8
-
+DELETE http://localhost:9090/node_api/user/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU
 ###
 POST http://localhost:9090/node_api/auth/login
 Content-Type: application/json
 
 {
-    "email": "jonne.airaksinen@perfektio.fi",
-    "password": "password123"
+    "email": "janne.timonen@perfektio.com",
+    "password": "passwordtesti"
 }
+
+###
+PATCH http://localhost:9090/node_api/user/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU
+Content-Type: application/json
+
+{
+    "username": "woland",
+    "email": "jrolli@perfektio.com",
+    "nickname": "woland",
+    "location": "Helsinki",
+    "description": "Testikuvaus",
+    "profileReady": false,
+    "tutorialWatched": true
+}
+
+###
+GET http://localhost:9090/node_api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDVRWXpDUFdienBudS5aRWZ0UG5HNi5OeXp6R1ViS05scGthUUVDc01zOWJSQmJxVktlekhtIiwiY3JlYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwidXBkYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwiaWF0IjoxNTU3MjM2OTYzfQ.vt7VFmPN0x9fiCs-uoSYMBz3TA9qBLJS_yPLtS8JhY0
+
+###
+GET http://localhost:9090/node_api/location/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU

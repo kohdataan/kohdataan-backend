@@ -40,6 +40,34 @@ export default (sequelize, DataTypes) => {
           },
         },
       },
+      nickname: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      location: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      description: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      profileReady: {
+        type: DataTypes.BOOLEAN,
+        allowNull: {
+          args: false,
+          msg: 'Profile should be defined as ready or not',
+        },
+        defaultValue: false,
+      },
+      tutorialWatched: {
+        type: DataTypes.BOOLEAN,
+        allowNull: {
+          args: false,
+          msg: 'Tutorial should be defined as watched or not',
+        },
+        defaultValue: false,
+      },
     },
     {}
   )

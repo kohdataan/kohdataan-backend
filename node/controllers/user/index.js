@@ -12,18 +12,37 @@ export const getUsers = (req, res) => {
 }
 
 export const getUser = (req, res) => {
-  res.status(501).send('get user')
+  const { id } = req.params
+
+  return User.findByPk(id).then(user =>
+    res.status(200).send({
+      user,
+    })
+  )
 }
 
 export const addUser = async (req, res) => {
-  const { username, email, password } = req.body
-
+  const {
+    username,
+    email,
+    password,
+    nickname,
+    location,
+    description,
+    profileReady,
+    tutorialWatched,
+  } = req.body
   const hashed = bcrypt.hashSync(password, 12)
 
   return User.create({
     username,
     email,
     password: hashed,
+    nickname,
+    location,
+    description,
+    profileReady,
+    tutorialWatched,
   })
     .then(userData =>
       res.status(201).send({
@@ -41,7 +60,54 @@ export const addUser = async (req, res) => {
 }
 
 export const updateUser = (req, res) => {
-  res.status(501).send('put user')
+  const {
+    username,
+    email,
+    nickname,
+    location,
+    description,
+    profileReady,
+    tutorialWatched,
+  } = req.body
+  const { id } = req.user.dataValues
+  const queryId = req.params.id
+  // eslint-disable-next-line radix
+  if (parseInt(id) !== parseInt(queryId)) {
+    res.status(401).send({
+      success: false,
+      message: 'Action forbidden',
+    })
+  } else {
+    User.update(
+      {
+        username,
+        email,
+        nickname,
+        location,
+        description,
+        profileReady,
+        tutorialWatched,
+      },
+      {
+        where: {
+          id,
+        },
+      }
+    )
+      .then(rows =>
+        res.status(200).send({
+          success: true,
+          message: 'User succesfully updated',
+          updated: rows,
+        })
+      )
+      .catch(error =>
+        res.status(400).send({
+          success: false,
+          error,
+        })
+      )
+  }
 }
 
 export const deleteUser = (req, res) => {
