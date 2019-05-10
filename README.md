@@ -54,14 +54,15 @@ Jos lisäät projektiin uusia npm-paketteja:
 Tietokantadumpit löytyvät kansiosta db/dumps. Kantoja on kaksi, "kohdataan" ja "mattermost", joista ensimmäinen palvelee itse backendiä ja toinen Mattermostin sisäisiä toimintoja. 
 
 Kantojen tuonti tapahtuu ajamalla komennot:
-```docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
+```bash
+docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
 docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
 ```
 
 #### Ongelmatilanteet
 
 Mikäli backendin kanssa ilmenee ongelmia, esimerkiksi ajaessa docker-compose up, voivat ensihätään auttaa komennot:
-```
+```bash
 docker system prune
 docker-compose build --no-cache
 ```
