@@ -55,7 +55,8 @@ Tietokantadumpit löytyvät kansiosta db/dumps. Kantoja on kaksi, "kohdataan" ja
 
 Kantojen tuonti tapahtuu ajamalla komennot:
 ```docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
-docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql```
+docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
+```
 
 #### Ongelmatilanteet
 
