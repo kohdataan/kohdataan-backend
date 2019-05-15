@@ -1,5 +1,15 @@
+import model from '../../models'
+
+const { Interest } = model
+
 export const getInterests = (req, res) => {
-  res.status(501).send('get all interests')
+  return Interest.findAll({ attributes: ['id', 'name'] }).then(results =>
+    res.status(200).send({
+      success: true,
+      message: 'User interests fetched',
+      results,
+    })
+  )
 }
 
 export const getInterest = (req, res) => {

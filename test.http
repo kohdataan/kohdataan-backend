@@ -7,7 +7,16 @@ POST http://localhost:9090/api/v4/users/login
 
 
 ###
+POST http://localhost:9090/api/v4/users
+Content-Type: application/json
 
+{
+    "username": "woland",
+    "email": "janne.timonen@perfektio.com",
+    "password": "passwordtesti"
+}
+
+###
 OPTIONS http://localhost:9090/api/users/login/
 Origin: http://www.example.com
 Access-Control-Request-Method: GET
@@ -19,10 +28,9 @@ POST http://localhost:9090/node_api/user/
 Content-Type: application/json
 
 {
-    "username": "woland",
-    "email": "janne.timonen@perfektio.com",
-    "password": "passwordtesti",
-    "profileReady": true
+    "username": "kameli",
+    "email": "kameli.timonen@perfektio.com",
+    "password": "passwordtesti"
 }
 
 ###
@@ -60,5 +68,29 @@ GET http://localhost:9090/node_api/user
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDVRWXpDUFdienBudS5aRWZ0UG5HNi5OeXp6R1ViS05scGthUUVDc01zOWJSQmJxVktlekhtIiwiY3JlYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwidXBkYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwiaWF0IjoxNTU3MjM2OTYzfQ.vt7VFmPN0x9fiCs-uoSYMBz3TA9qBLJS_yPLtS8JhY0
 
 ###
-GET http://localhost:9090/node_api/location/
+GET http://localhost:9090/node_api/location
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU
+
+###
+
+POST http://localhost:9090/node_api/userInterest/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDVRWXpDUFdienBudS5aRWZ0UG5HNi5OeXp6R1ViS05scGthUUVDc01zOWJSQmJxVktlekhtIiwiY3JlYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwidXBkYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwiaWF0IjoxNTU3MjM2OTYzfQ.vt7VFmPN0x9fiCs-uoSYMBz3TA9qBLJS_yPLtS8JhY0
+Content-Type: application/json
+
+{
+    "userId": 3,
+    "userInterests": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ]
+}
+
+###
+GET http://localhost:9090/node_api/interest/
+
+###
+GET http://localhost:9090/node_api/userInterest/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDVRWXpDUFdienBudS5aRWZ0UG5HNi5OeXp6R1ViS05scGthUUVDc01zOWJSQmJxVktlekhtIiwiY3JlYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwidXBkYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwiaWF0IjoxNTU3MjM2OTYzfQ.vt7VFmPN0x9fiCs-uoSYMBz3TA9qBLJS_yPLtS8JhY0
