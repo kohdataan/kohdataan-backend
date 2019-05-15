@@ -1,16 +1,33 @@
 import express from 'express'
+import passport from 'passport'
 import * as userInterestCtrl from '../../controllers/userInterest'
 
 const router = express.Router()
 
-router.get('/', userInterestCtrl.getUserInterests)
+router.get('/', passport.authenticate('jwt'), userInterestCtrl.getUserInterests)
 
-router.post('/', userInterestCtrl.addUserInterest)
+router.post(
+  '/',
+  passport.authenticate('jwt'),
+  userInterestCtrl.addUserInterests
+)
 
-router.get('/:id', userInterestCtrl.getUserInterest)
+router.get(
+  '/:id',
+  passport.authenticate('jwt'),
+  userInterestCtrl.getUserInterest
+)
 
-router.put('/:id', userInterestCtrl.updateUserInterest)
+router.put(
+  '/:id',
+  passport.authenticate('jwt'),
+  userInterestCtrl.updateUserInterest
+)
 
-router.delete('/:id', userInterestCtrl.deleteUserInterest)
+router.delete(
+  '/:id',
+  passport.authenticate('jwt'),
+  userInterestCtrl.deleteUserInterest
+)
 
 export default router
