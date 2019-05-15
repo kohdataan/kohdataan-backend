@@ -10,23 +10,24 @@
     "pretty": "npx prettier --write '**/*.{js,jsx,json,css,scss}'"
   },
   "dependencies": {
+    "bcrypt": "3.0.6",
     "body-parser": "^1.18.3",
     "cors": "2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
+    "jsonwebtoken": "8.5.1",
     "mattermost-redux": "^5.9.0",
     "morgan": "^1.9.1",
     "nodemon": "1.18.11",
+    "passport": "0.4.0",
+    "passport-jwt": "4.0.0",
+    "passport-local": "1.0.0",
     "pg": "^7.9.0",
     "pg-hstore": "^2.3.2",
     "request": "^2.88.0",
-    "sequelize": "^5.2.15",
-    "bcrypt": "3.0.6",
-    "jsonwebtoken": "8.5.1",
-    "passport": "0.4.0",
-    "passport-local": "1.0.0",
-    "passport-jwt": "4.0.0"
+    "request-promise": "^4.2.4",
+    "sequelize": "^5.2.15"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",

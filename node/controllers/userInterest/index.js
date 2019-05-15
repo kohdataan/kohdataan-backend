@@ -1,36 +1,39 @@
 import model from '../../models'
 
-const { UserInterest } = model
+const { UserInterest, User, Interest } = model
 
 export const getUserInterests = (req, res) => {
   const { id } = req.user.dataValues
 
-  UserInterest.findAll({
+  User.findAll({
+    attributes: ['id'],
+    where: {
+      id,
+    },
     include: [
       {
-        model: model.Interest,
-        attributes: ['name'],
-        through: { where: { id } },
+        model: Interest,
+        as: 'Interest',
+        attributes: ['id', 'name'],
+        through: { attributes: [] },
       },
     ],
-    where: {
-      userId: id,
-    },
   })
     .then(result =>
       res.status(200).send({
         success: true,
-        message: 'User found',
+        message: 'User interests found',
         result,
       })
     )
-    .catch(err =>
+    .catch(err => {
+      console.log(err)
       res.status(500).send({
         success: false,
         message: 'Error occurred',
         err,
       })
-    )
+    })
 }
 
 export const getUserInterest = (req, res) => {

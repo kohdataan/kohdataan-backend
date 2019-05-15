@@ -1,7 +1,10 @@
 import bcrypt from 'bcrypt'
+import rp from 'request-promise'
+import { Client4 } from 'mattermost-redux/client'
 import model from '../../models'
 
 const { User } = model
+Client4.setUrl('http://mattermost:8000')
 
 export const getUsers = (req, res) => {
   return User.findAll().then(users =>
@@ -16,7 +19,9 @@ export const getUser = (req, res) => {
 
   return User.findByPk(id).then(user =>
     res.status(200).send({
-      user,
+      nickname: user.username,
+      location: user.location,
+      description: user.description,
     })
   )
 }
@@ -44,6 +49,28 @@ export const addUser = async (req, res) => {
     profileReady,
     tutorialWatched,
   })
+    .then(async () => {
+      try {
+        const response = await rp({
+          method: 'POST',
+          uri: 'http://localhost:9090/api/v4/users',
+          body: {
+            username,
+            email,
+            password,
+          },
+          json: true,
+        })
+        return response
+      } catch (err) {
+        User.destroy({
+          where: {
+            email,
+          },
+        })
+        return Promise.reject(err)
+      }
+    })
     .then(userData =>
       res.status(201).send({
         success: true,

@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
   Interest.associate = models => {
     Interest.belongsToMany(models.User, {
       through: 'UserInterest',
-      as: 'user',
-      foreignKey: 'userId',
+      as: 'User',
+      foreignKey: 'interestId',
     })
     // associations can be defined here
   }
