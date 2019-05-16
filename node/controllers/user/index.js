@@ -6,23 +6,39 @@ const { User } = model
 const mattermostUrl = 'http://mattermost:8000/api/v4'
 
 export const getUsers = (req, res) => {
-  return User.findAll().then(users =>
-    res.status(200).send({
-      users,
+  return User.findAll()
+    .then(users =>
+      res.status(200).send({
+        users,
+      })
+    )
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Error getting users',
+        error: err,
+      })
     })
-  )
 }
 
 export const getUser = (req, res) => {
   const { id } = req.params
 
-  return User.findByPk(id).then(user =>
-    res.status(200).send({
-      nickname: user.username,
-      location: user.location,
-      description: user.description,
+  return User.findByPk(id)
+    .then(user =>
+      res.status(200).send({
+        nickname: user.username,
+        location: user.location,
+        description: user.description,
+      })
+    )
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Error getting user',
+        error: err,
+      })
     })
-  )
 }
 
 export const addUser = async (req, res) => {
@@ -47,26 +63,39 @@ export const addUser = async (req, res) => {
     profileReady,
     tutorialWatched,
   }
-  const mmuserCreation = axios.post(`${mattermostUrl}/users`, {
-    username,
-    email,
-    password,
-  })
-  const userCreation = User.create(user)
-  Promise.all([mmuserCreation, userCreation])
-    .then(allResults => {
+
+  User.create(user)
+    .then(async results => {
+      const results2 = await axios.post(`${mattermostUrl}/users`, {
+        username,
+        email,
+        password,
+      })
+      return [results, results2]
+    })
+    .then(([results, results2]) => {
+      const mmuser = results2.data
       res.status(201).send({
         success: true,
         message: 'User successfully created',
-        user: allResults[1].dataValues,
-        mmuser: allResults[0].data,
+        results: {
+          username: results.username,
+          email: results.email,
+          nickname: results.nickname,
+        },
+        mmuser,
       })
     })
     .catch(err => {
-      console.log(err)
-      res.status(400).send({
+      User.destroy({
+        where: {
+          email,
+        },
+      })
+      res.status(500).send({
         success: false,
         message: 'Error in creating a user',
+        error: err,
       })
     })
 }
@@ -114,8 +143,9 @@ export const updateUser = (req, res) => {
         })
       )
       .catch(error =>
-        res.status(400).send({
+        res.status(500).send({
           success: false,
+          message: 'Error in updating user',
           error,
         })
       )
@@ -129,10 +159,18 @@ export const deleteUser = (req, res) => {
     where: {
       id,
     },
-  }).then(affectedRows => {
-    res.status(200).send({
-      success: true,
-      deleted: affectedRows,
-    })
   })
+    .then(affectedRows => {
+      res.status(200).send({
+        success: true,
+        deleted: affectedRows,
+      })
+    })
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Error deleting users',
+        error: err,
+      })
+    })
 }
