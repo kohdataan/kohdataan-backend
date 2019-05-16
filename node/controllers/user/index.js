@@ -1,11 +1,14 @@
 import bcrypt from 'bcrypt'
-import rp from 'request-promise'
-import { Client4 } from 'mattermost-redux/client'
+import axios from 'axios'
 import model from '../../models'
 
 const { User } = model
-Client4.setUrl('http://mattermost:8000')
-
+const mattermostUrl = 'http://mattermost:8000/api/v4'
+/* Client4.setUrl(mattermostUrl)
+Client4.login('kalevi', 'einari')
+  .then(result => console.log(result))
+  .catch(err => console.log(err))
+*/
 export const getUsers = (req, res) => {
   return User.findAll().then(users =>
     res.status(200).send({
@@ -38,8 +41,7 @@ export const addUser = async (req, res) => {
     tutorialWatched,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
-
-  return User.create({
+  const user = {
     username,
     email,
     password: hashed,
@@ -48,27 +50,25 @@ export const addUser = async (req, res) => {
     description,
     profileReady,
     tutorialWatched,
-  })
+  }
+  return User.create(user)
     .then(async () => {
       try {
-        const response = await rp({
-          method: 'POST',
-          uri: 'http://localhost:9090/api/v4/users',
-          body: {
-            username,
-            email,
-            password,
-          },
-          json: true,
+        axios.defaults.headers.common['Authorization'] = 'Bearer prriipraa'
+        const result = await axios.post(`${mattermostUrl}/users`, {
+          username,
+          email,
+          password,
         })
-        return response
+        return result
       } catch (err) {
         User.destroy({
           where: {
             email,
           },
         })
-        return Promise.reject(err)
+        console.log(err)
+        return Promise.reject(JSON.stringify(err))
       }
     })
     .then(userData =>
