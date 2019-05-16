@@ -29,8 +29,8 @@ POST http://localhost:9090/node_api/user/
 Content-Type: application/json
 
 {
-    "username": "laalaalaama",
-    "email": "laalaalaama@perfektio.com",
+    "username": "laalaalaama1",
+    "email": "laalaalaama1@perfektio.com",
     "password": "passwordtesti"
 }
 

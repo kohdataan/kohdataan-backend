@@ -87,11 +87,6 @@ export const addUser = async (req, res) => {
       })
     })
     .catch(err => {
-      User.destroy({
-        where: {
-          email,
-        },
-      })
       res.status(500).send({
         success: false,
         message: 'Error in creating a user',
