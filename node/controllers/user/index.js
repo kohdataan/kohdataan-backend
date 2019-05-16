@@ -4,11 +4,7 @@ import model from '../../models'
 
 const { User } = model
 const mattermostUrl = 'http://mattermost:8000/api/v4'
-/* Client4.setUrl(mattermostUrl)
-Client4.login('kalevi', 'einari')
-  .then(result => console.log(result))
-  .catch(err => console.log(err))
-*/
+
 export const getUsers = (req, res) => {
   return User.findAll().then(users =>
     res.status(200).send({
@@ -51,39 +47,28 @@ export const addUser = async (req, res) => {
     profileReady,
     tutorialWatched,
   }
-  return User.create(user)
-    .then(async () => {
-      try {
-        axios.defaults.headers.common['Authorization'] = 'Bearer prriipraa'
-        const result = await axios.post(`${mattermostUrl}/users`, {
-          username,
-          email,
-          password,
-        })
-        return result
-      } catch (err) {
-        User.destroy({
-          where: {
-            email,
-          },
-        })
-        console.log(err)
-        return Promise.reject(JSON.stringify(err))
-      }
-    })
-    .then(userData =>
+  const mmuserCreation = axios.post(`${mattermostUrl}/users`, {
+    username,
+    email,
+    password,
+  })
+  const userCreation = User.create(user)
+  Promise.all([mmuserCreation, userCreation])
+    .then(allResults => {
       res.status(201).send({
         success: true,
         message: 'User successfully created',
-        userData,
+        user: allResults[1].dataValues,
+        mmuser: allResults[0].data,
       })
-    )
-    .catch(error =>
+    })
+    .catch(err => {
+      console.log(err)
       res.status(400).send({
         success: false,
-        error,
+        message: 'Error in creating a user',
       })
-    )
+    })
 }
 
 export const updateUser = (req, res) => {
