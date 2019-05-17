@@ -1,29 +1,44 @@
 import bcrypt from 'bcrypt'
-import rp from 'request-promise'
-import { Client4 } from 'mattermost-redux/client'
+import axios from 'axios'
 import model from '../../models'
 
 const { User } = model
-Client4.setUrl('http://mattermost:8000')
+const mattermostUrl = 'http://mattermost:8000/api/v4'
 
 export const getUsers = (req, res) => {
-  return User.findAll().then(users =>
-    res.status(200).send({
-      users,
+  return User.findAll()
+    .then(users =>
+      res.status(200).send({
+        users,
+      })
+    )
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Error getting users',
+        error: err,
+      })
     })
-  )
 }
 
 export const getUser = (req, res) => {
   const { id } = req.params
 
-  return User.findByPk(id).then(user =>
-    res.status(200).send({
-      nickname: user.username,
-      location: user.location,
-      description: user.description,
+  return User.findByPk(id)
+    .then(user =>
+      res.status(200).send({
+        nickname: user.username,
+        location: user.location,
+        description: user.description,
+      })
+    )
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Error getting user',
+        error: err,
+      })
     })
-  )
 }
 
 export const addUser = async (req, res) => {
@@ -38,8 +53,7 @@ export const addUser = async (req, res) => {
     tutorialWatched,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
-
-  return User.create({
+  const user = {
     username,
     email,
     password: hashed,
@@ -48,42 +62,37 @@ export const addUser = async (req, res) => {
     description,
     profileReady,
     tutorialWatched,
-  })
-    .then(async () => {
-      try {
-        const response = await rp({
-          method: 'POST',
-          uri: 'http://localhost:9090/api/v4/users',
-          body: {
-            username,
-            email,
-            password,
-          },
-          json: true,
-        })
-        return response
-      } catch (err) {
-        User.destroy({
-          where: {
-            email,
-          },
-        })
-        return Promise.reject(err)
-      }
+  }
+
+  User.create(user)
+    .then(async results => {
+      const results2 = await axios.post(`${mattermostUrl}/users`, {
+        username,
+        email,
+        password,
+      })
+      return [results, results2]
     })
-    .then(userData =>
+    .then(([results, results2]) => {
+      const mmuser = results2.data
       res.status(201).send({
         success: true,
         message: 'User successfully created',
-        userData,
+        results: {
+          username: results.username,
+          email: results.email,
+          nickname: results.nickname,
+        },
+        mmuser,
       })
-    )
-    .catch(error =>
-      res.status(400).send({
+    })
+    .catch(err => {
+      res.status(500).send({
         success: false,
-        error,
+        message: 'Error in creating a user',
+        error: err,
       })
-    )
+    })
 }
 
 export const updateUser = (req, res) => {
@@ -129,8 +138,9 @@ export const updateUser = (req, res) => {
         })
       )
       .catch(error =>
-        res.status(400).send({
+        res.status(500).send({
           success: false,
+          message: 'Error in updating user',
           error,
         })
       )
@@ -144,10 +154,18 @@ export const deleteUser = (req, res) => {
     where: {
       id,
     },
-  }).then(affectedRows => {
-    res.status(200).send({
-      success: true,
-      deleted: affectedRows,
-    })
   })
+    .then(affectedRows => {
+      res.status(200).send({
+        success: true,
+        deleted: affectedRows,
+      })
+    })
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Error deleting users',
+        error: err,
+      })
+    })
 }
