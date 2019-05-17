@@ -74,7 +74,7 @@ export default (sequelize, DataTypes) => {
   User.associate = models => {
     User.belongsToMany(models.Interest, {
       through: 'UserInterest',
-      as: 'Interest',
+      as: 'interests',
       foreignKey: 'userId',
     })
   }

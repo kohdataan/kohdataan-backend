@@ -25,13 +25,22 @@ export const getUser = (req, res) => {
   const { id } = req.params
 
   return User.findByPk(id)
-    .then(user =>
+    .then(user => {
+      const {
+        nickname,
+        location,
+        description,
+        profileReady,
+        tutorialWatched,
+      } = user
       res.status(200).send({
-        nickname: user.username,
-        location: user.location,
-        description: user.description,
+        nickname,
+        location,
+        description,
+        profileReady,
+        tutorialWatched,
       })
-    )
+    })
     .catch(err => {
       res.status(500).send({
         success: false,
