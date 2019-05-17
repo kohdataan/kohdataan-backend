@@ -48,8 +48,8 @@ Content-Type: application/json
 
 {
     "username": "woland",
-    "email": "jrolli@perfektio.com",
-    "nickname": "woland",
+    "email": "plororororo@perfektio.com",
+    "nickname": "lentävälettu",
     "location": "Helsinki",
     "description": "Testikuvaus",
     "profileReady": false,
@@ -83,11 +83,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hb
 Content-Type: application/json
 
 {
-    "userId": 3,
+    "userId": 5,
     "userInterests": [
         12,
         13,
-        20
+        20,
+        15
     ]
 }
 
@@ -97,3 +98,9 @@ GET http://localhost:9090/node_api/interest/
 ###
 GET http://localhost:9090/node_api/userInterest/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDVRWXpDUFdienBudS5aRWZ0UG5HNi5OeXp6R1ViS05scGthUUVDc01zOWJSQmJxVktlekhtIiwiY3JlYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwidXBkYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwiaWF0IjoxNTU3MjM2OTYzfQ.vt7VFmPN0x9fiCs-uoSYMBz3TA9qBLJS_yPLtS8JhY0
+
+###
+GET http://localhost:9090/node_api/userInterest/username=Test987
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJDVRWXpDUFdienBudS5aRWZ0UG5HNi5OeXp6R1ViS05scGthUUVDc01zOWJSQmJxVktlekhtIiwiY3JlYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwidXBkYXRlZEF0IjoiMjAxOS0wNS0wN1QxMzo0ODo1NC4yMDZaIiwiaWF0IjoxNTU3MjM2OTYzfQ.vt7VFmPN0x9fiCs-uoSYMBz3TA9qBLJS_yPLtS8JhY0
+
+###

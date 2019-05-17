@@ -13,7 +13,7 @@ export const getUserInterests = (req, res) => {
     include: [
       {
         model: Interest,
-        as: 'Interest',
+        as: 'interests',
         attributes: ['id', 'name'],
         through: { attributes: [] },
       },
@@ -27,7 +27,6 @@ export const getUserInterests = (req, res) => {
       })
     )
     .catch(err => {
-      console.log(err)
       res.status(500).send({
         success: false,
         message: 'Error occurred',
@@ -37,7 +36,36 @@ export const getUserInterests = (req, res) => {
 }
 
 export const getUserInterest = (req, res) => {
-  res.status(501).send('get user interest')
+  const { username } = req.params
+
+  User.findAll({
+    attributes: ['id', 'username'],
+    where: {
+      username,
+    },
+    include: [
+      {
+        model: Interest,
+        as: 'interests',
+        attributes: ['id', 'name'],
+        through: { attributes: [] },
+      },
+    ],
+  })
+    .then(result =>
+      res.status(200).send({
+        success: true,
+        message: 'User interests found',
+        result,
+      })
+    )
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Error occurred',
+        err,
+      })
+    })
 }
 
 export const addUserInterest = (req, res) => {
@@ -74,7 +102,6 @@ export const addUserInterests = (req, res) => {
       })
     })
     .catch(err => {
-      console.log(err)
       res.send(500).send('fail', err)
     })
 }
