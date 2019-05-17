@@ -13,7 +13,7 @@ router.post(
 )
 
 router.get(
-  '/:id',
+  '/{username}',
   passport.authenticate('jwt'),
   userInterestCtrl.getUserInterest
 )

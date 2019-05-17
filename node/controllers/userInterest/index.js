@@ -36,12 +36,12 @@ export const getUserInterests = (req, res) => {
 }
 
 export const getUserInterest = (req, res) => {
-  const { id } = req.params
+  const { username } = req.params
 
   User.findAll({
-    attributes: ['id'],
+    attributes: ['id', 'username'],
     where: {
-      id,
+      username,
     },
     include: [
       {
