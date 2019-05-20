@@ -6,7 +6,7 @@ import cors from 'cors'
 import routes from './routes'
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: process.env.FRONTEND_URL,
   optionsSuccessStatus: 200,
 }
 
