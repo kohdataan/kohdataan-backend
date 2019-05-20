@@ -1,4 +1,5 @@
 import axios from 'axios'
+import flatted from 'flatted'
 import model from '../../models'
 
 const mattermostUrl = 'http://mattermost:8000/api/v4'
@@ -9,7 +10,7 @@ export const getChannelInvitation = (req, res) => {
   res.status(501).send('get all channel invitation')
 }
 
-export const getChannelInvitations = (req, res) => {
+export const getChannelInvitations = async (req, res) => {
   axios.defaults.headers.common.Authorization =
     'Bearer xefuizt693rwznw6gbj9bbwwih'
   const { id } = req.user.dataValues
@@ -20,7 +21,6 @@ export const getChannelInvitations = (req, res) => {
       return results
     })
     .catch(err => {
-      // console.log(err)
       return err
     })
 
@@ -41,44 +41,54 @@ export const getChannelInvitations = (req, res) => {
       return results[0].interests
     })
     .catch(err => {
-      // console.log(err)
       return err
     })
 
-  Promise.all([getChannels, userInterests])
+  const channelInvitations = await Promise.all([getChannels, userInterests])
     .then(results => {
       const { data } = results[0]
       const interests = results[1].map(interest => interest.dataValues.name)
       const found = data.filter(channel =>
         interests.includes(channel.display_name)
       )
-      const displayName = Date.now().toString()
-      if (found.length === 0 && interests.length > 0) {
-        axios
-          .post(`${mattermostUrl}/channels`, {
-            team_id: 'rb391tirmjgkxgnhdeouc6x7or',
-            name: displayName,
-            display_name: interests[0],
-            type: 'O',
-          })
-          .then(newChannel => {
-            // eslint-disable-next-line no-shadow
-            const { data } = newChannel
-            res.status(200).send({
-              success: true,
-              message: 'Channel invitation',
-              channel: data,
-            })
-          })
-      } else {
-        res.status(200).send({
-          success: true,
-          message: 'Channels',
-          found,
-        })
-      }
+      return [found, interests]
     })
     .catch(err => console.log(err))
+
+  const found = channelInvitations[0]
+  const interests = channelInvitations[1]
+
+  if (found.length === 0 && interests.length > 0) {
+    const array = await Promise.all(
+      interests.map(interest => {
+        const displayName =
+          interest.replace(/\W/g, '').toLowerCase() + Date.now().toString()
+
+        return axios.post(`${mattermostUrl}/channels`, {
+          team_id: 'rb391tirmjgkxgnhdeouc6x7or',
+          name: displayName,
+          display_name: interest,
+          type: 'O',
+        })
+      })
+    )
+
+    const channels = array.map(plaa => {
+      return plaa.data
+    })
+
+    res.status(200).send({
+      success: true,
+      message: 'Channel invitation',
+      channels,
+    })
+  } else {
+    res.status(200).send({
+      success: true,
+      message: 'Channels',
+      found,
+    })
+  }
 }
 
 export const addChannelInvitation = (req, res) => {
