@@ -8,6 +8,10 @@ export default (sequelize, DataTypes) => {
           args: false,
           msg: 'Please enter your username',
         },
+        unique: {
+          args: true,
+          msg: 'Email already exists',
+        },
       },
       email: {
         type: DataTypes.STRING,
