@@ -1,9 +1,14 @@
 import express from 'express'
+import passport from 'passport'
 import * as channelInvitationCtrl from '../../controllers/channelInvitation'
 
 const router = express.Router()
 
-router.get('/', channelInvitationCtrl.getChannelInvitations)
+router.get(
+  '/',
+  passport.authenticate('jwt'),
+  channelInvitationCtrl.getChannelInvitations
+)
 
 router.post('/', channelInvitationCtrl.addChannelInvitation)
 
