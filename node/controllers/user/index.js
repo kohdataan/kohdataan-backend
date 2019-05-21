@@ -82,8 +82,18 @@ export const addUser = async (req, res) => {
       })
       return [results, results2]
     })
-    .then(([results, results2]) => {
+    .then(async ([results, results2]) => {
       const mmuser = results2.data
+      axios.defaults.headers.common.Authorization = 'Bearer m5xxcpjkjprozpjqcnrk1p5por'
+      const results3 = await axios.post(`${mattermostUrl}/teams/omkqws7ta7nziqednmwkna7z6w/members`, {
+        team_id: 'omkqws7ta7nziqednmwkna7z6w',
+        user_id: mmuser.id,
+      })
+      return [results, results2, results3]
+    })
+    .then(([results, results2, results3]) => {
+      const mmuser = results2.data
+      const team = results3.data
       res.status(201).send({
         success: true,
         message: 'User successfully created',
@@ -93,9 +103,12 @@ export const addUser = async (req, res) => {
           nickname: results.nickname,
         },
         mmuser,
+        team,
       })
+      return results
     })
     .catch(err => {
+      console.log(err)
       res.status(500).send({
         success: false,
         message: 'Error in creating a user',
