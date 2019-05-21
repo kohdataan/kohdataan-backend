@@ -1,9 +1,13 @@
 import express from 'express'
+import dotenv from 'dotenv'
 import logger from 'morgan'
 import bodyParser from 'body-parser'
 import passport from 'passport'
 import cors from 'cors'
 import routes from './routes'
+dotenv.config()
+
+console.log(process.env)
 
 const corsOptions = {
   origin: process.env.FRONTEND_URL || 'http://localhost:3000',
