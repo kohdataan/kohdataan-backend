@@ -1,8 +1,10 @@
 import axios from 'axios'
 import flatted from 'flatted'
+import { fail } from 'assert'
 import model from '../../models'
 
-const mattermostUrl = 'http://mattermost:8000/api/v4'
+const mattermostUrl =
+  process.env.MATTERMOST_URL || 'http://mattermost:8000/api/v4'
 
 const { User, Interest } = model
 
@@ -15,6 +17,13 @@ export const getChannelInvitations = async (req, res) => {
     process.env.MASTER_TOKEN
   }`
   const { id } = req.user.dataValues
+
+  if (!id) {
+    return res.status(401).send({
+      success: false,
+      message: 'User id invalid',
+    })
+  }
 
   const getChannels = axios
     .get(`${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`)
@@ -42,52 +51,60 @@ export const getChannelInvitations = async (req, res) => {
       return results[0].interests
     })
     .catch(err => {
-      return err
+      return flatted.stringify(err)
     })
 
   const channelInvitations = await Promise.all([getChannels, userInterests])
     .then(results => {
       const { data } = results[0]
-      const interests = results[1].map(interest => interest.dataValues.name)
-      const found = data.filter(channel =>
-        interests.includes(channel.display_name)
-      )
+      const interests =
+        results[1] && results[1].map(interest => interest.dataValues.name)
+      const found =
+        data && data.filter(channel => interests.includes(channel.display_name))
       return [found, interests]
     })
-    .catch(err => console.log(err))
+    .catch(err => flatted.stringify(err))
 
-  const found = channelInvitations[0]
-  const interests = channelInvitations[1]
+  try {
+    const found = channelInvitations[0]
+    const interests = channelInvitations[1]
 
-  if (found.length === 0 && interests.length > 0) {
-    const array = await Promise.all(
-      interests.map(interest => {
-        const displayName =
-          interest.replace(/\W/g, '').toLowerCase() + Date.now().toString()
+    if (found.length === 0 && interests.length > 0) {
+      const channelPromises = await Promise.all(
+        interests.map(interest => {
+          const displayName =
+            interest.replace(/\W/g, '').toLowerCase() + Date.now().toString()
 
-        return axios.post(`${mattermostUrl}/channels`, {
-          team_id: process.env.TEAM_ID,
-          name: displayName,
-          display_name: interest,
-          type: 'O',
+          return axios.post(`${mattermostUrl}/channels`, {
+            team_id: process.env.TEAM_ID,
+            name: displayName,
+            display_name: interest,
+            type: 'O',
+          })
         })
+      )
+
+      const channels = channelPromises.map(channel => {
+        return channel.data
       })
-    )
 
-    const channels = array.map(plaa => {
-      return plaa.data
-    })
-
-    res.status(200).send({
-      success: true,
-      message: 'Channel invitation',
-      channels,
-    })
-  } else {
-    res.status(200).send({
-      success: true,
-      message: 'Channels',
-      found,
+      res.status(200).send({
+        success: true,
+        message: 'Channel invitation',
+        channels,
+      })
+    } else {
+      res.status(200).send({
+        success: true,
+        message: 'Channels',
+        found,
+      })
+    }
+  } catch (e) {
+    return res.status(500).send({
+      success: false,
+      message: 'Error',
+      error: e,
     })
   }
 }

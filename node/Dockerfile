@@ -4,6 +4,7 @@ RUN apk update && apk upgrade
 RUN apk add --no-cache --virtual builds-deps build-base python git
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
+ENV ULI=ULInaa2
 
 WORKDIR /usr/src/app
 

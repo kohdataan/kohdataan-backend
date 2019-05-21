@@ -3,7 +3,8 @@ import axios from 'axios'
 import model from '../../models'
 
 const { User } = model
-const mattermostUrl = 'http://mattermost:8000/api/v4'
+const mattermostUrl =
+  process.env.MATTERMOST_URL || 'http://mattermost:8000/api/v4'
 
 export const getUsers = (req, res) => {
   return User.findAll()
