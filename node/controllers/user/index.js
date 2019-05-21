@@ -84,11 +84,16 @@ export const addUser = async (req, res) => {
     })
     .then(async ([results, results2]) => {
       const mmuser = results2.data
-      axios.defaults.headers.common.Authorization = 'Bearer m5xxcpjkjprozpjqcnrk1p5por'
-      const results3 = await axios.post(`${mattermostUrl}/teams/omkqws7ta7nziqednmwkna7z6w/members`, {
-        team_id: 'omkqws7ta7nziqednmwkna7z6w',
-        user_id: mmuser.id,
-      })
+      axios.defaults.headers.common.Authorization = `Bearer ${
+        process.env.MASTER_TOKEN
+      }`
+      const results3 = await axios.post(
+        `${mattermostUrl}/teams/${process.env.TEAM_ID}/members`,
+        {
+          team_id: process.env.TEAM_ID,
+          user_id: mmuser.id,
+        }
+      )
       return [results, results2, results3]
     })
     .then(([results, results2, results3]) => {

@@ -11,12 +11,13 @@ export const getChannelInvitation = (req, res) => {
 }
 
 export const getChannelInvitations = async (req, res) => {
-  axios.defaults.headers.common.Authorization =
-    'Bearer xefuizt693rwznw6gbj9bbwwih'
+  axios.defaults.headers.common.Authorization = `Bearer ${
+    process.env.MASTER_TOKEN
+  }`
   const { id } = req.user.dataValues
 
   const getChannels = axios
-    .get(`${mattermostUrl}/teams/rb391tirmjgkxgnhdeouc6x7or/channels`)
+    .get(`${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`)
     .then(results => {
       return results
     })
@@ -65,7 +66,7 @@ export const getChannelInvitations = async (req, res) => {
           interest.replace(/\W/g, '').toLowerCase() + Date.now().toString()
 
         return axios.post(`${mattermostUrl}/channels`, {
-          team_id: 'rb391tirmjgkxgnhdeouc6x7or',
+          team_id: process.env.TEAM_ID,
           name: displayName,
           display_name: interest,
           type: 'O',
