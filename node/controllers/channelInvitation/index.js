@@ -1,6 +1,5 @@
 import axios from 'axios'
 import flatted from 'flatted'
-import { fail } from 'assert'
 import model from '../../models'
 
 const mattermostUrl =
