@@ -29,16 +29,17 @@ POST http://localhost:9090/node_api/user/
 Content-Type: application/json
 
 {
-    "username": "laalaalaama3",
-    "email": "laalaalaama3@perfektio.com",
-    "password": "passwordtesti"
+    "username": "laalaalaama4",
+    "email": "laalaalaama4@perfektio.com",
+    "password": "passwordtesti",
+    "nickname": "einari"
 }
 
 ###
 GET http://localhost:9090/node_api/user/5
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU
 ###
-GET http://localhost:9090/node_api/user/username/plaa
+GET http://localhost:9090/node_api/user/username/Eemeli
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJ3b2xhbmQiLCJlbWFpbCI6Imphbm5lLnRpbW9uZW5AcGVyZmVrdGlvLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEyJHZnTDF6TnBiN2FKZUNuZlNBNHZxcXVMOS5BWkRzc2d1M2l2U0QyVlNKd3FLSnJzLnlzdS55Iiwibmlja25hbWUiOm51bGwsImRlc2NyaXB0aW9uIjpudWxsLCJwcm9maWxlUmVhZHkiOmZhbHNlLCJjcmVhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJ1cGRhdGVkQXQiOiIyMDE5LTA1LTA4VDExOjAzOjUwLjI1OFoiLCJpYXQiOjE1NTczMTM3OTl9.eoCrySNvmgsB32hd1A1Ju_pVS5Ic6QLFJ9ZTeo9nLeU
 ###
 DELETE http://localhost:9090/node_api/user/6
@@ -52,11 +53,11 @@ Content-Type: application/json
 {
     "username": "plaa",
     "email": "plororororo@perfektio.com",
-    "nickname": "lentävälettu",
     "location": "Helsinki",
     "description": "Testikuvaus",
     "profileReady": false,
-    "tutorialWatched": true
+    "tutorialWatched": true,
+    "mmid": "q1wur1qh3pdn3boajkn88srq1r"
 }
 
 ###
