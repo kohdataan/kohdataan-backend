@@ -85,12 +85,15 @@ export const getChannelInvitations = async (req, res) => {
     const found = channelInvitations[0].filter(channel =>
       channelsWithRoom.includes(channel.id)
     )
-    const userInterests = channelInvitations[1]
-    const interests = found
-      .filter(channel => !userInterests.includes(channel.display_name))
-      .map(channel => channel.display_name)
 
-    if (found.length === 0 && interests.length > 0) {
+    const userInterests = channelInvitations[1]
+    const channelInterests = found.map(channel => channel.display_name)
+
+    const interests = userInterests.filter(
+      interest => !channelInterests.includes(interest)
+    )
+
+    if (interests.length > 0) {
       const channelPromises = await Promise.all(
         interests.map(interest => {
           const displayName =
@@ -105,9 +108,11 @@ export const getChannelInvitations = async (req, res) => {
         })
       )
 
-      const channels = channelPromises.map(channel => {
+      const newChannels = channelPromises.map(channel => {
         return channel.data
       })
+
+      const channels = [...found, ...newChannels]
 
       return res.status(200).send({
         success: true,

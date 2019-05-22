@@ -90,7 +90,8 @@ Content-Type: application/json
     "userInterests": [
         12,
         13,
-        15
+        15,
+        16
     ]
 }
 
