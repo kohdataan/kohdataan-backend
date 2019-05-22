@@ -51,6 +51,38 @@ export const getUser = (req, res) => {
     })
 }
 
+export const getUserByUsername = (req, res) => {
+  const { username } = req.params
+
+  return User.findAll({
+    where: { username },
+  })
+    .then(user => {
+      const {
+        nickname,
+        location,
+        description,
+        profileReady,
+        tutorialWatched,
+      } = user[0]
+      res.status(200).send({
+        nickname,
+        location,
+        description,
+        profileReady,
+        tutorialWatched,
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).send({
+        success: false,
+        message: 'Error getting user',
+        error: err,
+      })
+    })
+}
+
 export const addUser = async (req, res) => {
   const {
     username,
@@ -80,6 +112,7 @@ export const addUser = async (req, res) => {
         username,
         email,
         password,
+        nickname,
       })
       return [results, results2]
     })

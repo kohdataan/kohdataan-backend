@@ -1,6 +1,5 @@
 import axios from 'axios'
 import flatted from 'flatted'
-import { fail } from 'assert'
 import model from '../../models'
 
 const mattermostUrl =
@@ -17,7 +16,6 @@ export const getChannelInvitations = async (req, res) => {
     process.env.MASTER_TOKEN
   }`
   const { id } = req.user.dataValues
-
   if (!id) {
     return res.status(401).send({
       success: false,
@@ -25,7 +23,7 @@ export const getChannelInvitations = async (req, res) => {
     })
   }
 
-  const getChannels = axios
+  const channelsPromise = axios
     .get(`${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`)
     .then(results => {
       return results
@@ -34,7 +32,7 @@ export const getChannelInvitations = async (req, res) => {
       return err
     })
 
-  const userInterests = User.findAll({
+  const userInterestsPromise = User.findAll({
     where: {
       id,
     },
@@ -54,7 +52,10 @@ export const getChannelInvitations = async (req, res) => {
       return flatted.stringify(err)
     })
 
-  const channelInvitations = await Promise.all([getChannels, userInterests])
+  const channelInvitations = await Promise.all([
+    channelsPromise,
+    userInterestsPromise,
+  ])
     .then(results => {
       const { data } = results[0]
       const interests =
@@ -63,13 +64,36 @@ export const getChannelInvitations = async (req, res) => {
         data && data.filter(channel => interests.includes(channel.display_name))
       return [found, interests]
     })
-    .catch(err => flatted.stringify(err))
+    .catch(err => {
+      flatted.stringify(err)
+      return []
+    })
 
   try {
-    const found = channelInvitations[0]
-    const interests = channelInvitations[1]
+    const channelsPromises =
+      channelInvitations[0] &&
+      (await Promise.all(
+        channelInvitations[0].map(channel => {
+          return axios.get(`${mattermostUrl}/channels/${channel.id}/stats`)
+        })
+      ))
 
-    if (found.length === 0 && interests.length > 0) {
+    const channelsWithRoom = channelsPromises
+      .filter(result => result.data.member_count < 8)
+      .map(result => result.data.channel_id)
+
+    const found = channelInvitations[0].filter(channel =>
+      channelsWithRoom.includes(channel.id)
+    )
+
+    const userInterests = channelInvitations[1]
+    const channelInterests = found.map(channel => channel.display_name)
+
+    const interests = userInterests.filter(
+      interest => !channelInterests.includes(interest)
+    )
+
+    if (interests.length > 0) {
       const channelPromises = await Promise.all(
         interests.map(interest => {
           const displayName =
@@ -84,23 +108,25 @@ export const getChannelInvitations = async (req, res) => {
         })
       )
 
-      const channels = channelPromises.map(channel => {
+      const newChannels = channelPromises.map(channel => {
         return channel.data
       })
 
-      res.status(200).send({
+      const channels = [...found, ...newChannels]
+
+      return res.status(200).send({
         success: true,
         message: 'Channel invitation',
         channels,
       })
-    } else {
-      res.status(200).send({
-        success: true,
-        message: 'Channels',
-        found,
-      })
     }
+    res.status(200).send({
+      success: true,
+      message: 'Channels',
+      found,
+    })
   } catch (e) {
+    console.log(e)
     return res.status(500).send({
       success: false,
       message: 'Error',
