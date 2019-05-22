@@ -23,7 +23,7 @@ export const getChannelInvitations = async (req, res) => {
     })
   }
 
-  const getChannels = axios
+  const channelsPromise = axios
     .get(`${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`)
     .then(results => {
       return results
@@ -32,7 +32,7 @@ export const getChannelInvitations = async (req, res) => {
       return err
     })
 
-  const userInterests = User.findAll({
+  const userInterestsPromise = User.findAll({
     where: {
       id,
     },
@@ -52,7 +52,10 @@ export const getChannelInvitations = async (req, res) => {
       return flatted.stringify(err)
     })
 
-  const channelInvitations = await Promise.all([getChannels, userInterests])
+  const channelInvitations = await Promise.all([
+    channelsPromise,
+    userInterestsPromise,
+  ])
     .then(results => {
       const { data } = results[0]
       const interests =
@@ -67,7 +70,7 @@ export const getChannelInvitations = async (req, res) => {
     })
 
   try {
-    const channels =
+    const channelsPromises =
       channelInvitations[0] &&
       (await Promise.all(
         channelInvitations[0].map(channel => {
@@ -75,16 +78,19 @@ export const getChannelInvitations = async (req, res) => {
         })
       ))
 
-    const channelsWithRoom = channels
+    const channelsWithRoom = channelsPromises
       .filter(result => result.data.member_count < 8)
       .map(result => result.data.channel_id)
 
     const found = channelInvitations[0].filter(channel =>
       channelsWithRoom.includes(channel.id)
     )
-    const interests = channelInvitations[1]
+    const userInterests = channelInvitations[1]
+    const interests = found
+      .filter(channel => !userInterests.includes(channel.display_name))
+      .map(channel => channel.display_name)
 
-    if (found && interests && found.length === 0 && interests.length > 0) {
+    if (found.length === 0 && interests.length > 0) {
       const channelPromises = await Promise.all(
         interests.map(interest => {
           const displayName =
