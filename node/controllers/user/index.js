@@ -172,6 +172,7 @@ export const updateUser = (req, res) => {
     description,
     profileReady,
     tutorialWatched,
+    mmid,
   } = req.body
   const { id } = req.user.dataValues
   const queryId = req.params.id
@@ -198,20 +199,33 @@ export const updateUser = (req, res) => {
         },
       }
     )
-      .then(rows =>
-        res.status(200).send({
+      .then(rows => {
+        if (nickname && mmid) {
+          axios.defaults.headers.common.Authorization = `Bearer ${
+            process.env.MASTER_TOKEN
+          }`
+          return axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
+            nickname,
+          })
+        }
+        return rows
+      })
+      .then(rows => {
+        const updated = rows && rows.data ? rows.data : rows
+        return res.status(200).send({
           success: true,
           message: 'User succesfully updated',
-          updated: rows,
+          updated,
         })
-      )
-      .catch(error =>
+      })
+      .catch(error => {
+        console.log(error)
         res.status(500).send({
           success: false,
           message: 'Error in updating user',
           error,
         })
-      )
+      })
   }
 }
 
