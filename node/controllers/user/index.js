@@ -80,6 +80,7 @@ export const addUser = async (req, res) => {
         username,
         email,
         password,
+        nickname,
       })
       return [results, results2]
     })
