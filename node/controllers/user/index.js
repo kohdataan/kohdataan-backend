@@ -58,20 +58,27 @@ export const getUserByUsername = (req, res) => {
     where: { username },
   })
     .then(user => {
-      const {
-        nickname,
-        location,
-        description,
-        profileReady,
-        tutorialWatched,
-      } = user[0]
-      res.status(200).send({
-        nickname,
-        location,
-        description,
-        profileReady,
-        tutorialWatched,
-      })
+      if (user && user[0]) {
+        const {
+          nickname,
+          location,
+          description,
+          profileReady,
+          tutorialWatched,
+        } = user[0]
+        res.status(200).send({
+          nickname,
+          location,
+          description,
+          profileReady,
+          tutorialWatched,
+        })
+      } else {
+        res.status(404).send({
+          success: false,
+          message: 'User not found',
+        })
+      }
     })
     .catch(err => {
       console.log(err)
