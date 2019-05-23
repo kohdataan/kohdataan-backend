@@ -82,9 +82,18 @@ export const getChannelInvitations = async (req, res) => {
       .filter(result => result.data.member_count < 8)
       .map(result => result.data.channel_id)
 
-    const found = channelInvitations[0].filter(channel =>
-      channelsWithRoom.includes(channel.id)
-    )
+    let exhaustedInterests = []
+
+    const found = channelInvitations[0].filter(channel => {
+      if (
+        channelsWithRoom.includes(channel.id) &&
+        !exhaustedInterests.includes(channel.display_name)
+      ) {
+        exhaustedInterests = [...exhaustedInterests, channel.display_name]
+        return channelsWithRoom.includes(channel.id)
+      }
+      return false
+    })
 
     const userInterests = channelInvitations[1]
     const channelInterests = found.map(channel => channel.display_name)
