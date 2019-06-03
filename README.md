@@ -62,10 +62,12 @@ docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
 docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
 ```
 
+```bash
 Käyttäjätiedot:
 email: dev@kohdataan.fi
 username: dev
 password: devtest
+```
 
 #### Mattermost config
 
