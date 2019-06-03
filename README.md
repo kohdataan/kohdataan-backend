@@ -81,7 +81,13 @@ Muutettavat kentät:
   "AllowCorsFrom": "http://localhost:3000 http://localhost:9090",
   "CorsAllowCredentials": true,
   "CorsDebug": true,
+  "EnableUserAccessTokens": true,
   ...
+  },
+"TeamSettings": {
+  "EnableTeamCreation": true,
+  "EnableUserCreation": true,
+  "EnableOpenServer": true,
   },
 ```
 
