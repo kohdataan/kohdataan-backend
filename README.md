@@ -62,6 +62,22 @@ docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
 docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
 ```
 
+#### Mattermost config
+
+Mattermostin config-tiedostoon täytyy käydä tekemässä myös muutama muutos, jotta frontti ja mattermost-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin. Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Käyttöliittymästä ne löytyvät puolestaan system consolen alta.
+
+Muutettavat kentät:
+```
+"ServiceSettings": {
+  "SiteURL": "http://localhost:9090",
+  ...
+  "AllowCorsFrom": "http://localhost:3000 http://localhost:9090",
+  "CorsAllowCredentials": true,
+  "CorsDebug": true,
+  ...
+  },
+```
+
 #### Ongelmatilanteet
 
 Mikäli backendin kanssa ilmenee ongelmia, esimerkiksi ajaessa docker-compose up, voivat ensihätään auttaa komennot:
