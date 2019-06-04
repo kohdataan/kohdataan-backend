@@ -30,7 +30,7 @@ Teknisenä kumppanina ja yhteiskehittämisen koordinaattorina hankkeessa toimii 
 
 #### Asennus
 
-Jos kehität projektia windows -koneella on syytä lukea [ohjeet](./windows.md) ennen jatkamista.
+Jos kehität projektia windows -koneella, on sinun syytä lukea [ohjeet](./windows.md) ennen jatkamista.
 
 Saadaksesi projektin kehitysympäristön pystyyn, sinun täytyy asentaa [Docker Compose](https://docs.docker.com/compose/install/).
 
@@ -77,6 +77,7 @@ password: devtest
 Mattermostin config-tiedostoon täytyy käydä tekemässä myös muutama muutos, jotta frontti ja mattermost-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin. Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Käyttöliittymästä ne löytyvät puolestaan system consolen alta.
 
 Muutettavat kentät:
+
 ```
 "ServiceSettings": {
   "SiteURL": "http://localhost:9090",
