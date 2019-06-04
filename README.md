@@ -30,6 +30,8 @@ Teknisenä kumppanina ja yhteiskehittämisen koordinaattorina hankkeessa toimii 
 
 #### Asennus
 
+Jos kehität projektia windows -koneella on syytä lukea [ohjeet](./windows.md) ennen jatkamista.
+
 Saadaksesi projektin kehitysympäristön pystyyn, sinun täytyy asentaa [Docker Compose](https://docs.docker.com/compose/install/).
 
 Asennuksen jälkeen projekti lähtee käyntiin ajamalla seuraavat komennot:
