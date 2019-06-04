@@ -10,7 +10,7 @@
     "pretty": "npx prettier --write '**/*.{js,jsx,json,css,scss}'"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "bcrypt": "3.0.6",
     "body-parser": "^1.18.3",
     "cors": "2.8.5",
