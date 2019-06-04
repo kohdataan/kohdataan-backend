@@ -6,7 +6,7 @@ Projektin kehittäminen windows -ympäristössä on hivenen haastavampaa kuin li
 
 ##### Docker
 
-Tarvitset backendin pyörittämiseen docker for winsows:in. Löydät asennustiedoston [täältä.](https://docs.docker.com/docker-for-windows/install/). Asennuksen jälkeen sinun tulee jakaa jokin tietokoneen levyistä dockerin käyttöön. Löydät ohjeen [täältä](https://blogs.msdn.microsoft.com/stevelasker/2016/06/14/configuring-docker-for-windows-volumes/).  Jos kohtaat dockerin asennuksessa muita ongelmia kannattaa laittaa viestiä [slackissa.](https://join.slack.com/t/kohdataan-dev/shared_invite/enQtNjIwMTc4NzA4MjE0LWMzMDZmMmI1NjEwMjcyMDA2YjJiZTlhMmJiZTk5N2JiMGE2YTRjZDViNGVjNGM1NzYwNThkZjBkMzhlYzExMGU)
+Tarvitset backendin pyörittämiseen docker for winsows:in. Löydät asennustiedoston [täältä.](https://docs.docker.com/docker-for-windows/install/). Asennuksen jälkeen sinun tulee jakaa jokin tietokoneen levyistä dockerin käyttöön. Löydät ohjeen [täältä](https://blogs.msdn.microsoft.com/stevelasker/2016/06/14/configuring-docker-for-windows-volumes/). Jos kohtaat dockerin asennuksessa muita ongelmia kannattaa laittaa viestiä [slackissa.](https://join.slack.com/t/kohdataan-dev/shared_invite/enQtNjIwMTc4NzA4MjE0LWMzMDZmMmI1NjEwMjcyMDA2YjJiZTlhMmJiZTk5N2JiMGE2YTRjZDViNGVjNGM1NzYwNThkZjBkMzhlYzExMGU)
 
 ##### Git
 
@@ -15,6 +15,7 @@ Jotta saat kloonattua repositorion githubista tarvitset koneellesi gitin. Löyd�
 ##### Tietokanta
 
 Sinun tulee ajaa dockerin sisään oikea tietokanta dumppi. Helpoin tapa tehdä tämä on mennä päällä olevan docker -kontin sisälle komennolla `docker exec -it kohdataan-backend_db_1 /bin/bash`. Tämän jälkeen mene kansioon `db_dumps` ja kopio sinne [kohdataan.pgsql](https://github.com/kohdataan/kohdataan-backend/blob/master/db/dumps/kohdataan.pgsql) ja [mattermost.pgsql](https://github.com/kohdataan/kohdataan-backend/blob/master/db/dumps/mattermost.pgsql). Voit kopioimisen jälkeen ajaa dumpit komennoilla.
+
 ```
 createdb -U mmuser kohdataan
 psql -U mmuser kohdataan < kohdataan.pgsql
