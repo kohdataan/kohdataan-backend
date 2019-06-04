@@ -9,4 +9,6 @@ router.post('/sendAudioToChannel', channelCtrl.sendAudioToChannel)
 
 router.post('/leaveChannel', channelCtrl.leaveChannel)
 
+router.get('/members/:id', channelCtrl.getChannelUsers)
+
 export default router
