@@ -128,3 +128,8 @@ pz13sc4n9f817r5fzt7iqnz7oh
 nn7sh1w3f3fyzkzmgkhxwmt1nr
 
 ncjo8di4mbyspgwx9oou943oro
+
+### CHANNEL
+GET http://localhost:9090/node_api/channel/members/b1swt4psb7nhmb4z6ybcjaywja
+Authorization: Bearer xefuizt693rwznw6gbj9bbwwih
+
