@@ -7,7 +7,8 @@
     "start": "nodemon ./index.js --exec babel-node",
     "start:prod": "",
     "lint": "npx eslint .",
-    "pretty": "npx prettier --write '**/*.{js,jsx,json,css,scss}'"
+    "pretty": "npx prettier --write '**/*.{js,jsx,json,css,scss}'",
+    "test": "echo 'here be tests"
   },
   "dependencies": {
     "axios": "^0.18.1",

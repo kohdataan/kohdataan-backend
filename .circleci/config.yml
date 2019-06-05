@@ -5,7 +5,12 @@ jobs:
      - image: alpine:3.7
    steps:
      - run:
-         name: The First Step
+         name: Start docker
          command: |
-           echo 'Hello World!'
-           echo 'This is the delivery pipeline'
+          docker-compose build
+          docker-compose up
+     - run:
+         name: Tests
+         command: |
+           cd node
+           npm run test
