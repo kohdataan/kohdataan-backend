@@ -1,16 +1,16 @@
 version: 2.0
 jobs:
  build:
-   docker:
-     - image: alpine:3.7
+   machine: true
    steps:
-     - setup_remote_docker
+     - checkout
      - run:
          name: Start docker
          command: |
-          mkdir -p ./volumes/app/mattermost/{data,logs,config,plugins}
-          sudo chown -R 2000:2000 ./volumes/app/mattermost/
-          docker-compose up
+          set -x
+          mkdir -p ./volumes/mattermost/{data,logs,config,plugins}
+          sudo chown -R 2000:2000 ./volumes/mattermost/
+          docker-compose up -d
      - run:
          name: Tests
          command: |

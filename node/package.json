@@ -8,7 +8,7 @@
     "start:prod": "",
     "lint": "npx eslint .",
     "pretty": "npx prettier --write '**/*.{js,jsx,json,css,scss}'",
-    "test": "echo 'here be tests"
+    "test": "echo 'here be tests'"
   },
   "dependencies": {
     "axios": "^0.18.1",
