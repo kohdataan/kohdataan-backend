@@ -4,9 +4,9 @@ services:
   db:
     build: db
     read_only: true
-    restart: unless-stopped
+    restart: always
     volumes:
-      - ./volumes/db/var/lib/postgresql/data:/var/lib/postgresql/data
+      - postgres_database:/var/lib/postgresql/data:Z
       - ./volumes/db_dumps/:/db_dumps/
       #- /etc/localtime:/etc/localtime:ro
     environment:
@@ -54,3 +54,7 @@ services:
     volumes:
       - ./node/:/usr/src/app/
       - /usr/src/app/node_modules/
+
+volumes:
+    postgres_database:
+        external: true
