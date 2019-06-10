@@ -8,12 +8,8 @@ jobs:
      - run:
          name: Start docker
          command: |
-<<<<<<< HEAD
-          docker-compose build
-=======
           mkdir -p ./volumes/app/mattermost/{data,logs,config,plugins}
           sudo chown -R 2000:2000 ./volumes/app/mattermost/
->>>>>>> 6cd1e86... test
           docker-compose up
      - run:
          name: Tests
