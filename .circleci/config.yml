@@ -9,7 +9,7 @@ jobs:
          name: Start docker
          command: |
           mkdir -p ./volumes/mattermost/{data,logs,config,plugins}
-          sudo chown -R 2000:2000 ./volumes/app/mattermost/
+          chown -R 2000:2000 ./volumes/app/mattermost/
           docker-compose up
      - run:
          name: Tests
