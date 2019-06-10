@@ -7,9 +7,10 @@ jobs:
      - run:
          name: Start docker
          command: |
+          set -x
           mkdir -p ./volumes/mattermost/{data,logs,config,plugins}
           sudo chown -R 2000:2000 ./volumes/mattermost/
-          docker-compose up
+          docker-compose up -d
      - run:
          name: Tests
          command: |
