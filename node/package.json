@@ -29,7 +29,8 @@
     "pg-hstore": "^2.3.2",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
-    "sequelize": "^5.2.15"
+    "sequelize": "^5.2.15",
+    "sha1": "^1.1.1"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
