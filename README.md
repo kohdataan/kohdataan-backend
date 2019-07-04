@@ -65,8 +65,22 @@ docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
 docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
 ```
 
+Tämän lisäksi kannattaa ajaa tarvittavat migraation sekä seedit. Komennot voi ajaa suoraan node-kontissa:
+
 ```bash
+sequelize db:migrate
+sequelize db:seed:all
+```
+
+Tai suoraan konsolista
+
+```bash
+docker exec -i kohdataan-backend_node_1 sequelize db:migrate
+docker exec -i kohdataan-backend_node_1 sequelize db:seed:all
+```
+
 Käyttäjätiedot:
+```bash
 email: dev@kohdataan.fi
 username: dev
 password: devtest
