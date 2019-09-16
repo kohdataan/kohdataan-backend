@@ -28,7 +28,7 @@ export const handlePasswordResetRequest = (req, res) => {
       console.log(uuid)
       return res.status(200).send({
         success: true,
-        message: 'Email found!',
+        message: 'Email found and uuid generated and stored',
         uuid,
       })
     })
