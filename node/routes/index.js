@@ -8,6 +8,7 @@ import user from './user'
 import userInterest from './userInterest'
 import userQuestion from './userQuestion'
 import auth from './auth'
+import passwordReset from './passwordreset'
 
 const router = express.Router()
 
@@ -20,5 +21,6 @@ router.use('/user', user)
 router.use('/userInterest', userInterest)
 router.use('/userQuestion', userQuestion)
 router.use('/auth', auth)
+router.use('/passwordReset', passwordReset)
 
 export default router
