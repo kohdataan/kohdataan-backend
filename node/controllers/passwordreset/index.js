@@ -39,14 +39,15 @@ export const handlePasswordResetRequest = (req, res) => {
     })
 }
 
+// Non completed template for handling password reset
 export const handlePasswordReset = (req, res) => {
   const { uuid } = req.body
 
   PasswordResetUuid.findOne({ where: { uuid } })
     .then(passwordResetEntry => {
       // eslint-disable-next-line no-console
-      console.log(typeof passwordResetEntry.createdAt)
-
+      console.log(passwordResetEntry)
+      // Here check if the token is still valid, and change the password if so
       return res.status(200).send({
         success: true,
         message: 'Found',
