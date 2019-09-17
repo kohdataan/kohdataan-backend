@@ -37,7 +37,7 @@ Saadaksesi projektin kehitysympäristön pystyyn, sinun täytyy asentaa [Docker 
 Asennuksen jälkeen projekti lähtee käyntiin ajamalla seuraavat komennot:
 
 ```bash
-git clone git@github.com:kohdataan/kohdataan-backend.git
+git clone https://github.com/kohdataan/kohdataan-backend.git
 cd kohdataan-backend
 docker-compose build
 docker volume create --name=postgres_database
