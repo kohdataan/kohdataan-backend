@@ -3,7 +3,6 @@ import model from '../../models'
 
 const { PasswordResetUuid, User } = model
 
-// eslint-disable-next-line import/prefer-default-export
 export const handlePasswordResetRequest = (req, res) => {
   const { email } = req.body
 
@@ -26,16 +25,37 @@ export const handlePasswordResetRequest = (req, res) => {
       console.log('Created new database entry with uuid4 token')
       // eslint-disable-next-line no-console
       console.log(uuid)
-      return res.status(200).send({
+      return res.status(201).send({
         success: true,
         message: 'Email found and uuid generated and stored',
-        uuid,
       })
     })
     .catch(err => {
       return res.status(500).send({
         success: false,
         message: 'Email not found',
+        error: err,
+      })
+    })
+}
+
+export const handlePasswordReset = (req, res) => {
+  const { uuid } = req.body
+
+  PasswordResetUuid.findOne({ where: { uuid } })
+    .then(passwordResetEntry => {
+      // eslint-disable-next-line no-console
+      console.log(typeof passwordResetEntry.createdAt)
+
+      return res.status(200).send({
+        success: true,
+        message: 'Found',
+      })
+    })
+    .catch(err => {
+      return res.status(500).send({
+        success: false,
+        message: 'Given uuid does not match any stored uuids',
         error: err,
       })
     })
