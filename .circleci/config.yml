@@ -13,11 +13,11 @@ jobs:
           docker volume create --name=postgres_database
           docker-compose up -d
           cd db/dumps
-          docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan
-          docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
-          docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
-          docker exec -i kohdataan-backend_node_1 sequelize db:migrate
-          docker exec -i kohdataan-backend_node_1 sequelize db:seed:all
+          docker exec -i project_db_1 createdb -U mmuser kohdataan
+          docker exec -i project_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
+          docker exec -i project_db_1 psql -U mmuser mattermost < mattermost.pgsql
+          docker exec -i project_db_1 sequelize db:migrate
+          docker exec -i project_db_1 sequelize db:seed:all
      - run:
          name: Tests
          command: |
