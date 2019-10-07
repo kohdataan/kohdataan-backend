@@ -37,6 +37,7 @@
     "@babel/node": "7.2.2",
     "@babel/preset-env": "7.4.3",
     "@babel/register": "7.4.0",
+    "@types/jest": "^24.0.18",
     "babel-eslint": "10.0.1",
     "eslint": "5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -44,8 +45,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.1",
     "jest": "^24.9.0",
-    "prettier": "1.17.0",
-    "sequelize-mock": "^0.10.2"
+    "prettier": "1.17.0"
   },
   "jest": {
     "testEnvironment": "node",
