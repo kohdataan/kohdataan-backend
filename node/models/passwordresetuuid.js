@@ -1,9 +1,21 @@
+import uuidv4 from 'uuid/v4'
+
 module.exports = (sequelize, DataTypes) => {
   const PasswordResetUuid = sequelize.define(
     'PasswordResetUuid',
     {
-      uuid: DataTypes.STRING,
-      userId: DataTypes.INTEGER,
+      uuid: {
+        type: DataTypes.UUIDV4,
+        allowNull: false,
+        unique: true,
+        defaultValue: () => {
+          return uuidv4()
+        },
+      },
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
     },
     {}
   )

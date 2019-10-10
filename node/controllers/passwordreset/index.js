@@ -1,4 +1,3 @@
-import uuidv4 from 'uuid/v4'
 import model from '../../models'
 
 const { PasswordResetUuid, User } = model
@@ -6,29 +5,28 @@ const { PasswordResetUuid, User } = model
 export const handlePasswordResetRequest = (req, res) => {
   const { email } = req.body
 
-  User.findOne({ where: { email } })
+  return User.findOne({ where: { email } })
     .then(user => {
-      const uuid = uuidv4()
-      PasswordResetUuid.create({ uuid, userId: user.id }).catch(err => {
-        // eslint-disable-next-line no-console
-        console.log(
-          'Something went wrong while creating database entry for new password reset token'
-        )
-        return res.status(500).send({
-          success: false,
-          message: 'Cannot create database entry',
-          error: err,
+      return PasswordResetUuid.create({ userId: user.id })
+        .then(() => {
+          // eslint-disable-next-line no-console
+          console.log('Created new database entry with uuid4 token')
+          return res.status(201).send({
+            success: true,
+            message: 'Email found and uuid generated and stored',
+          })
         })
-      })
-
-      // eslint-disable-next-line no-console
-      console.log('Created new database entry with uuid4 token')
-      // eslint-disable-next-line no-console
-      console.log(uuid)
-      return res.status(201).send({
-        success: true,
-        message: 'Email found and uuid generated and stored',
-      })
+        .catch(err => {
+          // eslint-disable-next-line no-console
+          console.log(
+            'Something went wrong while creating database entry for new password reset token'
+          )
+          return res.status(500).send({
+            success: false,
+            message: 'Cannot create database entry',
+            error: err,
+          })
+        })
     })
     .catch(err => {
       return res.status(500).send({
