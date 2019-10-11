@@ -33,6 +33,7 @@ export const getUser = (req, res) => {
         description,
         profileReady,
         tutorialWatched,
+        showAge,
       } = user
       res.status(200).send({
         nickname,
@@ -40,6 +41,7 @@ export const getUser = (req, res) => {
         description,
         profileReady,
         tutorialWatched,
+        showAge,
       })
     })
     .catch(err => {
@@ -63,15 +65,21 @@ export const getUserByUsername = (req, res) => {
           nickname,
           location,
           description,
+          birthdate,
+          phoneNumber,
           profileReady,
           tutorialWatched,
+          showAge,
         } = user[0]
         res.status(200).send({
           nickname,
           location,
           description,
+          birthdate,
+          phoneNumber,
           profileReady,
           tutorialWatched,
+          showAge,
         })
       } else {
         res.status(404).send({
@@ -97,26 +105,28 @@ export const addUser = async (req, res) => {
     password,
     first_name,
     last_name,
-    dateOfBirth,
+    birthdate,
     phoneNumber,
     nickname,
     location,
     description,
     profileReady,
     tutorialWatched,
+    showAge,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
   const user = {
     username,
     email,
     password: hashed,
-    dateOfBirth,
+    birthdate,
     phoneNumber,
     nickname,
     location,
     description,
     profileReady,
     tutorialWatched,
+    showAge,
   }
 
   User.create(user)
@@ -155,7 +165,7 @@ export const addUser = async (req, res) => {
           username: results.username,
           email: results.email,
           nickname: results.nickname,
-          dateOfBirth: results.dateOfBirth,
+          birthdate: results.birthdate,
           phoneNumber: results.phoneNumber,
         },
         mmuser,
