@@ -56,6 +56,17 @@ export default (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
+      phoneNumber: {
+        type: DataTypes.STRING,
+        allowNull: {
+          args: false,
+          msg: 'Phone number is required',
+        },
+      },
+      birthdate: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
       profileReady: {
         type: DataTypes.BOOLEAN,
         allowNull: {
