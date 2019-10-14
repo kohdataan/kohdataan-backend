@@ -61,6 +61,7 @@ Kun palvelu on pystyssä, kantojen tuonti tapahtuu ajamalla db/dumps kansiossa s
 
 ```bash
 docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan
+docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test
 docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
 docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
 ```
@@ -155,6 +156,10 @@ npm ci
 ```
 
 ### Testaaminen
+
+Testit voi runnata komennolla "docker exec -e NODE_ENV=test -it kohdataan-backend_node_1 npm test" 
+
+Jos volumeen ei olla luotu testaustietokantaa build -vaiheessa, voit lisätä sen komennolla: "docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test"
 
 ### Pull Request -käytännöt
 

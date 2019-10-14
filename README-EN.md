@@ -32,6 +32,7 @@ After installing Docker Compose you can get the project up by running the follow
 git clone git@github.com:kohdataan/kohdataan-backend.git
 cd kohdataan-backend
 docker-compose build
+docker volume create --name=postgres_database
 docker-compose up
 ```
 
