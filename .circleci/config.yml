@@ -16,5 +16,5 @@ jobs:
          name: Tests
          command: |
            cd node
-           sudo npm install
-           npm run test
+           docker exec -i project_node_1 createdb -U mmuser database_test
+           docker exec -e NODE_ENV=test -it project_node_1 npm test
