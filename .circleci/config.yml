@@ -13,10 +13,13 @@ jobs:
           docker volume create --name=postgres_database
           docker-compose up -d
      - run:
+         name: Test setup
+         command: |
+           docker exec -i project_db_1 createdb -U mmuser database_test
+     - run:
          name: Tests
          command: |
            cd node
-           docker exec -i project_db_1 createdb -U mmuser database_test
            docker exec -i -e NODE_ENV=test project_node_1 sequelize db:migrate
            docker exec -i -e NODE_ENV=test project_node_1 sequelize db:seed:all
            docker exec -e NODE_ENV=test -it project_node_1 npm test
