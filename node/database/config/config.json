@@ -10,7 +10,7 @@
     "username": "mmuser",
     "password": "mmuser_password",
     "database": "database_test",
-    "host": "localhost",
+    "host": "db",
     "dialect": "postgres"
   },
   "production": {
