@@ -19,7 +19,7 @@ jobs:
           DOCKERIZE_VERSION: v0.6.1
      - run:
          name: Wait for db
-         command: dockerize -wait tcp://localhost:5432 -timeout 1m
+         command: dockerize -wait tcp:db -timeout 1m
      - run:
          name: Tests
          command: |
