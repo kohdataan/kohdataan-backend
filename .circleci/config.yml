@@ -16,6 +16,7 @@ jobs:
          name: Tests
          command: |
            cd node
+           docker ps -a
            docker exec -i project_node_1 sequelize db:migrate --env test
            docker exec -i project_node_1 sequelize db:seed:all --env test
            docker exec -i project_node_1 sequelize npm test
