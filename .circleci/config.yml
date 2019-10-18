@@ -16,5 +16,6 @@ jobs:
          name: Tests
          command: |
            cd node
-           sudo npm install
-           sudo npm test
+           docker exec -i project_node_1 sequelize db:migrate --env test
+           docker exec -i project_node_1 sequelize db:seed:all --env test
+           docker exec -i project_node_1 sequelize npm test
