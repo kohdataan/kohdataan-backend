@@ -16,5 +16,5 @@ jobs:
          name: Tests
          command: |
            cd node
-           npm install
-           npm test
+           sudo npm install
+           sudo npm test
