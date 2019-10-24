@@ -24,6 +24,7 @@ jobs:
          name: Initialize test database
          command: |
            docker ps
+           ps -a
            docker exec -i project_db_1 createdb -U mmuser database_test
      - run:
          name: Run migrations
