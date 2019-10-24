@@ -21,9 +21,22 @@ jobs:
          name: Wait for db
          command: dockerize -wait tcp://localhost:5432 -timeout 1m
      - run:
-         name: Tests
+         name: Initialize test database
          command: |
-           cd node
            docker ps
            docker exec -i project_db_1 createdb -U mmuser database_test
+     - run:
+         name: Run migrations
+         command: |
+           docker ps
+           docker exec -i project_node_1 sequelize db:migrate --env test
+     - run:
+         name: Run seeds
+         command: |
+           docker ps
+           docker exec -i project_node_1 sequelize db:seed:all --env test
+     - run:
+         name: Tests
+         command: |
+           docker ps
            docker exec -i -e NODE_ENV=test project_node_1 npm test
