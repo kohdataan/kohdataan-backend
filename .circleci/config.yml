@@ -25,7 +25,6 @@ jobs:
          command: |
            docker ps
            docker logs project_db_1
-           dockerize -wait tcp://localhost:5432 -timeout 1m
            docker exec -i project_db_1 createdb -h localhost -p 5432 -U mmuser database_test
            docker exec -i project_node_1 sequelize db:migrate --env test
            docker exec -i project_node_1 sequelize db:seed:all --env test
