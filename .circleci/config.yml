@@ -13,19 +13,10 @@ jobs:
           docker volume create --name=postgres_database
           docker-compose up -d
      - run:
-         name: install dockerize
-         command: wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && sudo tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-         environment:
-          DOCKERIZE_VERSION: v0.6.1
-     - run:
-         name: Wait for db
-         command: dockerize -wait tcp://localhost:5432 -timeout 1m
-     - run:
          name: Tests
          command: |
-           docker ps
-           docker logs project_db_1
            sleep 30
+           docker ps -a
            docker logs project_db_1
            docker exec -i project_db_1 createdb -h localhost -p 5432 -U mmuser database_test
            docker exec -i project_node_1 sequelize db:migrate --env test
