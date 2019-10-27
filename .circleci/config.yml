@@ -16,10 +16,8 @@ jobs:
          name: Tests
          command: |
            sleep 30
-           docker ps -a
-           docker logs project_db_1
-           docker exec -i project_db_1 createdb -h localhost -p 5432 -U mmuser database_test
-           docker exec -i project_node_1 sequelize db:migrate --env test
-           docker exec -i project_node_1 sequelize db:seed:all --env test
-           docker exec -i -e NODE_ENV=test project_node_1 npm test
+           docker exec -i project_db_1 createdb -U mmuser database_test
+           docker exec -i project_node_1 sequelize db:migrate --env circleclitest
+           docker exec -i project_node_1 sequelize db:seed:all --env circleclitest
+           docker exec -i -e NODE_ENV=circleclitest project_node_1 npm test
            
