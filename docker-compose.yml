@@ -5,7 +5,7 @@ services:
     build: db
     ports:
       - '5432:5432'
-    read_only: false
+    read_only: true
     restart: always
     volumes:
       - postgres_database:/var/lib/postgresql/data:Z
