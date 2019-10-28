@@ -13,13 +13,6 @@
     "host": "localhost",
     "dialect": "postgres"
   },
-  "circleclitest": {
-    "username": "mmuser",
-    "password": "mmuser_password",
-    "database": "database_test",
-    "host": "db",
-    "dialect": "postgres"
-  },
   "production": {
     "username": "mmuser",
     "password": null,
