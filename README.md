@@ -157,7 +157,7 @@ npm ci
 
 ### Testaaminen
 
-Testit voi runnata komennolla "docker exec -e NODE_ENV=test -it kohdataan-backend_node_1 npm test"  
+Testit voi runnata komennolla "npm test" node -kansiossa.  
 
 Jos volumeen ei olla luotu testaustietokantaa build -vaiheessa, voit lisätä sen komennolla: "docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test"
 
