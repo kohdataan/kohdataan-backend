@@ -78,27 +78,24 @@ export const forgot = (req, res) => {
 
 // Non completed template for handling password reset
 export const reset = (req, res) => {
-  const { uuid } = req.body
+  const { uuid, password } = req.body
 
   return PasswordResetUuid.findOne({ where: { uuid } })
     .then(passwordResetEntry => {
-      // Here check if the token is still valid, and change the password if so
       const givenTime = Number(process.env.PASSWORD_RESET_TIME)
       const currentTime = new Date().getTime()
       const tokenTime = passwordResetEntry.createdAt.getTime()
-
       if (currentTime - tokenTime < givenTime) {
-        
-      } else {
-        return res.status(500).send({
-          success: false,
-          message: 'Password reset token has expired',
+        passwordResetEntry.destroy()
+        return res.status(200).send({
+          success: true,
+          message: 'Found',
         })
       }
-
-      return res.status(200).send({
-        success: true,
-        message: 'Found',
+      passwordResetEntry.destroy()
+      return res.status(500).send({
+        success: false,
+        message: 'Password reset token has expired',
       })
     })
     .catch(err => {
