@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     'PasswordResetUuid',
     {
       uuid: {
-        type: DataTypes.UUID,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true,
         defaultValue: () => {

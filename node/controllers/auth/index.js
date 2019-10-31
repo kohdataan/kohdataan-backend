@@ -1,5 +1,8 @@
 import passport from 'passport'
 import jwt from 'jsonwebtoken'
+import model from '../../models'
+
+const { PasswordResetUuid, User } = model
 
 export const login = (req, res) => {
   passport.authenticate(
@@ -45,9 +48,64 @@ export const logout = (req, res) => {
 }
 
 export const forgot = (req, res) => {
-  res.status(501).send('not yet implemented')
+  const { email } = req.body
+
+  return User.findOne({ where: { email } })
+    .then(user => {
+      return PasswordResetUuid.create({ userId: user.id })
+        .then(() => {
+          return res.status(201).send({
+            success: true,
+            message: 'Email found and uuid generated and stored',
+          })
+        })
+        .catch(err => {
+          return res.status(500).send({
+            success: false,
+            message: 'Cannot create database entry',
+            error: err,
+          })
+        })
+    })
+    .catch(err => {
+      return res.status(500).send({
+        success: false,
+        message: 'Email not found',
+        error: err,
+      })
+    })
 }
 
+// Non completed template for handling password reset
 export const reset = (req, res) => {
-  res.status(501).send('not yet implemented')
+  const { uuid } = req.body
+
+  return PasswordResetUuid.findOne({ where: { uuid } })
+    .then(passwordResetEntry => {
+      // Here check if the token is still valid, and change the password if so
+      const givenTime = Number(process.env.PASSWORD_RESET_TIME)
+      const currentTime = new Date().getTime()
+      const tokenTime = passwordResetEntry.createdAt.getTime()
+
+      if (currentTime - tokenTime < givenTime) {
+        console.log("VAIHDETAAN SALASANA")
+      } else {
+        return res.status(500).send({
+          success: false,
+          message: 'Password reset token has expired',
+        })
+      }
+
+      return res.status(200).send({
+        success: true,
+        message: 'Found',
+      })
+    })
+    .catch(err => {
+      return res.status(500).send({
+        success: false,
+        message: 'Given uuid does not match any stored uuids',
+        error: err,
+      })
+    })
 }

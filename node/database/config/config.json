@@ -4,20 +4,23 @@
     "password": "mmuser_password",
     "database": "kohdataan",
     "host": "db",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "timezone": "-02:00"
   },
   "test": {
     "username": "mmuser",
     "password": "mmuser_password",
     "database": "database_test",
     "host": "localhost",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "timezone": "-02:00"
   },
   "production": {
     "username": "mmuser",
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "timezone": "-02:00"
   }
 }
