@@ -88,7 +88,7 @@ export const reset = (req, res) => {
       const tokenTime = passwordResetEntry.createdAt.getTime()
 
       if (currentTime - tokenTime < givenTime) {
-        console.log("VAIHDETAAN SALASANA")
+        
       } else {
         return res.status(500).send({
           success: false,
