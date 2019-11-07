@@ -1,5 +1,7 @@
 import passport from 'passport'
 import jwt from 'jsonwebtoken'
+import bcrypt from 'bcrypt'
+import axios from 'axios'
 import model from '../../models'
 
 const { PasswordResetUuid, User } = model
@@ -86,11 +88,21 @@ export const reset = (req, res) => {
       const currentTime = new Date().getTime()
       const tokenTime = passwordResetEntry.createdAt.getTime()
       if (currentTime - tokenTime < givenTime) {
-        passwordResetEntry.destroy()
-        return res.status(200).send({
-          success: true,
-          message: 'Found',
-        })
+        return User.findOne({ where: { id: passwordResetEntry.userId } })
+          .then(user => {
+            passwordResetEntry.destroy()
+            return res.status(200).send({
+              success: true,
+              message: 'Found',
+            })
+          })
+          .catch(err => {
+            return res.status(500).send({
+              success: false,
+              message: 'There was a problem fetching associated user',
+              error: err,
+            })
+          })
       }
       passwordResetEntry.destroy()
       return res.status(500).send({
