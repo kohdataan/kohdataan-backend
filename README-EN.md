@@ -32,8 +32,30 @@ After installing Docker Compose you can get the project up by running the follow
 git clone git@github.com:kohdataan/kohdataan-backend.git
 cd kohdataan-backend
 docker-compose build
+docker volume create --name=postgres_database
 docker-compose up
 ```
+
+After the containers are up you need to create the database itself and run dumps. use following commands to create databases;
+
+'docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan'
+
+'docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test'
+
+
+After this go to db/dumps and run commands;
+
+'docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql'
+
+'docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql'
+
+
+It is also a good idea to run migrations;
+
+'docker exec -i kohdataan-backend_node_1 sequelize db:migrate'
+
+'docker exec -i kohdataan-backend_node_1 sequelize db:seed:all'
+
 
 If you add new npm-packages to the project:
 * Add the package to the `node/package.json` file
@@ -74,6 +96,14 @@ In addition to slack, there is of course the discussion on pull requests and iss
 The project uses [ESLint](https://github.com/eslint/eslint) and [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) with small changes.
 
 #### Backend
+
+### Testing
+
+You can run tests inside the node -container with the command 'npm test'
+
+Make sure you have created the test database inside db image, this can be done with the command 'docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test'
+
+First time you run tests you will get error 'relation user does not exist', just run the tests again, on the first go it sets up tables and relations and everything should work next try.
 
 #### Frontend
 

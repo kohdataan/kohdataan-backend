@@ -10,7 +10,7 @@ export default (sequelize, DataTypes) => {
         },
         unique: {
           args: true,
-          msg: 'Email already exists',
+          msg: 'Username already exists',
         },
       },
       email: {
