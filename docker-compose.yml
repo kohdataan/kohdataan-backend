@@ -3,6 +3,8 @@ version: '2'
 services:
   db:
     build: db
+    ports:
+      - '5432:5432'
     read_only: true
     restart: always
     volumes:
@@ -49,7 +51,7 @@ services:
     build: node
     ports:
       - '8080:8080'
-    read_only: true
+    read_only: false
     command: 'npm start'
     volumes:
       - ./node/:/usr/src/app/

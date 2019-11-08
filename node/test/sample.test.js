@@ -1,26 +1,28 @@
 import model from '../models'
 
-const { user } = model
+const { User } = model
 
-beforeAll(() => {
-  return model.sequelize.sync({
-    force: true,
+test('connection to database is established', () => {
+  return model.sequelize.authenticate().then(() => {
+    expect(true).toBe(true)
   })
 })
 
-describe('Sample Test', () => {
-  test('should test that true === true', () => {
-    expect(true).toBe(true)
-  })
+test('user is created and atleast one user is found', () => {
+  const testUser = {
+    username: 'test',
+    email: 'test@gmail.com',
+    password: 'testtest',
+    nickname: 'test',
+    location: 'kerava',
+    description: 'moi',
+    profileReady: true,
+    tutorialWatched: true,
+  }
 
-  test('connection to database is established', () => {
-    model.sequelize
-      .authenticate()
-      .then(() => {
-        expect(true).toBe(true)
-      })
-      .catch(() => {
-        expect(true).toBe(false)
-      })
+  return User.create(testUser).then(() => {
+    return User.findAll().then(users => {
+      expect(users.length).toBeGreaterThan(0)
+    })
   })
 })

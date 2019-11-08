@@ -15,5 +15,12 @@ jobs:
      - run:
          name: Tests
          command: |
-           cd node
-           npm run test
+           # Sleep for some time to allow psql database to restart
+           sleep 30
+           # Create the normal kohdataan database because the test -enviroment uses localhost which is not available in the container
+           docker exec -i project_db_1 createdb -U mmuser kohdataan
+           docker exec -i project_node_1 sequelize db:migrate
+           docker exec -i project_node_1 sequelize db:seed:all
+           # Run the tests in the container
+           docker exec -i project_node_1 npm test
+           
