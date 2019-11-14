@@ -2,9 +2,14 @@ import passport from 'passport'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import axios from 'axios'
-import model from '../../models'
+import db from '../../models'
 
-const { PasswordResetUuid, User } = model
+// The models here are retrieved through db because this way vscode knows they are sequelize models.
+const PasswordResetUuid = db.sequelize.model('PasswordResetUuid')
+const User = db.sequelize.model('User')
+
+const mattermostUrl =
+  process.env.MATTERMOST_URL || 'http://mattermost:8000/api/v4'
 
 export const login = (req, res) => {
   passport.authenticate(
@@ -55,22 +60,15 @@ export const forgot = (req, res) => {
   return User.findOne({ where: { email } })
     .then(user => {
       return PasswordResetUuid.create({ userId: user.id })
-        .then(() => {
-          return res.status(201).send({
-            success: true,
-            message: 'Email found and uuid generated and stored',
-          })
-        })
-        .catch(err => {
-          return res.status(500).send({
-            success: false,
-            message: 'Cannot create database entry',
-            error: err,
-          })
-        })
+    })
+    .then(() => {
+      res.status(201).send({
+        success: true,
+        message: 'Email found and uuid generated and stored',
+      })
     })
     .catch(err => {
-      return res.status(500).send({
+      res.status(500).send({
         success: false,
         message: 'Email not found',
         error: err,
@@ -78,43 +76,49 @@ export const forgot = (req, res) => {
     })
 }
 
-// Non completed template for handling password reset
-export const reset = (req, res) => {
+export const reset = async (req, res) => {
   const { uuid, password } = req.body
 
   return PasswordResetUuid.findOne({ where: { uuid } })
-    .then(passwordResetEntry => {
+    .then(async passwordResetEntry => {
       const givenTime = Number(process.env.PASSWORD_RESET_TIME)
       const currentTime = new Date().getTime()
       const tokenTime = passwordResetEntry.createdAt.getTime()
+
       if (currentTime - tokenTime < givenTime) {
         return User.findOne({ where: { id: passwordResetEntry.userId } })
-          .then(user => {
-            passwordResetEntry.destroy()
-            return res.status(200).send({
-              success: true,
-              message: 'Found',
-            })
-          })
-          .catch(err => {
-            return res.status(500).send({
-              success: false,
-              message: 'There was a problem fetching associated user',
-              error: err,
-            })
-          })
       }
-      passwordResetEntry.destroy()
-      return res.status(500).send({
-        success: false,
-        message: 'Password reset token has expired',
+      // throw an error if token is expired, this causes the .then chain to go directly into .catch
+      throw new Error('Given token has expired')
+    })
+    .then(async user => {
+      await user.update({
+        password: bcrypt.hashSync(password, 12),
+      })
+      axios.defaults.headers.common.Authorization = `Bearer ${
+        process.env.MASTER_TOKEN
+      }`
+      return axios.post(`${mattermostUrl}/users/search`, {
+        term: user.email,
+      })
+    })
+    .then(async mattermostUser => {
+      await axios.put(
+        `${mattermostUrl}/users/${mattermostUser.data[0].id}/password`,
+        {
+          new_password: password,
+        }
+      )
+      res.status(200).send({
+        success: true,
+        message: 'Password changed succesfully',
       })
     })
     .catch(err => {
-      return res.status(500).send({
+      res.status(500).send({
         success: false,
-        message: 'Given uuid does not match any stored uuids',
-        error: err,
+        message: 'Something went wrong',
+        error: err.message,
       })
     })
 }
