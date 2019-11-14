@@ -157,9 +157,11 @@ npm ci
 
 ### Testaaminen
 
-Testit voi runnata komennolla "npm test" node -kansiossa.  
+Testit voi runnata komennolla "npm test" node -kansiossa, tarkista että containerit ovat pystyssä ennen.  
 
 Jos volumeen ei olla luotu testaustietokantaa build -vaiheessa, voit lisätä sen komennolla: "docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test"
+
+Ekaa kertaa testejä runnatessa tulee ongelma "relation user does not exist", tämän pystyy ratkaisemaan runnaamalla testit uudelleen. (ekalla kerralla luodaan uudet tablet ja relationit eikä se ole enää sen jälkeen ongelma)
 
 ### Pull Request -käytännöt
 
