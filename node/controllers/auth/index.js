@@ -2,6 +2,7 @@ import passport from 'passport'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import axios from 'axios'
+import nodemailer from 'nodemailer'
 import db from '../../models'
 
 // The models here are retrieved through db because this way vscode knows they are sequelize models.
@@ -54,14 +55,28 @@ export const logout = (req, res) => {
   res.status(501).send('not yet implemented')
 }
 
-export const forgot = (req, res) => {
+export const forgot = async (req, res) => {
   const { email } = req.body
 
   return User.findOne({ where: { email } })
-    .then(user => {
+    .then(async user => {
       return PasswordResetUuid.create({ userId: user.id })
     })
-    .then(() => {
+    .then(async createdToken => {
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.TESTEMAIL,
+          pass: process.env.TESTEMAILPASS,
+        },
+      })
+      await transporter.sendMail({
+        from: process.env.TESTEMAIL,
+        to: email,
+        subject: 'Password reset link',
+        text: `${'Here is the link also change this message to something more suitable ' +
+          'www.kohdataan.com/forgotPass?uuid='}${createdToken.dataValues.uuid}`,
+      })
       res.status(201).send({
         success: true,
         message: 'Email found and uuid generated and stored',
@@ -85,11 +100,14 @@ export const reset = async (req, res) => {
       const currentTime = new Date().getTime()
       const tokenTime = passwordResetEntry.createdAt.getTime()
 
-      if (currentTime - tokenTime < givenTime) {
+      if (currentTime - tokenTime < givenTime && !passwordResetEntry.used) {
+        await passwordResetEntry.update({
+          used: true,
+        })
         return User.findOne({ where: { id: passwordResetEntry.userId } })
       }
       // throw an error if token is expired, this causes the .then chain to go directly into .catch
-      throw new Error('Given token has expired')
+      throw new Error('Given token has expired or has been used')
     })
     .then(async user => {
       await user.update({
