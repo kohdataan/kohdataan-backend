@@ -13,20 +13,30 @@ jobs:
           docker volume create --name=postgres_database
           docker-compose up -d
      - run:
+         name: install dockerize
+         command: wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && sudo tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+         environment:
+           DOCKERIZE_VERSION: v0.3.0
+     - run:
          name: Tests
          command: |
            # Sleep for some time to allow psql database to restart
            docker ps -a
+           docker logs project_db_1
            sleep 30
            # Create the normal kohdataan database because the test -enviroment uses localhost which is not available in the container
            docker ps -a
+           docker logs project_db_1
+           dockerize -wait tcp://localhost:5432 -timeout 1m
            docker exec -i project_db_1 createdb -U mmuser kohdataan
            docker ps -a
+           docker logs project_db_1
            docker exec -i project_node_1 sequelize db:migrate
            docker ps -a
+           docker logs project_db_1
            docker exec -i project_node_1 sequelize db:seed:all
            docker ps -a
+           docker logs project_db_1
            # Run the tests in the container
-           docker ps -a
            docker exec -i project_node_1 npm test
            
