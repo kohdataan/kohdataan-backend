@@ -1,5 +1,9 @@
 import passport from 'passport'
 import jwt from 'jsonwebtoken'
+import db from '../../models'
+
+// The models here are retrieved through db because this way vscode knows they are sequelize models.
+const LogoutToken = db.sequelize.model('LogoutToken')
 
 export const login = (req, res) => {
   passport.authenticate(
