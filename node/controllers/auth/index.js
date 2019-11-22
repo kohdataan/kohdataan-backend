@@ -8,6 +8,7 @@ import db from '../../models'
 // The models here are retrieved through db because this way vscode knows they are sequelize models.
 const PasswordResetUuid = db.sequelize.model('PasswordResetUuid')
 const User = db.sequelize.model('User')
+const LogoutToken = db.sequelize.model('LogoutToken')
 
 const mattermostUrl =
   process.env.MATTERMOST_URL || 'http://mattermost:8000/api/v4'
@@ -35,7 +36,10 @@ export const login = (req, res) => {
           if (error) {
             res.send(error)
           }
-          const token = jwt.sign(user.dataValues, process.env.JWT_SECRET)
+          const token = jwt.sign(
+            { user: user.dataValues, date: new Date() },
+            process.env.JWT_SECRET
+          )
 
           return res.json({
             user: {
@@ -52,7 +56,22 @@ export const login = (req, res) => {
 }
 
 export const logout = (req, res) => {
-  res.status(501).send('not yet implemented')
+  const { authToken } = req.body
+
+  return LogoutToken.create({ token: authToken })
+    .then(() => {
+      res.status(200).send({
+        success: true,
+        message: 'Succesfully logged out',
+      })
+    })
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Something went wrong',
+        error: err.message,
+      })
+    })
 }
 
 export const forgot = async (req, res) => {
