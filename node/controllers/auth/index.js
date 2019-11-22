@@ -24,7 +24,10 @@ export const login = (req, res) => {
           if (error) {
             res.send(error)
           }
-          const token = jwt.sign(user.dataValues, process.env.JWT_SECRET)
+          const token = jwt.sign(
+            { user: user.dataValues, date: new Date() },
+            process.env.JWT_SECRET
+          )
 
           return res.json({
             user: {
@@ -41,7 +44,22 @@ export const login = (req, res) => {
 }
 
 export const logout = (req, res) => {
-  res.status(501).send('not yet implemented')
+  const { authToken } = req.body
+
+  return LogoutToken.create({ token: authToken })
+    .then(() => {
+      res.status(200).send({
+        success: true,
+        message: 'Succesfully logged out',
+      })
+    })
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Something went wrong',
+        error: err.message,
+      })
+    })
 }
 
 export const forgot = (req, res) => {
