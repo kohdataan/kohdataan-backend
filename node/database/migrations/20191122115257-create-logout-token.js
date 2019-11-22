@@ -1,7 +1,7 @@
 /* eslint-disable */
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('logoutTokens', {
+    return queryInterface.createTable('LogoutTokens', {
       id: {
         allowNull: false,
         autoIncrement: true,

@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const logoutToken = sequelize.define(
-    'logoutToken',
+    'LogoutToken',
     {
       token: DataTypes.STRING(1000),
     },
