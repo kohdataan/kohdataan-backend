@@ -10,7 +10,7 @@ module.exports = {
       },
       token: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1000)
       },
       createdAt: {
         allowNull: false,
