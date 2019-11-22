@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt'
 import model from './models'
 
-const { User, LogoutToken } = model
+const { User } = model
 
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
@@ -49,10 +49,9 @@ passport.use(
       secretOrKey: process.env.JWT_SECRET,
     },
     (jwtPayload, cb) => {
-      console.log(jwtPayload)
       return User.findOne({
         where: {
-          id: jwtPayload.user.id,
+          id: jwtPayload.id,
         },
       })
         .then(user => {
