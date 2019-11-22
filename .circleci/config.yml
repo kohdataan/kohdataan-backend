@@ -10,7 +10,7 @@ jobs:
           set -x
           mkdir -p ./volumes/mattermost/{data,logs,config,plugins}
           sudo chown -R 2000:2000 ./volumes/mattermost/
-          docker volume create --name=postgres_database
+          sudo docker volume create --name=postgres_database
           docker-compose up -d
      - run:
          name: Tests
