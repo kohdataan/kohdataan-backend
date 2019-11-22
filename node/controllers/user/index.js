@@ -36,6 +36,7 @@ export const getUser = (req, res) => {
         profileReady,
         tutorialWatched,
         showAge,
+        showLocation,
       } = user
       res.status(200).send({
         nickname,
@@ -46,6 +47,7 @@ export const getUser = (req, res) => {
         profileReady,
         tutorialWatched,
         showAge,
+        showLocation,
       })
     })
     .catch(err => {
@@ -66,6 +68,7 @@ export const getUserByUsername = (req, res) => {
     .then(user => {
       if (user && user[0]) {
         const {
+          id,
           nickname,
           location,
           description,
@@ -74,8 +77,10 @@ export const getUserByUsername = (req, res) => {
           profileReady,
           tutorialWatched,
           showAge,
+          showLocation,
         } = user[0]
         res.status(200).send({
+          id,
           nickname,
           location,
           description,
@@ -84,6 +89,7 @@ export const getUserByUsername = (req, res) => {
           profileReady,
           tutorialWatched,
           showAge,
+          showLocation,
         })
       } else {
         res.status(404).send({
@@ -117,6 +123,7 @@ export const addUser = async (req, res) => {
     profileReady,
     tutorialWatched,
     showAge,
+    showLocation,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
   const user = {
@@ -131,6 +138,7 @@ export const addUser = async (req, res) => {
     profileReady,
     tutorialWatched,
     showAge,
+    showLocation,
   }
 
   User.create(user)
@@ -196,6 +204,8 @@ export const updateUser = (req, res) => {
     description,
     profileReady,
     tutorialWatched,
+    showAge,
+    showLocation,
     mmid,
   } = req.body
   const { id } = req.user.dataValues
@@ -216,6 +226,8 @@ export const updateUser = (req, res) => {
         description,
         profileReady,
         tutorialWatched,
+        showAge,
+        showLocation,
       },
       {
         where: {

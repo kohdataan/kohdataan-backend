@@ -67,6 +67,14 @@ export default (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: true,
       },
+      showAge: {
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
+      },
+      showLocation: {
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
+      },
       profileReady: {
         type: DataTypes.BOOLEAN,
         allowNull: {
