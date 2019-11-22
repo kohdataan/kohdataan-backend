@@ -3,7 +3,6 @@ import jwt from 'jsonwebtoken'
 import db from '../../models'
 
 // The models here are retrieved through db because this way vscode knows they are sequelize models.
-const LogoutToken = db.sequelize.model('LogoutToken')
 
 export const login = (req, res) => {
   passport.authenticate(
@@ -50,6 +49,7 @@ export const login = (req, res) => {
 export const logout = (req, res) => {
   const { authToken } = req.body
 
+  /*
   return LogoutToken.create({ token: authToken })
     .then(() => {
       res.status(200).send({
@@ -64,6 +64,7 @@ export const logout = (req, res) => {
         error: err.message,
       })
     })
+    */
 }
 
 export const forgot = (req, res) => {

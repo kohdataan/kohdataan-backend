@@ -1,16 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
-  const LogoutToken = sequelize.define(
-    'LogoutToken',
+  const logoutToken = sequelize.define(
+    'logoutToken',
     {
       token: DataTypes.STRING(1000),
-      allowNull: false,
-      unique: true,
     },
     {}
   )
-  // eslint-disable-next-line no-unused-vars
-  LogoutToken.associate = models => {
+  logoutToken.associate = models => {
     // associations can be defined here
   }
-  return LogoutToken
+
+  return logoutToken
 }
