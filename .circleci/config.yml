@@ -17,7 +17,7 @@ jobs:
          command: |
            # Sleep for some time to allow psql database to restart
            docker ps -a
-           docker logs --until 100m project_db_1
+           docker logs project_db_1
            sleep 30
            # Create the normal kohdataan database because the test -enviroment uses localhost which is not available in the container
            docker ps -a
