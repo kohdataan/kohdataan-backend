@@ -4,10 +4,7 @@ export default (sequelize, DataTypes) => {
     {
       username: {
         type: DataTypes.STRING,
-        allowNull: {
-          args: false,
-          msg: 'Please enter your username',
-        },
+        allowNull: false,
         unique: {
           args: true,
           msg: 'Username already exists',
@@ -15,10 +12,7 @@ export default (sequelize, DataTypes) => {
       },
       email: {
         type: DataTypes.STRING,
-        allowNull: {
-          args: false,
-          msg: 'Please enter your email address',
-        },
+        allowNull: false,
         unique: {
           args: true,
           msg: 'Email already exists',
@@ -32,10 +26,7 @@ export default (sequelize, DataTypes) => {
       },
       password: {
         type: DataTypes.STRING,
-        allowNull: {
-          args: false,
-          msg: 'Please enter a password',
-        },
+        allowNull: false,
         validate: {
           isNotShort: value => {
             if (value.length < 8) {
@@ -46,7 +37,8 @@ export default (sequelize, DataTypes) => {
       },
       nickname: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
+        defaultValue: 'defaultnick',
       },
       location: {
         type: DataTypes.STRING,
@@ -58,14 +50,11 @@ export default (sequelize, DataTypes) => {
       },
       phoneNumber: {
         type: DataTypes.STRING,
-        allowNull: {
-          args: false,
-          msg: 'Phone number is required',
-        },
+        allowNull: false,
       },
       birthdate: {
         type: DataTypes.DATE,
-        allowNull: true,
+        allowNull: false,
       },
       showAge: {
         type: DataTypes.BOOLEAN,
