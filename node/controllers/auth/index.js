@@ -99,7 +99,6 @@ export const reset = async (req, res) => {
       const givenTime = Number(process.env.PASSWORD_RESET_TIME)
       const currentTime = new Date().getTime()
       const tokenTime = passwordResetEntry.createdAt.getTime()
-
       if (currentTime - tokenTime < givenTime && !passwordResetEntry.used) {
         await passwordResetEntry.update({
           used: true,
