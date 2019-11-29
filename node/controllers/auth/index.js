@@ -2,6 +2,8 @@ import passport from 'passport'
 import jwt from 'jsonwebtoken'
 import db from '../../models'
 
+const ExtractJWT = require('passport-jwt').ExtractJwt
+
 // The models here are retrieved through db because this way vscode knows they are sequelize models.
 const LogoutToken = db.sequelize.model('LogoutToken')
 
@@ -48,7 +50,7 @@ export const login = (req, res) => {
 }
 
 export const logout = (req, res) => {
-  const { authToken } = req.body
+  const authToken = ExtractJWT.fromAuthHeaderAsBearerToken()(req)
 
   return LogoutToken.create({ token: authToken })
     .then(() => {
