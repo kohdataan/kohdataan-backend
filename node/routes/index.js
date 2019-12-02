@@ -1,4 +1,4 @@
-import express from 'express'
+ import express from 'express'
 import channel from './channel'
 import channelInvitation from './channelInvitation'
 import interest from './interest'
