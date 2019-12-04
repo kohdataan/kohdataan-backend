@@ -13,13 +13,14 @@ export const mailFromRegProb = async (req, res) => {
   try {
     await transporter.sendMail({
       from: process.env.TESTEMAIL,
-      to: 'karoliina.mietola@helsinki.fi',
+      to: process.env.TESTEMAIL, // replace address with the mail address you want the messages to be sent
       subject: 'Ongelma kirjautumisessa',
       text: `Käyttäjän nimi ${name}, osoite ${email} viesti ${message}`,
       html: `<body>
             <p>Käyttäjän nimi: ${name}</p>
             <p>Osoite: ${email}</p>
-            <p>Viesti: <br />${message}</p>
+            <hr />
+            <p>${message}</p>
           </body>`,
     })
     res.status(201).send({
