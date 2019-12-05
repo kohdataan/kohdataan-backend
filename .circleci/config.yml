@@ -12,16 +12,11 @@ jobs:
             sudo chown -R 2000:2000 ./volumes/mattermost/
             docker-compose up -d
       - run:
-          name: install dockerize
-          command: wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && sudo tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-          environment:
-            DOCKERIZE_VERSION: v0.3.0
-      - run:
-          name: Wait for db
+          name: Check if db is ready
           command: |
             docker ps -a
             docker logs project_db_1
-            dockerize -wait http://localhost:9090 -timeout 1m
+            docker exec -i project_db_1 pg_isready -U $POSTGRES_USER -d $POSTGRES_DB
       - run:
           name: Tests
           command: |
