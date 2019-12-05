@@ -5,7 +5,6 @@ import bodyParser from 'body-parser'
 import passport from 'passport'
 import cors from 'cors'
 import routes from './routes'
-import jwtTokenCheck from './middlewares/checkJwtToken'
 
 dotenv.config()
 
@@ -17,7 +16,6 @@ const corsOptions = {
 const app = express()
 
 app.use(cors(corsOptions))
-app.use(jwtTokenCheck)
 app.use(logger('dev'))
 app.use(passport.initialize())
 app.use(bodyParser.json())

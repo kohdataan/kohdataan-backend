@@ -1,11 +1,5 @@
 import passport from 'passport'
 import jwt from 'jsonwebtoken'
-import db from '../../models'
-
-const ExtractJWT = require('passport-jwt').ExtractJwt
-
-// The models here are retrieved through db because this way vscode knows they are sequelize models.
-const LogoutToken = db.sequelize.model('LogoutToken')
 
 export const login = (req, res) => {
   passport.authenticate(
@@ -50,22 +44,15 @@ export const login = (req, res) => {
 }
 
 export const logout = (req, res) => {
-  const authToken = ExtractJWT.fromAuthHeaderAsBearerToken()(req)
-
-  return LogoutToken.create({ token: authToken })
-    .then(() => {
-      res.status(200).send({
-        success: true,
-        message: 'Succesfully logged out',
-      })
-    })
-    .catch(err => {
-      res.status(500).send({
-        success: false,
-        message: 'Something went wrong',
-        error: err.message,
-      })
-    })
+  /*
+  This path is protected, so you need to be logged in to access it and receive 200 status.
+  Because we use jwt tokens, you cannot really log out, but if we implement
+  some sort of session based system, handle logging out here.
+  */
+  res.status(200).send({
+    success: true,
+    message: 'Succesfully logged out',
+  })
 }
 
 export const forgot = (req, res) => {
