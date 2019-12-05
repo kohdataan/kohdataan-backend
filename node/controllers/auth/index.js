@@ -2,8 +2,8 @@ import passport from 'passport'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import axios from 'axios'
-import nodemailer from 'nodemailer'
 import db from '../../models'
+import sendMail from '../../utils/mailSender'
 
 // The models here are retrieved through db because this way vscode knows they are sequelize models.
 const PasswordResetUuid = db.sequelize.model('PasswordResetUuid')
@@ -63,20 +63,9 @@ export const forgot = async (req, res) => {
       return PasswordResetUuid.create({ userId: user.id })
     })
     .then(async createdToken => {
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.TESTEMAIL,
-          pass: process.env.TESTEMAILPASS,
-        },
-      })
-      await transporter.sendMail({
-        from: process.env.TESTEMAIL,
-        to: email,
-        subject: 'Password reset link',
-        text: `${'Here is the link also change this message to something more suitable ' +
-          'www.kohdataan.com/forgotPass?uuid='}${createdToken.dataValues.uuid}`,
-      })
+      const emailToSent = `Hei, meille tuli pyyntö resetoida salasanasi, tässä linkki josta pääset tekemään sen: 
+      \nwww.kohdataan.com/forgotPass?uuid=${createdToken.dataValues.uuid}`
+      await sendMail(email, 'PasswordResetLink', emailToSent)
       res.status(201).send({
         success: true,
         message: 'Email found and uuid generated and stored',
