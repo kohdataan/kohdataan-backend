@@ -18,7 +18,10 @@ jobs:
             DOCKERIZE_VERSION: v0.3.0
       - run:
           name: Wait for db
-          command: dockerize -wait http://localhost:9090 -timeout 1m
+          command: |
+            docker ps -a
+            docker logs project_db_1
+            dockerize -wait http://localhost:9090 -timeout 1m
       - run:
           name: Tests
           command: |
