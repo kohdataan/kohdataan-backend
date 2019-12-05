@@ -9,7 +9,7 @@ import userInterest from './userInterest'
 import userQuestion from './userQuestion'
 import auth from './auth'
 import passwordReset from './passwordreset'
-import sendMail from './sendmail'
+import sendMail from './sendMail'
 
 const router = express.Router()
 
