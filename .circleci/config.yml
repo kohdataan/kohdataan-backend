@@ -1,26 +1,24 @@
 version: 2.0
 jobs:
- build:
-   machine: true
-   steps:
-     - checkout
-     - run:
-         name: Start docker
-         command: |
-          set -x
-          mkdir -p ./volumes/mattermost/{data,logs,config,plugins}
-          sudo chown -R 2000:2000 ./volumes/mattermost/
-          docker volume create --name=postgres_database
-          docker-compose up -d
-     - run:
-         name: Tests
-         command: |
-           # Sleep for some time to allow psql database to restart
-           sleep 30
-           # Create the normal kohdataan database because the test -enviroment uses localhost which is not available in the container
-           docker exec -i project_db_1 createdb -U mmuser kohdataan
-           docker exec -i project_node_1 sequelize db:migrate
-           docker exec -i project_node_1 sequelize db:seed:all
-           # Run the tests in the container
-           docker exec -i project_node_1 npm test
-           
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Start docker
+          command: |
+            set -x
+            mkdir -p ./volumes/mattermost/{data,logs,config,plugins}
+            sudo chown -R 2000:2000 ./volumes/mattermost/
+            docker-compose up -d
+      - run:
+          name: Tests
+          command: |
+            # Sleep for some time to allow psql database to restart
+            sleep 30
+            # Create the normal kohdataan database because the test -enviroment uses localhost which is not available in the container
+            docker exec -i project_db_1 createdb -U mmuser kohdataan
+            docker exec -i project_node_1 sequelize db:migrate
+            docker exec -i project_node_1 sequelize db:seed:all
+            # Run the tests in the container
+            docker exec -i project_node_1 npm test
