@@ -37,6 +37,7 @@ export const getUser = (req, res) => {
         tutorialWatched,
         showAge,
         showLocation,
+        emailVerified,
       } = user
       res.status(200).send({
         nickname,
@@ -48,6 +49,7 @@ export const getUser = (req, res) => {
         tutorialWatched,
         showAge,
         showLocation,
+        emailVerified,
       })
     })
     .catch(err => {
@@ -78,6 +80,7 @@ export const getUserByUsername = (req, res) => {
           tutorialWatched,
           showAge,
           showLocation,
+          emailVerified,
         } = user[0]
         res.status(200).send({
           id,
@@ -90,6 +93,7 @@ export const getUserByUsername = (req, res) => {
           tutorialWatched,
           showAge,
           showLocation,
+          emailVerified,
         })
       } else {
         res.status(404).send({
@@ -124,6 +128,7 @@ export const addUser = async (req, res) => {
     tutorialWatched,
     showAge,
     showLocation,
+    emailVerified,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
   const user = {
@@ -139,6 +144,7 @@ export const addUser = async (req, res) => {
     tutorialWatched,
     showAge,
     showLocation,
+    emailVerified,
   }
 
   User.create(user)
@@ -206,6 +212,7 @@ export const updateUser = (req, res) => {
     tutorialWatched,
     showAge,
     showLocation,
+    emailVerified,
     mmid,
   } = req.body
   const { id } = req.user.dataValues
@@ -228,6 +235,7 @@ export const updateUser = (req, res) => {
         tutorialWatched,
         showAge,
         showLocation,
+        emailVerified,
       },
       {
         where: {
