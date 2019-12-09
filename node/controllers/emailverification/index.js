@@ -17,7 +17,7 @@ export const handleEmailVerificationRequest = (req, res) => {
     })
     .then(createdToken => {
       const emailToSent = `Hei, tästä linkistä pääset kirjautumaan palveluun: 
-      \nwww.kohdataan.com/forgotPass?uuid=${createdToken.dataValues.uuid}`
+      \nwww.kohdataan.com/verifyemail?uuid=${createdToken.dataValues.uuid}`
       return sendMail(thisUser.email, 'Kirjautuminen', emailToSent)
     })
     .then(response => {
