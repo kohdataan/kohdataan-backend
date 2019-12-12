@@ -52,32 +52,33 @@ export const login = (req, res) => {
 }
 
 export const logout = (req, res) => {
-  res.status(501).send('not yet implemented')
+  return res.status(201).send({
+    success: true,
+    message: 'Email found and uuid generated and stored',
+  })
 }
 
 export const forgot = async (req, res) => {
   const { email } = req.body
 
-  return User.findOne({ where: { email } })
-    .then(async user => {
-      return PasswordResetUuid.create({ userId: user.id })
+  try {
+    const user = await User.findOne({ where: { email } })
+    const createdToken = await PasswordResetUuid.create({ userId: user.id })
+    const emailToSent = `Hei, meille tuli pyyntö resetoida salasanasi, tässä linkki josta pääset tekemään sen: 
+      \nwww.kohdataan.com/forgotPass?uuid=${createdToken.uuid}`
+    await sendMail(email, 'PasswordResetLink', emailToSent)
+  } catch (err) {
+    return res.status(500).send({
+      success: false,
+      message: 'Something went wrong',
+      error: err,
     })
-    .then(async createdToken => {
-      const emailToSent = `Hei, meille tuli pyyntö resetoida salasanasi, tässä linkki josta pääset tekemään sen: 
-      \nwww.kohdataan.com/forgotPass?uuid=${createdToken.dataValues.uuid}`
-      await sendMail(email, 'PasswordResetLink', emailToSent)
-      res.status(201).send({
-        success: true,
-        message: 'Email found and uuid generated and stored',
-      })
-    })
-    .catch(err => {
-      res.status(500).send({
-        success: false,
-        message: 'Email not found',
-        error: err,
-      })
-    })
+  }
+
+  return res.status(201).send({
+    success: true,
+    message: 'Email found and uuid generated and stored',
+  })
 }
 
 export const reset = async (req, res) => {
