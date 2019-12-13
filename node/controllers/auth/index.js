@@ -82,7 +82,7 @@ export const reset = async (req, res) => {
 
   try {
     // Check the token is still valid and if so update 'used' value
-    // If the token is not valid, throw and error
+    // If the token is not valid, throw an error
     const passwordResetEntry = await PasswordResetUuid.findOne({
       where: { uuid },
     })
@@ -123,7 +123,7 @@ export const reset = async (req, res) => {
     res.status(500).send({
       success: false,
       message: 'Something went wrong',
-      error: err,
+      error: err.message,
     })
   }
 }
