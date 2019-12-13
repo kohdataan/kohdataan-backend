@@ -31,15 +31,23 @@ export const getUser = (req, res) => {
         nickname,
         location,
         description,
+        birthdate,
+        phoneNumber,
         profileReady,
         tutorialWatched,
+        showAge,
+        showLocation,
       } = user
       res.status(200).send({
         nickname,
         location,
         description,
+        birthdate,
+        phoneNumber,
         profileReady,
         tutorialWatched,
+        showAge,
+        showLocation,
       })
     })
     .catch(err => {
@@ -60,18 +68,28 @@ export const getUserByUsername = (req, res) => {
     .then(user => {
       if (user && user[0]) {
         const {
+          id,
           nickname,
           location,
           description,
+          birthdate,
+          phoneNumber,
           profileReady,
           tutorialWatched,
+          showAge,
+          showLocation,
         } = user[0]
         res.status(200).send({
+          id,
           nickname,
           location,
           description,
+          birthdate,
+          phoneNumber,
           profileReady,
           tutorialWatched,
+          showAge,
+          showLocation,
         })
       } else {
         res.status(404).send({
@@ -95,22 +113,32 @@ export const addUser = async (req, res) => {
     username,
     email,
     password,
+    first_name,
+    last_name,
+    birthdate,
+    phoneNumber,
     nickname,
     location,
     description,
     profileReady,
     tutorialWatched,
+    showAge,
+    showLocation,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
   const user = {
     username,
     email,
     password: hashed,
+    birthdate,
+    phoneNumber,
     nickname,
     location,
     description,
     profileReady,
     tutorialWatched,
+    showAge,
+    showLocation,
   }
 
   User.create(user)
@@ -119,6 +147,8 @@ export const addUser = async (req, res) => {
         username,
         email,
         password,
+        first_name,
+        last_name,
         nickname,
       })
       return [results, results2]
@@ -147,6 +177,8 @@ export const addUser = async (req, res) => {
           username: results.username,
           email: results.email,
           nickname: results.nickname,
+          birthdate: results.birthdate,
+          phoneNumber: results.phoneNumber,
         },
         mmuser,
         team,
@@ -172,6 +204,8 @@ export const updateUser = (req, res) => {
     description,
     profileReady,
     tutorialWatched,
+    showAge,
+    showLocation,
     mmid,
   } = req.body
   const { id } = req.user.dataValues
@@ -192,6 +226,8 @@ export const updateUser = (req, res) => {
         description,
         profileReady,
         tutorialWatched,
+        showAge,
+        showLocation,
       },
       {
         where: {
