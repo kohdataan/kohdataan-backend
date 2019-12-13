@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     'PasswordResetUuid',
     {
       uuid: {
-        type: DataTypes.UUID,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true,
         defaultValue: () => {
@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
       userId: {
         type: DataTypes.INTEGER,
         allowNull: false,
+      },
+      used: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
       },
     },
     {}
