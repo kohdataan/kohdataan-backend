@@ -52,10 +52,7 @@ export const login = (req, res) => {
 }
 
 export const logout = (req, res) => {
-  return res.status(201).send({
-    success: true,
-    message: 'Email found and uuid generated and stored',
-  })
+  res.status(501).send('not yet implemented')
 }
 
 export const forgot = async (req, res) => {
@@ -67,65 +64,66 @@ export const forgot = async (req, res) => {
     const emailToSent = `Hei, meille tuli pyyntö resetoida salasanasi, tässä linkki josta pääset tekemään sen: 
       \nwww.kohdataan.com/forgotPass?uuid=${createdToken.uuid}`
     await sendMail(email, 'PasswordResetLink', emailToSent)
+    res.status(201).send({
+      success: true,
+      message: 'Email found and uuid generated and stored',
+    })
   } catch (err) {
-    return res.status(500).send({
+    res.status(500).send({
       success: false,
       message: 'Something went wrong',
       error: err,
     })
   }
-
-  return res.status(201).send({
-    success: true,
-    message: 'Email found and uuid generated and stored',
-  })
 }
 
 export const reset = async (req, res) => {
   const { uuid, password } = req.body
 
-  return PasswordResetUuid.findOne({ where: { uuid } })
-    .then(async passwordResetEntry => {
-      const givenTime = Number(process.env.PASSWORD_RESET_TIME)
-      const currentTime = new Date().getTime()
-      const tokenTime = passwordResetEntry.createdAt.getTime()
-      if (currentTime - tokenTime < givenTime && !passwordResetEntry.used) {
-        await passwordResetEntry.update({
-          used: true,
-        })
-        return User.findOne({ where: { id: passwordResetEntry.userId } })
-      }
-      // throw an error if token is expired, this causes the .then chain to go directly into .catch
+  try {
+    // Check the token is still valid and if so update 'used' value
+    // If the token is not valid, throw and error
+    const passwordResetEntry = await PasswordResetUuid.findOne({
+      where: { uuid },
+    })
+    const givenTime = Number(process.env.PASSWORD_RESET_TIME)
+    const currentTime = new Date().getTime()
+    const tokenTime = passwordResetEntry.createdAt.getTime()
+    if (currentTime - tokenTime > givenTime || passwordResetEntry.used) {
       throw new Error('Given token has expired or has been used')
+    }
+    await passwordResetEntry.update({
+      used: true,
     })
-    .then(async user => {
-      await user.update({
-        password: bcrypt.hashSync(password, 12),
-      })
-      axios.defaults.headers.common.Authorization = `Bearer ${
-        process.env.MASTER_TOKEN
-      }`
-      return axios.post(`${mattermostUrl}/users/search`, {
-        term: user.email,
-      })
+    // Update node user password
+    const user = await User.findOne({
+      where: { id: passwordResetEntry.userId },
     })
-    .then(async mattermostUser => {
-      await axios.put(
-        `${mattermostUrl}/users/${mattermostUser.data[0].id}/password`,
-        {
-          new_password: password,
-        }
-      )
-      res.status(200).send({
-        success: true,
-        message: 'Password changed succesfully',
-      })
+    await user.update({
+      password: bcrypt.hashSync(password, 12),
     })
-    .catch(err => {
-      res.status(500).send({
-        success: false,
-        message: 'Something went wrong',
-        error: err.message,
-      })
+    // Update mattermost user password
+    axios.defaults.headers.common.Authorization = `Bearer ${
+      process.env.MASTER_TOKEN
+    }`
+    const mattermostUser = await axios.post(`${mattermostUrl}/users/search`, {
+      term: user.email,
     })
+    await axios.put(
+      `${mattermostUrl}/users/${mattermostUser.data[0].id}/password`,
+      {
+        new_password: password,
+      }
+    )
+    res.status(200).send({
+      success: true,
+      message: 'Password changed succesfully',
+    })
+  } catch (err) {
+    res.status(500).send({
+      success: false,
+      message: 'Something went wrong',
+      error: err,
+    })
+  }
 }
