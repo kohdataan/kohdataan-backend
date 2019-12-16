@@ -1,4 +1,5 @@
 import express from 'express'
+import passport from 'passport'
 import * as authCtrl from '../../controllers/auth'
 
 const router = express.Router()
