@@ -9,6 +9,7 @@ import userInterest from './userInterest'
 import userQuestion from './userQuestion'
 import auth from './auth'
 import sendMail from './sendMail'
+import channelPurpose from './channelPurpose'
 
 const router = express.Router()
 
@@ -22,5 +23,6 @@ router.use('/userInterest', userInterest)
 router.use('/userQuestion', userQuestion)
 router.use('/auth', auth)
 router.use('/sendMail', sendMail)
+router.use('/channelPurpose', channelPurpose)
 
 export default router

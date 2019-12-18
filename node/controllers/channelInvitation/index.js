@@ -1,20 +1,17 @@
 import axios from 'axios'
 import flatted from 'flatted'
-import model from '../../models'
+import db from '../../models'
+
+const User = db.sequelize.model('User')
+const Interest = db.sequelize.model('Interest')
 
 const mattermostUrl =
   process.env.MATTERMOST_URL || 'http://mattermost:8000/api/v4'
 
-const { User, Interest } = model
-
-export const getChannelInvitation = (req, res) => {
-  res.status(501).send('get all channel invitation')
-}
-
 export const getChannelInvitations = async (req, res) => {
-  axios.defaults.headers.common.Authorization = `Bearer ${
-    process.env.MASTER_TOKEN
-  }`
+  // Check that user has logged in and get the user datavalues
+  // (this part really does not make sense since passport sets the req.user, and it does not let
+  // the request get this far without setting it. I am however too afraid to touch it because something might break)
   const { id } = req.user.dataValues
   if (!id) {
     return res.status(401).send({
@@ -23,16 +20,12 @@ export const getChannelInvitations = async (req, res) => {
     })
   }
 
-  const channelsPromise = axios
-    .get(`${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`)
-    .then(results => {
-      return results
-    })
-    .catch(err => {
-      return err
-    })
-
-  const userInterestsPromise = User.findAll({
+  // Set the axios header token
+  axios.defaults.headers.common.Authorization = `Bearer ${
+    process.env.MASTER_TOKEN
+  }`
+  // Make a promise that returns all given user interests
+  const userInterestsPromise = User.findOne({
     where: {
       id,
     },
@@ -45,21 +38,30 @@ export const getChannelInvitations = async (req, res) => {
       },
     ],
   })
-    .then(results => {
-      return results[0].interests
+    .then(result => {
+      return result.interests
     })
     .catch(err => {
       return flatted.stringify(err)
     })
 
+  // Make a promise that returns all channels
+  const channelsPromise = axios.get(
+    `${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`
+  )
+
+  // Wait till both promises are done and we have their return values
   const channelInvitations = await Promise.all([
-    channelsPromise,
     userInterestsPromise,
+    channelsPromise,
   ])
+    // Here we return array that has a list of interests, and a list of channels which have the same name
+    // as one of the interests. These values are stored in variable 'channelInvitations' above.
     .then(results => {
-      const { data } = results[0]
+      console.log(results[1])
       const interests =
-        results[1] && results[1].map(interest => interest.dataValues.name)
+        results[0] && results[0].map(interest => interest.dataValues.name)
+      const { data } = results[1]
       const found =
         data && data.filter(channel => interests.includes(channel.display_name))
       return [found, interests]
@@ -69,7 +71,9 @@ export const getChannelInvitations = async (req, res) => {
       return []
     })
 
+  // If this fails, we will just return an error..
   try {
+    // Here we get a list of stats for every channel that had a name relating to current interests
     const channelsPromises =
       channelInvitations[0] &&
       (await Promise.all(
@@ -78,31 +82,39 @@ export const getChannelInvitations = async (req, res) => {
         })
       ))
 
+    // Here we filter out the channels that have eight or more people, and return their id.
     const channelsWithRoom = channelsPromises
       .filter(result => result.data.member_count < 8)
       .map(result => result.data.channel_id)
 
+    // Make a new array to hold interests that we have already found channels for..
     let exhaustedInterests = []
 
+    // Get a list of channels with room, without duplicates of same interest types.
     const found = channelInvitations[0].filter(channel => {
       if (
         channelsWithRoom.includes(channel.id) &&
         !exhaustedInterests.includes(channel.display_name)
       ) {
         exhaustedInterests = [...exhaustedInterests, channel.display_name]
-        return channelsWithRoom.includes(channel.id)
+        return true
       }
       return false
     })
 
+    // Get user interests
     const userInterests = channelInvitations[1]
+    // Get a list of user interests based on channels found so far
     const channelInterests = found.map(channel => channel.display_name)
 
+    // Get a list of interests that we have not yet found a channel for
     const interests = userInterests.filter(
       interest => !channelInterests.includes(interest)
     )
 
+    // If there are any interests that do not yet have a channel..
     if (interests.length > 0) {
+      // Create new channels for the interests that did not yet have a channel
       const channelPromises = await Promise.all(
         interests.map(interest => {
           const displayName =
@@ -142,6 +154,10 @@ export const getChannelInvitations = async (req, res) => {
       error: e,
     })
   }
+}
+
+export const getChannelInvitation = (req, res) => {
+  res.status(501).send('get all channel invitation')
 }
 
 export const addChannelInvitation = (req, res) => {
