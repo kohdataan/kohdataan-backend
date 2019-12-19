@@ -50,15 +50,64 @@ export const getChannelInvitations = async (req, res) => {
     `${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`
   )
 
-  // Wait till both promises are done and we have their return values
-  const channelInvitations = await Promise.all([
-    userInterestsPromise,
-    channelsPromise,
-  ])
-    // Here we return array that has a list of interests, and a list of channels which have the same name
-    // as one of the interests. These values are stored in variable 'channelInvitations' above.
+  // Wait till both promises are done, and map values into stuff we want
+  // interestsPromise becomes a list that just contains calling users interests
+  // channelsPromise becomes a list containing all channel stats
+  // we also extract channel purpose (all interests of the channel) into a seperate variable and return it also.
+  // Here we also use await and .then because we want data to contain the values returned from .then
+  const data = await Promise.all([userInterestsPromise, channelsPromise]).then(
+    async results => {
+      // Convert results[0] (the interests) into a form that only has the interest name
+      const interests = results[0] && results[0].map(interest => interest.name)
+
+      // Here we gather all relevant data about channels into simple objects, we also prune away town-square and off-topic
+      const channelsData =
+        // If results[1].data is defined..
+        results[1].data &&
+        // ..we wait for all promises returned by map to finish.
+        (await Promise.all(
+          results[1].data.map(async channelData => {
+            // Just return undefined if currently processed channel is either one of the 'stock' ones
+            if (
+              channelData.name === 'town-square' ||
+              channelData.name === 'off-topic'
+            ) {
+              return undefined
+            }
+            // Fetch stats for the channel (only thing we want from here is the member count)
+            const channelStats = await axios.get(
+              `${mattermostUrl}/channels/${channelData.id}/stats`
+            )
+            // Get all relevant info about the channel and build an object from it, return the object.
+            const channelName = channelData.name
+            const channelId = channelData.id
+            const channelPurpose = channelData.purpose
+            const memberCount = channelStats.data.member_count
+            return { channelName, channelId, channelPurpose, memberCount }
+          })
+        ))
+      return [interests, channelsData]
+    }
+  )
+
+  // Filter away the channels that are not defined and that contain too many people
+  const channelsWithRoom = data[1].filter(channelData => {
+    return channelData && channelData.memberCount < 8
+  })
+
+  console.log(data[0])
+  data[0].forEach(interest => {
+    console.log(interest)
+  })
+
+  return res.status(200).send({
+    success: true,
+    message: 'Channels',
+  })
+  /*
+  // Here we return array that has a list of interests, and a list of channels which have the same name
+  // as one of the interests. These values are stored in variable 'channelInvitations' above.
     .then(results => {
-      console.log(results[1])
       const interests =
         results[0] && results[0].map(interest => interest.dataValues.name)
       const { data } = results[1]
@@ -154,6 +203,7 @@ export const getChannelInvitations = async (req, res) => {
       error: e,
     })
   }
+  */
 }
 
 export const getChannelInvitation = (req, res) => {

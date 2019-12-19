@@ -21,12 +21,9 @@ export const resetChannelPurpose = async (req, res) => {
       in_channel: channelId,
     })
     // Get a list of promises that each return a user in database
-    const usersPromises = []
-    usersInChannel.data.forEach(mattermostUser => {
-      usersPromises.push(
-        User.findOne({ where: { email: mattermostUser.email } })
-      )
-    })
+    const usersPromises = usersInChannel.data.map(mattermostUser =>
+      User.findOne({ where: { email: mattermostUser.email } })
+    )
     // Wait for the promises to resolve
     const users = await Promise.all(usersPromises)
 
