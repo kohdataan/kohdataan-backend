@@ -2,6 +2,7 @@ volumes/*
 */node_modules/
 .vscode/
 node/.env
+node/.env*
 
 .DS_Store
 node_modules
