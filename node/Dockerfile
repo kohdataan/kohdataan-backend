@@ -10,6 +10,7 @@ ENV NODE_ENV=${NODE_ENV}
 COPY package*.json ./
 RUN npm install -g node-gyp
 RUN npm install -g license-checker
+RUN npm install -g sequelize-cli
 
 RUN npm install
 COPY . .
