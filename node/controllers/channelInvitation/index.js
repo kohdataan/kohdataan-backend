@@ -78,12 +78,13 @@ export const getChannelInvitations = async (req, res) => {
             const channelStats = await axios.get(
               `${mattermostUrl}/channels/${channelData.id}/stats`
             )
-            // Get all relevant info about the channel and build an object from it, return the object.
-            const channelName = channelData.name
-            const channelId = channelData.id
-            const channelPurpose = channelData.purpose
-            const memberCount = channelStats.data.member_count
-            return { channelName, channelId, channelPurpose, memberCount }
+            // Add the membercount variable to channelData
+            // The given parameter was fetched for this purpose and is disregarded after, so we do not care if we modify it here.
+            // eslint-disable-next-line no-param-reassign
+            channelData.memberCount = channelStats.data.member_count
+            // eslint-disable-next-line no-param-reassign
+            channelData.purpose = JSON.parse(channelData.purpose)
+            return channelData
           })
         ))
       return [interests, channelsData]
@@ -95,14 +96,85 @@ export const getChannelInvitations = async (req, res) => {
     return channelData && channelData.memberCount < 8
   })
 
-  console.log(data[0])
+  console.log('HERE ARE THE CHANNELS THAT SHOULD HAVE ROOM')
+  console.log(channelsWithRoom)
+
+  const usedChannelIds = []
+  const foundChannels = {}
   data[0].forEach(interest => {
-    console.log(interest)
+    let currentBestChannel
+    channelsWithRoom.forEach(channel => {
+      console.log('NOW PROCESSING CHANNEL')
+      console.log(channel)
+      console.log(channel.purpose)
+      if (channel.purpose) {
+        console.log(Object.keys(channel.purpose))
+        console.log(Object.values(channel.purpose))
+        console.log(Object.keys(channel.purpose).length)
+        console.log(Object.keys(channel.purpose).includes(interest))
+      }
+      if (
+        channel.purpose &&
+        (Object.keys(channel.purpose).length === 0 ||
+          Object.keys(channel.purpose).includes(interest)) &&
+        !usedChannelIds.includes(channel.id)
+      ) {
+        console.log('THIS CHANNEL HAs A PURPOSE WHICH IS EMPTY OR CONTAINS SAME INTERESTS, ALSO IT IS NOT YET USED')
+        console.log(channel)
+        if (
+          !currentBestChannel ||
+          !currentBestChannel.purpose ||
+          (channel.purpose &&
+            currentBestChannel.purpose[interest] < channel.purpose[interest])
+        ) {
+          currentBestChannel = channel
+        }
+      }
+    })
+    if (currentBestChannel) {
+      usedChannelIds.push(currentBestChannel.id)
+      foundChannels[interest] = currentBestChannel
+    }
   })
 
+  console.log('HERE ARE THE CHANNELS THAT WE HAVE FOUND THAT YOU MIGHT ENJOY')
+  console.log(foundChannels)
+
+  if (data[0].length > Object.keys(foundChannels).length) {
+    console.log('CREATING NEW CHANNELS')
+    const foundAndNewChannels = await Promise.all(
+      data[0].map(interest => {
+        if (!Object.keys(foundChannels).includes(interest)) {
+          console.log(`Creating channel for ${interest}`)
+          const name =
+            interest.replace(/\W/g, '').toLowerCase() + Date.now().toString()
+          return axios.post(`${mattermostUrl}/channels`, {
+            team_id: process.env.TEAM_ID,
+            name,
+            display_name: interest,
+            purpose: JSON.stringify({}),
+            type: 'O',
+          })
+        }
+        return foundChannels[interest]
+      })
+    )
+    const allChannelsInCorrectForm = foundAndNewChannels.map(channel => {
+      if (channel.data) {
+        return channel.data
+      }
+      return channel
+    })
+    return res.status(200).send({
+      success: true,
+      message: 'Channel invitation',
+      found: allChannelsInCorrectForm,
+    })
+  }
   return res.status(200).send({
     success: true,
     message: 'Channels',
+    found: Object.values(foundChannels),
   })
   /*
   // Here we return array that has a list of interests, and a list of channels which have the same name
