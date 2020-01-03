@@ -123,8 +123,8 @@ export const getChannelInvitations = async (req, res) => {
         console.log(channel)
         if (
           !currentBestChannel ||
-          !currentBestChannel.purpose ||
-          (channel.purpose &&
+          !currentBestChannel.purpose[interest] ||
+          (channel.purpose[interest] &&
             currentBestChannel.purpose[interest] < channel.purpose[interest])
         ) {
           currentBestChannel = channel
