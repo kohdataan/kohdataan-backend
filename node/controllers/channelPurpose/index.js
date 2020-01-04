@@ -14,8 +14,8 @@ export const resetChannelPurpose = async (req, res) => {
     process.env.MASTER_TOKEN
   }`
 
-  // Get channel id from request body
-  const { channelId } = req.body
+  // Get channel id from request parameters
+  const { channelId } = req.params
 
   try {
     // Get all mattermost users currently in given channel
@@ -84,9 +84,10 @@ export const addUserInterestsToPurpose = async (req, res) => {
     process.env.MASTER_TOKEN
   }`
 
-  // Get channel id and user id from request body
-  const { channelId } = req.body
-  const { userId } = req.body
+  // Get channel id from request parameters
+  const { channelId } = req.params
+  // Get user from passport set user object
+  const userId = req.user.dataValues.id
 
   try {
     // Make promises that return given mm channel and user interests.
@@ -138,9 +139,10 @@ export const removeUserInterestsFromPurpose = async (req, res) => {
     process.env.MASTER_TOKEN
   }`
 
-  // Get channel id and user id from request body
-  const { channelId } = req.body
-  const { userId } = req.body
+  // Get channel id from request parameters
+  const { channelId } = req.params
+  // Get user from passport set user object
+  const userId = req.user.dataValues.id
 
   try {
     // Make promises that return given mm channel and user interests.
