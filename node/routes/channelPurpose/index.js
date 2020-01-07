@@ -11,13 +11,13 @@ router.patch(
   channelPurposeCtrl.resetChannelPurpose
 )
 router.patch(
-  passport.authenticate('jwt'),
   '/addUser/:channelId',
+  passport.authenticate('jwt'),
   channelPurposeCtrl.addUserInterestsToPurpose
 )
 router.patch(
-  passport.authenticate('jwt'),
   '/removeUser:channelId',
+  passport.authenticate('jwt'),
   channelPurposeCtrl.removeUserInterestsFromPurpose
 )
 
