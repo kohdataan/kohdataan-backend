@@ -6,7 +6,7 @@ const router = express.Router()
 
 // This one is for resetting channel purpose if anything ever goes wrong
 router.patch(
-  '/reset:channelId',
+  '/reset/:channelId',
   passport.authenticate('jwt'),
   channelPurposeCtrl.resetChannelPurpose
 )
@@ -16,7 +16,7 @@ router.patch(
   channelPurposeCtrl.addUserInterestsToPurpose
 )
 router.patch(
-  '/removeUser:channelId',
+  '/removeUser/:channelId',
   passport.authenticate('jwt'),
   channelPurposeCtrl.removeUserInterestsFromPurpose
 )
