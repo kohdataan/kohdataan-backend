@@ -4,11 +4,10 @@ import * as channelPurposeCtrl from '../../controllers/channelPurpose'
 
 const router = express.Router()
 
-// This one is for resetting channel purpose if anything ever goes wrong
 router.patch(
-  '/reset/:channelId',
+  '/resetUserChannels',
   passport.authenticate('jwt'),
-  channelPurposeCtrl.resetChannelPurpose
+  channelPurposeCtrl.resetUserChannelsPurpose
 )
 router.patch(
   '/addUser/:channelId',
