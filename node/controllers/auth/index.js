@@ -24,10 +24,7 @@ export const login = (req, res) => {
           if (error) {
             res.send(error)
           }
-          const token = jwt.sign(
-            { user: user.dataValues, date: new Date() },
-            process.env.JWT_SECRET
-          )
+          const token = jwt.sign(user.dataValues, process.env.JWT_SECRET)
 
           return res.json({
             user: {

@@ -51,7 +51,7 @@ passport.use(
     (jwtPayload, cb) => {
       return User.findOne({
         where: {
-          id: jwtPayload.user.id,
+          id: jwtPayload.id,
         },
       })
         .then(user => {
