@@ -155,9 +155,7 @@ export const addUser = async (req, res) => {
     })
     .then(async ([results, results2]) => {
       const mmuser = results2.data
-      axios.defaults.headers.common.Authorization = `Bearer ${
-        process.env.MASTER_TOKEN
-      }`
+      axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
       const results3 = await axios.post(
         `${mattermostUrl}/teams/${process.env.TEAM_ID}/members`,
         {
@@ -195,6 +193,14 @@ export const addUser = async (req, res) => {
     })
 }
 
+export const updateMattermostUser = async (mmid, nickname, email) => {
+  axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+  const newData = { nickname, email }
+  return await axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
+    ...newData,
+  })
+}
+
 export const updateUser = (req, res) => {
   const {
     username,
@@ -206,6 +212,7 @@ export const updateUser = (req, res) => {
     tutorialWatched,
     showAge,
     showLocation,
+    phoneNumber,
     mmid,
   } = req.body
   const { id } = req.user.dataValues
@@ -228,6 +235,7 @@ export const updateUser = (req, res) => {
         tutorialWatched,
         showAge,
         showLocation,
+        phoneNumber,
       },
       {
         where: {
@@ -236,13 +244,8 @@ export const updateUser = (req, res) => {
       }
     )
       .then(rows => {
-        if (nickname && mmid) {
-          axios.defaults.headers.common.Authorization = `Bearer ${
-            process.env.MASTER_TOKEN
-          }`
-          return axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
-            nickname,
-          })
+        if (mmid) {
+          return updateMattermostUser(mmid, nickname, email)
         }
         return rows
       })

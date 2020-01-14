@@ -12,4 +12,6 @@ router.post('/forgot', authCtrl.forgot)
 
 router.post('/reset', authCtrl.reset)
 
+router.post('/update-password', authCtrl.updatePassword)
+
 export default router
