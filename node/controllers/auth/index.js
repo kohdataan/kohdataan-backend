@@ -52,7 +52,15 @@ export const login = (req, res) => {
 }
 
 export const logout = (req, res) => {
-  res.status(501).send('not yet implemented')
+  /*
+  This path is protected, so you need to be logged in to access it and receive 200 status.
+  Because we use jwt tokens, you cannot really log out, but if we implement
+  some sort of session based system, handle logging out here.
+  */
+  res.status(200).send({
+    success: true,
+    message: 'Succesfully logged out',
+  })
 }
 
 export const forgot = async (req, res) => {
