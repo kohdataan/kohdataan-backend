@@ -51,10 +51,6 @@ export default (sequelize, DataTypes) => {
       phoneNumber: {
         type: DataTypes.STRING,
         allowNull: true,
-        unique: {
-          args: true,
-          msg: 'Phonenumber already exists',
-        },
       },
       birthdate: {
         type: DataTypes.DATE,
@@ -83,6 +79,13 @@ export default (sequelize, DataTypes) => {
           msg: 'Tutorial should be defined as watched or not',
         },
         defaultValue: false,
+      },
+      verifiedPhoneNumber: {
+        type: DataTypes.STRING,
+        unique: {
+          args: true,
+          msg: 'This phone number is already verified.',
+        },
       },
     },
     {}
