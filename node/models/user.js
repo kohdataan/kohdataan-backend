@@ -50,7 +50,11 @@ export default (sequelize, DataTypes) => {
       },
       phoneNumber: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
+        unique: {
+          args: true,
+          msg: 'Phonenumber already exists',
+        },
       },
       birthdate: {
         type: DataTypes.DATE,
