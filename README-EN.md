@@ -37,21 +37,31 @@ docker-compose up
 
 After the containers are up you need to create the database itself and run dumps. use following commands to create databases;
 
-'docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan'
+```bash
+docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan
+```
 
-'docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test'
+```bash
+docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test
+```
 
 After this go to db/dumps and run commands;
 
-'docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql'
+```bash
+docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
 
-'docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql'
+docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
+```
 
 It is also a good idea to run migrations;
 
-'docker exec -i kohdataan-backend_node_1 sequelize db:migrate'
+```
+docker exec -i kohdataan-backend_node_1 sequelize db:migrate
+```
 
-'docker exec -i kohdataan-backend_node_1 sequelize db:seed:all'
+```
+docker exec -i kohdataan-backend_node_1 sequelize db:seed:all
+```
 
 If you add new npm-packages to the project:
 

@@ -19,9 +19,9 @@ Dockerin kannalta isoin ero windowsille on external volumen käyttö postgres-da
 ```bash
 git clone https://github.com/kohdataan/kohdataan-backend.git
 cd kohdataan-backend
-docker-compose build -f docker-compose-win.yml
+docker-compose -f docker-compose-win.yml build
 docker volume create --name=postgres_database
-docker-compose up -f docker-compose-win.yml
+docker-compose -f docker-compose-win.yml up
 ```
 
 ##### Tietokanta
