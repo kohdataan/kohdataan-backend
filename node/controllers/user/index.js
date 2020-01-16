@@ -142,6 +142,13 @@ export const addUser = async (req, res) => {
   }
 
   User.create(user)
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Error in creating node-user',
+        error: err,
+      })
+    })
     .then(async results => {
       const results2 = await axios.post(`${mattermostUrl}/users`, {
         username,
@@ -152,6 +159,20 @@ export const addUser = async (req, res) => {
         nickname,
       })
       return [results, results2]
+    })
+    .catch(err => {
+      // If there was some problem while creating mattermost user,
+      // delete related node user and rollback
+      await User.destroy({
+        where: {
+          email,
+        },
+      })
+      res.status(500).send({
+        success: false,
+        message: 'Error in creating mattermost-user',
+        error: err,
+      })
     })
     .then(async ([results, results2]) => {
       const mmuser = results2.data
@@ -165,6 +186,13 @@ export const addUser = async (req, res) => {
       )
       return [results, results2, results3]
     })
+    .catch(err =>
+      res.status(500).send({
+        success: false,
+        message: 'Error in adding user to team',
+        error: err,
+      })
+    )
     .then(([results, results2, results3]) => {
       const mmuser = results2.data
       const team = results3.data
@@ -183,17 +211,9 @@ export const addUser = async (req, res) => {
       })
       return results
     })
-    .catch(err => {
-      console.log(err)
-      res.status(500).send({
-        success: false,
-        message: 'Error in creating a user',
-        error: err,
-      })
-    })
 }
 
-export const updateMattermostUser = async (mmid, nickname, email) => {
+const updateMattermostUser = async (mmid, nickname, email) => {
   axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
   const newData = { nickname, email }
   return await axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
@@ -268,25 +288,37 @@ export const updateUser = (req, res) => {
   }
 }
 
-export const deleteUser = (req, res) => {
+export const deleteUser = async (req, res) => {
   const { id } = req.params
-
-  return User.destroy({
-    where: {
-      id,
-    },
-  })
-    .then(affectedRows => {
+  const { mmid } = req.body
+  try {
+    if (id && mmid) {
+      // Delete first node-user
+      const affectedRows = await User.destroy({
+        where: {
+          id,
+        },
+      })
+      // Deactivate also mattermost user
+      axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+      const mmresp = await axios.delete(`${mattermostUrl}/users/${mmid}`)
+      console.log(mmresp)
       res.status(200).send({
         success: true,
         deleted: affectedRows,
       })
-    })
-    .catch(err => {
-      res.status(500).send({
+    } else {
+      res.status(400).send({
         success: false,
-        message: 'Error deleting users',
-        error: err,
+        message:
+          'Missing parameters in request. Both id and mmid are rqeuired.',
       })
+    }
+  } catch (e) {
+    res.status(500).send({
+      success: false,
+      message: 'Error deleting users',
+      error: e,
     })
+  }
 }
