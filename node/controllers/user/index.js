@@ -160,7 +160,7 @@ export const addUser = async (req, res) => {
       })
       return [results, results2]
     })
-    .catch(err => {
+    .catch(async err => {
       // If there was some problem while creating mattermost user,
       // delete related node user and rollback
       await User.destroy({
