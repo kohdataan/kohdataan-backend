@@ -41,6 +41,13 @@
 │  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-helper-call-delegate
 │  ├─ path: /usr/src/app/node_modules/@babel/helper-call-delegate
 │  └─ licenseFile: /usr/src/app/node_modules/@babel/helper-call-delegate/LICENSE
+├─ [2m@[22m[32mbabel/helper-create-regexp-features-plugin[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/babel/babel
+│  ├─ publisher: The Babel Team
+│  ├─ url: https://babeljs.io/team
+│  ├─ path: /usr/src/app/node_modules/@babel/helper-create-regexp-features-plugin
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/helper-create-regexp-features-plugin/LICENSE
 ├─ [2m@[22m[32mbabel/helper-define-map[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-helper-define-map
@@ -164,6 +171,11 @@
 │  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-async-generator-functions
 │  ├─ path: /usr/src/app/node_modules/@babel/plugin-proposal-async-generator-functions
 │  └─ licenseFile: /usr/src/app/node_modules/@babel/plugin-proposal-async-generator-functions/LICENSE
+├─ [2m@[22m[32mbabel/plugin-proposal-dynamic-import[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-dynamic-import
+│  ├─ path: /usr/src/app/node_modules/@babel/plugin-proposal-dynamic-import
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/plugin-proposal-dynamic-import/LICENSE
 ├─ [2m@[22m[32mbabel/plugin-proposal-json-strings[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-json-strings
@@ -189,6 +201,11 @@
 │  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-async-generators
 │  ├─ path: /usr/src/app/node_modules/@babel/plugin-syntax-async-generators
 │  └─ licenseFile: /usr/src/app/node_modules/@babel/plugin-syntax-async-generators/LICENSE
+├─ [2m@[22m[32mbabel/plugin-syntax-dynamic-import[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-dynamic-import
+│  ├─ path: /usr/src/app/node_modules/@babel/plugin-syntax-dynamic-import
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/plugin-syntax-dynamic-import/LICENSE
 ├─ [2m@[22m[32mbabel/plugin-syntax-json-strings[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-json-strings
@@ -204,6 +221,11 @@
 │  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-optional-catch-binding
 │  ├─ path: /usr/src/app/node_modules/@babel/plugin-syntax-optional-catch-binding
 │  └─ licenseFile: /usr/src/app/node_modules/@babel/plugin-syntax-optional-catch-binding/LICENSE
+├─ [2m@[22m[32mbabel/plugin-syntax-top-level-await[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-top-level-await
+│  ├─ path: /usr/src/app/node_modules/@babel/plugin-syntax-top-level-await
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/plugin-syntax-top-level-await/LICENSE
 ├─ [2m@[22m[32mbabel/plugin-transform-arrow-functions[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-arrow-functions
@@ -296,7 +318,7 @@
 │  └─ licenseFile: /usr/src/app/node_modules/@babel/plugin-transform-modules-umd/LICENSE
 ├─ [2m@[22m[32mbabel/plugin-transform-named-capturing-groups-regex[39m
 │  ├─ licenses: MIT
-│  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-named-capturing-groups-regex
+│  ├─ repository: https://github.com/babel/babel
 │  ├─ path: /usr/src/app/node_modules/@babel/plugin-transform-named-capturing-groups-regex
 │  └─ licenseFile: /usr/src/app/node_modules/@babel/plugin-transform-named-capturing-groups-regex/LICENSE
 ├─ [2m@[22m[32mbabel/plugin-transform-new-target[39m
@@ -491,11 +513,6 @@
 │  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
 │  ├─ path: /usr/src/app/node_modules/@types/istanbul-reports
 │  └─ licenseFile: /usr/src/app/node_modules/@types/istanbul-reports/LICENSE
-├─ [2m@[22m[32mtypes/jest-diff[39m
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
-│  ├─ path: /usr/src/app/node_modules/@types/jest-diff
-│  └─ licenseFile: /usr/src/app/node_modules/@types/jest-diff/LICENSE
 ├─ [2m@[22m[32mtypes/jest[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -521,7 +538,7 @@
 │  ├─ repository: https://github.com/DefinitelyTyped/DefinitelyTyped
 │  ├─ path: /usr/src/app/node_modules/@types/yargs
 │  └─ licenseFile: /usr/src/app/node_modules/@types/yargs/LICENSE
-├─ [34mabab[39m[2m@[22m[32m2.0.2[39m
+├─ [34mabab[39m[2m@[22m[32m2.0.3[39m
 │  ├─ licenses: BSD-3-Clause
 │  ├─ repository: https://github.com/jsdom/abab
 │  ├─ publisher: Jeff Carpenter
@@ -533,9 +550,9 @@
 │  ├─ repository: https://github.com/isaacs/abbrev-js
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
-│  ├─ path: /usr/src/app/node_modules/abbrev
-│  └─ licenseFile: /usr/src/app/node_modules/abbrev/LICENSE
-├─ [34maccepts[39m[2m@[22m[32m1.3.5[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/abbrev
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/abbrev/LICENSE
+├─ [34maccepts[39m[2m@[22m[32m1.3.7[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/accepts
 │  ├─ path: /usr/src/app/node_modules/accepts
@@ -546,9 +563,9 @@
 │  ├─ publisher: ForbesLindesay
 │  ├─ path: /usr/src/app/node_modules/acorn-globals
 │  └─ licenseFile: /usr/src/app/node_modules/acorn-globals/LICENSE
-├─ [34macorn-jsx[39m[2m@[22m[32m5.0.1[39m
+├─ [34macorn-jsx[39m[2m@[22m[32m5.1.0[39m
 │  ├─ licenses: MIT
-│  ├─ repository: https://github.com/RReverser/acorn-jsx
+│  ├─ repository: https://github.com/acornjs/acorn-jsx
 │  ├─ path: /usr/src/app/node_modules/acorn-jsx
 │  └─ licenseFile: /usr/src/app/node_modules/acorn-jsx/LICENSE
 ├─ [34macorn-walk[39m[2m@[22m[32m6.2.0[39m
@@ -561,12 +578,17 @@
 │  ├─ repository: https://github.com/acornjs/acorn
 │  ├─ path: /usr/src/app/node_modules/jsdom/node_modules/acorn
 │  └─ licenseFile: /usr/src/app/node_modules/jsdom/node_modules/acorn/LICENSE
-├─ [34macorn[39m[2m@[22m[32m6.1.1[39m
+├─ [34macorn[39m[2m@[22m[32m6.4.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/acornjs/acorn
+│  ├─ path: /usr/src/app/node_modules/acorn-globals/node_modules/acorn
+│  └─ licenseFile: /usr/src/app/node_modules/acorn-globals/node_modules/acorn/LICENSE
+├─ [34macorn[39m[2m@[22m[32m7.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/acornjs/acorn
 │  ├─ path: /usr/src/app/node_modules/acorn
 │  └─ licenseFile: /usr/src/app/node_modules/acorn/LICENSE
-├─ [34majv[39m[2m@[22m[32m6.10.0[39m
+├─ [34majv[39m[2m@[22m[32m6.10.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/epoberezkin/ajv
 │  ├─ publisher: Evgeny Poberezkin
@@ -584,6 +606,14 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/jest-watcher/node_modules/ansi-escapes
+│  └─ licenseFile: /usr/src/app/node_modules/jest-watcher/node_modules/ansi-escapes/license
+├─ [34mansi-escapes[39m[2m@[22m[32m4.3.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/ansi-escapes
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/ansi-escapes
 │  └─ licenseFile: /usr/src/app/node_modules/ansi-escapes/license
 ├─ [34mansi-regex[39m[2m@[22m[32m2.1.1[39m
@@ -592,8 +622,8 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/gauge/node_modules/ansi-regex
-│  └─ licenseFile: /usr/src/app/node_modules/gauge/node_modules/ansi-regex/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/ansi-regex
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/ansi-regex/license
 ├─ [34mansi-regex[39m[2m@[22m[32m3.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/chalk/ansi-regex
@@ -608,8 +638,16 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/pretty-format/node_modules/ansi-regex
-│  └─ licenseFile: /usr/src/app/node_modules/pretty-format/node_modules/ansi-regex/license
+│  ├─ path: /usr/src/app/node_modules/cliui/node_modules/ansi-regex
+│  └─ licenseFile: /usr/src/app/node_modules/cliui/node_modules/ansi-regex/license
+├─ [34mansi-regex[39m[2m@[22m[32m5.0.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/ansi-regex
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/inquirer/node_modules/ansi-regex
+│  └─ licenseFile: /usr/src/app/node_modules/inquirer/node_modules/ansi-regex/license
 ├─ [34mansi-styles[39m[2m@[22m[32m3.2.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/chalk/ansi-styles
@@ -629,6 +667,13 @@
 │  ├─ repository: https://github.com/micromatch/anymatch
 │  ├─ publisher: Elan Shanker
 │  ├─ url: http://github.com/es128
+│  ├─ path: /usr/src/app/node_modules/jest-haste-map/node_modules/anymatch
+│  └─ licenseFile: /usr/src/app/node_modules/jest-haste-map/node_modules/anymatch/LICENSE
+├─ [34manymatch[39m[2m@[22m[32m3.1.1[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/micromatch/anymatch
+│  ├─ publisher: Elan Shanker
+│  ├─ url: https://github.com/es128
 │  ├─ path: /usr/src/app/node_modules/anymatch
 │  └─ licenseFile: /usr/src/app/node_modules/anymatch/LICENSE
 ├─ [34maproba[39m[2m@[22m[32m1.2.0[39m
@@ -636,15 +681,15 @@
 │  ├─ repository: https://github.com/iarna/aproba
 │  ├─ publisher: Rebecca Turner
 │  ├─ email: me@re-becca.org
-│  ├─ path: /usr/src/app/node_modules/aproba
-│  └─ licenseFile: /usr/src/app/node_modules/aproba/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/aproba
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/aproba/LICENSE
 ├─ [34mare-we-there-yet[39m[2m@[22m[32m1.1.5[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/iarna/are-we-there-yet
 │  ├─ publisher: Rebecca Turner
 │  ├─ url: http://re-becca.org
-│  ├─ path: /usr/src/app/node_modules/are-we-there-yet
-│  └─ licenseFile: /usr/src/app/node_modules/are-we-there-yet/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/are-we-there-yet
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/are-we-there-yet/LICENSE
 ├─ [34margparse[39m[2m@[22m[32m1.0.10[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/nodeca/argparse
@@ -687,9 +732,9 @@
 │  ├─ url: http://blakeembrey.me
 │  ├─ path: /usr/src/app/node_modules/array-flatten
 │  └─ licenseFile: /usr/src/app/node_modules/array-flatten/LICENSE
-├─ [34marray-includes[39m[2m@[22m[32m3.0.3[39m
+├─ [34marray-includes[39m[2m@[22m[32m3.1.0[39m
 │  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ljharb/array-includes
+│  ├─ repository: https://github.com/es-shims/array-includes
 │  ├─ publisher: Jordan Harband
 │  ├─ email: ljharb@gmail.com
 │  ├─ url: http://ljharb.codes
@@ -702,6 +747,14 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/array-unique
 │  └─ licenseFile: /usr/src/app/node_modules/array-unique/LICENSE
+├─ [34marray.prototype.flat[39m[2m@[22m[32m1.2.3[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/es-shims/Array.prototype.flat
+│  ├─ publisher: Jordan Harband
+│  ├─ email: ljharb@gmail.com
+│  ├─ url: http://ljharb.codes
+│  ├─ path: /usr/src/app/node_modules/array.prototype.flat
+│  └─ licenseFile: /usr/src/app/node_modules/array.prototype.flat/LICENSE
 ├─ [34masn1[39m[2m@[22m[32m0.2.4[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/joyent/node-asn1
@@ -767,7 +820,7 @@
 │  ├─ url: http://www.futurealoof.com
 │  ├─ path: /usr/src/app/node_modules/aws-sign2
 │  └─ licenseFile: /usr/src/app/node_modules/aws-sign2/LICENSE
-├─ [34maws4[39m[2m@[22m[32m1.8.0[39m
+├─ [34maws4[39m[2m@[22m[32m1.9.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/mhart/aws4
 │  ├─ publisher: Michael Hart
@@ -775,7 +828,7 @@
 │  ├─ url: http://github.com/mhart
 │  ├─ path: /usr/src/app/node_modules/aws4
 │  └─ licenseFile: /usr/src/app/node_modules/aws4/LICENSE
-├─ [34maxios[39m[2m@[22m[32m0.18.1[39m
+├─ [34maxios[39m[2m@[22m[32m0.19.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/axios/axios
 │  ├─ publisher: Matt Zabriskie
@@ -793,6 +846,13 @@
 │  ├─ repository: https://github.com/facebook/jest
 │  ├─ path: /usr/src/app/node_modules/babel-jest
 │  └─ licenseFile: /usr/src/app/node_modules/babel-jest/README.md
+├─ [34mbabel-plugin-dynamic-import-node[39m[2m@[22m[32m2.3.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/airbnb/babel-plugin-dynamic-import-node
+│  ├─ publisher: Jordan Gensler
+│  ├─ email: jordan.gensler@airbnb.com
+│  ├─ path: /usr/src/app/node_modules/babel-plugin-dynamic-import-node
+│  └─ licenseFile: /usr/src/app/node_modules/babel-plugin-dynamic-import-node/LICENSE
 ├─ [34mbabel-plugin-istanbul[39m[2m@[22m[32m5.2.0[39m
 │  ├─ licenses: BSD-3-Clause
 │  ├─ repository: https://github.com/istanbuljs/babel-plugin-istanbul
@@ -809,14 +869,21 @@
 │  ├─ repository: https://github.com/facebook/jest
 │  ├─ path: /usr/src/app/node_modules/babel-preset-jest
 │  └─ licenseFile: /usr/src/app/node_modules/babel-preset-jest/LICENSE
+├─ [34mbabel-runtime[39m[2m@[22m[32m6.26.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/babel/babel/tree/master/packages/babel-runtime
+│  ├─ publisher: Sebastian McKenzie
+│  ├─ email: sebmck@gmail.com
+│  ├─ path: /usr/src/app/node_modules/babel-runtime
+│  └─ licenseFile: /usr/src/app/node_modules/babel-runtime/README.md
 ├─ [34mbalanced-match[39m[2m@[22m[32m1.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/juliangruber/balanced-match
 │  ├─ publisher: Julian Gruber
 │  ├─ email: mail@juliangruber.com
 │  ├─ url: http://juliangruber.com
-│  ├─ path: /usr/src/app/node_modules/balanced-match
-│  └─ licenseFile: /usr/src/app/node_modules/balanced-match/LICENSE.md
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/balanced-match
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/balanced-match/LICENSE.md
 ├─ [34mbase[39m[2m@[22m[32m0.11.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/node-base/base
@@ -834,7 +901,7 @@
 │  ├─ repository: https://github.com/joyent/node-bcrypt-pbkdf
 │  ├─ path: /usr/src/app/node_modules/bcrypt-pbkdf
 │  └─ licenseFile: /usr/src/app/node_modules/bcrypt-pbkdf/LICENSE
-├─ [34mbcrypt[39m[2m@[22m[32m3.0.6[39m
+├─ [34mbcrypt[39m[2m@[22m[32m3.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/kelektiv/node.bcrypt.js
 │  ├─ publisher: Nick Campbell
@@ -847,9 +914,17 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/@babel/cli/node_modules/binary-extensions
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/cli/node_modules/binary-extensions/license
+├─ [34mbinary-extensions[39m[2m@[22m[32m2.0.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/binary-extensions
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/binary-extensions
 │  └─ licenseFile: /usr/src/app/node_modules/binary-extensions/license
-├─ [34mbluebird[39m[2m@[22m[32m3.5.4[39m
+├─ [34mbluebird[39m[2m@[22m[32m3.7.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/petkaantonov/bluebird
 │  ├─ publisher: Petka Antonov
@@ -857,7 +932,7 @@
 │  ├─ url: http://github.com/petkaantonov/
 │  ├─ path: /usr/src/app/node_modules/bluebird
 │  └─ licenseFile: /usr/src/app/node_modules/bluebird/LICENSE
-├─ [34mbody-parser[39m[2m@[22m[32m1.18.3[39m
+├─ [34mbody-parser[39m[2m@[22m[32m1.19.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/expressjs/body-parser
 │  ├─ path: /usr/src/app/node_modules/body-parser
@@ -876,9 +951,16 @@
 │  ├─ publisher: Julian Gruber
 │  ├─ email: mail@juliangruber.com
 │  ├─ url: http://juliangruber.com
-│  ├─ path: /usr/src/app/node_modules/brace-expansion
-│  └─ licenseFile: /usr/src/app/node_modules/brace-expansion/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/brace-expansion
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/brace-expansion/LICENSE
 ├─ [34mbraces[39m[2m@[22m[32m2.3.2[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/braces
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/micromatch/node_modules/braces
+│  └─ licenseFile: /usr/src/app/node_modules/micromatch/node_modules/braces/LICENSE
+├─ [34mbraces[39m[2m@[22m[32m3.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/micromatch/braces
 │  ├─ publisher: Jon Schlinkert
@@ -898,14 +980,14 @@
 │  ├─ email: shtylman@gmail.com
 │  ├─ path: /usr/src/app/node_modules/browser-resolve
 │  └─ licenseFile: /usr/src/app/node_modules/browser-resolve/LICENSE
-├─ [34mbrowserslist[39m[2m@[22m[32m4.5.5[39m
+├─ [34mbrowserslist[39m[2m@[22m[32m4.8.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/browserslist/browserslist
 │  ├─ publisher: Andrey Sitnik
 │  ├─ email: andrey@sitnik.ru
 │  ├─ path: /usr/src/app/node_modules/browserslist
 │  └─ licenseFile: /usr/src/app/node_modules/browserslist/LICENSE
-├─ [34mbser[39m[2m@[22m[32m2.1.0[39m
+├─ [34mbser[39m[2m@[22m[32m2.1.1[39m
 │  ├─ licenses: Apache-2.0
 │  ├─ repository: https://github.com/facebook/watchman
 │  ├─ publisher: Wez Furlong
@@ -930,7 +1012,7 @@
 │  ├─ publisher: Brian M. Carlson
 │  ├─ path: /usr/src/app/node_modules/buffer-writer
 │  └─ licenseFile: /usr/src/app/node_modules/buffer-writer/LICENSE
-├─ [34mbytes[39m[2m@[22m[32m3.0.0[39m
+├─ [34mbytes[39m[2m@[22m[32m3.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/visionmedia/bytes.js
 │  ├─ publisher: TJ Holowaychuk
@@ -967,9 +1049,9 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/jest-validate/node_modules/camelcase
-│  └─ licenseFile: /usr/src/app/node_modules/jest-validate/node_modules/camelcase/license
-├─ [34mcaniuse-lite[39m[2m@[22m[32m1.0.30000963[39m
+│  ├─ path: /usr/src/app/node_modules/yargs-parser/node_modules/camelcase
+│  └─ licenseFile: /usr/src/app/node_modules/yargs-parser/node_modules/camelcase/license
+├─ [34mcaniuse-lite[39m[2m@[22m[32m1.0.30001016[39m
 │  ├─ licenses: CC-BY-4.0
 │  ├─ repository: https://github.com/ben-eb/caniuse-lite
 │  ├─ publisher: Ben Briggs
@@ -1011,21 +1093,28 @@
 │  ├─ email: deadrunk@gmail.com
 │  ├─ path: /usr/src/app/node_modules/chardet
 │  └─ licenseFile: /usr/src/app/node_modules/chardet/LICENSE
-├─ [34mchokidar[39m[2m@[22m[32m2.1.5[39m
+├─ [34mchokidar[39m[2m@[22m[32m2.1.8[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/paulmillr/chokidar
+│  ├─ publisher: Paul Miller
+│  ├─ url: https://paulmillr.com
+│  ├─ path: /usr/src/app/node_modules/@babel/cli/node_modules/chokidar
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/cli/node_modules/chokidar/README.md
+├─ [34mchokidar[39m[2m@[22m[32m3.3.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/paulmillr/chokidar
 │  ├─ publisher: Paul Miller
 │  ├─ url: https://paulmillr.com
 │  ├─ path: /usr/src/app/node_modules/chokidar
-│  └─ licenseFile: /usr/src/app/node_modules/chokidar/README.md
-├─ [34mchownr[39m[2m@[22m[32m1.1.1[39m
+│  └─ licenseFile: /usr/src/app/node_modules/chokidar/LICENSE
+├─ [34mchownr[39m[2m@[22m[32m1.0.1[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/chownr
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/chownr
-│  └─ licenseFile: /usr/src/app/node_modules/chownr/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/chownr
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/chownr/LICENSE
 ├─ [34mci-info[39m[2m@[22m[32m1.6.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/watson/ci-info
@@ -1057,7 +1146,15 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/cli-boxes
 │  └─ licenseFile: /usr/src/app/node_modules/cli-boxes/license
-├─ [34mcli-cursor[39m[2m@[22m[32m2.1.0[39m
+├─ [34mcli-color[39m[2m@[22m[32m1.4.0[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/cli-color
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/cli-color
+│  └─ licenseFile: /usr/src/app/node_modules/cli-color/LICENSE
+├─ [34mcli-cursor[39m[2m@[22m[32m3.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/cli-cursor
 │  ├─ publisher: Sindre Sorhus
@@ -1097,8 +1194,8 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/code-point-at
-│  └─ licenseFile: /usr/src/app/node_modules/code-point-at/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/code-point-at
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/code-point-at/license
 ├─ [34mcollection-visit[39m[2m@[22m[32m1.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/collection-visit
@@ -1120,7 +1217,7 @@
 │  ├─ email: dfcreative@gmail.com
 │  ├─ path: /usr/src/app/node_modules/color-name
 │  └─ licenseFile: /usr/src/app/node_modules/color-name/LICENSE
-├─ [34mcombined-stream[39m[2m@[22m[32m1.0.7[39m
+├─ [34mcombined-stream[39m[2m@[22m[32m1.0.8[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/felixge/node-combined-stream
 │  ├─ publisher: Felix Geisendörfer
@@ -1128,13 +1225,20 @@
 │  ├─ url: http://debuggable.com/
 │  ├─ path: /usr/src/app/node_modules/combined-stream
 │  └─ licenseFile: /usr/src/app/node_modules/combined-stream/License
-├─ [34mcommander[39m[2m@[22m[32m2.20.0[39m
+├─ [34mcommander[39m[2m@[22m[32m2.20.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/tj/commander.js
 │  ├─ publisher: TJ Holowaychuk
 │  ├─ email: tj@vision-media.ca
 │  ├─ path: /usr/src/app/node_modules/commander
 │  └─ licenseFile: /usr/src/app/node_modules/commander/LICENSE
+├─ [34mcommander[39m[2m@[22m[32m4.0.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/tj/commander.js
+│  ├─ publisher: TJ Holowaychuk
+│  ├─ email: tj@vision-media.ca
+│  ├─ path: /usr/src/app/node_modules/@babel/cli/node_modules/commander
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/cli/node_modules/commander/LICENSE
 ├─ [34mcommondir[39m[2m@[22m[32m1.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/substack/node-commondir
@@ -1154,8 +1258,16 @@
 │  ├─ publisher: James Halliday
 │  ├─ email: mail@substack.net
 │  ├─ url: http://substack.net
-│  ├─ path: /usr/src/app/node_modules/concat-map
-│  └─ licenseFile: /usr/src/app/node_modules/concat-map/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/concat-map
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/concat-map/LICENSE
+├─ [34mconfig-chain[39m[2m@[22m[32m1.1.12[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/dominictarr/config-chain
+│  ├─ publisher: Dominic Tarr
+│  ├─ email: dominic.tarr@gmail.com
+│  ├─ url: http://dominictarr.com
+│  ├─ path: /usr/src/app/node_modules/config-chain
+│  └─ licenseFile: /usr/src/app/node_modules/config-chain/LICENCE
 ├─ [34mconfigstore[39m[2m@[22m[32m3.1.2[39m
 │  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/yeoman/configstore
@@ -1164,14 +1276,19 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/configstore
 │  └─ licenseFile: /usr/src/app/node_modules/configstore/license
+├─ [34mconfusing-browser-globals[39m[2m@[22m[32m1.0.9[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/facebook/create-react-app
+│  ├─ path: /usr/src/app/node_modules/confusing-browser-globals
+│  └─ licenseFile: /usr/src/app/node_modules/confusing-browser-globals/LICENSE
 ├─ [34mconsole-control-strings[39m[2m@[22m[32m1.1.0[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/iarna/console-control-strings
 │  ├─ publisher: Rebecca Turner
 │  ├─ email: me@re-becca.org
 │  ├─ url: http://re-becca.org/
-│  ├─ path: /usr/src/app/node_modules/console-control-strings
-│  └─ licenseFile: /usr/src/app/node_modules/console-control-strings/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/console-control-strings
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/console-control-strings/LICENSE
 ├─ [34mcontains-path[39m[2m@[22m[32m0.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/contains-path
@@ -1179,9 +1296,11 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/contains-path
 │  └─ licenseFile: /usr/src/app/node_modules/contains-path/LICENSE
-├─ [34mcontent-disposition[39m[2m@[22m[32m0.5.2[39m
+├─ [34mcontent-disposition[39m[2m@[22m[32m0.5.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/content-disposition
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
 │  ├─ path: /usr/src/app/node_modules/content-disposition
 │  └─ licenseFile: /usr/src/app/node_modules/content-disposition/LICENSE
 ├─ [34mcontent-type[39m[2m@[22m[32m1.0.4[39m
@@ -1191,7 +1310,7 @@
 │  ├─ email: doug@somethingdoug.com
 │  ├─ path: /usr/src/app/node_modules/content-type
 │  └─ licenseFile: /usr/src/app/node_modules/content-type/LICENSE
-├─ [34mconvert-source-map[39m[2m@[22m[32m1.6.0[39m
+├─ [34mconvert-source-map[39m[2m@[22m[32m1.7.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/thlorenz/convert-source-map
 │  ├─ publisher: Thorsten Lorenz
@@ -1206,7 +1325,7 @@
 │  ├─ email: tj@learnboost.com
 │  ├─ path: /usr/src/app/node_modules/cookie-signature
 │  └─ licenseFile: /usr/src/app/node_modules/cookie-signature/Readme.md
-├─ [34mcookie[39m[2m@[22m[32m0.3.1[39m
+├─ [34mcookie[39m[2m@[22m[32m0.4.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/cookie
 │  ├─ publisher: Roman Shtylman
@@ -1220,34 +1339,24 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/copy-descriptor
 │  └─ licenseFile: /usr/src/app/node_modules/copy-descriptor/LICENSE
-├─ [34mcore-js-compat[39m[2m@[22m[32m3.0.1[39m
+├─ [34mcore-js-compat[39m[2m@[22m[32m3.5.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/zloirock/core-js
 │  ├─ path: /usr/src/app/node_modules/core-js-compat
-│  └─ licenseFile: /usr/src/app/node_modules/core-js-compat/README.md
-├─ [34mcore-js-pure[39m[2m@[22m[32m3.0.1[39m
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/zloirock/core-js
-│  ├─ path: /usr/src/app/node_modules/core-js-pure
-│  └─ licenseFile: /usr/src/app/node_modules/core-js-pure/LICENSE
-├─ [34mcore-js[39m[2m@[22m[32m2.6.5[39m
+│  └─ licenseFile: /usr/src/app/node_modules/core-js-compat/LICENSE
+├─ [34mcore-js[39m[2m@[22m[32m2.6.11[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/zloirock/core-js
 │  ├─ path: /usr/src/app/node_modules/core-js
 │  └─ licenseFile: /usr/src/app/node_modules/core-js/LICENSE
-├─ [34mcore-js[39m[2m@[22m[32m3.0.1[39m
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/zloirock/core-js
-│  ├─ path: /usr/src/app/node_modules/core-js-compat/node_modules/core-js
-│  └─ licenseFile: /usr/src/app/node_modules/core-js-compat/node_modules/core-js/LICENSE
 ├─ [34mcore-util-is[39m[2m@[22m[32m1.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/isaacs/core-util-is
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/core-util-is
-│  └─ licenseFile: /usr/src/app/node_modules/core-util-is/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/core-util-is
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/core-util-is/LICENSE
 ├─ [34mcors[39m[2m@[22m[32m2.8.5[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/expressjs/cors
@@ -1299,6 +1408,14 @@
 │  ├─ repository: https://github.com/jsakas/CSSStyleDeclaration
 │  ├─ path: /usr/src/app/node_modules/cssstyle
 │  └─ licenseFile: /usr/src/app/node_modules/cssstyle/README.md
+├─ [34md[39m[2m@[22m[32m1.0.1[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/d
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/d
+│  └─ licenseFile: /usr/src/app/node_modules/d/LICENSE
 ├─ [34mdashdash[39m[2m@[22m[32m1.14.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/trentm/node-dashdash
@@ -1320,8 +1437,8 @@
 │  ├─ repository: https://github.com/visionmedia/debug
 │  ├─ publisher: TJ Holowaychuk
 │  ├─ email: tj@vision-media.ca
-│  ├─ path: /usr/src/app/node_modules/debug
-│  └─ licenseFile: /usr/src/app/node_modules/debug/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/debug
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/debug/LICENSE
 ├─ [34mdebug[39m[2m@[22m[32m3.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/visionmedia/debug
@@ -1341,8 +1458,8 @@
 │  ├─ repository: https://github.com/visionmedia/debug
 │  ├─ publisher: TJ Holowaychuk
 │  ├─ email: tj@vision-media.ca
-│  ├─ path: /usr/src/app/node_modules/needle/node_modules/debug
-│  └─ licenseFile: /usr/src/app/node_modules/needle/node_modules/debug/LICENSE
+│  ├─ path: /usr/src/app/node_modules/sequelize/node_modules/debug
+│  └─ licenseFile: /usr/src/app/node_modules/sequelize/node_modules/debug/LICENSE
 ├─ [34mdecamelize[39m[2m@[22m[32m1.2.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/decamelize
@@ -1364,8 +1481,8 @@
 │  ├─ repository: https://github.com/unclechu/node-deep-extend
 │  ├─ publisher: Viacheslav Lotsmanov
 │  ├─ email: lotsmanov89@gmail.com
-│  ├─ path: /usr/src/app/node_modules/deep-extend
-│  └─ licenseFile: /usr/src/app/node_modules/deep-extend/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/deep-extend
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/deep-extend/LICENSE
 ├─ [34mdeep-is[39m[2m@[22m[32m0.1.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/thlorenz/deep-is
@@ -1412,8 +1529,8 @@
 ├─ [34mdelegates[39m[2m@[22m[32m1.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/visionmedia/node-delegates
-│  ├─ path: /usr/src/app/node_modules/delegates
-│  └─ licenseFile: /usr/src/app/node_modules/delegates/License
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/delegates
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/delegates/License
 ├─ [34mdepd[39m[2m@[22m[32m1.1.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/dougwilson/nodejs-depd
@@ -1434,8 +1551,8 @@
 │  ├─ repository: https://github.com/lovell/detect-libc
 │  ├─ publisher: Lovell Fuller
 │  ├─ email: npm@lovell.info
-│  ├─ path: /usr/src/app/node_modules/detect-libc
-│  └─ licenseFile: /usr/src/app/node_modules/detect-libc/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/detect-libc
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/detect-libc/LICENSE
 ├─ [34mdetect-newline[39m[2m@[22m[32m2.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/detect-newline
@@ -1478,12 +1595,12 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/dot-prop
 │  └─ licenseFile: /usr/src/app/node_modules/dot-prop/license
-├─ [34mdotenv[39m[2m@[22m[32m7.0.0[39m
+├─ [34mdotenv[39m[2m@[22m[32m8.2.0[39m
 │  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/motdotla/dotenv
 │  ├─ path: /usr/src/app/node_modules/dotenv
 │  └─ licenseFile: /usr/src/app/node_modules/dotenv/LICENSE
-├─ [34mdottie[39m[2m@[22m[32m2.0.1[39m
+├─ [34mdottie[39m[2m@[22m[32m2.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/mickhansen/dottie.js
 │  ├─ publisher: Mick Hansen
@@ -1512,6 +1629,12 @@
 │  ├─ publisher: D2L Corporation
 │  ├─ path: /usr/src/app/node_modules/ecdsa-sig-formatter
 │  └─ licenseFile: /usr/src/app/node_modules/ecdsa-sig-formatter/LICENSE
+├─ [34meditorconfig[39m[2m@[22m[32m0.15.3[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/editorconfig/editorconfig-core-js
+│  ├─ publisher: EditorConfig Team
+│  ├─ path: /usr/src/app/node_modules/editorconfig
+│  └─ licenseFile: /usr/src/app/node_modules/editorconfig/LICENSE
 ├─ [34mee-first[39m[2m@[22m[32m1.1.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonathanong/ee-first
@@ -1520,7 +1643,7 @@
 │  ├─ url: http://jongleberry.com
 │  ├─ path: /usr/src/app/node_modules/ee-first
 │  └─ licenseFile: /usr/src/app/node_modules/ee-first/LICENSE
-├─ [34melectron-to-chromium[39m[2m@[22m[32m1.3.127[39m
+├─ [34melectron-to-chromium[39m[2m@[22m[32m1.3.322[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/kilian/electron-to-chromium
 │  ├─ publisher: Kilian Valkhof
@@ -1533,6 +1656,13 @@
 │  ├─ url: https://mathiasbynens.be/
 │  ├─ path: /usr/src/app/node_modules/emoji-regex
 │  └─ licenseFile: /usr/src/app/node_modules/emoji-regex/LICENSE-MIT.txt
+├─ [34memoji-regex[39m[2m@[22m[32m8.0.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/mathiasbynens/emoji-regex
+│  ├─ publisher: Mathias Bynens
+│  ├─ url: https://mathiasbynens.be/
+│  ├─ path: /usr/src/app/node_modules/inquirer/node_modules/emoji-regex
+│  └─ licenseFile: /usr/src/app/node_modules/inquirer/node_modules/emoji-regex/LICENSE-MIT.txt
 ├─ [34mencodeurl[39m[2m@[22m[32m1.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/pillarjs/encodeurl
@@ -1550,7 +1680,7 @@
 │  ├─ repository: https://github.com/qix-/node-error-ex
 │  ├─ path: /usr/src/app/node_modules/error-ex
 │  └─ licenseFile: /usr/src/app/node_modules/error-ex/LICENSE
-├─ [34mes-abstract[39m[2m@[22m[32m1.13.0[39m
+├─ [34mes-abstract[39m[2m@[22m[32m1.17.0-next.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/ljharb/es-abstract
 │  ├─ publisher: Jordan Harband
@@ -1558,12 +1688,45 @@
 │  ├─ url: http://ljharb.codes
 │  ├─ path: /usr/src/app/node_modules/es-abstract
 │  └─ licenseFile: /usr/src/app/node_modules/es-abstract/LICENSE
-├─ [34mes-to-primitive[39m[2m@[22m[32m1.2.0[39m
+├─ [34mes-to-primitive[39m[2m@[22m[32m1.2.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/ljharb/es-to-primitive
 │  ├─ publisher: Jordan Harband
+│  ├─ email: ljharb@gmail.com
 │  ├─ path: /usr/src/app/node_modules/es-to-primitive
 │  └─ licenseFile: /usr/src/app/node_modules/es-to-primitive/LICENSE
+├─ [34mes5-ext[39m[2m@[22m[32m0.10.53[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/es5-ext
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/es5-ext
+│  └─ licenseFile: /usr/src/app/node_modules/es5-ext/LICENSE
+├─ [34mes6-iterator[39m[2m@[22m[32m2.0.3[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/medikoo/es6-iterator
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/es6-iterator
+│  └─ licenseFile: /usr/src/app/node_modules/es6-iterator/LICENSE
+├─ [34mes6-symbol[39m[2m@[22m[32m3.1.3[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/es6-symbol
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/es6-symbol
+│  └─ licenseFile: /usr/src/app/node_modules/es6-symbol/LICENSE
+├─ [34mes6-weak-map[39m[2m@[22m[32m2.0.3[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/es6-weak-map
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/es6-weak-map
+│  └─ licenseFile: /usr/src/app/node_modules/es6-weak-map/LICENSE
 ├─ [34mescape-html[39m[2m@[22m[32m1.0.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/component/escape-html
@@ -1582,14 +1745,14 @@
 │  ├─ repository: https://github.com/estools/escodegen
 │  ├─ path: /usr/src/app/node_modules/escodegen
 │  └─ licenseFile: /usr/src/app/node_modules/escodegen/LICENSE.BSD
-├─ [34meslint-config-airbnb-base[39m[2m@[22m[32m13.1.0[39m
+├─ [34meslint-config-airbnb-base[39m[2m@[22m[32m14.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/airbnb/javascript
 │  ├─ publisher: Jake Teton-Landis
 │  ├─ url: https://twitter.com/@jitl
 │  ├─ path: /usr/src/app/node_modules/eslint-config-airbnb-base
 │  └─ licenseFile: /usr/src/app/node_modules/eslint-config-airbnb-base/LICENSE.md
-├─ [34meslint-config-prettier[39m[2m@[22m[32m4.2.0[39m
+├─ [34meslint-config-prettier[39m[2m@[22m[32m6.7.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/prettier/eslint-config-prettier
 │  ├─ publisher: Simon Lydell
@@ -1602,63 +1765,56 @@
 │  ├─ url: me@benmosher.com
 │  ├─ path: /usr/src/app/node_modules/eslint-import-resolver-node
 │  └─ licenseFile: /usr/src/app/node_modules/eslint-import-resolver-node/README.md
-├─ [34meslint-module-utils[39m[2m@[22m[32m2.4.0[39m
+├─ [34meslint-module-utils[39m[2m@[22m[32m2.5.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/benmosher/eslint-plugin-import
 │  ├─ publisher: Ben Mosher
 │  ├─ email: me@benmosher.com
 │  └─ path: /usr/src/app/node_modules/eslint-module-utils
-├─ [34meslint-plugin-import[39m[2m@[22m[32m2.17.2[39m
+├─ [34meslint-plugin-import[39m[2m@[22m[32m2.19.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/benmosher/eslint-plugin-import
 │  ├─ publisher: Ben Mosher
 │  ├─ email: me@benmosher.com
 │  ├─ path: /usr/src/app/node_modules/eslint-plugin-import
 │  └─ licenseFile: /usr/src/app/node_modules/eslint-plugin-import/LICENSE
-├─ [34meslint-plugin-prettier[39m[2m@[22m[32m3.0.1[39m
+├─ [34meslint-plugin-prettier[39m[2m@[22m[32m3.1.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/prettier/eslint-plugin-prettier
 │  ├─ publisher: Teddy Katz
 │  ├─ path: /usr/src/app/node_modules/eslint-plugin-prettier
 │  └─ licenseFile: /usr/src/app/node_modules/eslint-plugin-prettier/LICENSE.md
-├─ [34meslint-restricted-globals[39m[2m@[22m[32m0.1.1[39m
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/doshisid/eslint-restricted-globals
-│  ├─ publisher: Siddharth Doshi
-│  ├─ email: sidoshi@mail.com
-│  ├─ path: /usr/src/app/node_modules/eslint-restricted-globals
-│  └─ licenseFile: /usr/src/app/node_modules/eslint-restricted-globals/README.md
 ├─ [34meslint-scope[39m[2m@[22m[32m3.7.1[39m
 │  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/eslint/eslint-scope
 │  ├─ path: /usr/src/app/node_modules/eslint-scope
 │  └─ licenseFile: /usr/src/app/node_modules/eslint-scope/LICENSE
-├─ [34meslint-scope[39m[2m@[22m[32m4.0.3[39m
+├─ [34meslint-scope[39m[2m@[22m[32m5.0.0[39m
 │  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/eslint/eslint-scope
 │  ├─ path: /usr/src/app/node_modules/eslint/node_modules/eslint-scope
 │  └─ licenseFile: /usr/src/app/node_modules/eslint/node_modules/eslint-scope/LICENSE
-├─ [34meslint-utils[39m[2m@[22m[32m1.3.1[39m
+├─ [34meslint-utils[39m[2m@[22m[32m1.4.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/mysticatea/eslint-utils
 │  ├─ publisher: Toru Nagashima
 │  ├─ path: /usr/src/app/node_modules/eslint-utils
 │  └─ licenseFile: /usr/src/app/node_modules/eslint-utils/LICENSE
-├─ [34meslint-visitor-keys[39m[2m@[22m[32m1.0.0[39m
+├─ [34meslint-visitor-keys[39m[2m@[22m[32m1.1.0[39m
 │  ├─ licenses: Apache-2.0
 │  ├─ repository: https://github.com/eslint/eslint-visitor-keys
 │  ├─ publisher: Toru Nagashima
 │  ├─ url: https://github.com/mysticatea
 │  ├─ path: /usr/src/app/node_modules/eslint-visitor-keys
 │  └─ licenseFile: /usr/src/app/node_modules/eslint-visitor-keys/LICENSE
-├─ [34meslint[39m[2m@[22m[32m5.16.0[39m
+├─ [34meslint[39m[2m@[22m[32m6.7.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/eslint/eslint
 │  ├─ publisher: Nicholas C. Zakas
 │  ├─ email: nicholas+npm@nczconsulting.com
 │  ├─ path: /usr/src/app/node_modules/eslint
 │  └─ licenseFile: /usr/src/app/node_modules/eslint/LICENSE
-├─ [34mespree[39m[2m@[22m[32m5.0.1[39m
+├─ [34mespree[39m[2m@[22m[32m6.1.2[39m
 │  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/eslint/espree
 │  ├─ publisher: Nicholas C. Zakas
@@ -1691,13 +1847,13 @@
 │  ├─ repository: https://github.com/estools/esrecurse
 │  ├─ path: /usr/src/app/node_modules/esrecurse
 │  └─ licenseFile: /usr/src/app/node_modules/esrecurse/README.md
-├─ [34mestraverse[39m[2m@[22m[32m4.2.0[39m
+├─ [34mestraverse[39m[2m@[22m[32m4.3.0[39m
 │  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/estools/estraverse
 │  ├─ path: /usr/src/app/node_modules/estraverse
 │  └─ licenseFile: /usr/src/app/node_modules/estraverse/LICENSE.BSD
-├─ [34mesutils[39m[2m@[22m[32m2.0.2[39m
-│  ├─ licenses: BSD
+├─ [34mesutils[39m[2m@[22m[32m2.0.3[39m
+│  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/estools/esutils
 │  ├─ path: /usr/src/app/node_modules/esutils
 │  └─ licenseFile: /usr/src/app/node_modules/esutils/LICENSE.BSD
@@ -1706,7 +1862,15 @@
 │  ├─ repository: https://github.com/jshttp/etag
 │  ├─ path: /usr/src/app/node_modules/etag
 │  └─ licenseFile: /usr/src/app/node_modules/etag/LICENSE
-├─ [34mexec-sh[39m[2m@[22m[32m0.3.2[39m
+├─ [34mevent-emitter[39m[2m@[22m[32m0.3.5[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/medikoo/event-emitter
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/event-emitter
+│  └─ licenseFile: /usr/src/app/node_modules/event-emitter/LICENSE
+├─ [34mexec-sh[39m[2m@[22m[32m0.3.4[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/tsertkov/exec-sh
 │  ├─ publisher: Aleksandr Tsertkov
@@ -1748,20 +1912,28 @@
 │  ├─ repository: https://github.com/facebook/jest
 │  ├─ path: /usr/src/app/node_modules/expect
 │  └─ licenseFile: /usr/src/app/node_modules/expect/LICENSE
-├─ [34mexpress[39m[2m@[22m[32m4.16.4[39m
+├─ [34mexpress[39m[2m@[22m[32m4.17.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/expressjs/express
 │  ├─ publisher: TJ Holowaychuk
 │  ├─ email: tj@vision-media.ca
 │  ├─ path: /usr/src/app/node_modules/express
 │  └─ licenseFile: /usr/src/app/node_modules/express/LICENSE
+├─ [34mext[39m[2m@[22m[32m1.4.0[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/es5-ext/tree/ext
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/ext
+│  └─ licenseFile: /usr/src/app/node_modules/ext/LICENSE
 ├─ [34mextend-shallow[39m[2m@[22m[32m2.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/extend-shallow
 │  ├─ publisher: Jon Schlinkert
 │  ├─ url: https://github.com/jonschlinkert
-│  ├─ path: /usr/src/app/node_modules/braces/node_modules/extend-shallow
-│  └─ licenseFile: /usr/src/app/node_modules/braces/node_modules/extend-shallow/LICENSE
+│  ├─ path: /usr/src/app/node_modules/micromatch/node_modules/braces/node_modules/extend-shallow
+│  └─ licenseFile: /usr/src/app/node_modules/micromatch/node_modules/braces/node_modules/extend-shallow/LICENSE
 ├─ [34mextend-shallow[39m[2m@[22m[32m3.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/extend-shallow
@@ -1777,7 +1949,7 @@
 │  ├─ url: http://www.justmoon.net
 │  ├─ path: /usr/src/app/node_modules/extend
 │  └─ licenseFile: /usr/src/app/node_modules/extend/LICENSE
-├─ [34mexternal-editor[39m[2m@[22m[32m3.0.3[39m
+├─ [34mexternal-editor[39m[2m@[22m[32m3.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/mrkmg/node-external-editor
 │  ├─ publisher: Kevin Gravier
@@ -1810,7 +1982,7 @@
 │  ├─ email: jhchen7@gmail.com
 │  ├─ path: /usr/src/app/node_modules/fast-diff
 │  └─ licenseFile: /usr/src/app/node_modules/fast-diff/README.md
-├─ [34mfast-json-stable-stringify[39m[2m@[22m[32m2.0.0[39m
+├─ [34mfast-json-stable-stringify[39m[2m@[22m[32m2.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/epoberezkin/fast-json-stable-stringify
 │  ├─ publisher: James Halliday
@@ -1826,7 +1998,7 @@
 │  ├─ url: http://www.hiddentao.com/
 │  ├─ path: /usr/src/app/node_modules/fast-levenshtein
 │  └─ licenseFile: /usr/src/app/node_modules/fast-levenshtein/LICENSE.md
-├─ [34mfb-watchman[39m[2m@[22m[32m2.0.0[39m
+├─ [34mfb-watchman[39m[2m@[22m[32m2.0.1[39m
 │  ├─ licenses: Apache-2.0
 │  ├─ repository: https://github.com/facebook/watchman
 │  ├─ publisher: Wez Furlong
@@ -1834,7 +2006,7 @@
 │  ├─ url: http://wezfurlong.org
 │  ├─ path: /usr/src/app/node_modules/fb-watchman
 │  └─ licenseFile: /usr/src/app/node_modules/fb-watchman/README.md
-├─ [34mfigures[39m[2m@[22m[32m2.0.0[39m
+├─ [34mfigures[39m[2m@[22m[32m3.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/figures
 │  ├─ publisher: Sindre Sorhus
@@ -1854,9 +2026,16 @@
 │  ├─ repository: https://github.com/jonschlinkert/fill-range
 │  ├─ publisher: Jon Schlinkert
 │  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/micromatch/node_modules/fill-range
+│  └─ licenseFile: /usr/src/app/node_modules/micromatch/node_modules/fill-range/LICENSE
+├─ [34mfill-range[39m[2m@[22m[32m7.0.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/fill-range
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/fill-range
 │  └─ licenseFile: /usr/src/app/node_modules/fill-range/LICENSE
-├─ [34mfinalhandler[39m[2m@[22m[32m1.1.1[39m
+├─ [34mfinalhandler[39m[2m@[22m[32m1.1.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/pillarjs/finalhandler
 │  ├─ publisher: Douglas Christopher Wilson
@@ -1891,7 +2070,7 @@
 │  ├─ url: http://royriojas.com
 │  ├─ path: /usr/src/app/node_modules/flat-cache
 │  └─ licenseFile: /usr/src/app/node_modules/flat-cache/LICENSE
-├─ [34mflatted[39m[2m@[22m[32m2.0.0[39m
+├─ [34mflatted[39m[2m@[22m[32m2.0.1[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/WebReflection/flatted
 │  ├─ publisher: Andrea Giammarchi
@@ -1948,14 +2127,21 @@
 │  ├─ url: http://tjholowaychuk.com
 │  ├─ path: /usr/src/app/node_modules/fresh
 │  └─ licenseFile: /usr/src/app/node_modules/fresh/LICENSE
+├─ [34mfs-extra[39m[2m@[22m[32m7.0.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jprichardson/node-fs-extra
+│  ├─ publisher: JP Richardson
+│  ├─ email: jprichardson@gmail.com
+│  ├─ path: /usr/src/app/node_modules/fs-extra
+│  └─ licenseFile: /usr/src/app/node_modules/fs-extra/LICENSE
 ├─ [34mfs-minipass[39m[2m@[22m[32m1.2.5[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/npm/fs-minipass
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/fs-minipass
-│  └─ licenseFile: /usr/src/app/node_modules/fs-minipass/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/fs-minipass
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/fs-minipass/LICENSE
 ├─ [34mfs-readdir-recursive[39m[2m@[22m[32m1.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/fs-utils/fs-readdir-recursive
@@ -1970,8 +2156,8 @@
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/fs.realpath
-│  └─ licenseFile: /usr/src/app/node_modules/fs.realpath/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/fs.realpath
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/fs.realpath/LICENSE
 ├─ [34mfunction-bind[39m[2m@[22m[32m1.1.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/Raynos/function-bind
@@ -1990,8 +2176,8 @@
 │  ├─ repository: https://github.com/iarna/gauge
 │  ├─ publisher: Rebecca Turner
 │  ├─ email: me@re-becca.org
-│  ├─ path: /usr/src/app/node_modules/gauge
-│  └─ licenseFile: /usr/src/app/node_modules/gauge/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/gauge
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/gauge/LICENSE
 ├─ [34mget-caller-file[39m[2m@[22m[32m2.0.5[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/stefanpenner/get-caller-file
@@ -2041,9 +2227,25 @@
 │  ├─ repository: https://github.com/es128/glob-parent
 │  ├─ publisher: Elan Shanker
 │  ├─ url: https://github.com/es128
+│  ├─ path: /usr/src/app/node_modules/@babel/cli/node_modules/glob-parent
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/cli/node_modules/glob-parent/LICENSE
+├─ [34mglob-parent[39m[2m@[22m[32m5.1.0[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/gulpjs/glob-parent
+│  ├─ publisher: Gulp Team
+│  ├─ email: team@gulpjs.com
+│  ├─ url: https://gulpjs.com/
 │  ├─ path: /usr/src/app/node_modules/glob-parent
 │  └─ licenseFile: /usr/src/app/node_modules/glob-parent/LICENSE
-├─ [34mglob[39m[2m@[22m[32m7.1.3[39m
+├─ [34mglob[39m[2m@[22m[32m7.1.2[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/node-glob
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/glob
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/glob/LICENSE
+├─ [34mglob[39m[2m@[22m[32m7.1.6[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/node-glob
 │  ├─ publisher: Isaac Z. Schlueter
@@ -2059,7 +2261,7 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/global-dirs
 │  └─ licenseFile: /usr/src/app/node_modules/global-dirs/license
-├─ [34mglobals[39m[2m@[22m[32m11.11.0[39m
+├─ [34mglobals[39m[2m@[22m[32m11.12.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/globals
 │  ├─ publisher: Sindre Sorhus
@@ -2067,12 +2269,20 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/globals
 │  └─ licenseFile: /usr/src/app/node_modules/globals/license
+├─ [34mglobals[39m[2m@[22m[32m12.3.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/globals
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/eslint/node_modules/globals
+│  └─ licenseFile: /usr/src/app/node_modules/eslint/node_modules/globals/license
 ├─ [34mgot[39m[2m@[22m[32m6.7.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/got
 │  ├─ path: /usr/src/app/node_modules/got
 │  └─ licenseFile: /usr/src/app/node_modules/got/license
-├─ [34mgraceful-fs[39m[2m@[22m[32m4.1.15[39m
+├─ [34mgraceful-fs[39m[2m@[22m[32m4.2.3[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/node-graceful-fs
 │  ├─ path: /usr/src/app/node_modules/graceful-fs
@@ -2085,7 +2295,7 @@
 │  ├─ url: http://ibrahimalrajhi.com/
 │  ├─ path: /usr/src/app/node_modules/growly
 │  └─ licenseFile: /usr/src/app/node_modules/growly/README.md
-├─ [34mhandlebars[39m[2m@[22m[32m4.4.2[39m
+├─ [34mhandlebars[39m[2m@[22m[32m4.5.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/wycats/handlebars.js
 │  ├─ publisher: Yehuda Katz
@@ -2115,7 +2325,7 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/has-flag
 │  └─ licenseFile: /usr/src/app/node_modules/has-flag/license
-├─ [34mhas-symbols[39m[2m@[22m[32m1.0.0[39m
+├─ [34mhas-symbols[39m[2m@[22m[32m1.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/ljharb/has-symbols
 │  ├─ publisher: Jordan Harband
@@ -2128,8 +2338,8 @@
 │  ├─ repository: https://github.com/iarna/has-unicode
 │  ├─ publisher: Rebecca Turner
 │  ├─ email: me@re-becca.org
-│  ├─ path: /usr/src/app/node_modules/has-unicode
-│  └─ licenseFile: /usr/src/app/node_modules/has-unicode/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/has-unicode
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/has-unicode/LICENSE
 ├─ [34mhas-value[39m[2m@[22m[32m0.3.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/has-value
@@ -2172,7 +2382,7 @@
 │  ├─ url: https://github.com/doowb
 │  ├─ path: /usr/src/app/node_modules/homedir-polyfill
 │  └─ licenseFile: /usr/src/app/node_modules/homedir-polyfill/LICENSE
-├─ [34mhosted-git-info[39m[2m@[22m[32m2.7.1[39m
+├─ [34mhosted-git-info[39m[2m@[22m[32m2.8.5[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/npm/hosted-git-info
 │  ├─ publisher: Rebecca Turner
@@ -2188,7 +2398,7 @@
 │  ├─ url: https://domenic.me/
 │  ├─ path: /usr/src/app/node_modules/html-encoding-sniffer
 │  └─ licenseFile: /usr/src/app/node_modules/html-encoding-sniffer/LICENSE.txt
-├─ [34mhttp-errors[39m[2m@[22m[32m1.6.3[39m
+├─ [34mhttp-errors[39m[2m@[22m[32m1.7.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/http-errors
 │  ├─ publisher: Jonathan Ong
@@ -2207,15 +2417,15 @@
 │  ├─ repository: https://github.com/ashtuchkin/iconv-lite
 │  ├─ publisher: Alexander Shtuchkin
 │  ├─ email: ashtuchkin@gmail.com
-│  ├─ path: /usr/src/app/node_modules/iconv-lite
-│  └─ licenseFile: /usr/src/app/node_modules/iconv-lite/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/iconv-lite
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/iconv-lite/LICENSE
 ├─ [34miconv-lite[39m[2m@[22m[32m0.4.24[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/ashtuchkin/iconv-lite
 │  ├─ publisher: Alexander Shtuchkin
 │  ├─ email: ashtuchkin@gmail.com
-│  ├─ path: /usr/src/app/node_modules/whatwg-encoding/node_modules/iconv-lite
-│  └─ licenseFile: /usr/src/app/node_modules/whatwg-encoding/node_modules/iconv-lite/LICENSE
+│  ├─ path: /usr/src/app/node_modules/iconv-lite
+│  └─ licenseFile: /usr/src/app/node_modules/iconv-lite/LICENSE
 ├─ [34mignore-by-default[39m[2m@[22m[32m1.0.1[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/novemberborn/ignore-by-default
@@ -2229,15 +2439,15 @@
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/ignore-walk
-│  └─ licenseFile: /usr/src/app/node_modules/ignore-walk/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/ignore-walk
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/ignore-walk/LICENSE
 ├─ [34mignore[39m[2m@[22m[32m4.0.6[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/kaelzhang/node-ignore
 │  ├─ publisher: kael
 │  ├─ path: /usr/src/app/node_modules/ignore
 │  └─ licenseFile: /usr/src/app/node_modules/ignore/LICENSE-MIT
-├─ [34mimport-fresh[39m[2m@[22m[32m3.0.0[39m
+├─ [34mimport-fresh[39m[2m@[22m[32m3.2.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/import-fresh
 │  ├─ publisher: Sindre Sorhus
@@ -2282,22 +2492,22 @@
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/inflight
-│  └─ licenseFile: /usr/src/app/node_modules/inflight/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/inflight
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/inflight/LICENSE
 ├─ [34minherits[39m[2m@[22m[32m2.0.3[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/inherits
-│  ├─ path: /usr/src/app/node_modules/inherits
-│  └─ licenseFile: /usr/src/app/node_modules/inherits/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/inherits
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/inherits/LICENSE
 ├─ [34mini[39m[2m@[22m[32m1.3.5[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/ini
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/ini
-│  └─ licenseFile: /usr/src/app/node_modules/ini/LICENSE
-├─ [34minquirer[39m[2m@[22m[32m6.3.1[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/ini
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/ini/LICENSE
+├─ [34minquirer[39m[2m@[22m[32m7.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/SBoudrias/Inquirer.js
 │  ├─ publisher: Simon Boudrias
@@ -2345,6 +2555,14 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/@babel/cli/node_modules/is-binary-path
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/cli/node_modules/is-binary-path/license
+├─ [34mis-binary-path[39m[2m@[22m[32m2.1.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-binary-path
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/is-binary-path
 │  └─ licenseFile: /usr/src/app/node_modules/is-binary-path/license
 ├─ [34mis-bluebird[39m[2m@[22m[32m1.0.2[39m
@@ -2359,16 +2577,16 @@
 │  ├─ publisher: Feross Aboukhadijeh
 │  ├─ email: feross@feross.org
 │  ├─ url: http://feross.org/
-│  ├─ path: /usr/src/app/node_modules/is-buffer
-│  └─ licenseFile: /usr/src/app/node_modules/is-buffer/LICENSE
-├─ [34mis-buffer[39m[2m@[22m[32m2.0.3[39m
+│  ├─ path: /usr/src/app/node_modules/micromatch/node_modules/is-buffer
+│  └─ licenseFile: /usr/src/app/node_modules/micromatch/node_modules/is-buffer/LICENSE
+├─ [34mis-buffer[39m[2m@[22m[32m2.0.4[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/feross/is-buffer
 │  ├─ publisher: Feross Aboukhadijeh
 │  ├─ email: feross@feross.org
 │  ├─ url: https://feross.org
-│  ├─ path: /usr/src/app/node_modules/axios/node_modules/is-buffer
-│  └─ licenseFile: /usr/src/app/node_modules/axios/node_modules/is-buffer/LICENSE
+│  ├─ path: /usr/src/app/node_modules/is-buffer
+│  └─ licenseFile: /usr/src/app/node_modules/is-buffer/LICENSE
 ├─ [34mis-callable[39m[2m@[22m[32m1.1.4[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/ljharb/is-callable
@@ -2454,8 +2672,8 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/gauge/node_modules/is-fullwidth-code-point
-│  └─ licenseFile: /usr/src/app/node_modules/gauge/node_modules/is-fullwidth-code-point/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/is-fullwidth-code-point
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/is-fullwidth-code-point/license
 ├─ [34mis-fullwidth-code-point[39m[2m@[22m[32m2.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/is-fullwidth-code-point
@@ -2464,6 +2682,14 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/is-fullwidth-code-point
 │  └─ licenseFile: /usr/src/app/node_modules/is-fullwidth-code-point/license
+├─ [34mis-fullwidth-code-point[39m[2m@[22m[32m3.0.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/is-fullwidth-code-point
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/inquirer/node_modules/is-fullwidth-code-point
+│  └─ licenseFile: /usr/src/app/node_modules/inquirer/node_modules/is-fullwidth-code-point/license
 ├─ [34mis-generator-fn[39m[2m@[22m[32m2.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/is-generator-fn
@@ -2477,8 +2703,8 @@
 │  ├─ repository: https://github.com/jonschlinkert/is-glob
 │  ├─ publisher: Jon Schlinkert
 │  ├─ url: https://github.com/jonschlinkert
-│  ├─ path: /usr/src/app/node_modules/glob-parent/node_modules/is-glob
-│  └─ licenseFile: /usr/src/app/node_modules/glob-parent/node_modules/is-glob/LICENSE
+│  ├─ path: /usr/src/app/node_modules/@babel/cli/node_modules/glob-parent/node_modules/is-glob
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/cli/node_modules/glob-parent/node_modules/is-glob/LICENSE
 ├─ [34mis-glob[39m[2m@[22m[32m4.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/micromatch/is-glob
@@ -2507,6 +2733,13 @@
 │  ├─ repository: https://github.com/jonschlinkert/is-number
 │  ├─ publisher: Jon Schlinkert
 │  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/micromatch/node_modules/is-number
+│  └─ licenseFile: /usr/src/app/node_modules/micromatch/node_modules/is-number/LICENSE
+├─ [34mis-number[39m[2m@[22m[32m7.0.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jonschlinkert/is-number
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/is-number
 │  └─ licenseFile: /usr/src/app/node_modules/is-number/LICENSE
 ├─ [34mis-obj[39m[2m@[22m[32m1.0.1[39m
@@ -2525,14 +2758,6 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/is-path-inside
 │  └─ licenseFile: /usr/src/app/node_modules/is-path-inside/license
-├─ [34mis-plain-obj[39m[2m@[22m[32m1.1.0[39m
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/sindresorhus/is-plain-obj
-│  ├─ publisher: Sindre Sorhus
-│  ├─ email: sindresorhus@gmail.com
-│  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/is-plain-obj
-│  └─ licenseFile: /usr/src/app/node_modules/is-plain-obj/license
 ├─ [34mis-plain-object[39m[2m@[22m[32m2.0.4[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/is-plain-object
@@ -2554,13 +2779,14 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/is-redirect
 │  └─ licenseFile: /usr/src/app/node_modules/is-redirect/license
-├─ [34mis-regex[39m[2m@[22m[32m1.0.4[39m
+├─ [34mis-regex[39m[2m@[22m[32m1.0.5[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/ljharb/is-regex
 │  ├─ publisher: Jordan Harband
+│  ├─ email: ljharb@gmail.com
 │  ├─ path: /usr/src/app/node_modules/is-regex
 │  └─ licenseFile: /usr/src/app/node_modules/is-regex/LICENSE
-├─ [34mis-retry-allowed[39m[2m@[22m[32m1.1.0[39m
+├─ [34mis-retry-allowed[39m[2m@[22m[32m1.2.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/floatdrop/is-retry-allowed
 │  ├─ publisher: Vsevolod Strukchinsky
@@ -2576,10 +2802,11 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/is-stream
 │  └─ licenseFile: /usr/src/app/node_modules/is-stream/license
-├─ [34mis-symbol[39m[2m@[22m[32m1.0.2[39m
+├─ [34mis-symbol[39m[2m@[22m[32m1.0.3[39m
 │  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ljharb/is-symbol
+│  ├─ repository: https://github.com/inspect-js/is-symbol
 │  ├─ publisher: Jordan Harband
+│  ├─ email: ljharb@gmail.com
 │  ├─ path: /usr/src/app/node_modules/is-symbol
 │  └─ licenseFile: /usr/src/app/node_modules/is-symbol/LICENSE
 ├─ [34mis-typedarray[39m[2m@[22m[32m1.0.0[39m
@@ -2611,8 +2838,8 @@
 │  ├─ publisher: Julian Gruber
 │  ├─ email: mail@juliangruber.com
 │  ├─ url: http://juliangruber.com
-│  ├─ path: /usr/src/app/node_modules/isarray
-│  └─ licenseFile: /usr/src/app/node_modules/isarray/README.md
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/isarray
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/isarray/README.md
 ├─ [34misexe[39m[2m@[22m[32m2.0.0[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/isexe
@@ -2812,6 +3039,13 @@
 │  ├─ repository: https://github.com/facebook/jest
 │  ├─ path: /usr/src/app/node_modules/jest
 │  └─ licenseFile: /usr/src/app/node_modules/jest/README.md
+├─ [34mjs-beautify[39m[2m@[22m[32m1.10.2[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/beautify-web/js-beautify
+│  ├─ publisher: Einar Lielmanis
+│  ├─ email: einar@beautifier.io
+│  ├─ path: /usr/src/app/node_modules/js-beautify
+│  └─ licenseFile: /usr/src/app/node_modules/js-beautify/LICENSE
 ├─ [34mjs-levenshtein[39m[2m@[22m[32m1.1.6[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/gustf/js-levenshtein
@@ -2894,13 +3128,20 @@
 │  ├─ url: http://blog.izs.me
 │  ├─ path: /usr/src/app/node_modules/json-stringify-safe
 │  └─ licenseFile: /usr/src/app/node_modules/json-stringify-safe/LICENSE
-├─ [34mjson5[39m[2m@[22m[32m2.1.0[39m
+├─ [34mjson5[39m[2m@[22m[32m2.1.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/json5/json5
 │  ├─ publisher: Aseem Kishore
 │  ├─ email: aseem.kishore@gmail.com
 │  ├─ path: /usr/src/app/node_modules/json5
 │  └─ licenseFile: /usr/src/app/node_modules/json5/LICENSE.md
+├─ [34mjsonfile[39m[2m@[22m[32m4.0.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/jprichardson/node-jsonfile
+│  ├─ publisher: JP Richardson
+│  ├─ email: jprichardson@gmail.com
+│  ├─ path: /usr/src/app/node_modules/jsonfile
+│  └─ licenseFile: /usr/src/app/node_modules/jsonfile/LICENSE
 ├─ [34mjsonwebtoken[39m[2m@[22m[32m8.5.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/auth0/node-jsonwebtoken
@@ -2930,8 +3171,8 @@
 │  ├─ repository: https://github.com/jonschlinkert/kind-of
 │  ├─ publisher: Jon Schlinkert
 │  ├─ url: https://github.com/jonschlinkert
-│  ├─ path: /usr/src/app/node_modules/is-number/node_modules/kind-of
-│  └─ licenseFile: /usr/src/app/node_modules/is-number/node_modules/kind-of/LICENSE
+│  ├─ path: /usr/src/app/node_modules/micromatch/node_modules/is-number/node_modules/kind-of
+│  └─ licenseFile: /usr/src/app/node_modules/micromatch/node_modules/is-number/node_modules/kind-of/LICENSE
 ├─ [34mkind-of[39m[2m@[22m[32m4.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/kind-of
@@ -3086,12 +3327,11 @@
 │  ├─ url: http://allyoucanleet.com/
 │  ├─ path: /usr/src/app/node_modules/lodash.sortby
 │  └─ licenseFile: /usr/src/app/node_modules/lodash.sortby/LICENSE
-├─ [34mlodash[39m[2m@[22m[32m4.17.11[39m
+├─ [34mlodash[39m[2m@[22m[32m4.17.15[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/lodash/lodash
 │  ├─ publisher: John-David Dalton
 │  ├─ email: john.david.dalton@gmail.com
-│  ├─ url: http://allyoucanleet.com/
 │  ├─ path: /usr/src/app/node_modules/lodash
 │  └─ licenseFile: /usr/src/app/node_modules/lodash/LICENSE
 ├─ [34mloose-envify[39m[2m@[22m[32m1.4.0[39m
@@ -3116,6 +3356,14 @@
 │  ├─ email: i@izs.me
 │  ├─ path: /usr/src/app/node_modules/lru-cache
 │  └─ licenseFile: /usr/src/app/node_modules/lru-cache/LICENSE
+├─ [34mlru-queue[39m[2m@[22m[32m0.1.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/medikoo/lru-queue
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/lru-queue
+│  └─ licenseFile: /usr/src/app/node_modules/lru-queue/LICENCE
 ├─ [34mmake-dir[39m[2m@[22m[32m1.3.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/make-dir
@@ -3160,6 +3408,14 @@
 │  ├─ email: doug@somethingdoug.com
 │  ├─ path: /usr/src/app/node_modules/media-typer
 │  └─ licenseFile: /usr/src/app/node_modules/media-typer/LICENSE
+├─ [34mmemoizee[39m[2m@[22m[32m0.4.14[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/memoizee
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medikoo@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/memoizee
+│  └─ licenseFile: /usr/src/app/node_modules/memoizee/LICENSE
 ├─ [34mmerge-descriptors[39m[2m@[22m[32m1.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/component/merge-descriptors
@@ -3187,17 +3443,17 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/micromatch
 │  └─ licenseFile: /usr/src/app/node_modules/micromatch/LICENSE
-├─ [34mmime-db[39m[2m@[22m[32m1.40.0[39m
+├─ [34mmime-db[39m[2m@[22m[32m1.42.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/mime-db
 │  ├─ path: /usr/src/app/node_modules/mime-db
 │  └─ licenseFile: /usr/src/app/node_modules/mime-db/LICENSE
-├─ [34mmime-types[39m[2m@[22m[32m2.1.24[39m
+├─ [34mmime-types[39m[2m@[22m[32m2.1.25[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/mime-types
 │  ├─ path: /usr/src/app/node_modules/mime-types
 │  └─ licenseFile: /usr/src/app/node_modules/mime-types/LICENSE
-├─ [34mmime[39m[2m@[22m[32m1.4.1[39m
+├─ [34mmime[39m[2m@[22m[32m1.6.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/broofa/node-mime
 │  ├─ publisher: Robert Kieffer
@@ -3205,7 +3461,7 @@
 │  ├─ url: http://github.com/broofa
 │  ├─ path: /usr/src/app/node_modules/mime
 │  └─ licenseFile: /usr/src/app/node_modules/mime/LICENSE
-├─ [34mmimic-fn[39m[2m@[22m[32m1.2.0[39m
+├─ [34mmimic-fn[39m[2m@[22m[32m2.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/mimic-fn
 │  ├─ publisher: Sindre Sorhus
@@ -3219,8 +3475,8 @@
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me
-│  ├─ path: /usr/src/app/node_modules/minimatch
-│  └─ licenseFile: /usr/src/app/node_modules/minimatch/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/minimatch
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/minimatch/LICENSE
 ├─ [34mminimist[39m[2m@[22m[32m0.0.10[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/substack/minimist
@@ -3235,33 +3491,33 @@
 │  ├─ publisher: James Halliday
 │  ├─ email: mail@substack.net
 │  ├─ url: http://substack.net
-│  ├─ path: /usr/src/app/node_modules/mkdirp/node_modules/minimist
-│  └─ licenseFile: /usr/src/app/node_modules/mkdirp/node_modules/minimist/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/minimist
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/minimist/LICENSE
 ├─ [34mminimist[39m[2m@[22m[32m1.2.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/substack/minimist
 │  ├─ publisher: James Halliday
 │  ├─ email: mail@substack.net
 │  ├─ url: http://substack.net
-│  ├─ path: /usr/src/app/node_modules/minimist
-│  └─ licenseFile: /usr/src/app/node_modules/minimist/LICENSE
-├─ [34mminipass[39m[2m@[22m[32m2.3.5[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/rc/node_modules/minimist
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/rc/node_modules/minimist/LICENSE
+├─ [34mminipass[39m[2m@[22m[32m2.3.3[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/minipass
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/minipass
-│  └─ licenseFile: /usr/src/app/node_modules/minipass/LICENSE
-├─ [34mminizlib[39m[2m@[22m[32m1.2.1[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/minipass
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/minipass/README.md
+├─ [34mminizlib[39m[2m@[22m[32m1.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/isaacs/minizlib
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/minizlib
-│  └─ licenseFile: /usr/src/app/node_modules/minizlib/LICENSE
-├─ [34mmixin-deep[39m[2m@[22m[32m1.3.1[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/minizlib
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/minizlib/LICENSE
+├─ [34mmixin-deep[39m[2m@[22m[32m1.3.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/mixin-deep
 │  ├─ publisher: Jon Schlinkert
@@ -3274,9 +3530,9 @@
 │  ├─ publisher: James Halliday
 │  ├─ email: mail@substack.net
 │  ├─ url: http://substack.net
-│  ├─ path: /usr/src/app/node_modules/mkdirp
-│  └─ licenseFile: /usr/src/app/node_modules/mkdirp/LICENSE
-├─ [34mmoment-timezone[39m[2m@[22m[32m0.5.25[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/mkdirp
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/mkdirp/LICENSE
+├─ [34mmoment-timezone[39m[2m@[22m[32m0.5.27[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/moment/moment-timezone
 │  ├─ publisher: Tim Wood
@@ -3305,14 +3561,14 @@
 ├─ [34mms[39m[2m@[22m[32m2.1.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/zeit/ms
-│  ├─ path: /usr/src/app/node_modules/needle/node_modules/ms
-│  └─ licenseFile: /usr/src/app/node_modules/needle/node_modules/ms/license.md
+│  ├─ path: /usr/src/app/node_modules/send/node_modules/ms
+│  └─ licenseFile: /usr/src/app/node_modules/send/node_modules/ms/license.md
 ├─ [34mms[39m[2m@[22m[32m2.1.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/zeit/ms
-│  ├─ path: /usr/src/app/node_modules/istanbul-lib-source-maps/node_modules/ms
-│  └─ licenseFile: /usr/src/app/node_modules/istanbul-lib-source-maps/node_modules/ms/license.md
-├─ [34mmute-stream[39m[2m@[22m[32m0.0.7[39m
+│  ├─ path: /usr/src/app/node_modules/jsonwebtoken/node_modules/ms
+│  └─ licenseFile: /usr/src/app/node_modules/jsonwebtoken/node_modules/ms/license.md
+├─ [34mmute-stream[39m[2m@[22m[32m0.0.8[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/mute-stream
 │  ├─ publisher: Isaac Z. Schlueter
@@ -3320,7 +3576,7 @@
 │  ├─ url: http://blog.izs.me/
 │  ├─ path: /usr/src/app/node_modules/mute-stream
 │  └─ licenseFile: /usr/src/app/node_modules/mute-stream/LICENSE
-├─ [34mnan[39m[2m@[22m[32m2.13.2[39m
+├─ [34mnan[39m[2m@[22m[32m2.10.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/nodejs/nan
 │  ├─ path: /usr/src/app/node_modules/nan
@@ -3339,14 +3595,14 @@
 │  ├─ url: https://github.com/litejs/natural-compare-lite
 │  ├─ path: /usr/src/app/node_modules/natural-compare
 │  └─ licenseFile: /usr/src/app/node_modules/natural-compare/README.md
-├─ [34mneedle[39m[2m@[22m[32m2.3.1[39m
+├─ [34mneedle[39m[2m@[22m[32m2.2.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/tomas/needle
 │  ├─ publisher: Tomás Pollak
 │  ├─ email: tomas@forkhq.com
-│  ├─ path: /usr/src/app/node_modules/needle
-│  └─ licenseFile: /usr/src/app/node_modules/needle/license.txt
-├─ [34mnegotiator[39m[2m@[22m[32m0.6.1[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/needle
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/needle/license.txt
+├─ [34mnegotiator[39m[2m@[22m[32m0.6.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/negotiator
 │  ├─ path: /usr/src/app/node_modules/negotiator
@@ -3356,6 +3612,14 @@
 │  ├─ repository: https://github.com/suguru03/neo-async
 │  ├─ path: /usr/src/app/node_modules/neo-async
 │  └─ licenseFile: /usr/src/app/node_modules/neo-async/LICENSE
+├─ [34mnext-tick[39m[2m@[22m[32m1.0.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/medikoo/next-tick
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/next-tick
+│  └─ licenseFile: /usr/src/app/node_modules/next-tick/LICENSE
 ├─ [34mnice-try[39m[2m@[22m[32m1.0.5[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/electerious/nice-try
@@ -3382,27 +3646,27 @@
 │  ├─ publisher: Mikael Brevik
 │  ├─ path: /usr/src/app/node_modules/node-notifier
 │  └─ licenseFile: /usr/src/app/node_modules/node-notifier/LICENSE
-├─ [34mnode-pre-gyp[39m[2m@[22m[32m0.12.0[39m
+├─ [34mnode-pre-gyp[39m[2m@[22m[32m0.10.2[39m
 │  ├─ licenses: BSD-3-Clause
 │  ├─ repository: https://github.com/mapbox/node-pre-gyp
 │  ├─ publisher: Dane Springmeyer
 │  ├─ email: dane@mapbox.com
-│  ├─ path: /usr/src/app/node_modules/node-pre-gyp
-│  └─ licenseFile: /usr/src/app/node_modules/node-pre-gyp/LICENSE
-├─ [34mnode-releases[39m[2m@[22m[32m1.1.17[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/node-pre-gyp
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/node-pre-gyp/LICENSE
+├─ [34mnode-releases[39m[2m@[22m[32m1.1.42[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/chicoxyzzy/node-releases
 │  ├─ publisher: Sergey Rubanov
 │  ├─ email: chi187@gmail.com
 │  ├─ path: /usr/src/app/node_modules/node-releases
 │  └─ licenseFile: /usr/src/app/node_modules/node-releases/LICENSE
-├─ [34mnodemon[39m[2m@[22m[32m1.18.11[39m
+├─ [34mnodemon[39m[2m@[22m[32m2.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/remy/nodemon
 │  ├─ publisher: Remy Sharp
 │  ├─ url: http://github.com/remy
 │  ├─ path: /usr/src/app/node_modules/nodemon
-│  └─ licenseFile: /usr/src/app/node_modules/nodemon/README.md
+│  └─ licenseFile: /usr/src/app/node_modules/nodemon/LICENSE
 ├─ [34mnopt[39m[2m@[22m[32m1.0.10[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/isaacs/nopt
@@ -3417,8 +3681,8 @@
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/node-pre-gyp/node_modules/nopt
-│  └─ licenseFile: /usr/src/app/node_modules/node-pre-gyp/node_modules/nopt/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/nopt
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/nopt/LICENSE
 ├─ [34mnormalize-package-data[39m[2m@[22m[32m2.5.0[39m
 │  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/npm/normalize-package-data
@@ -3431,8 +3695,8 @@
 │  ├─ repository: https://github.com/jonschlinkert/normalize-path
 │  ├─ publisher: Jon Schlinkert
 │  ├─ url: https://github.com/jonschlinkert
-│  ├─ path: /usr/src/app/node_modules/anymatch/node_modules/normalize-path
-│  └─ licenseFile: /usr/src/app/node_modules/anymatch/node_modules/normalize-path/LICENSE
+│  ├─ path: /usr/src/app/node_modules/jest-haste-map/node_modules/normalize-path
+│  └─ licenseFile: /usr/src/app/node_modules/jest-haste-map/node_modules/normalize-path/LICENSE
 ├─ [34mnormalize-path[39m[2m@[22m[32m3.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/normalize-path
@@ -3440,22 +3704,22 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/normalize-path
 │  └─ licenseFile: /usr/src/app/node_modules/normalize-path/LICENSE
-├─ [34mnpm-bundled[39m[2m@[22m[32m1.0.6[39m
+├─ [34mnpm-bundled[39m[2m@[22m[32m1.0.3[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/npm/npm-bundled
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/npm-bundled
-│  └─ licenseFile: /usr/src/app/node_modules/npm-bundled/LICENSE
-├─ [34mnpm-packlist[39m[2m@[22m[32m1.4.1[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/npm-bundled
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/npm-bundled/README.md
+├─ [34mnpm-packlist[39m[2m@[22m[32m1.1.10[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/npm/npm-packlist
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/npm-packlist
-│  └─ licenseFile: /usr/src/app/node_modules/npm-packlist/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/npm-packlist
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/npm-packlist/LICENSE
 ├─ [34mnpm-run-path[39m[2m@[22m[32m2.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/npm-run-path
@@ -3470,17 +3734,17 @@
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/npmlog
-│  └─ licenseFile: /usr/src/app/node_modules/npmlog/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/npmlog
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/npmlog/LICENSE
 ├─ [34mnumber-is-nan[39m[2m@[22m[32m1.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/number-is-nan
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/number-is-nan
-│  └─ licenseFile: /usr/src/app/node_modules/number-is-nan/license
-├─ [34mnwsapi[39m[2m@[22m[32m2.1.4[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/number-is-nan
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/number-is-nan/license
+├─ [34mnwsapi[39m[2m@[22m[32m2.2.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/dperini/nwsapi
 │  ├─ publisher: Diego Perini
@@ -3502,8 +3766,8 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/object-assign
-│  └─ licenseFile: /usr/src/app/node_modules/object-assign/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/object-assign
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/object-assign/license
 ├─ [34mobject-copy[39m[2m@[22m[32m0.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/object-copy
@@ -3511,6 +3775,14 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/object-copy
 │  └─ licenseFile: /usr/src/app/node_modules/object-copy/LICENSE
+├─ [34mobject-inspect[39m[2m@[22m[32m1.7.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/substack/object-inspect
+│  ├─ publisher: James Halliday
+│  ├─ email: mail@substack.net
+│  ├─ url: http://substack.net
+│  ├─ path: /usr/src/app/node_modules/object-inspect
+│  └─ licenseFile: /usr/src/app/node_modules/object-inspect/LICENSE
 ├─ [34mobject-keys[39m[2m@[22m[32m1.1.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/ljharb/object-keys
@@ -3532,16 +3804,17 @@
 │  ├─ publisher: Jordan Harband
 │  ├─ path: /usr/src/app/node_modules/object.assign
 │  └─ licenseFile: /usr/src/app/node_modules/object.assign/LICENSE
-├─ [34mobject.entries[39m[2m@[22m[32m1.1.0[39m
+├─ [34mobject.entries[39m[2m@[22m[32m1.1.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/es-shims/Object.entries
 │  ├─ publisher: Jordan Harband
 │  ├─ path: /usr/src/app/node_modules/object.entries
 │  └─ licenseFile: /usr/src/app/node_modules/object.entries/LICENSE
-├─ [34mobject.getownpropertydescriptors[39m[2m@[22m[32m2.0.3[39m
+├─ [34mobject.getownpropertydescriptors[39m[2m@[22m[32m2.1.0[39m
 │  ├─ licenses: MIT
-│  ├─ repository: https://github.com/ljharb/object.getownpropertydescriptors
+│  ├─ repository: https://github.com/es-shims/object.getownpropertydescriptors
 │  ├─ publisher: Jordan Harband
+│  ├─ email: ljharb@gmail.com
 │  ├─ path: /usr/src/app/node_modules/object.getownpropertydescriptors
 │  └─ licenseFile: /usr/src/app/node_modules/object.getownpropertydescriptors/LICENSE
 ├─ [34mobject.pick[39m[2m@[22m[32m1.3.0[39m
@@ -3551,6 +3824,13 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/object.pick
 │  └─ licenseFile: /usr/src/app/node_modules/object.pick/LICENSE
+├─ [34mobject.values[39m[2m@[22m[32m1.1.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/es-shims/Object.values
+│  ├─ publisher: Jordan Harband
+│  ├─ email: ljharb@gmail.com
+│  ├─ path: /usr/src/app/node_modules/object.values
+│  └─ licenseFile: /usr/src/app/node_modules/object.values/LICENSE
 ├─ [34mon-finished[39m[2m@[22m[32m2.3.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/on-finished
@@ -3569,9 +3849,9 @@
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/once
-│  └─ licenseFile: /usr/src/app/node_modules/once/LICENSE
-├─ [34monetime[39m[2m@[22m[32m2.0.1[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/once
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/once/LICENSE
+├─ [34monetime[39m[2m@[22m[32m5.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/onetime
 │  ├─ publisher: Sindre Sorhus
@@ -3587,7 +3867,7 @@
 │  ├─ url: http://substack.net
 │  ├─ path: /usr/src/app/node_modules/optimist
 │  └─ licenseFile: /usr/src/app/node_modules/optimist/LICENSE
-├─ [34moptionator[39m[2m@[22m[32m0.8.2[39m
+├─ [34moptionator[39m[2m@[22m[32m0.8.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/gkz/optionator
 │  ├─ publisher: George Zahariev
@@ -3600,31 +3880,24 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/os-homedir
-│  └─ licenseFile: /usr/src/app/node_modules/os-homedir/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/os-homedir
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/os-homedir/license
 ├─ [34mos-tmpdir[39m[2m@[22m[32m1.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/os-tmpdir
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/os-tmpdir
-│  └─ licenseFile: /usr/src/app/node_modules/os-tmpdir/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/os-tmpdir
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/os-tmpdir/license
 ├─ [34mosenv[39m[2m@[22m[32m0.1.5[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/npm/osenv
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/osenv
-│  └─ licenseFile: /usr/src/app/node_modules/osenv/LICENSE
-├─ [34moutput-file-sync[39m[2m@[22m[32m2.0.1[39m
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/shinnn/output-file-sync
-│  ├─ publisher: Shinnosuke Watanabe
-│  ├─ url: https://github.com/shinnn
-│  ├─ path: /usr/src/app/node_modules/output-file-sync
-│  └─ licenseFile: /usr/src/app/node_modules/output-file-sync/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/osenv
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/osenv/LICENSE
 ├─ [34mp-each-series[39m[2m@[22m[32m1.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/p-each-series
@@ -3649,7 +3922,7 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/eslint-module-utils/node_modules/p-limit
 │  └─ licenseFile: /usr/src/app/node_modules/eslint-module-utils/node_modules/p-limit/license
-├─ [34mp-limit[39m[2m@[22m[32m2.2.0[39m
+├─ [34mp-limit[39m[2m@[22m[32m2.2.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/p-limit
 │  ├─ publisher: Sindre Sorhus
@@ -3812,8 +4085,8 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/path-is-absolute
-│  └─ licenseFile: /usr/src/app/node_modules/path-is-absolute/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/path-is-absolute
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/path-is-absolute/license
 ├─ [34mpath-is-inside[39m[2m@[22m[32m1.0.2[39m
 │  ├─ licenses: (WTFPL OR MIT)
 │  ├─ repository: https://github.com/domenic/path-is-inside
@@ -3879,7 +4152,7 @@
 │  ├─ url: http://iceddev.com/
 │  ├─ path: /usr/src/app/node_modules/pg-connection-string
 │  └─ licenseFile: /usr/src/app/node_modules/pg-connection-string/LICENSE
-├─ [34mpg-hstore[39m[2m@[22m[32m2.3.2[39m
+├─ [34mpg-hstore[39m[2m@[22m[32m2.3.3[39m
 │  ├─ licenses: MIT*
 │  ├─ repository: https://github.com/scarney81/pg-hstore
 │  ├─ publisher: Seth Carney
@@ -3892,19 +4165,19 @@
 │  ├─ repository: https://github.com/charmander/pg-int8
 │  ├─ path: /usr/src/app/node_modules/pg-int8
 │  └─ licenseFile: /usr/src/app/node_modules/pg-int8/LICENSE
-├─ [34mpg-pool[39m[2m@[22m[32m2.0.6[39m
+├─ [34mpg-pool[39m[2m@[22m[32m2.0.7[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/brianc/node-pg-pool
 │  ├─ publisher: Brian M. Carlson
 │  ├─ path: /usr/src/app/node_modules/pg-pool
 │  └─ licenseFile: /usr/src/app/node_modules/pg-pool/LICENSE
-├─ [34mpg-types[39m[2m@[22m[32m2.0.1[39m
+├─ [34mpg-types[39m[2m@[22m[32m2.2.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/brianc/node-pg-types
 │  ├─ publisher: Brian M. Carlson
 │  ├─ path: /usr/src/app/node_modules/pg-types
 │  └─ licenseFile: /usr/src/app/node_modules/pg-types/README.md
-├─ [34mpg[39m[2m@[22m[32m7.10.0[39m
+├─ [34mpg[39m[2m@[22m[32m7.14.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/brianc/node-postgres
 │  ├─ publisher: Brian Carlson
@@ -3918,6 +4191,13 @@
 │  ├─ email: hannes.hoerl+pgpass@snowreporter.com
 │  ├─ path: /usr/src/app/node_modules/pgpass
 │  └─ licenseFile: /usr/src/app/node_modules/pgpass/README.md
+├─ [34mpicomatch[39m[2m@[22m[32m2.1.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/picomatch
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/picomatch
+│  └─ licenseFile: /usr/src/app/node_modules/picomatch/LICENSE
 ├─ [34mpify[39m[2m@[22m[32m2.3.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/pify
@@ -4031,7 +4311,7 @@
 │  ├─ repository: https://github.com/prettier/prettier-linter-helpers
 │  ├─ path: /usr/src/app/node_modules/prettier-linter-helpers
 │  └─ licenseFile: /usr/src/app/node_modules/prettier-linter-helpers/LICENSE.md
-├─ [34mprettier[39m[2m@[22m[32m1.17.0[39m
+├─ [34mprettier[39m[2m@[22m[32m1.19.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/prettier/prettier
 │  ├─ publisher: James Long
@@ -4054,6 +4334,11 @@
 ├─ [34mprocess-nextick-args[39m[2m@[22m[32m2.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/calvinmetcalf/process-nextick-args
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/process-nextick-args
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/process-nextick-args/license.md
+├─ [34mprocess-nextick-args[39m[2m@[22m[32m2.0.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/calvinmetcalf/process-nextick-args
 │  ├─ path: /usr/src/app/node_modules/process-nextick-args
 │  └─ licenseFile: /usr/src/app/node_modules/process-nextick-args/license.md
 ├─ [34mprogress[39m[2m@[22m[32m2.0.3[39m
@@ -4063,7 +4348,7 @@
 │  ├─ email: tj@vision-media.ca
 │  ├─ path: /usr/src/app/node_modules/progress
 │  └─ licenseFile: /usr/src/app/node_modules/progress/LICENSE
-├─ [34mprompts[39m[2m@[22m[32m2.2.1[39m
+├─ [34mprompts[39m[2m@[22m[32m2.3.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/terkelg/prompts
 │  ├─ publisher: Terkel Gjervig
@@ -4071,6 +4356,14 @@
 │  ├─ url: https://terkel.com
 │  ├─ path: /usr/src/app/node_modules/prompts
 │  └─ licenseFile: /usr/src/app/node_modules/prompts/license
+├─ [34mproto-list[39m[2m@[22m[32m1.2.4[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/proto-list
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/proto-list
+│  └─ licenseFile: /usr/src/app/node_modules/proto-list/LICENSE
 ├─ [34mproxy-addr[39m[2m@[22m[32m2.0.5[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/proxy-addr
@@ -4086,16 +4379,19 @@
 │  ├─ url: http://blog.izs.me/
 │  ├─ path: /usr/src/app/node_modules/pseudomap
 │  └─ licenseFile: /usr/src/app/node_modules/pseudomap/LICENSE
-├─ [34mpsl[39m[2m@[22m[32m1.1.31[39m
+├─ [34mpsl[39m[2m@[22m[32m1.6.0[39m
 │  ├─ licenses: MIT
-│  ├─ repository: https://github.com/wrangr/psl
+│  ├─ repository: https://github.com/lupomontero/psl
 │  ├─ publisher: Lupo Montero
+│  ├─ email: lupomontero@gmail.com
+│  ├─ url: https://lupomontero.com/
 │  ├─ path: /usr/src/app/node_modules/psl
 │  └─ licenseFile: /usr/src/app/node_modules/psl/LICENSE
-├─ [34mpstree.remy[39m[2m@[22m[32m1.1.6[39m
+├─ [34mpstree.remy[39m[2m@[22m[32m1.1.7[39m
 │  ├─ licenses: MIT
 │  ├─ publisher: Remy Sharp
-│  └─ path: /usr/src/app/node_modules/pstree.remy
+│  ├─ path: /usr/src/app/node_modules/pstree.remy
+│  └─ licenseFile: /usr/src/app/node_modules/pstree.remy/LICENSE
 ├─ [34mpump[39m[2m@[22m[32m3.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/mafintosh/pump
@@ -4108,8 +4404,8 @@
 │  ├─ repository: https://github.com/bestiejs/punycode.js
 │  ├─ publisher: Mathias Bynens
 │  ├─ url: https://mathiasbynens.be/
-│  ├─ path: /usr/src/app/node_modules/tough-cookie/node_modules/punycode
-│  └─ licenseFile: /usr/src/app/node_modules/tough-cookie/node_modules/punycode/LICENSE-MIT.txt
+│  ├─ path: /usr/src/app/node_modules/request/node_modules/punycode
+│  └─ licenseFile: /usr/src/app/node_modules/request/node_modules/punycode/LICENSE-MIT.txt
 ├─ [34mpunycode[39m[2m@[22m[32m2.1.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/bestiejs/punycode.js
@@ -4120,9 +4416,14 @@
 ├─ [34mqs[39m[2m@[22m[32m6.5.2[39m
 │  ├─ licenses: BSD-3-Clause
 │  ├─ repository: https://github.com/ljharb/qs
+│  ├─ path: /usr/src/app/node_modules/request/node_modules/qs
+│  └─ licenseFile: /usr/src/app/node_modules/request/node_modules/qs/LICENSE
+├─ [34mqs[39m[2m@[22m[32m6.7.0[39m
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/ljharb/qs
 │  ├─ path: /usr/src/app/node_modules/qs
 │  └─ licenseFile: /usr/src/app/node_modules/qs/LICENSE
-├─ [34mrange-parser[39m[2m@[22m[32m1.2.0[39m
+├─ [34mrange-parser[39m[2m@[22m[32m1.2.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/range-parser
 │  ├─ publisher: TJ Holowaychuk
@@ -4130,7 +4431,7 @@
 │  ├─ url: http://tjholowaychuk.com
 │  ├─ path: /usr/src/app/node_modules/range-parser
 │  └─ licenseFile: /usr/src/app/node_modules/range-parser/LICENSE
-├─ [34mraw-body[39m[2m@[22m[32m2.3.3[39m
+├─ [34mraw-body[39m[2m@[22m[32m2.4.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/stream-utils/raw-body
 │  ├─ publisher: Jonathan Ong
@@ -4144,9 +4445,9 @@
 │  ├─ publisher: Dominic Tarr
 │  ├─ email: dominic.tarr@gmail.com
 │  ├─ url: dominictarr.com
-│  ├─ path: /usr/src/app/node_modules/rc
-│  └─ licenseFile: /usr/src/app/node_modules/rc/LICENSE.APACHE2
-├─ [34mreact-is[39m[2m@[22m[32m16.10.1[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/rc
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/rc/LICENSE.APACHE2
+├─ [34mreact-is[39m[2m@[22m[32m16.12.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/facebook/react
 │  ├─ path: /usr/src/app/node_modules/react-is
@@ -4183,12 +4484,25 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/test-exclude/node_modules/read-pkg
 │  └─ licenseFile: /usr/src/app/node_modules/test-exclude/node_modules/read-pkg/license
+├─ [34mreadable-stream[39m[2m@[22m[32m2.3.5[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/nodejs/readable-stream
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/readable-stream
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/readable-stream/LICENSE
 ├─ [34mreadable-stream[39m[2m@[22m[32m2.3.6[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/nodejs/readable-stream
 │  ├─ path: /usr/src/app/node_modules/readable-stream
 │  └─ licenseFile: /usr/src/app/node_modules/readable-stream/LICENSE
 ├─ [34mreaddirp[39m[2m@[22m[32m2.2.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/paulmillr/readdirp
+│  ├─ publisher: Thorsten Lorenz
+│  ├─ email: thlorenz@gmx.de
+│  ├─ url: thlorenz.com
+│  ├─ path: /usr/src/app/node_modules/@babel/cli/node_modules/readdirp
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/cli/node_modules/readdirp/LICENSE
+├─ [34mreaddirp[39m[2m@[22m[32m3.3.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/paulmillr/readdirp
 │  ├─ publisher: Thorsten Lorenz
@@ -4203,7 +4517,7 @@
 │  ├─ email: sbekkhus91@gmail.com
 │  ├─ path: /usr/src/app/node_modules/realpath-native
 │  └─ licenseFile: /usr/src/app/node_modules/realpath-native/LICENSE
-├─ [34mregenerate-unicode-properties[39m[2m@[22m[32m8.0.2[39m
+├─ [34mregenerate-unicode-properties[39m[2m@[22m[32m8.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/mathiasbynens/regenerate-unicode-properties
 │  ├─ publisher: Mathias Bynens
@@ -4217,20 +4531,27 @@
 │  ├─ url: https://mathiasbynens.be/
 │  ├─ path: /usr/src/app/node_modules/regenerate
 │  └─ licenseFile: /usr/src/app/node_modules/regenerate/LICENSE-MIT.txt
-├─ [34mregenerator-runtime[39m[2m@[22m[32m0.13.2[39m
+├─ [34mregenerator-runtime[39m[2m@[22m[32m0.11.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime
+│  ├─ publisher: Ben Newman
+│  ├─ email: bn@cs.stanford.edu
+│  ├─ path: /usr/src/app/node_modules/regenerator-runtime
+│  └─ licenseFile: /usr/src/app/node_modules/regenerator-runtime/README.md
+├─ [34mregenerator-runtime[39m[2m@[22m[32m0.13.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime
 │  ├─ publisher: Ben Newman
 │  ├─ email: bn@cs.stanford.edu
 │  ├─ path: /usr/src/app/node_modules/@babel/polyfill/node_modules/regenerator-runtime
-│  └─ licenseFile: /usr/src/app/node_modules/@babel/polyfill/node_modules/regenerator-runtime/README.md
-├─ [34mregenerator-transform[39m[2m@[22m[32m0.13.4[39m
+│  └─ licenseFile: /usr/src/app/node_modules/@babel/polyfill/node_modules/regenerator-runtime/LICENSE
+├─ [34mregenerator-transform[39m[2m@[22m[32m0.14.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/facebook/regenerator/tree/master/packages/regenerator-transform
 │  ├─ publisher: Ben Newman
 │  ├─ email: bn@cs.stanford.edu
 │  ├─ path: /usr/src/app/node_modules/regenerator-transform
-│  └─ licenseFile: /usr/src/app/node_modules/regenerator-transform/README.md
+│  └─ licenseFile: /usr/src/app/node_modules/regenerator-transform/LICENSE
 ├─ [34mregex-not[39m[2m@[22m[32m1.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/regex-not
@@ -4238,12 +4559,6 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/regex-not
 │  └─ licenseFile: /usr/src/app/node_modules/regex-not/LICENSE
-├─ [34mregexp-tree[39m[2m@[22m[32m0.1.5[39m
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/DmitrySoshnikov/regexp-tree
-│  ├─ publisher: Dmitry Soshnikov
-│  ├─ path: /usr/src/app/node_modules/regexp-tree
-│  └─ licenseFile: /usr/src/app/node_modules/regexp-tree/LICENSE
 ├─ [34mregexpp[39m[2m@[22m[32m2.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/mysticatea/regexpp
@@ -4251,7 +4566,7 @@
 │  ├─ url: https://github.com/mysticatea
 │  ├─ path: /usr/src/app/node_modules/regexpp
 │  └─ licenseFile: /usr/src/app/node_modules/regexpp/LICENSE
-├─ [34mregexpu-core[39m[2m@[22m[32m4.5.4[39m
+├─ [34mregexpu-core[39m[2m@[22m[32m4.6.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/mathiasbynens/regexpu-core
 │  ├─ publisher: Mathias Bynens
@@ -4273,14 +4588,14 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/registry-url
 │  └─ licenseFile: /usr/src/app/node_modules/registry-url/license
-├─ [34mregjsgen[39m[2m@[22m[32m0.5.0[39m
+├─ [34mregjsgen[39m[2m@[22m[32m0.5.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/bnjmnt4n/regjsgen
 │  ├─ publisher: Benjamin Tan
 │  ├─ url: https://bnjmnt4n.now.sh/
 │  ├─ path: /usr/src/app/node_modules/regjsgen
 │  └─ licenseFile: /usr/src/app/node_modules/regjsgen/LICENSE
-├─ [34mregjsparser[39m[2m@[22m[32m0.6.0[39m
+├─ [34mregjsparser[39m[2m@[22m[32m0.6.1[39m
 │  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/jviereck/regjsparser
 │  ├─ publisher: 'Julian Viereck'
@@ -4307,27 +4622,20 @@
 │  ├─ url: http://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/repeat-string
 │  └─ licenseFile: /usr/src/app/node_modules/repeat-string/LICENSE
-├─ [34mrequest-promise-core[39m[2m@[22m[32m1.1.2[39m
+├─ [34mrequest-promise-core[39m[2m@[22m[32m1.1.3[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/request/promise-core
 │  ├─ publisher: Nicolai Kamenzky
 │  ├─ url: https://github.com/analog-nico
 │  ├─ path: /usr/src/app/node_modules/request-promise-core
 │  └─ licenseFile: /usr/src/app/node_modules/request-promise-core/LICENSE
-├─ [34mrequest-promise-native[39m[2m@[22m[32m1.0.7[39m
+├─ [34mrequest-promise-native[39m[2m@[22m[32m1.0.8[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/request/request-promise-native
 │  ├─ publisher: Nicolai Kamenzky
 │  ├─ url: https://github.com/analog-nico
 │  ├─ path: /usr/src/app/node_modules/request-promise-native
 │  └─ licenseFile: /usr/src/app/node_modules/request-promise-native/LICENSE
-├─ [34mrequest-promise[39m[2m@[22m[32m4.2.4[39m
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/request/request-promise
-│  ├─ publisher: Nicolai Kamenzky
-│  ├─ url: https://github.com/analog-nico
-│  ├─ path: /usr/src/app/node_modules/request-promise
-│  └─ licenseFile: /usr/src/app/node_modules/request-promise/LICENSE
 ├─ [34mrequest[39m[2m@[22m[32m2.88.0[39m
 │  ├─ licenses: Apache-2.0
 │  ├─ repository: https://github.com/request/request
@@ -4388,7 +4696,7 @@
 │  ├─ url: http://substack.net
 │  ├─ path: /usr/src/app/node_modules/browser-resolve/node_modules/resolve
 │  └─ licenseFile: /usr/src/app/node_modules/browser-resolve/node_modules/resolve/LICENSE
-├─ [34mresolve[39m[2m@[22m[32m1.10.1[39m
+├─ [34mresolve[39m[2m@[22m[32m1.13.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/browserify/resolve
 │  ├─ publisher: James Halliday
@@ -4396,7 +4704,7 @@
 │  ├─ url: http://substack.net
 │  ├─ path: /usr/src/app/node_modules/resolve
 │  └─ licenseFile: /usr/src/app/node_modules/resolve/LICENSE
-├─ [34mrestore-cursor[39m[2m@[22m[32m2.0.0[39m
+├─ [34mrestore-cursor[39m[2m@[22m[32m3.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/restore-cursor
 │  ├─ publisher: Sindre Sorhus
@@ -4418,6 +4726,14 @@
 │  ├─ email: maker@mhansen.io
 │  ├─ path: /usr/src/app/node_modules/retry-as-promised
 │  └─ licenseFile: /usr/src/app/node_modules/retry-as-promised/LICENSE
+├─ [34mrimraf[39m[2m@[22m[32m2.6.2[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/rimraf
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/rimraf
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/rimraf/LICENSE
 ├─ [34mrimraf[39m[2m@[22m[32m2.6.3[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/rimraf
@@ -4439,21 +4755,29 @@
 │  ├─ email: admin@simonboudrias.com
 │  ├─ path: /usr/src/app/node_modules/run-async
 │  └─ licenseFile: /usr/src/app/node_modules/run-async/LICENSE
-├─ [34mrxjs[39m[2m@[22m[32m6.5.1[39m
+├─ [34mrxjs[39m[2m@[22m[32m6.5.3[39m
 │  ├─ licenses: Apache-2.0
 │  ├─ repository: https://github.com/reactivex/rxjs
 │  ├─ publisher: Ben Lesh
 │  ├─ email: ben@benlesh.com
 │  ├─ path: /usr/src/app/node_modules/rxjs
 │  └─ licenseFile: /usr/src/app/node_modules/rxjs/LICENSE.txt
+├─ [34msafe-buffer[39m[2m@[22m[32m5.1.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/feross/safe-buffer
+│  ├─ publisher: Feross Aboukhadijeh
+│  ├─ email: feross@feross.org
+│  ├─ url: http://feross.org
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/safe-buffer
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/safe-buffer/LICENSE
 ├─ [34msafe-buffer[39m[2m@[22m[32m5.1.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/feross/safe-buffer
 │  ├─ publisher: Feross Aboukhadijeh
 │  ├─ email: feross@feross.org
 │  ├─ url: http://feross.org
-│  ├─ path: /usr/src/app/node_modules/safe-buffer
-│  └─ licenseFile: /usr/src/app/node_modules/safe-buffer/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/minipass/node_modules/safe-buffer
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/minipass/node_modules/safe-buffer/LICENSE
 ├─ [34msafe-regex[39m[2m@[22m[32m1.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/substack/safe-regex
@@ -4468,8 +4792,8 @@
 │  ├─ publisher: Nikita Skovoroda
 │  ├─ email: chalkerx@gmail.com
 │  ├─ url: https://github.com/ChALkeR
-│  ├─ path: /usr/src/app/node_modules/safer-buffer
-│  └─ licenseFile: /usr/src/app/node_modules/safer-buffer/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/safer-buffer
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/safer-buffer/LICENSE
 ├─ [34msane[39m[2m@[22m[32m4.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/amasad/sane
@@ -4482,8 +4806,8 @@
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/sax
-│  └─ licenseFile: /usr/src/app/node_modules/sax/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/sax
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/sax/LICENSE
 ├─ [34msemver-diff[39m[2m@[22m[32m2.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/semver-diff
@@ -4497,43 +4821,48 @@
 │  ├─ repository: https://github.com/npm/node-semver
 │  ├─ path: /usr/src/app/node_modules/pg/node_modules/semver
 │  └─ licenseFile: /usr/src/app/node_modules/pg/node_modules/semver/LICENSE
-├─ [34msemver[39m[2m@[22m[32m5.7.0[39m
+├─ [34msemver[39m[2m@[22m[32m5.5.0[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/npm/node-semver
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/semver
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/semver/LICENSE
+├─ [34msemver[39m[2m@[22m[32m5.7.1[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/npm/node-semver
 │  ├─ path: /usr/src/app/node_modules/semver
 │  └─ licenseFile: /usr/src/app/node_modules/semver/LICENSE
-├─ [34msemver[39m[2m@[22m[32m6.0.0[39m
-│  ├─ licenses: ISC
-│  ├─ repository: https://github.com/npm/node-semver
-│  ├─ path: /usr/src/app/node_modules/core-js-compat/node_modules/semver
-│  └─ licenseFile: /usr/src/app/node_modules/core-js-compat/node_modules/semver/LICENSE
 ├─ [34msemver[39m[2m@[22m[32m6.3.0[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/npm/node-semver
-│  ├─ path: /usr/src/app/node_modules/istanbul-lib-instrument/node_modules/semver
-│  └─ licenseFile: /usr/src/app/node_modules/istanbul-lib-instrument/node_modules/semver/LICENSE
-├─ [34msend[39m[2m@[22m[32m0.16.2[39m
+│  ├─ path: /usr/src/app/node_modules/sequelize/node_modules/semver
+│  └─ licenseFile: /usr/src/app/node_modules/sequelize/node_modules/semver/LICENSE
+├─ [34msend[39m[2m@[22m[32m0.17.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/pillarjs/send
 │  ├─ publisher: TJ Holowaychuk
 │  ├─ email: tj@vision-media.ca
 │  ├─ path: /usr/src/app/node_modules/send
 │  └─ licenseFile: /usr/src/app/node_modules/send/LICENSE
-├─ [34msequelize-pool[39m[2m@[22m[32m1.0.2[39m
+├─ [34msequelize-cli[39m[2m@[22m[32m5.5.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sequelize/cli
+│  ├─ path: /usr/src/app/node_modules/sequelize-cli
+│  └─ licenseFile: /usr/src/app/node_modules/sequelize-cli/LICENSE
+├─ [34msequelize-pool[39m[2m@[22m[32m2.3.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sushantdhiman/sequelize-pool
 │  ├─ publisher: Sushant
 │  ├─ email: sushantdhiman@outlook.com
 │  ├─ path: /usr/src/app/node_modules/sequelize-pool
 │  └─ licenseFile: /usr/src/app/node_modules/sequelize-pool/LICENSE
-├─ [34msequelize[39m[2m@[22m[32m5.7.5[39m
+├─ [34msequelize[39m[2m@[22m[32m5.21.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sequelize/sequelize
 │  ├─ publisher: Sascha Depold
 │  ├─ email: sascha@depold.com
 │  ├─ path: /usr/src/app/node_modules/sequelize
 │  └─ licenseFile: /usr/src/app/node_modules/sequelize/LICENSE
-├─ [34mserve-static[39m[2m@[22m[32m1.13.2[39m
+├─ [34mserve-static[39m[2m@[22m[32m1.14.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/expressjs/serve-static
 │  ├─ publisher: Douglas Christopher Wilson
@@ -4545,23 +4874,16 @@
 │  ├─ repository: https://github.com/yargs/set-blocking
 │  ├─ publisher: Ben Coe
 │  ├─ email: ben@npmjs.com
-│  ├─ path: /usr/src/app/node_modules/set-blocking
-│  └─ licenseFile: /usr/src/app/node_modules/set-blocking/LICENSE.txt
-├─ [34mset-value[39m[2m@[22m[32m0.4.3[39m
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jonschlinkert/set-value
-│  ├─ publisher: Jon Schlinkert
-│  ├─ url: https://github.com/jonschlinkert
-│  ├─ path: /usr/src/app/node_modules/union-value/node_modules/set-value
-│  └─ licenseFile: /usr/src/app/node_modules/union-value/node_modules/set-value/LICENSE
-├─ [34mset-value[39m[2m@[22m[32m2.0.0[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/set-blocking
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/set-blocking/LICENSE.txt
+├─ [34mset-value[39m[2m@[22m[32m2.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/set-value
 │  ├─ publisher: Jon Schlinkert
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/set-value
 │  └─ licenseFile: /usr/src/app/node_modules/set-value/LICENSE
-├─ [34msetprototypeof[39m[2m@[22m[32m1.1.0[39m
+├─ [34msetprototypeof[39m[2m@[22m[32m1.1.1[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/wesleytodd/setprototypeof
 │  ├─ publisher: Wes Todd
@@ -4598,14 +4920,22 @@
 │  ├─ email: ogd@aoaioxxysz.net
 │  ├─ path: /usr/src/app/node_modules/shimmer
 │  └─ licenseFile: /usr/src/app/node_modules/shimmer/LICENSE
+├─ [34msigmund[39m[2m@[22m[32m1.0.1[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/isaacs/sigmund
+│  ├─ publisher: Isaac Z. Schlueter
+│  ├─ email: i@izs.me
+│  ├─ url: http://blog.izs.me/
+│  ├─ path: /usr/src/app/node_modules/sigmund
+│  └─ licenseFile: /usr/src/app/node_modules/sigmund/LICENSE
 ├─ [34msignal-exit[39m[2m@[22m[32m3.0.2[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/tapjs/signal-exit
 │  ├─ publisher: Ben Coe
 │  ├─ email: ben@npmjs.com
-│  ├─ path: /usr/src/app/node_modules/signal-exit
-│  └─ licenseFile: /usr/src/app/node_modules/signal-exit/LICENSE.txt
-├─ [34msisteransi[39m[2m@[22m[32m1.0.3[39m
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/signal-exit
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/signal-exit/LICENSE.txt
+├─ [34msisteransi[39m[2m@[22m[32m1.0.4[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/terkelg/sisteransi
 │  ├─ publisher: Terkel Gjervig
@@ -4653,7 +4983,7 @@
 │  ├─ publisher: Simon Lydell
 │  ├─ path: /usr/src/app/node_modules/source-map-resolve
 │  └─ licenseFile: /usr/src/app/node_modules/source-map-resolve/LICENSE
-├─ [34msource-map-support[39m[2m@[22m[32m0.5.12[39m
+├─ [34msource-map-support[39m[2m@[22m[32m0.5.16[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/evanw/node-source-map-support
 │  ├─ path: /usr/src/app/node_modules/source-map-support
@@ -4700,7 +5030,7 @@
 │  ├─ url: http://kemitchell.com
 │  ├─ path: /usr/src/app/node_modules/spdx-expression-parse
 │  └─ licenseFile: /usr/src/app/node_modules/spdx-expression-parse/LICENSE
-├─ [34mspdx-license-ids[39m[2m@[22m[32m3.0.4[39m
+├─ [34mspdx-license-ids[39m[2m@[22m[32m3.0.5[39m
 │  ├─ licenses: CC0-1.0
 │  ├─ repository: https://github.com/shinnn/spdx-license-ids
 │  ├─ publisher: Shinnosuke Watanabe
@@ -4751,11 +5081,6 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/static-extend
 │  └─ licenseFile: /usr/src/app/node_modules/static-extend/LICENSE
-├─ [34mstatuses[39m[2m@[22m[32m1.4.0[39m
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/jshttp/statuses
-│  ├─ path: /usr/src/app/node_modules/finalhandler/node_modules/statuses
-│  └─ licenseFile: /usr/src/app/node_modules/finalhandler/node_modules/statuses/LICENSE
 ├─ [34mstatuses[39m[2m@[22m[32m1.5.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/statuses
@@ -4782,8 +5107,8 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/gauge/node_modules/string-width
-│  └─ licenseFile: /usr/src/app/node_modules/gauge/node_modules/string-width/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/string-width
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/string-width/license
 ├─ [34mstring-width[39m[2m@[22m[32m2.1.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/string-width
@@ -4800,6 +5125,31 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/cliui/node_modules/string-width
 │  └─ licenseFile: /usr/src/app/node_modules/cliui/node_modules/string-width/license
+├─ [34mstring-width[39m[2m@[22m[32m4.2.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/string-width
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/inquirer/node_modules/string-width
+│  └─ licenseFile: /usr/src/app/node_modules/inquirer/node_modules/string-width/license
+├─ [34mstring.prototype.trimleft[39m[2m@[22m[32m2.1.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/es-shims/String.prototype.trimLeft
+│  ├─ publisher: Jordan Harband
+│  ├─ path: /usr/src/app/node_modules/string.prototype.trimleft
+│  └─ licenseFile: /usr/src/app/node_modules/string.prototype.trimleft/LICENSE
+├─ [34mstring.prototype.trimright[39m[2m@[22m[32m2.1.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/es-shims/String.prototype.trimRight
+│  ├─ publisher: Jordan Harband
+│  ├─ path: /usr/src/app/node_modules/string.prototype.trimright
+│  └─ licenseFile: /usr/src/app/node_modules/string.prototype.trimright/LICENSE
+├─ [34mstring_decoder[39m[2m@[22m[32m1.0.3[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/rvagg/string_decoder
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/string_decoder
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/string_decoder/LICENSE
 ├─ [34mstring_decoder[39m[2m@[22m[32m1.1.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/nodejs/string_decoder
@@ -4811,8 +5161,8 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/gauge/node_modules/strip-ansi
-│  └─ licenseFile: /usr/src/app/node_modules/gauge/node_modules/strip-ansi/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/strip-ansi
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/strip-ansi/license
 ├─ [34mstrip-ansi[39m[2m@[22m[32m4.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/chalk/strip-ansi
@@ -4829,6 +5179,14 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/cliui/node_modules/strip-ansi
 │  └─ licenseFile: /usr/src/app/node_modules/cliui/node_modules/strip-ansi/license
+├─ [34mstrip-ansi[39m[2m@[22m[32m6.0.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/chalk/strip-ansi
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/inquirer/node_modules/string-width/node_modules/strip-ansi
+│  └─ licenseFile: /usr/src/app/node_modules/inquirer/node_modules/string-width/node_modules/strip-ansi/license
 ├─ [34mstrip-bom[39m[2m@[22m[32m3.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/strip-bom
@@ -4851,8 +5209,16 @@
 │  ├─ publisher: Sindre Sorhus
 │  ├─ email: sindresorhus@gmail.com
 │  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/strip-json-comments
-│  └─ licenseFile: /usr/src/app/node_modules/strip-json-comments/license
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/strip-json-comments
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/strip-json-comments/license
+├─ [34mstrip-json-comments[39m[2m@[22m[32m3.0.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sindresorhus/strip-json-comments
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/eslint/node_modules/strip-json-comments
+│  └─ licenseFile: /usr/src/app/node_modules/eslint/node_modules/strip-json-comments/license
 ├─ [34msupports-color[39m[2m@[22m[32m5.5.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/chalk/supports-color
@@ -4876,7 +5242,7 @@
 │  ├─ email: joris@jorisvanderwel.com
 │  ├─ path: /usr/src/app/node_modules/symbol-tree
 │  └─ licenseFile: /usr/src/app/node_modules/symbol-tree/LICENSE
-├─ [34mtable[39m[2m@[22m[32m5.2.3[39m
+├─ [34mtable[39m[2m@[22m[32m5.4.6[39m
 │  ├─ licenses: BSD-3-Clause
 │  ├─ repository: https://github.com/gajus/table
 │  ├─ publisher: Gajus Kuizinas
@@ -4884,14 +5250,14 @@
 │  ├─ url: http://gajus.com
 │  ├─ path: /usr/src/app/node_modules/table
 │  └─ licenseFile: /usr/src/app/node_modules/table/LICENSE
-├─ [34mtar[39m[2m@[22m[32m4.4.8[39m
+├─ [34mtar[39m[2m@[22m[32m4.4.4[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/npm/node-tar
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/tar
-│  └─ licenseFile: /usr/src/app/node_modules/tar/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/tar
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/tar/LICENSE
 ├─ [34mterm-size[39m[2m@[22m[32m1.2.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/term-size
@@ -4936,6 +5302,14 @@
 │  ├─ email: floatdrop@gmail.com
 │  ├─ path: /usr/src/app/node_modules/timed-out
 │  └─ licenseFile: /usr/src/app/node_modules/timed-out/license
+├─ [34mtimers-ext[39m[2m@[22m[32m0.1.7[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/timers-ext
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: http://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/timers-ext
+│  └─ licenseFile: /usr/src/app/node_modules/timers-ext/LICENSE
 ├─ [34mtmp[39m[2m@[22m[32m0.0.33[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/raszi/node-tmp
@@ -4971,6 +5345,13 @@
 │  ├─ repository: https://github.com/micromatch/to-regex-range
 │  ├─ publisher: Jon Schlinkert
 │  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/micromatch/node_modules/to-regex-range
+│  └─ licenseFile: /usr/src/app/node_modules/micromatch/node_modules/to-regex-range/LICENSE
+├─ [34mto-regex-range[39m[2m@[22m[32m5.0.1[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/micromatch/to-regex-range
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/to-regex-range
 │  └─ licenseFile: /usr/src/app/node_modules/to-regex-range/LICENSE
 ├─ [34mto-regex[39m[2m@[22m[32m3.0.2[39m
@@ -4980,6 +5361,13 @@
 │  ├─ url: https://github.com/jonschlinkert
 │  ├─ path: /usr/src/app/node_modules/to-regex
 │  └─ licenseFile: /usr/src/app/node_modules/to-regex/LICENSE
+├─ [34mtoidentifier[39m[2m@[22m[32m1.0.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/component/toidentifier
+│  ├─ publisher: Douglas Christopher Wilson
+│  ├─ email: doug@somethingdoug.com
+│  ├─ path: /usr/src/app/node_modules/toidentifier
+│  └─ licenseFile: /usr/src/app/node_modules/toidentifier/LICENSE
 ├─ [34mtoposort-class[39m[2m@[22m[32m1.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/gustavohenke/toposort
@@ -4998,6 +5386,13 @@
 │  ├─ repository: https://github.com/salesforce/tough-cookie
 │  ├─ publisher: Jeremy Stashewsky
 │  ├─ email: jstash@gmail.com
+│  ├─ path: /usr/src/app/node_modules/request/node_modules/tough-cookie
+│  └─ licenseFile: /usr/src/app/node_modules/request/node_modules/tough-cookie/LICENSE
+├─ [34mtough-cookie[39m[2m@[22m[32m2.5.0[39m
+│  ├─ licenses: BSD-3-Clause
+│  ├─ repository: https://github.com/salesforce/tough-cookie
+│  ├─ publisher: Jeremy Stashewsky
+│  ├─ email: jstash@gmail.com
 │  ├─ path: /usr/src/app/node_modules/tough-cookie
 │  └─ licenseFile: /usr/src/app/node_modules/tough-cookie/LICENSE
 ├─ [34mtr46[39m[2m@[22m[32m1.0.1[39m
@@ -5007,15 +5402,7 @@
 │  ├─ email: npm@smayr.name
 │  ├─ path: /usr/src/app/node_modules/tr46
 │  └─ licenseFile: /usr/src/app/node_modules/tr46/LICENSE.md
-├─ [34mtrim-right[39m[2m@[22m[32m1.0.1[39m
-│  ├─ licenses: MIT
-│  ├─ repository: https://github.com/sindresorhus/trim-right
-│  ├─ publisher: Sindre Sorhus
-│  ├─ email: sindresorhus@gmail.com
-│  ├─ url: sindresorhus.com
-│  ├─ path: /usr/src/app/node_modules/trim-right
-│  └─ licenseFile: /usr/src/app/node_modules/trim-right/license
-├─ [34mtslib[39m[2m@[22m[32m1.9.3[39m
+├─ [34mtslib[39m[2m@[22m[32m1.10.0[39m
 │  ├─ licenses: Apache-2.0
 │  ├─ repository: https://github.com/Microsoft/tslib
 │  ├─ publisher: Microsoft Corp.
@@ -5042,12 +5429,36 @@
 │  ├─ email: z@georgezahariev.com
 │  ├─ path: /usr/src/app/node_modules/type-check
 │  └─ licenseFile: /usr/src/app/node_modules/type-check/LICENSE
-├─ [34mtype-is[39m[2m@[22m[32m1.6.16[39m
+├─ [34mtype-fest[39m[2m@[22m[32m0.8.1[39m
+│  ├─ licenses: (MIT OR CC0-1.0)
+│  ├─ repository: https://github.com/sindresorhus/type-fest
+│  ├─ publisher: Sindre Sorhus
+│  ├─ email: sindresorhus@gmail.com
+│  ├─ url: sindresorhus.com
+│  ├─ path: /usr/src/app/node_modules/type-fest
+│  └─ licenseFile: /usr/src/app/node_modules/type-fest/license
+├─ [34mtype-is[39m[2m@[22m[32m1.6.18[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jshttp/type-is
 │  ├─ path: /usr/src/app/node_modules/type-is
 │  └─ licenseFile: /usr/src/app/node_modules/type-is/LICENSE
-├─ [34muglify-js[39m[2m@[22m[32m3.6.0[39m
+├─ [34mtype[39m[2m@[22m[32m1.2.0[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/type
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: https://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/type
+│  └─ licenseFile: /usr/src/app/node_modules/type/LICENSE
+├─ [34mtype[39m[2m@[22m[32m2.0.0[39m
+│  ├─ licenses: ISC
+│  ├─ repository: https://github.com/medikoo/type
+│  ├─ publisher: Mariusz Nowak
+│  ├─ email: medyk@medikoo.com
+│  ├─ url: https://www.medikoo.com/
+│  ├─ path: /usr/src/app/node_modules/ext/node_modules/type
+│  └─ licenseFile: /usr/src/app/node_modules/ext/node_modules/type/LICENSE
+├─ [34muglify-js[39m[2m@[22m[32m3.7.2[39m
 │  ├─ licenses: BSD-2-Clause
 │  ├─ repository: https://github.com/mishoo/UglifyJS2
 │  ├─ publisher: Mihai Bazon
@@ -5055,6 +5466,13 @@
 │  ├─ url: http://lisperator.net/
 │  ├─ path: /usr/src/app/node_modules/uglify-js
 │  └─ licenseFile: /usr/src/app/node_modules/uglify-js/LICENSE
+├─ [34mumzug[39m[2m@[22m[32m2.2.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/sequelize/umzug
+│  ├─ publisher: Sascha Depold
+│  ├─ email: sascha@depold.com
+│  ├─ path: /usr/src/app/node_modules/umzug
+│  └─ licenseFile: /usr/src/app/node_modules/umzug/LICENSE
 ├─ [34mundefsafe[39m[2m@[22m[32m2.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/remy/undefsafe
@@ -5096,7 +5514,7 @@
 │  ├─ url: https://mathiasbynens.be/
 │  ├─ path: /usr/src/app/node_modules/unicode-property-aliases-ecmascript
 │  └─ licenseFile: /usr/src/app/node_modules/unicode-property-aliases-ecmascript/LICENSE-MIT.txt
-├─ [34munion-value[39m[2m@[22m[32m1.0.0[39m
+├─ [34munion-value[39m[2m@[22m[32m1.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jonschlinkert/union-value
 │  ├─ publisher: Jon Schlinkert
@@ -5111,6 +5529,13 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/unique-string
 │  └─ licenseFile: /usr/src/app/node_modules/unique-string/license
+├─ [34muniversalify[39m[2m@[22m[32m0.1.2[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/RyanZim/universalify
+│  ├─ publisher: Ryan Zimmerman
+│  ├─ email: opensrc@ryanzim.com
+│  ├─ path: /usr/src/app/node_modules/universalify
+│  └─ licenseFile: /usr/src/app/node_modules/universalify/LICENSE
 ├─ [34munpipe[39m[2m@[22m[32m1.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/stream-utils/unpipe
@@ -5130,7 +5555,7 @@
 │  ├─ repository: https://github.com/sindresorhus/unzip-response
 │  ├─ path: /usr/src/app/node_modules/unzip-response
 │  └─ licenseFile: /usr/src/app/node_modules/unzip-response/license
-├─ [34mupath[39m[2m@[22m[32m1.1.2[39m
+├─ [34mupath[39m[2m@[22m[32m1.2.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/anodynos/upath
 │  ├─ publisher: Angelos Pikoulas
@@ -5179,8 +5604,8 @@
 │  ├─ publisher: Nathan Rajlich
 │  ├─ email: nathan@tootallnate.net
 │  ├─ url: http://n8.io/
-│  ├─ path: /usr/src/app/node_modules/util-deprecate
-│  └─ licenseFile: /usr/src/app/node_modules/util-deprecate/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/util-deprecate
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/util-deprecate/LICENSE
 ├─ [34mutil.promisify[39m[2m@[22m[32m1.0.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/ljharb/util.promisify
@@ -5201,7 +5626,14 @@
 │  ├─ repository: https://github.com/kelektiv/node-uuid
 │  ├─ path: /usr/src/app/node_modules/uuid
 │  └─ licenseFile: /usr/src/app/node_modules/uuid/LICENSE.md
-├─ [34mv8flags[39m[2m@[22m[32m3.1.2[39m
+├─ [34mv8-compile-cache[39m[2m@[22m[32m2.1.0[39m
+│  ├─ licenses: MIT
+│  ├─ repository: https://github.com/zertosh/v8-compile-cache
+│  ├─ publisher: Andres Suarez
+│  ├─ email: zertosh@gmail.com
+│  ├─ path: /usr/src/app/node_modules/v8-compile-cache
+│  └─ licenseFile: /usr/src/app/node_modules/v8-compile-cache/LICENSE
+├─ [34mv8flags[39m[2m@[22m[32m3.1.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/gulpjs/v8flags
 │  ├─ publisher: Gulp Team
@@ -5281,7 +5713,7 @@
 │  ├─ email: github@smayr.name
 │  ├─ path: /usr/src/app/node_modules/whatwg-url
 │  └─ licenseFile: /usr/src/app/node_modules/whatwg-url/LICENSE.txt
-├─ [34mwhatwg-url[39m[2m@[22m[32m7.0.0[39m
+├─ [34mwhatwg-url[39m[2m@[22m[32m7.1.0[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/jsdom/whatwg-url
 │  ├─ publisher: Sebastian Mayr
@@ -5308,8 +5740,8 @@
 │  ├─ publisher: Rebecca Turner
 │  ├─ email: me@re-becca.org
 │  ├─ url: http://re-becca.org/
-│  ├─ path: /usr/src/app/node_modules/wide-align
-│  └─ licenseFile: /usr/src/app/node_modules/wide-align/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/wide-align
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/wide-align/LICENSE
 ├─ [34mwidest-line[39m[2m@[22m[32m2.0.1[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/sindresorhus/widest-line
@@ -5318,21 +5750,20 @@
 │  ├─ url: sindresorhus.com
 │  ├─ path: /usr/src/app/node_modules/widest-line
 │  └─ licenseFile: /usr/src/app/node_modules/widest-line/license
-├─ [34mwkx[39m[2m@[22m[32m0.4.6[39m
+├─ [34mwkx[39m[2m@[22m[32m0.4.8[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/cschwarz/wkx
 │  ├─ publisher: Christian Schwarz
 │  ├─ path: /usr/src/app/node_modules/wkx
 │  └─ licenseFile: /usr/src/app/node_modules/wkx/LICENSE.txt
-├─ [34mwordwrap[39m[2m@[22m[32m0.0.3[39m
+├─ [34mword-wrap[39m[2m@[22m[32m1.2.3[39m
 │  ├─ licenses: MIT
-│  ├─ repository: https://github.com/substack/node-wordwrap
-│  ├─ publisher: James Halliday
-│  ├─ email: mail@substack.net
-│  ├─ url: http://substack.net
-│  ├─ path: /usr/src/app/node_modules/optimist/node_modules/wordwrap
-│  └─ licenseFile: /usr/src/app/node_modules/optimist/node_modules/wordwrap/LICENSE
-├─ [34mwordwrap[39m[2m@[22m[32m1.0.0[39m
+│  ├─ repository: https://github.com/jonschlinkert/word-wrap
+│  ├─ publisher: Jon Schlinkert
+│  ├─ url: https://github.com/jonschlinkert
+│  ├─ path: /usr/src/app/node_modules/word-wrap
+│  └─ licenseFile: /usr/src/app/node_modules/word-wrap/LICENSE
+├─ [34mwordwrap[39m[2m@[22m[32m0.0.3[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/substack/node-wordwrap
 │  ├─ publisher: James Halliday
@@ -5354,8 +5785,8 @@
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/wrappy
-│  └─ licenseFile: /usr/src/app/node_modules/wrappy/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/wrappy
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/wrappy/LICENSE
 ├─ [34mwrite-file-atomic[39m[2m@[22m[32m2.4.1[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/iarna/write-file-atomic
@@ -5364,7 +5795,7 @@
 │  ├─ url: http://re-becca.org
 │  ├─ path: /usr/src/app/node_modules/@jest/transform/node_modules/write-file-atomic
 │  └─ licenseFile: /usr/src/app/node_modules/@jest/transform/node_modules/write-file-atomic/LICENSE
-├─ [34mwrite-file-atomic[39m[2m@[22m[32m2.4.2[39m
+├─ [34mwrite-file-atomic[39m[2m@[22m[32m2.4.3[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/iarna/write-file-atomic
 │  ├─ publisher: Rebecca Turner
@@ -5403,13 +5834,13 @@
 │  ├─ url: https://domenic.me/
 │  ├─ path: /usr/src/app/node_modules/xml-name-validator
 │  └─ licenseFile: /usr/src/app/node_modules/xml-name-validator/LICENSE.txt
-├─ [34mxtend[39m[2m@[22m[32m4.0.1[39m
+├─ [34mxtend[39m[2m@[22m[32m4.0.2[39m
 │  ├─ licenses: MIT
 │  ├─ repository: https://github.com/Raynos/xtend
 │  ├─ publisher: Raynos
 │  ├─ email: raynos2@gmail.com
 │  ├─ path: /usr/src/app/node_modules/xtend
-│  └─ licenseFile: /usr/src/app/node_modules/xtend/LICENCE
+│  └─ licenseFile: /usr/src/app/node_modules/xtend/LICENSE
 ├─ [34my18n[39m[2m@[22m[32m4.0.0[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/yargs/y18n
@@ -5425,14 +5856,14 @@
 │  ├─ url: http://blog.izs.me/
 │  ├─ path: /usr/src/app/node_modules/yallist
 │  └─ licenseFile: /usr/src/app/node_modules/yallist/LICENSE
-├─ [34myallist[39m[2m@[22m[32m3.0.3[39m
+├─ [34myallist[39m[2m@[22m[32m3.0.2[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/isaacs/yallist
 │  ├─ publisher: Isaac Z. Schlueter
 │  ├─ email: i@izs.me
 │  ├─ url: http://blog.izs.me/
-│  ├─ path: /usr/src/app/node_modules/minipass/node_modules/yallist
-│  └─ licenseFile: /usr/src/app/node_modules/minipass/node_modules/yallist/LICENSE
+│  ├─ path: /usr/src/app/node_modules/bcrypt/node_modules/minipass/node_modules/yallist
+│  └─ licenseFile: /usr/src/app/node_modules/bcrypt/node_modules/minipass/node_modules/yallist/LICENSE
 ├─ [34myargs-parser[39m[2m@[22m[32m13.1.1[39m
 │  ├─ licenses: ISC
 │  ├─ repository: https://github.com/yargs/yargs-parser

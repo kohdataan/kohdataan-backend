@@ -14,7 +14,7 @@ Designin the service began in spring 2018 with the "Kohdataan"-hackathon, that c
 
 The implementation of the service is user centric by nature. The project also includes a co-creation model, where the service is developed in collaboration not only with the users, but also software engineers and other subject experts that are willing to participate in the project. Opennes, doing together and figuring out new ways of working is in the core of the project. The aim of the co-creation model is also to find some important additional resources for the implementation of the project.
 
-The "Kohdataan"-project is a joint venture of [Kehitysvammaliitto](https://www.kehitysvammaliitto.fi/) and [Mielenterveysseura](https://www.mielenterveysseura.fi/). 
+The "Kohdataan"-project is a joint venture of [Kehitysvammaliitto](https://www.kehitysvammaliitto.fi/) and [Mielenterveysseura](https://www.mielenterveysseura.fi/).
 
 The project is funded by [Funding centre for social welfare and health organisations, STEA](https://www.stea.fi/).
 
@@ -32,40 +32,47 @@ After installing Docker Compose you can get the project up by running the follow
 git clone git@github.com:kohdataan/kohdataan-backend.git
 cd kohdataan-backend
 docker-compose build
-docker volume create --name=postgres_database
 docker-compose up
 ```
 
 After the containers are up you need to create the database itself and run dumps. use following commands to create databases;
 
-'docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan'
+```bash
+docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan
+```
 
-'docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test'
-
+```bash
+docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test
+```
 
 After this go to db/dumps and run commands;
 
-'docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql'
+```bash
+docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
 
-'docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql'
-
+docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
+```
 
 It is also a good idea to run migrations;
 
-'docker exec -i kohdataan-backend_node_1 sequelize db:migrate'
+```
+docker exec -i kohdataan-backend_node_1 sequelize db:migrate
+```
 
-'docker exec -i kohdataan-backend_node_1 sequelize db:seed:all'
-
+```
+docker exec -i kohdataan-backend_node_1 sequelize db:seed:all
+```
 
 If you add new npm-packages to the project:
-* Add the package to the `node/package.json` file
-* Run `docker-compose build && docker-compose up` to install the new npm-packages.
-* With the service up, run `docker-compose run node license-checker > npm-license-list.txt`
-  * This will update the used packages and licenses list
+
+- Add the package to the `node/package.json` file
+- Run `docker-compose build && docker-compose up` to install the new npm-packages.
+- With the service up, run `docker-compose run node license-checker > npm-license-list.txt`
+  - This will update the used packages and licenses list
 
 ### Test credentials
 
-TBA 
+TBA
 
 ## Documentation and architecture
 
@@ -119,12 +126,12 @@ The project adheres to Web Content Accessibility Guidelines (WCAG) 2.1 accessibi
 
 The basis of the accessibility testing is to check accessibility every time something changes in the view:
 
-* Navigating to another view
-* Messages:
-  * New message is sent
-  * New message is received
-  * etc.
-* 
+- Navigating to another view
+- Messages:
+  - New message is sent
+  - New message is received
+  - etc.
+-
 
 Automated accessibility testing tools are not perfect. Before submitting a pull request, please check that your work is not in conflict with the following accessibility checklist: <checklist TBA>
 
@@ -143,5 +150,5 @@ If you find bugs in the project, [make a new issue](https://github.com/kohdataan
 You can also suggest new features to be implemented in the project using the "Feature"-template found on the same page. The project staff evaluates whether the suggested feature is needed and appropriate for the project in the bigger picture. They decide whether the request is taken into the backlog of the project and prioritise it to a fitting level and further defines the issue if needed.
 
 ## Supporting material for development
-[Mattermost API documentation](https://api.mattermost.com/)
 
+[Mattermost API documentation](https://api.mattermost.com/)
