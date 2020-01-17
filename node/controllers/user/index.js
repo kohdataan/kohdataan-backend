@@ -140,17 +140,11 @@ export const addUser = async (req, res) => {
     showAge,
     showLocation,
   }
-
-  User.create(user)
-    .catch(err => {
-      res.status(500).send({
-        success: false,
-        message: 'Error in creating node-user',
-        error: err,
-      })
-    })
-    .then(async results => {
-      const results2 = await axios.post(`${mattermostUrl}/users`, {
+  try {
+    const nodeUser = await User.create(user)
+    if (nodeUser) {
+      // Create mmuser if nodeuser was created
+      const mmresp = await axios.post(`${mattermostUrl}/users`, {
         username,
         email,
         password,
@@ -158,11 +152,49 @@ export const addUser = async (req, res) => {
         last_name,
         nickname,
       })
-      return [results, results2]
-    })
-    .catch(async err => {
-      // If there was some problem while creating mattermost user,
-      // delete related node user and rollback
+      if (mmresp && nodeUser) {
+        // If both we created successfully, add user to team
+        const mmuser = mmresp.data
+        axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+        const mmTeamResp = await axios.post(
+          `${mattermostUrl}/teams/${process.env.TEAM_ID}/members`,
+          {
+            team_id: process.env.TEAM_ID,
+            user_id: mmuser.id,
+          }
+        )
+        const team = mmTeamResp.data
+        // Send created response
+        res.status(201).send({
+          success: true,
+          message: 'User successfully created',
+          results: {
+            username: nodeUser.username,
+            email: nodeUser.email,
+            nickname: nodeUser.nickname,
+            birthdate: nodeUser.birthdate,
+            phoneNumber: nodeUser.phoneNumber,
+          },
+          mmuser,
+          team,
+        })
+      }
+    }
+  } catch (e) {
+    if (e && e.name == 'SequelizeUniqueConstraintError') {
+      // There was problem while creating node-user
+      res.status(500).send({
+        success: false,
+        message: 'Error in creating node-user',
+        error: e,
+      })
+    } else if (
+      e &&
+      e.response &&
+      e.response.data &&
+      e.response.data.id === 'store.sql_user.save.email_exists.app_error'
+    ) {
+      // There was a problem when creating mmuser => delete created node-user and rollback
       await User.destroy({
         where: {
           email,
@@ -171,46 +203,17 @@ export const addUser = async (req, res) => {
       res.status(500).send({
         success: false,
         message: 'Error in creating mattermost-user',
-        error: err,
+        error: e.response && e.response.data,
       })
-    })
-    .then(async ([results, results2]) => {
-      const mmuser = results2.data
-      axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
-      const results3 = await axios.post(
-        `${mattermostUrl}/teams/${process.env.TEAM_ID}/members`,
-        {
-          team_id: process.env.TEAM_ID,
-          user_id: mmuser.id,
-        }
-      )
-      return [results, results2, results3]
-    })
-    .catch(err =>
+    } else {
+      // Some other error occurred
       res.status(500).send({
         success: false,
-        message: 'Error in adding user to team',
-        error: err,
+        message: 'Something went wrong while creating user',
+        error: e.response,
       })
-    )
-    .then(([results, results2, results3]) => {
-      const mmuser = results2.data
-      const team = results3.data
-      res.status(201).send({
-        success: true,
-        message: 'User successfully created',
-        results: {
-          username: results.username,
-          email: results.email,
-          nickname: results.nickname,
-          birthdate: results.birthdate,
-          phoneNumber: results.phoneNumber,
-        },
-        mmuser,
-        team,
-      })
-      return results
-    })
+    }
+  }
 }
 
 const updateMattermostUser = async (mmid, nickname, email) => {
@@ -287,6 +290,9 @@ export const updateUser = (req, res) => {
       })
   }
 }
+
+// 1) TODO: WHEN REMOVING USER, CHANGE MATTERMOST email to something arbitrary
+// 2) TODO: Do we need to also remove all the messages from that user?
 
 export const deleteUser = async (req, res) => {
   const { id } = req.params
