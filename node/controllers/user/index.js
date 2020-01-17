@@ -141,45 +141,42 @@ export const addUser = async (req, res) => {
     showLocation,
   }
   try {
+    // create node-user
     const nodeUser = await User.create(user)
-    if (nodeUser) {
-      // Create mmuser if nodeuser was created
-      const mmresp = await axios.post(`${mattermostUrl}/users`, {
-        username,
-        email,
-        password,
-        first_name,
-        last_name,
-        nickname,
-      })
-      if (mmresp && nodeUser) {
-        // If both we created successfully, add user to team
-        const mmuser = mmresp.data
-        axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
-        const mmTeamResp = await axios.post(
-          `${mattermostUrl}/teams/${process.env.TEAM_ID}/members`,
-          {
-            team_id: process.env.TEAM_ID,
-            user_id: mmuser.id,
-          }
-        )
-        const team = mmTeamResp.data
-        // Send created response
-        res.status(201).send({
-          success: true,
-          message: 'User successfully created',
-          results: {
-            username: nodeUser.username,
-            email: nodeUser.email,
-            nickname: nodeUser.nickname,
-            birthdate: nodeUser.birthdate,
-            phoneNumber: nodeUser.phoneNumber,
-          },
-          mmuser,
-          team,
-        })
+    // Create mmuser
+    const mmresp = await axios.post(`${mattermostUrl}/users`, {
+      username,
+      email,
+      password,
+      first_name,
+      last_name,
+      nickname,
+    })
+    // Add user to team
+    const mmuser = mmresp.data
+    axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+    const mmTeamResp = await axios.post(
+      `${mattermostUrl}/teams/${process.env.TEAM_ID}/members`,
+      {
+        team_id: process.env.TEAM_ID,
+        user_id: mmuser.id,
       }
-    }
+    )
+    const team = mmTeamResp.data
+    // Send created response
+    res.status(201).send({
+      success: true,
+      message: 'User successfully created',
+      results: {
+        username: nodeUser.username,
+        email: nodeUser.email,
+        nickname: nodeUser.nickname,
+        birthdate: nodeUser.birthdate,
+        phoneNumber: nodeUser.phoneNumber,
+      },
+      mmuser,
+      team,
+    })
   } catch (e) {
     if (e && e.name == 'SequelizeUniqueConstraintError') {
       // There was problem while creating node-user
