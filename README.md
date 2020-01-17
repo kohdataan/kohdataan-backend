@@ -40,7 +40,6 @@ Asennuksen jälkeen projekti lähtee käyntiin ajamalla seuraavat komennot:
 git clone https://github.com/kohdataan/kohdataan-backend.git
 cd kohdataan-backend
 docker-compose build
-docker volume create --name=postgres_database
 docker-compose up
 ```
 
@@ -81,6 +80,7 @@ docker exec -i kohdataan-backend_node_1 sequelize db:seed:all
 ```
 
 Käyttäjätiedot:
+
 ```bash
 email: dev@kohdataan.fi
 username: dev
@@ -121,7 +121,7 @@ docker-compose build --no-cache
 
 ## Dokumentaatio ja arkkitehtuuri
 
-![Kohdataan arkkitehtuuri](documentation/kohdataan-architecture.png?raw=true 'Kohdataan arkkitehtuuri')
+![Kohdataan arkkitehtuuri](documentation/kohdataan-architecture.png?raw=true "Kohdataan arkkitehtuuri")
 
 ## Projektiin osallistuminen
 
@@ -157,7 +157,7 @@ npm ci
 
 ### Testaaminen
 
-Testit voi runnata komennolla "npm test" node -kansiossa, tarkista että containerit ovat pystyssä ennen.  
+Testit voi runnata komennolla "npm test" node -kansiossa, tarkista että containerit ovat pystyssä ennen.
 
 Jos volumeen ei olla luotu testaustietokantaa build -vaiheessa, voit lisätä sen komennolla: "docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test"
 

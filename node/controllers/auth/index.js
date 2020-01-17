@@ -52,7 +52,15 @@ export const login = (req, res) => {
 }
 
 export const logout = (req, res) => {
-  res.status(501).send('not yet implemented')
+  /*
+  This path is protected, so you need to be logged in to access it and receive 200 status.
+  Because we use jwt tokens, you cannot really log out, but if we implement
+  some sort of session based system, handle logging out here.
+  */
+  res.status(200).send({
+    success: true,
+    message: 'Succesfully logged out',
+  })
 }
 
 export const forgot = async (req, res) => {
@@ -73,6 +81,46 @@ export const forgot = async (req, res) => {
       success: false,
       message: 'Something went wrong',
       error: err,
+    })
+  }
+}
+
+export const updatePassword = async (req, res) => {
+  // This is used if user updates their password when they are already logged in
+  // and no email reset link is required
+  const { id, mmid, email, current_password, new_password } = req.body
+  try {
+    const mmAuthRes = await axios.post(`${mattermostUrl}/users/login`, {
+      login_id: email,
+      password: current_password,
+    })
+    if (mmAuthRes && mmAuthRes.data && mmAuthRes.status == 200) {
+      // User's current password was correct
+      // Update node user password
+      const user = await User.findOne({
+        where: { id },
+      })
+      await user.update({
+        password: bcrypt.hashSync(new_password, 12),
+      })
+
+      // Update mattermost user password
+      axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+      await axios.put(`${mattermostUrl}/users/${mmid}/password`, {
+        new_password,
+        current_password,
+      })
+
+      res.status(200).send({
+        success: true,
+        message: 'Password changed succesfully',
+      })
+    }
+  } catch (e) {
+    res.status(500).send({
+      success: false,
+      message: 'Changing password failed',
+      error: e.message,
     })
   }
 }
@@ -103,9 +151,7 @@ export const reset = async (req, res) => {
       password: bcrypt.hashSync(password, 12),
     })
     // Update mattermost user password
-    axios.defaults.headers.common.Authorization = `Bearer ${
-      process.env.MASTER_TOKEN
-    }`
+    axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
     const mattermostUser = await axios.post(`${mattermostUrl}/users/search`, {
       term: user.email,
     })
