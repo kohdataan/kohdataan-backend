@@ -1,5 +1,5 @@
 import express from 'express'
-import * as emailVerification from '../../controllers/emailverification'
+import * as emailVerification from '../../controllers/emailVerification'
 
 const router = express.Router()
 
