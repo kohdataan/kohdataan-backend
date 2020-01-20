@@ -11,7 +11,10 @@ export default (to, subject, content) => {
     },
   })
   return transporter.sendMail({
-    from: process.env.TESTEMAIL,
+    from: {
+      name: 'Kohdataan',
+      address: process.env.TESTEMAIL
+    },  
     to,
     subject,
     text: content,
