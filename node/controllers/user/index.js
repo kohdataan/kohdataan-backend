@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt'
 import axios from 'axios'
 import model from '../../models'
+import uuidv4 from 'uuid/v4'
 
 const { User } = model
 const mattermostUrl =
@@ -288,24 +289,24 @@ export const updateUser = (req, res) => {
   }
 }
 
-// 1) TODO: WHEN REMOVING USER, CHANGE MATTERMOST email to something arbitrary
-// 2) TODO: Do we need to also remove all the messages from that user?
-
 export const deleteUser = async (req, res) => {
   const { id } = req.params
   const { mmid } = req.body
   try {
     if (id && mmid) {
-      // Delete first node-user
+      // Deactivate also mattermost user
+      axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+      // First change email so that current email will be available for new user
+      const randomEmail = `${uuidv4()}@deleted.fi`
+      await updateMattermostUser(mmid, null, randomEmail)
+      // Deactivate mattermost user
+      await axios.delete(`${mattermostUrl}/users/${mmid}`)
+      // Only after mattermost user is successfully deactivated, delete also node-user
       const affectedRows = await User.destroy({
         where: {
           id,
         },
       })
-      // Deactivate also mattermost user
-      axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
-      const mmresp = await axios.delete(`${mattermostUrl}/users/${mmid}`)
-      console.log(mmresp)
       res.status(200).send({
         success: true,
         deleted: affectedRows,
