@@ -16,21 +16,17 @@ export const resetUserChannelsPurpose = async (req, res) => {
 
   try {
     // Get mmuser by searching email
-    const mmUserData = await axios
-      .post(`${mattermostUrl}/users/search`, {
-        term: req.user.dataValues.email,
-      })
-      .then(user => user.data)
+    const axiosMmUserData = await axios.post(`${mattermostUrl}/users/search`, {
+      term: req.user.dataValues.email,
+    })
     // Get users channels in current team
-    const userChannels = await axios
-      .get(
-        `${mattermostUrl}/users/${mmUserData[0].id}/teams/${
-          process.env.TEAM_ID
-        }/channels`
-      )
-      .then(channels => channels.data)
+    const axiosUserChannelsData = await axios.get(
+      `${mattermostUrl}/users/${axiosMmUserData.data[0].id}/teams/${
+        process.env.TEAM_ID
+      }/channels`
+    )
     // Loop through the returned channels, and set new channelpurposes
-    userChannels.forEach(async channel => {
+    axiosUserChannelsData.data.forEach(async channel => {
       // Also ignore town square and off-topic
       if (
         !(
@@ -39,11 +35,14 @@ export const resetUserChannelsPurpose = async (req, res) => {
         )
       ) {
         // Get all mattermost users currently in given channel
-        const usersInChannel = await axios.get(`${mattermostUrl}/users`, {
-          in_channel: channel.id,
-        })
-        // Get a list of promises that each return users interests
-        const usersInterestsPromises = usersInChannel.data.map(
+        const axiosUsersInChannelData = await axios.get(
+          `${mattermostUrl}/users`,
+          {
+            in_channel: channel.id,
+          }
+        )
+        // Get a list of promises that each return users with their interests
+        const usersInterestsPromises = axiosUsersInChannelData.data.map(
           mattermostUser => {
             return User.findOne({
               where: { email: mattermostUser.email },
@@ -56,25 +55,18 @@ export const resetUserChannelsPurpose = async (req, res) => {
                 },
               ],
             })
-              .then(fetchedUsers => {
-                return fetchedUsers.interests
-              })
-              .catch(() => {
-                return undefined
-              })
           }
         )
         // Wait for the promises to resolve
-        const usersInterests = await Promise.all(usersInterestsPromises)
+        const usersAndTheirInterests = await Promise.all(usersInterestsPromises)
         // Create empty object we are going to populate with the interests and set to be the purpose of the channel
         const allInterests = {}
-
-        // Parse through the resolved promises
-        usersInterests.forEach(interests => {
-          // Each promise contains a list of interests, add them to the allInterests object
-          // If user was not found (is undefined), do nothing
-          if (interests) {
-            interests.forEach(interest => {
+        // go through all found users
+        usersAndTheirInterests.forEach(user => {
+          // If the user is found (is not only in mattermost, like dev)
+          if (user) {
+            // Add every interest into allInterest -object
+            user.interests.forEach(interest => {
               allInterests[interest.name] =
                 interest.name in allInterests
                   ? (allInterests[interest.name] += 1)
@@ -82,6 +74,7 @@ export const resetUserChannelsPurpose = async (req, res) => {
             })
           }
         })
+
         // Update mattermost channel purpose to match its users interests
         await axios.put(`${mattermostUrl}/channels/${channel.id}/patch`, {
           purpose: JSON.stringify(allInterests),
@@ -126,15 +119,16 @@ export const addUserInterestsToPurpose = async (req, res) => {
           through: { attributes: [] },
         },
       ],
-    }).then(fetchedUser => {
-      return fetchedUser.interests
     })
     // Wait for both of the promises to complete
     const completedPromises = await Promise.all([channelPromise, userPromise])
     // Get current channel purpose and make it into js object
-    const channelPurpose = JSON.parse(completedPromises[0].data.purpose)
+    const channelPurpose =
+      completedPromises[0] &&
+      completedPromises[0].data.purpose &&
+      JSON.parse(completedPromises[0].data.purpose)
     // Go through fetched user interests and add them to the channel purpose
-    completedPromises[1].forEach(interest => {
+    completedPromises[1].interests.forEach(interest => {
       channelPurpose[interest.name] =
         interest.name in channelPurpose
           ? (channelPurpose[interest.name] += 1)
@@ -181,15 +175,16 @@ export const removeUserInterestsFromPurpose = async (req, res) => {
           through: { attributes: [] },
         },
       ],
-    }).then(fetchedUser => {
-      return fetchedUser.interests
     })
     // Wait for both of the promises to complete
     const completedPromises = await Promise.all([channelPromise, userPromise])
     // Get current channel purpose and make it into js object
-    const channelPurpose = JSON.parse(completedPromises[0].data.purpose)
+    const channelPurpose =
+      completedPromises[0] &&
+      completedPromises[0].data.purpose &&
+      JSON.parse(completedPromises[0].data.purpose)
     // Go through fetched user interests and remove them from the channel purpose
-    completedPromises[1].forEach(interest => {
+    completedPromises[1].interests.forEach(interest => {
       channelPurpose[interest.name] -= 1
       if (channelPurpose[interest.name] === 0)
         delete channelPurpose[interest.name]
