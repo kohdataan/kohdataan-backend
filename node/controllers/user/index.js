@@ -38,6 +38,7 @@ export const getUser = (req, res) => {
         tutorialWatched,
         showAge,
         showLocation,
+        deleteAt,
       } = user
       res.status(200).send({
         nickname,
@@ -49,6 +50,7 @@ export const getUser = (req, res) => {
         tutorialWatched,
         showAge,
         showLocation,
+        deleteAt,
       })
     })
     .catch(err => {
@@ -79,6 +81,7 @@ export const getUserByUsername = (req, res) => {
           tutorialWatched,
           showAge,
           showLocation,
+          deleteAt,
         } = user[0]
         res.status(200).send({
           id,
@@ -91,6 +94,7 @@ export const getUserByUsername = (req, res) => {
           tutorialWatched,
           showAge,
           showLocation,
+          deleteAt,
         })
       } else {
         res.status(404).send({
@@ -289,10 +293,15 @@ export const updateUser = (req, res) => {
   }
 }
 
-export const deleteUser = async (req, res) => {
-  const { id } = req.params
-  const { mmid } = req.body
+export const deleteUserImmediately = async (req, res) => {
+  // This can be used to go through node users in CRON job etc. and if
+  // deleteAt timestamp is more than (for example) 7 days ago, then call
+  // this to actually permanently delete the user and related mattermost user
   try {
+    console.log(req)
+    const { id } = req.params
+    const { mmid } = req.body
+
     if (id && mmid) {
       // Deactivate also mattermost user
       axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
@@ -322,6 +331,61 @@ export const deleteUser = async (req, res) => {
     res.status(500).send({
       success: false,
       message: 'Error deleting users',
+      error: e,
+    })
+  }
+}
+
+export const deleteUser = async (req, res) => {
+  // This only adds deleteAt timestamp to node-user
+  const { id } = req.params
+  try {
+    // Add deleteAt timestamp to user
+    const affectedRows = await User.update(
+      {
+        deleteAt: Date.now(),
+      },
+      {
+        where: {
+          id,
+        },
+      }
+    )
+    res.status(200).send({
+      success: true,
+      deleted: affectedRows,
+    })
+  } catch (e) {
+    res.status(500).send({
+      success: false,
+      message: 'Error deleting user',
+      error: e,
+    })
+  }
+}
+
+export const abortDeleteUser = async (req, res) => {
+  // This removes the deleteAt timestamp from node-user
+  const { id } = req.params
+  try {
+    const affectedRows = await User.update(
+      {
+        deleteAt: null,
+      },
+      {
+        where: {
+          id,
+        },
+      }
+    )
+    res.status(200).send({
+      success: true,
+      restored: affectedRows,
+    })
+  } catch (e) {
+    res.status(500).send({
+      success: false,
+      message: 'Error deleting user',
       error: e,
     })
   }

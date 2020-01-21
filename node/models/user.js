@@ -80,6 +80,9 @@ export default (sequelize, DataTypes) => {
         },
         defaultValue: false,
       },
+      deleteAt: {
+        type: DataTypes.DATE,
+      },
     },
     {}
   )
