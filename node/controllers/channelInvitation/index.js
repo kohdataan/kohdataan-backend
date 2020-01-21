@@ -78,6 +78,9 @@ export const getChannelInvitations = async (req, res) => {
     // Await for promises made in .map to finish
     channelsData = await Promise.all(channelsData)
 
+    // Filter away channels that are too full
+    channelsData = channelsData.filter(channel => channel.memberCount < 8)
+
     // Make a cache, so that we do not need to calculate how well channel suits user every time in a sort
     // Values here are the sum of channel interests from channel purpose that are shared with users interests
     const channelsPurposeValueCache = {}
@@ -130,13 +133,11 @@ export const getChannelInvitations = async (req, res) => {
       }
       // Wait for new channels to be made
       await Promise.all(newChannels)
+      // Get the data values from axios returned object
+      newChannels = newChannels.map(newChannel => newChannel.data)
+    } else {
+      channelsData = channelsData.slice(0, 10)
     }
-
-    // Get the data values from axios returned object
-    newChannels = newChannels.map(newChannel => newChannel.data)
-
-    console.log('RETURNING')
-    console.log(await channelsData.concat(newChannels))
 
     return res.status(200).send({
       success: true,
