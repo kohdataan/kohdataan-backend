@@ -1,14 +1,15 @@
 #! /bin/bash
 
-# A script that closes this project if it is on, builds it again, prunes the used volume, creates a new volume, starts the project and runs migrations and seed after a small delay
+# A script that closes this project if it is on, removes volumes, builds it again and starts the project and runs migrations and seed after a small delay
 
 docker-compose down
+rm -rf volumes/db
 docker-compose build
-docker volume rm --force postgres_database
-docker volume create --name=postgres_database
 docker-compose up -d
 
 cd db/dumps/
+
+sleep 50
 
 docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan
 docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test
