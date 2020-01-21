@@ -1,5 +1,5 @@
 import db from '../../models'
-import sendMail from '../../utils/mailsender'
+import sendMail from '../../utils/mailSender'
 
 const EmailVerificationUuid = db.sequelize.model('EmailVerificationUuid')
 const User = db.sequelize.model('User')
