@@ -1,15 +1,19 @@
-'use strict';
+'use strict'
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.addColumn('Users', 'emailVerified', Sequelize.BOOLEAN)
+    return queryInterface.addColumn('Users', 'emailVerified', {
+      allowNull: false,
+      type: Sequelize.BOOLEAN,
+      defaultValue: false,
+    })
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.removeColumn(
-      'Users',
-      'emailVerified',
-      Sequelize.BOOLEAN
-    )
+    return queryInterface.removeColumn('Users', 'emailVerified', {
+      allowNull: false,
+      type: Sequelize.BOOLEAN,
+      defaultValue: false,
+    })
   },
 }

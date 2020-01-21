@@ -13,6 +13,7 @@ module.exports = {
     return queryInterface.removeColumn('PasswordResetUuids', 'used', {
       allowNull: false,
       type: Sequelize.BOOLEAN,
+      defaultValue: false,
     })
   },
 }
