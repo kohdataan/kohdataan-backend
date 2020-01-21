@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.addColumn('PasswordResetUuids', 'used', {
+    return queryInterface.addColumn('Users', 'emailVerified', {
       allowNull: false,
       type: Sequelize.BOOLEAN,
       defaultValue: false,
@@ -10,7 +10,7 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.removeColumn('PasswordResetUuids', 'used', {
+    return queryInterface.removeColumn('Users', 'emailVerified', {
       allowNull: false,
       type: Sequelize.BOOLEAN,
       defaultValue: false,
