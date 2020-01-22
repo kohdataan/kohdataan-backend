@@ -80,6 +80,11 @@ export default (sequelize, DataTypes) => {
         },
         defaultValue: false,
       },
+      emailVerified: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+      },
       tutorialWatched: {
         type: DataTypes.BOOLEAN,
         allowNull: {

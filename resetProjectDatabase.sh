@@ -3,11 +3,12 @@
 # A script that closes this project if it is on and resets the database
 
 docker-compose down
-docker volume rm --force postgres_database
-docker volume create --name=postgres_database
+rm -rf volumes/db
 docker-compose up -d
 
 cd db/dumps/
+
+sleep 50
 
 docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan
 docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test

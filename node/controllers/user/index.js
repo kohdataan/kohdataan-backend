@@ -41,6 +41,7 @@ export const getUser = (req, res) => {
         showAge,
         showLocation,
         deleteAt,
+        emailVerified,
       } = user
       res.status(200).send({
         nickname,
@@ -55,6 +56,7 @@ export const getUser = (req, res) => {
         showAge,
         showLocation,
         deleteAt,
+        emailVerified,
       })
     })
     .catch(err => {
@@ -86,6 +88,7 @@ export const getUserByUsername = (req, res) => {
           showAge,
           showLocation,
           deleteAt,
+          emailVerified,
         } = user[0]
         res.status(200).send({
           id,
@@ -99,6 +102,7 @@ export const getUserByUsername = (req, res) => {
           showAge,
           showLocation,
           deleteAt,
+          emailVerified,
         })
       } else {
         res.status(404).send({
@@ -133,6 +137,7 @@ export const addUser = async (req, res) => {
     tutorialWatched,
     showAge,
     showLocation,
+    emailVerified,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
   const user = {
@@ -150,6 +155,7 @@ export const addUser = async (req, res) => {
     tutorialWatched,
     showAge,
     showLocation,
+    emailVerified,
   }
   try {
     // create node-user
@@ -245,6 +251,7 @@ export const updateUser = (req, res) => {
     tutorialWatched,
     showAge,
     showLocation,
+    emailVerified,
     phoneNumber,
     mmid,
   } = req.body
@@ -270,6 +277,7 @@ export const updateUser = (req, res) => {
         tutorialWatched,
         showAge,
         showLocation,
+        emailVerified,
         phoneNumber,
       },
       {
