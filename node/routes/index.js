@@ -8,8 +8,9 @@ import user from './user'
 import userInterest from './userInterest'
 import userQuestion from './userQuestion'
 import auth from './auth'
-import emailVerification from './emailverification'
 import sendMail from './sendmail'
+import channelPurpose from './channelPurpose'
+import emailVerification from './emailverification'
 
 const router = express.Router()
 
@@ -24,5 +25,6 @@ router.use('/userQuestion', userQuestion)
 router.use('/auth', auth)
 router.use('/emailverification', emailVerification)
 router.use('/sendMail', sendMail)
+router.use('/channelPurpose', channelPurpose)
 
 export default router
