@@ -30,6 +30,8 @@ export const getUser = (req, res) => {
     .then(user => {
       const {
         nickname,
+        first_name,
+        last_name,
         location,
         description,
         birthdate,
@@ -42,6 +44,8 @@ export const getUser = (req, res) => {
       } = user
       res.status(200).send({
         nickname,
+        first_name,
+        last_name,
         location,
         description,
         birthdate,
@@ -135,6 +139,8 @@ export const addUser = async (req, res) => {
     username,
     email,
     password: hashed,
+    first_name,
+    last_name,
     birthdate,
     phoneNumber,
     nickname,
@@ -230,6 +236,8 @@ export const updateUser = (req, res) => {
   const {
     username,
     email,
+    first_name,
+    last_name,
     nickname,
     location,
     description,
@@ -254,6 +262,8 @@ export const updateUser = (req, res) => {
         username,
         email,
         nickname,
+        first_name,
+        last_name,
         location,
         description,
         profileReady,
