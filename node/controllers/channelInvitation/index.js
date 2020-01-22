@@ -1,20 +1,18 @@
 import axios from 'axios'
-import flatted from 'flatted'
-import model from '../../models'
+import uuidv4 from 'uuid/v4'
+import db from '../../models'
+import generateChannelName from '../../utils/channelNameGenerator'
+
+const User = db.sequelize.model('User')
+const Interest = db.sequelize.model('Interest')
 
 const mattermostUrl =
   process.env.MATTERMOST_URL || 'http://mattermost:8000/api/v4'
 
-const { User, Interest } = model
-
-export const getChannelInvitation = (req, res) => {
-  res.status(501).send('get all channel invitation')
-}
-
 export const getChannelInvitations = async (req, res) => {
-  axios.defaults.headers.common.Authorization = `Bearer ${
-    process.env.MASTER_TOKEN
-  }`
+  // Check that user has logged in and get the user datavalues
+  // (this part really does not make sense since passport sets the req.user, and it does not let
+  // the request get this far without setting it. I am however too afraid to touch it because something might break)
   const { id } = req.user.dataValues
   if (!id) {
     return res.status(401).send({
@@ -23,125 +21,140 @@ export const getChannelInvitations = async (req, res) => {
     })
   }
 
-  const channelsPromise = axios
-    .get(`${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`)
-    .then(results => {
-      return results
-    })
-    .catch(err => {
-      return err
-    })
-
-  const userInterestsPromise = User.findAll({
-    where: {
-      id,
-    },
-    include: [
-      {
-        model: Interest,
-        as: 'interests',
-        attributes: ['id', 'name'],
-        through: { attributes: [] },
-      },
-    ],
-  })
-    .then(results => {
-      return results[0].interests
-    })
-    .catch(err => {
-      return flatted.stringify(err)
-    })
-
-  const channelInvitations = await Promise.all([
-    channelsPromise,
-    userInterestsPromise,
-  ])
-    .then(results => {
-      const { data } = results[0]
-      const interests =
-        results[1] && results[1].map(interest => interest.dataValues.name)
-      const found =
-        data && data.filter(channel => interests.includes(channel.display_name))
-      return [found, interests]
-    })
-    .catch(err => {
-      flatted.stringify(err)
-      return []
-    })
-
   try {
-    const channelsPromises =
-      channelInvitations[0] &&
-      (await Promise.all(
-        channelInvitations[0].map(channel => {
-          return axios.get(`${mattermostUrl}/channels/${channel.id}/stats`)
-        })
-      ))
+    // Set the axios header token
+    axios.defaults.headers.common.Authorization = `Bearer ${
+      process.env.MASTER_TOKEN
+    }`
 
-    const channelsWithRoom = channelsPromises
-      .filter(result => result.data.member_count < 8)
-      .map(result => result.data.channel_id)
-
-    let exhaustedInterests = []
-
-    const found = channelInvitations[0].filter(channel => {
-      if (
-        channelsWithRoom.includes(channel.id) &&
-        !exhaustedInterests.includes(channel.display_name)
-      ) {
-        exhaustedInterests = [...exhaustedInterests, channel.display_name]
-        return channelsWithRoom.includes(channel.id)
-      }
-      return false
+    // get a user that has linked all its interests
+    const userInterests = await User.findOne({
+      where: {
+        id,
+      },
+      include: [
+        {
+          model: Interest,
+          as: 'interests',
+          attributes: ['id', 'name'],
+          through: { attributes: [] },
+        },
+      ],
     })
 
-    const userInterests = channelInvitations[1]
-    const channelInterests = found.map(channel => channel.display_name)
-
-    const interests = userInterests.filter(
-      interest => !channelInterests.includes(interest)
+    // Get all channel data from mattermost
+    const allChannels = await axios.get(
+      `${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`
     )
 
-    if (interests.length > 0) {
-      const channelPromises = await Promise.all(
-        interests.map(interest => {
-          const displayName =
-            interest.replace(/\W/g, '').toLowerCase() + Date.now().toString()
+    // This list will hold all requesting user interests
+    const interestsData =
+      userInterests.interests &&
+      userInterests.interests.map(interest => interest.name)
+    // This list will hold all channels data (minus town-square and off-topic as they are stock channels)
+    let channelsData =
+      allChannels.data &&
+      allChannels.data
+        .filter(
+          channelData =>
+            channelData.name !== 'town-square' &&
+            channelData.name !== 'off-topic'
+        )
+        .map(async channelData => {
+          const newChannelData = { ...channelData }
+          const channelStats = await axios.get(
+            `${mattermostUrl}/channels/${channelData.id}/stats`
+          )
+          // Add the membercount variable to channelData
+          newChannelData.memberCount = channelStats.data.member_count
+          // Also parse channel purpose to js object
+          newChannelData.purpose =
+            channelData &&
+            channelData.purpose &&
+            JSON.parse(channelData.purpose)
+          return newChannelData
+        })
 
-          return axios.post(`${mattermostUrl}/channels`, {
+    // Await for promises made in .map to finish
+    channelsData = await Promise.all(channelsData)
+
+    // Filter away channels that are too full
+    channelsData = channelsData.filter(channel => channel.memberCount < 8)
+
+    // Make a cache, so that we do not need to calculate how well channel suits user every time in a sort
+    // Values here are the sum of channel interests from channel purpose that are shared with users interests
+    const channelsPurposeValueCache = {}
+    channelsData.sort((channel1, channel2) => {
+      // Check that first channel in this comparison is in cache, add it if not
+      if (!channelsPurposeValueCache[channel1.id]) {
+        let channelPurposeValue = 0
+        interestsData.forEach(interest => {
+          if (channel1.purpose[interest]) {
+            channelPurposeValue += channel1.purpose[interest]
+          }
+        })
+        channelsPurposeValueCache[channel1.id] = channelPurposeValue
+      }
+      // Check that second channel in this comparison is in cache, add it if not
+      if (!channelsPurposeValueCache[channel2.id]) {
+        let channelPurposeValue = 0
+        interestsData.forEach(interest => {
+          if (channel2.purpose[interest]) {
+            channelPurposeValue += channel2.purpose[interest]
+          }
+        })
+        channelsPurposeValueCache[channel2.id] = channelPurposeValue
+      }
+      // return result of this comparison from the cache
+      return (
+        channelsPurposeValueCache[channel2.id] -
+        channelsPurposeValueCache[channel1.id]
+      )
+    })
+
+    let newChannels = []
+    // Check if we found enough new channels
+    if (channelsData.length < 10) {
+      // How many need to be made?
+      let newChannelsAmount = 10 - channelsData.length
+      // Create promises that each make a new channel
+      while (newChannelsAmount > 0) {
+        newChannels.push(
+          axios.post(`${mattermostUrl}/channels`, {
             team_id: process.env.TEAM_ID,
-            name: displayName,
-            display_name: interest,
+            name: uuidv4(),
+            display_name: generateChannelName(),
+            purpose: JSON.stringify({}),
             type: 'O',
           })
-        })
-      )
-
-      const newChannels = channelPromises.map(channel => {
-        return channel.data
-      })
-
-      const channels = [...found, ...newChannels]
-
-      return res.status(200).send({
-        success: true,
-        message: 'Channel invitation',
-        channels,
-      })
+        )
+        // Make enough new channels so that there are 10 in total
+        newChannelsAmount -= 1
+      }
+      // Wait for new channels to be made
+      await Promise.all(newChannels)
+      // Get the data values from axios returned object
+      newChannels = newChannels.map(newChannel => newChannel.data)
+    } else {
+      channelsData = channelsData.slice(0, 10)
     }
+
     return res.status(200).send({
       success: true,
       message: 'Channels',
-      found,
+      found: await channelsData.concat(newChannels),
     })
-  } catch (e) {
-    console.log(e)
+  } catch (error) {
     return res.status(500).send({
       success: false,
-      message: 'Error',
-      error: e,
+      message: 'Something went wrong',
+      error,
     })
   }
+}
+
+export const getChannelInvitation = (req, res) => {
+  res.status(501).send('get all channel invitation')
 }
 
 export const addChannelInvitation = (req, res) => {
