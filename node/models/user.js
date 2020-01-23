@@ -44,6 +44,14 @@ export default (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
+      first_name: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      last_name: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
       description: {
         type: DataTypes.STRING,
         allowNull: true,
@@ -84,6 +92,9 @@ export default (sequelize, DataTypes) => {
           msg: 'Tutorial should be defined as watched or not',
         },
         defaultValue: false,
+      },
+      deleteAt: {
+        type: DataTypes.DATE,
       },
     },
     {}

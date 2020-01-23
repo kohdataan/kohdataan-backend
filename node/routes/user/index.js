@@ -20,4 +20,16 @@ router.patch('/:id', passport.authenticate('jwt'), userCtrl.updateUser)
 
 router.delete('/:id', passport.authenticate('jwt'), userCtrl.deleteUser)
 
+router.delete(
+  '/deletenow/:id',
+  passport.authenticate('jwt'),
+  userCtrl.deleteUserImmediately
+)
+
+router.post(
+  '/restore/:id',
+  passport.authenticate('jwt'),
+  userCtrl.abortDeleteUser
+)
+
 export default router
