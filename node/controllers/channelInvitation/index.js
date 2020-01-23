@@ -133,16 +133,10 @@ export const getChannelInvitations = async (req, res) => {
       newChannels = await Promise.all(newChannels)
       // Get the data values from axios returned object
       newChannels = newChannels.map(newChannel => newChannel.data)
-      console.log('NEW CHANNELS')
-      console.log('-------')
-      console.log(newChannels)
-      console.log('-------')
     } else {
       channelsData = channelsData.slice(0, 10)
     }
     const found = channelsData.concat(newChannels)
-    console.log('FOUND')
-    console.log(found)
 
     return res.status(200).send({
       success: true,
