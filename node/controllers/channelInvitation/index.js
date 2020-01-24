@@ -40,9 +40,12 @@ export const getChannelInvitations = async (req, res) => {
       ],
     })
 
-    // Get all channel data from mattermost
+    // Get all channel data from mattermost (result is paginated but 2000 results should be enough)
     const allChannels = await axios.get(
-      `${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`
+      `${mattermostUrl}/teams/${process.env.TEAM_ID}/channels`,
+      {
+        per_page: 2000,
+      }
     )
 
     // This list will hold all requesting user interests
@@ -56,7 +59,8 @@ export const getChannelInvitations = async (req, res) => {
         .filter(
           channelData =>
             channelData.name !== 'town-square' &&
-            channelData.name !== 'off-topic'
+            channelData.name !== 'off-topic' &&
+            channelData.delete_at === 0
         )
         .map(async channelData => {
           const newChannelData = { ...channelData }
@@ -111,21 +115,29 @@ export const getChannelInvitations = async (req, res) => {
     })
 
     let newChannels = []
+    // This keeps all the to-be-generated channel names to avoid duplicates
+    let newChannelNames = []
+
     // Check if we found enough new channels
     if (channelsData.length < 5) {
       // How many need to be made?
       let newChannelsAmount = 5 - channelsData.length
       // Create promises that each make a new channel
       while (newChannelsAmount > 0) {
+        const channelName = await generateChannelName(
+          allChannels,
+          newChannelNames
+        )
         newChannels.push(
           axios.post(`${mattermostUrl}/channels`, {
             team_id: process.env.TEAM_ID,
             name: uuidv4(),
-            display_name: generateChannelName(),
+            display_name: channelName,
             purpose: JSON.stringify({}),
             type: 'O',
           })
         )
+        newChannelNames.push(channelName)
         // Make enough new channels so that there are 5 in total
         newChannelsAmount -= 1
       }
