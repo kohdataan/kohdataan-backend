@@ -96,6 +96,9 @@ export default (sequelize, DataTypes) => {
       deleteAt: {
         type: DataTypes.DATE,
       },
+      channelInvitationsAt: {
+        type: DataTypes.DATE,
+      },
     },
     {}
   )

@@ -112,9 +112,9 @@ export const getChannelInvitations = async (req, res) => {
 
     let newChannels = []
     // Check if we found enough new channels
-    if (channelsData.length < 10) {
+    if (channelsData.length < 5) {
       // How many need to be made?
-      let newChannelsAmount = 10 - channelsData.length
+      let newChannelsAmount = 5 - channelsData.length
       // Create promises that each make a new channel
       while (newChannelsAmount > 0) {
         newChannels.push(
@@ -126,7 +126,7 @@ export const getChannelInvitations = async (req, res) => {
             type: 'O',
           })
         )
-        // Make enough new channels so that there are 10 in total
+        // Make enough new channels so that there are 5 in total
         newChannelsAmount -= 1
       }
       // Wait for new channels to be made
@@ -134,7 +134,7 @@ export const getChannelInvitations = async (req, res) => {
       // Get the data values from axios returned object
       newChannels = newChannels.map(newChannel => newChannel.data)
     } else {
-      channelsData = channelsData.slice(0, 10)
+      channelsData = channelsData.slice(0, 5)
     }
     const found = channelsData.concat(newChannels)
 

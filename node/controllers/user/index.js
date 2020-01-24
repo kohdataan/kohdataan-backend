@@ -42,6 +42,7 @@ export const getUser = (req, res) => {
         showLocation,
         deleteAt,
         emailVerified,
+        channelInvitationsAt,
       } = user
       res.status(200).send({
         nickname,
@@ -57,6 +58,7 @@ export const getUser = (req, res) => {
         showLocation,
         deleteAt,
         emailVerified,
+        channelInvitationsAt,
       })
     })
     .catch(err => {
@@ -253,6 +255,7 @@ export const updateUser = (req, res) => {
     showLocation,
     emailVerified,
     phoneNumber,
+    channelInvitationsAt,
     mmid,
   } = req.body
   const { id } = req.user.dataValues
@@ -279,6 +282,7 @@ export const updateUser = (req, res) => {
         showLocation,
         emailVerified,
         phoneNumber,
+        channelInvitationsAt,
       },
       {
         where: {
