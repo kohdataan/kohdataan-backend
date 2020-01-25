@@ -22,7 +22,7 @@ export const handleEmailVerificationRequest = async (req, res) => {
       verificationUuid = await EmailVerificationUuid.create({ userId: user.id })
     }
     const emailToSent = `Hei, tästä linkistä pääset kirjautumaan palveluun: 
-      \nhttp://localhost:3000/login/${verificationUuid.uuid}`
+      \n${process.env.FRONTEND_URL}/login/${verificationUuid.uuid}`
     sendMail(user.email, 'Kirjautuminen', emailToSent)
     return res.status(201).send({
       success: true,
