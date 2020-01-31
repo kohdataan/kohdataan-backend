@@ -11,7 +11,7 @@ export const handleEmailVerificationRequest = async (req, res) => {
     const user = await User.findOne({ where: { email } })
     if (user.emailVerified) {
       return res.status(201).send({
-        success: true,
+        success: false,
         message: 'This account is already verified',
       })
     }
