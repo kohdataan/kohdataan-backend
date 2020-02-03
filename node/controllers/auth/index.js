@@ -26,6 +26,13 @@ export const login = (req, res) => {
         })
       }
 
+      if (!user.emailVerified) {
+        return res.status(400).json({
+          message: 'Email needs to be verified',
+          user,
+        })
+      }
+
       return req.login(
         user,
         {
