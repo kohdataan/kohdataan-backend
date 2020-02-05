@@ -72,7 +72,6 @@ export const getUser = (req, res) => {
 
 export const getUserByUsername = (req, res) => {
   const { username } = req.params
-
   return User.findAll({
     where: { username },
   })
@@ -232,9 +231,9 @@ export const addUser = async (req, res) => {
   }
 }
 
-const updateMattermostUser = async (mmid, nickname, email) => {
+const updateMattermostUser = async (mmid, username, nickname, email) => {
   axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
-  const newData = { nickname, email }
+  const newData = { username, nickname, email }
   return await axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
     ...newData,
   })
@@ -292,7 +291,7 @@ export const updateUser = (req, res) => {
     )
       .then(rows => {
         if (mmid) {
-          return updateMattermostUser(mmid, nickname, email)
+          return updateMattermostUser(mmid, username, nickname, email)
         }
         return rows
       })
