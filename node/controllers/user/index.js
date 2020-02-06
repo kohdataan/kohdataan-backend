@@ -231,7 +231,7 @@ export const addUser = async (req, res) => {
   }
 }
 
-export const updateMattermostUser = async (mmid, nickname, email) => {
+export const updateMattermostUser = async (mmid, nickname, username, email) => {
   axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
   const newData = { username, nickname, email }
   return await axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
