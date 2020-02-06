@@ -68,6 +68,12 @@ export const forgot = async (req, res) => {
 
   try {
     const user = await User.findOne({ where: { email } })
+    if (!user) {
+      res.status(400).send({
+        success: false,
+        message: 'Could not find account with that email',
+      })
+    }
     const createdToken = await PasswordResetUuid.create({ userId: user.id })
     const emailToSent = `Hei, meille tuli pyyntö vaihtaa salasanasi. \nTässä on linkki, josta pääset tekemään sen: ${process.env.FRONTEND_URL}/reset-password/${createdToken.uuid}`
     await sendMail(email, 'PasswordResetLink', emailToSent)
@@ -133,6 +139,12 @@ export const reset = async (req, res) => {
     const passwordResetEntry = await PasswordResetUuid.findOne({
       where: { uuid },
     })
+    if (!passwordResetEntry) {
+      res.status(400).send({
+        success: false,
+        message: 'Could not find password reset entry with given uuid',
+      })
+    }
     const givenTime = Number(process.env.PASSWORD_RESET_TIME)
     const currentTime = new Date().getTime()
     const tokenTime = passwordResetEntry.createdAt.getTime()
