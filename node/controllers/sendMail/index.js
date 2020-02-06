@@ -1,15 +1,12 @@
 import sendMail from '../../utils/mailSender'
 
-// Place all endpoints here that only send email when frontend calls them
-
 // eslint-disable-next-line import/prefer-default-export
 export const sendMailToSupport = (req, res) => {
-  const { name, email, message } = req.body
+  const { name, email, message, type } = req.body
 
   const messageToSent = `Sender name: ${name} \nsender email: ${email} \nmessage: ${message}`
 
-  // UPDATE RECEIVER OF THIS EMAIL TO BE THE ONE THAT HANDLES PROBLEMS
-  sendMail(process.env.TESTEMAIL, 'Ongelma kirjautumisessa', messageToSent)
+  sendMail(process.env.EMAIL_USER, type, messageToSent)
     .then(() => {
       res.status(201).send({
         success: true,
