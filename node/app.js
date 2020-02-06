@@ -5,8 +5,10 @@ import bodyParser from 'body-parser'
 import passport from 'passport'
 import cors from 'cors'
 import routes from './routes'
+import cronDeleteUsers from './utils/cronDeleteUsers'
 
 dotenv.config()
+cronDeleteUsers()
 
 const corsOptions = {
   origin: process.env.FRONTEND_URL || 'http://localhost:3000',
