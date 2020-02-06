@@ -69,8 +69,7 @@ export const forgot = async (req, res) => {
   try {
     const user = await User.findOne({ where: { email } })
     const createdToken = await PasswordResetUuid.create({ userId: user.id })
-    const emailToSent = `Hei, meille tuli pyyntö resetoida salasanasi, tässä linkki josta pääset tekemään sen: 
-      \nwww.kohdataan.com/forgotPass?uuid=${createdToken.uuid}`
+    const emailToSent = `Hei, meille tuli pyyntö vaihtaa salasanasi. \nTässä on linkki, josta pääset tekemään sen: ${process.env.FRONTEND_URL}/forgotPass?uuid=${createdToken.uuid}`
     await sendMail(email, 'PasswordResetLink', emailToSent)
     res.status(201).send({
       success: true,

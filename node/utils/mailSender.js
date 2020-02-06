@@ -1,17 +1,18 @@
 import nodemailer from 'nodemailer'
 
-// Change the transport configuration when modifying this function to use smtp server
-// Google nodemailer docs.
+// To use Google nodemailer, use service: 'gmail'
 export default (to, subject, content) => {
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
+    secure: process.env.EMAIL_SECURE,
     auth: {
-      user: process.env.TESTEMAIL,
-      pass: process.env.TESTEMAILPASS,
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS 
     },
   })
   return transporter.sendMail({
-    from: process.env.TESTEMAIL,
+    from: process.env.EMAIL_USER,
     to,
     subject,
     text: content,
