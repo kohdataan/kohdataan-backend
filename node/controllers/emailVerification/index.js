@@ -10,7 +10,7 @@ export const handleEmailVerificationRequest = async (req, res) => {
   try {
     const user = await User.findOne({ where: { email } })
     if (user.emailVerified) {
-      return res.status(201).send({
+      return res.status(400).send({
         success: false,
         message: 'This account is already verified',
       })
@@ -44,6 +44,12 @@ export const handleEmailVerification = async (req, res) => {
     const verificationUuid = await EmailVerificationUuid.findOne({
       where: { uuid },
     })
+    if (!verificationUuid) {
+      return res.status(400).send({
+        success: false,
+        message: 'Given uuid does not match any stored uuids',
+      })
+    }
     await User.update(
       {
         emailVerified: true,
@@ -62,7 +68,7 @@ export const handleEmailVerification = async (req, res) => {
   } catch (err) {
     return res.status(500).send({
       success: false,
-      message: 'Given uuid does not match any stored uuids',
+      message: 'Something went wrong',
       error: err,
     })
   }
