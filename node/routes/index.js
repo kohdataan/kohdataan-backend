@@ -10,7 +10,7 @@ import userQuestion from './userQuestion'
 import auth from './auth'
 import sendMail from './sendmail'
 import channelPurpose from './channelPurpose'
-import emailVerification from './emailverification'
+import emailVerification from './emailVerification'
 
 const router = express.Router()
 
