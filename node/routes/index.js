@@ -23,7 +23,7 @@ router.use('/user', user)
 router.use('/userInterest', userInterest)
 router.use('/userQuestion', userQuestion)
 router.use('/auth', auth)
-router.use('/emailverification', emailVerification)
+router.use('/emailVerification', emailVerification)
 router.use('/sendMail', sendMail)
 router.use('/channelPurpose', channelPurpose)
 
