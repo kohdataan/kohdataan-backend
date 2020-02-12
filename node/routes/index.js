@@ -10,7 +10,7 @@ import userQuestion from './userQuestion'
 import auth from './auth'
 import sendMail from './sendmail'
 import channelPurpose from './channelPurpose'
-import emailVerification from './emailverification'
+import emailVerification from './emailVerification'
 
 const router = express.Router()
 
@@ -23,7 +23,7 @@ router.use('/user', user)
 router.use('/userInterest', userInterest)
 router.use('/userQuestion', userQuestion)
 router.use('/auth', auth)
-router.use('/emailverification', emailVerification)
+router.use('/emailVerification', emailVerification)
 router.use('/sendMail', sendMail)
 router.use('/channelPurpose', channelPurpose)
 

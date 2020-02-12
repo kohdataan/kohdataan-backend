@@ -335,7 +335,7 @@ export const deleteUserImmediately = async (req, res) => {
       axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
       // First change email so that current email will be available for new user
       const randomEmail = `${uuidv4()}@deleted.fi`
-      await updateMattermostUser(mmid, null, randomEmail)
+      await updateMattermostUser(mmid, null, null, randomEmail)
       // Deactivate mattermost user
       await axios.delete(`${mattermostUrl}/users/${mmid}`)
       // Only after mattermost user is successfully deactivated, delete also node-user
