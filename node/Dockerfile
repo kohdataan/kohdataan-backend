@@ -11,6 +11,7 @@ COPY package*.json ./
 RUN npm install -g node-gyp
 RUN npm install -g license-checker
 RUN npm install -g sequelize-cli
+RUN npm install cron
 
 RUN npm install
 COPY . .

@@ -237,7 +237,7 @@ export const addUser = async (req, res) => {
   }
 }
 
-const updateMattermostUser = async (mmid, username, nickname, email) => {
+export const updateMattermostUser = async (mmid, nickname, email) => {
   axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
   const newData = { username, nickname, email }
   return await axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
@@ -327,7 +327,6 @@ export const deleteUserImmediately = async (req, res) => {
   // deleteAt timestamp is more than (for example) 7 days ago, then call
   // this to actually permanently delete the user and related mattermost user
   try {
-    console.log(req)
     const { id } = req.params
     const { mmid } = req.body
 
