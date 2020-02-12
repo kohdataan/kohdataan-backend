@@ -125,7 +125,8 @@ CREATE TABLE public."Users" (
     location character varying(255),
     description character varying(255),
     "profileReady" boolean NOT NULL,
-    "tutorialWatched" boolean NOT NULL
+    "tutorialWatched" boolean NOT NULL,
+    "imageUploaded" boolean NOT NULL
 );
 
 
@@ -221,8 +222,8 @@ SELECT pg_catalog.setval('public."UserInterests_id_seq"', 1, false);
 -- Data for Name: Users; Type: TABLE DATA; Schema: public; Owner: mmuser
 --
 
-COPY public."Users" (id, username, email, password, "createdAt", "updatedAt", nickname, location, description, "profileReady", "tutorialWatched") FROM stdin;
-1	woland	janne.timonen@perfektio.com	$2b$12$9AWdWpQ4Fb.4OPl3cp00YOHoJlQnl8hMpJRPs.Qsq28JdSO.E0MmC	2019-05-09 15:54:59.609+00	2019-05-09 15:54:59.609+00	\N	\N	\N	f	f
+COPY public."Users" (id, username, email, password, "createdAt", "updatedAt", nickname, location, description, "profileReady", "tutorialWatched", "imageUploaded") FROM stdin;
+1	woland	janne.timonen@perfektio.com	$2b$12$9AWdWpQ4Fb.4OPl3cp00YOHoJlQnl8hMpJRPs.Qsq28JdSO.E0MmC	2019-05-09 15:54:59.609+00	2019-05-09 15:54:59.609+00	\N	\N	\N	f	f	f
 \.
 
 
