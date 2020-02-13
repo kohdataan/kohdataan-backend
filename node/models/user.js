@@ -108,6 +108,9 @@ export default (sequelize, DataTypes) => {
       as: 'interests',
       foreignKey: 'userId',
     })
+    User.hasMany(models.BlockedUser, {
+      foreignKey: 'userId',
+    })
   }
   return User
 }

@@ -11,6 +11,7 @@ import auth from './auth'
 import sendMail from './sendmail'
 import channelPurpose from './channelPurpose'
 import emailVerification from './emailVerification'
+import blockedUsers from './blockedUsers'
 
 const router = express.Router()
 
@@ -26,5 +27,6 @@ router.use('/auth', auth)
 router.use('/emailVerification', emailVerification)
 router.use('/sendMail', sendMail)
 router.use('/channelPurpose', channelPurpose)
+router.use('/blockUser', blockedUsers)
 
 export default router

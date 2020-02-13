@@ -1,9 +1,11 @@
 import bcrypt from 'bcrypt'
 import axios from 'axios'
-import model from '../../models'
 import uuidv4 from 'uuid/v4'
+import db from '../../models'
 
-const { User } = model
+const User = db.sequelize.model('User')
+const BlockedUser = db.sequelize.model('BlockedUser')
+
 const mattermostUrl =
   process.env.MATTERMOST_URL || 'http://mattermost:8000/api/v4'
 
@@ -26,8 +28,18 @@ export const getUsers = (req, res) => {
 export const getUser = (req, res) => {
   const { id } = req.params
 
-  return User.findByPk(id)
+  return User.findByPk(id, {
+    include: [
+      {
+        model: BlockedUser,
+        attributes: ['blockedUser'],
+      },
+    ],
+  })
     .then(user => {
+      const blockedUsers = user.BlockedUsers.map(
+        blockedUser => blockedUser.blockedUser
+      )
       const {
         nickname,
         first_name,
@@ -59,6 +71,7 @@ export const getUser = (req, res) => {
         deleteAt,
         emailVerified,
         channelInvitationsAt,
+        blockedUsers,
       })
     })
     .catch(err => {
@@ -172,7 +185,9 @@ export const addUser = async (req, res) => {
     })
     // Add user to team
     const mmuser = mmresp.data
-    axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+    axios.defaults.headers.common.Authorization = `Bearer ${
+      process.env.MASTER_TOKEN
+    }`
     const mmTeamResp = await axios.post(
       `${mattermostUrl}/teams/${process.env.TEAM_ID}/members`,
       {
@@ -232,7 +247,9 @@ export const addUser = async (req, res) => {
 }
 
 export const updateMattermostUser = async (mmid, username, nickname, email) => {
-  axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+  axios.defaults.headers.common.Authorization = `Bearer ${
+    process.env.MASTER_TOKEN
+  }`
   const newData = { username, nickname, email }
   return await axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
     ...newData,
@@ -324,7 +341,9 @@ export const deleteUserImmediately = async (req, res) => {
 
     if (id && mmid) {
       // Deactivate also mattermost user
-      axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+      axios.defaults.headers.common.Authorization = `Bearer ${
+        process.env.MASTER_TOKEN
+      }`
       // First change email so that current email will be available for new user
       const randomEmail = `${uuidv4()}@deleted.fi`
       await updateMattermostUser(mmid, null, null, randomEmail)
