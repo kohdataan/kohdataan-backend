@@ -15,6 +15,6 @@ export default (to, subject, content) => {
     from: process.env.EMAIL_USER,
     to,
     subject,
-    text: content,
+    html: content,
   })
 }
