@@ -43,6 +43,7 @@ export const getUser = (req, res) => {
         deleteAt,
         emailVerified,
         channelInvitationsAt,
+        imageUploaded,
       } = user
       res.status(200).send({
         nickname,
@@ -59,6 +60,7 @@ export const getUser = (req, res) => {
         deleteAt,
         emailVerified,
         channelInvitationsAt,
+        imageUploaded,
       })
     })
     .catch(err => {
@@ -90,6 +92,7 @@ export const getUserByUsername = (req, res) => {
           showLocation,
           deleteAt,
           emailVerified,
+          imageUploaded,
         } = user[0]
         res.status(200).send({
           id,
@@ -104,6 +107,7 @@ export const getUserByUsername = (req, res) => {
           showLocation,
           deleteAt,
           emailVerified,
+          imageUploaded,
         })
       } else {
         res.status(404).send({
@@ -139,6 +143,7 @@ export const addUser = async (req, res) => {
     showAge,
     showLocation,
     emailVerified,
+    imageUploaded,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
   const user = {
@@ -157,6 +162,7 @@ export const addUser = async (req, res) => {
     showAge,
     showLocation,
     emailVerified,
+    imageUploaded,
   }
   try {
     // create node-user
@@ -255,6 +261,7 @@ export const updateUser = (req, res) => {
     emailVerified,
     phoneNumber,
     channelInvitationsAt,
+    imageUploaded,
     mmid,
   } = req.body
   const { id } = req.user.dataValues
@@ -282,6 +289,7 @@ export const updateUser = (req, res) => {
         emailVerified,
         phoneNumber,
         channelInvitationsAt,
+        imageUploaded,
       },
       {
         where: {
