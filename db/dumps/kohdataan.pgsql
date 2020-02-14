@@ -125,8 +125,7 @@ CREATE TABLE public."Users" (
     location character varying(255),
     description character varying(255),
     "profileReady" boolean NOT NULL,
-    "tutorialWatched" boolean NOT NULL,
-    "imageUploaded" boolean NOT NULL
+    "tutorialWatched" boolean NOT NULL
 );
 
 
