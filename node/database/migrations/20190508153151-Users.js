@@ -24,12 +24,6 @@ module.exports = {
           type: Sequelize.BOOLEAN,
         })
       })
-      .then(() => {
-        return queryInterface.addColumn('Users', 'imageUploaded', {
-          allowNull: false,
-          type: Sequelize.BOOLEAN,
-        })
-      })
   },
 
   down: (queryInterface, Sequelize) => {
@@ -58,13 +52,6 @@ module.exports = {
       })
       .then(() => {
         return queryInterface.removeColumn('Users', 'tutorialWatched', {
-          allowNull: false,
-          defaultValue: false,
-          type: Sequelize.BOOLEAN,
-        })
-      })
-      .then(() => {
-        return queryInterface.removeColumn('Users', 'imageUploaded', {
           allowNull: false,
           defaultValue: false,
           type: Sequelize.BOOLEAN,
