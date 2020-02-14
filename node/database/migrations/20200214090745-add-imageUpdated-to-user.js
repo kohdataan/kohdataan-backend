@@ -1,9 +1,10 @@
-'use strict';
+'use strict'
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.addColumn('Users', 'imageUploaded', {
       allowNull: false,
+      defaultValue: false,
       type: Sequelize.BOOLEAN,
     })
   },
@@ -14,5 +15,5 @@ module.exports = {
       defaultValue: false,
       type: Sequelize.BOOLEAN,
     })
-  }
-};
+  },
+}
