@@ -87,9 +87,18 @@ export const getUserByUsername = (req, res) => {
   const { username } = req.params
   return User.findAll({
     where: { username },
+    include: [
+      {
+        model: BlockedUser,
+        attributes: ['blockedUser'],
+      },
+    ],
   })
     .then(user => {
       if (user && user[0]) {
+        const blockedUsers = user[0].BlockedUsers.map(
+          blockedUser => blockedUser.blockedUser
+        )
         const {
           id,
           nickname,
@@ -103,6 +112,7 @@ export const getUserByUsername = (req, res) => {
           showLocation,
           deleteAt,
           emailVerified,
+          channelInvitationsAt,
         } = user[0]
         res.status(200).send({
           id,
@@ -117,6 +127,8 @@ export const getUserByUsername = (req, res) => {
           showLocation,
           deleteAt,
           emailVerified,
+          channelInvitationsAt,
+          blockedUsers,
         })
       } else {
         res.status(404).send({
