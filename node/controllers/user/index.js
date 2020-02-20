@@ -1,9 +1,11 @@
 import bcrypt from 'bcrypt'
 import axios from 'axios'
-import model from '../../models'
 import uuidv4 from 'uuid/v4'
+import db from '../../models'
 
-const { User } = model
+const User = db.sequelize.model('User')
+const BlockedUser = db.sequelize.model('BlockedUser')
+
 const mattermostUrl =
   process.env.MATTERMOST_URL || 'http://mattermost:8000/api/v4'
 
@@ -26,8 +28,18 @@ export const getUsers = (req, res) => {
 export const getUser = (req, res) => {
   const { id } = req.params
 
-  return User.findByPk(id)
+  return User.findByPk(id, {
+    include: [
+      {
+        model: BlockedUser,
+        attributes: ['blockedUser'],
+      },
+    ],
+  })
     .then(user => {
+      const blockedUsers = user.BlockedUsers.map(
+        blockedUser => blockedUser.blockedUser
+      )
       const {
         nickname,
         first_name,
@@ -60,6 +72,7 @@ export const getUser = (req, res) => {
         deleteAt,
         emailVerified,
         channelInvitationsAt,
+        blockedUsers,
         imageUploaded,
       })
     })
@@ -76,9 +89,18 @@ export const getUserByUsername = (req, res) => {
   const { username } = req.params
   return User.findAll({
     where: { username },
+    include: [
+      {
+        model: BlockedUser,
+        attributes: ['blockedUser'],
+      },
+    ],
   })
     .then(user => {
       if (user && user[0]) {
+        const blockedUsers = user[0].BlockedUsers.map(
+          blockedUser => blockedUser.blockedUser
+        )
         const {
           id,
           nickname,
@@ -92,6 +114,7 @@ export const getUserByUsername = (req, res) => {
           showLocation,
           deleteAt,
           emailVerified,
+          channelInvitationsAt,
           imageUploaded,
         } = user[0]
         res.status(200).send({
@@ -107,6 +130,8 @@ export const getUserByUsername = (req, res) => {
           showLocation,
           deleteAt,
           emailVerified,
+          channelInvitationsAt,
+          blockedUsers,
           imageUploaded,
         })
       } else {
