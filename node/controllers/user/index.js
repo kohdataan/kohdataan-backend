@@ -55,6 +55,7 @@ export const getUser = (req, res) => {
         deleteAt,
         emailVerified,
         channelInvitationsAt,
+        imageUploaded,
       } = user
       res.status(200).send({
         nickname,
@@ -72,6 +73,7 @@ export const getUser = (req, res) => {
         emailVerified,
         channelInvitationsAt,
         blockedUsers,
+        imageUploaded,
       })
     })
     .catch(err => {
@@ -113,6 +115,7 @@ export const getUserByUsername = (req, res) => {
           deleteAt,
           emailVerified,
           channelInvitationsAt,
+          imageUploaded,
         } = user[0]
         res.status(200).send({
           id,
@@ -129,6 +132,7 @@ export const getUserByUsername = (req, res) => {
           emailVerified,
           channelInvitationsAt,
           blockedUsers,
+          imageUploaded,
         })
       } else {
         res.status(404).send({
@@ -164,6 +168,7 @@ export const addUser = async (req, res) => {
     showAge,
     showLocation,
     emailVerified,
+    imageUploaded,
   } = req.body
   const hashed = bcrypt.hashSync(password, 12)
   const user = {
@@ -182,6 +187,7 @@ export const addUser = async (req, res) => {
     showAge,
     showLocation,
     emailVerified,
+    imageUploaded,
   }
   try {
     // create node-user
@@ -197,9 +203,7 @@ export const addUser = async (req, res) => {
     })
     // Add user to team
     const mmuser = mmresp.data
-    axios.defaults.headers.common.Authorization = `Bearer ${
-      process.env.MASTER_TOKEN
-    }`
+    axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
     const mmTeamResp = await axios.post(
       `${mattermostUrl}/teams/${process.env.TEAM_ID}/members`,
       {
@@ -259,9 +263,7 @@ export const addUser = async (req, res) => {
 }
 
 export const updateMattermostUser = async (mmid, username, nickname, email) => {
-  axios.defaults.headers.common.Authorization = `Bearer ${
-    process.env.MASTER_TOKEN
-  }`
+  axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
   const newData = { username, nickname, email }
   return await axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
     ...newData,
@@ -284,6 +286,7 @@ export const updateUser = (req, res) => {
     emailVerified,
     phoneNumber,
     channelInvitationsAt,
+    imageUploaded,
     mmid,
   } = req.body
   const { id } = req.user.dataValues
@@ -311,6 +314,7 @@ export const updateUser = (req, res) => {
         emailVerified,
         phoneNumber,
         channelInvitationsAt,
+        imageUploaded,
       },
       {
         where: {
@@ -353,9 +357,7 @@ export const deleteUserImmediately = async (req, res) => {
 
     if (id && mmid) {
       // Deactivate also mattermost user
-      axios.defaults.headers.common.Authorization = `Bearer ${
-        process.env.MASTER_TOKEN
-      }`
+      axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
       // First change email so that current email will be available for new user
       const randomEmail = `${uuidv4()}@deleted.fi`
       await updateMattermostUser(mmid, null, null, randomEmail)

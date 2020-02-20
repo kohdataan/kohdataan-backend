@@ -93,6 +93,11 @@ export default (sequelize, DataTypes) => {
         },
         defaultValue: false,
       },
+      imageUploaded: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+      },
       deleteAt: {
         type: DataTypes.DATE,
       },

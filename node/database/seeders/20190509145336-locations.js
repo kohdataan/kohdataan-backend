@@ -4,12 +4,6 @@ module.exports = {
       'Interests',
       [
         {
-          name: 'Eläimet',
-        },
-        {
-          name: 'Matkustus',
-        },
-        {
           name: 'Urheilu',
         },
         {
