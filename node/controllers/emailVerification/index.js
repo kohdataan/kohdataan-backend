@@ -30,7 +30,7 @@ export const handleEmailVerificationRequest = async (req, res) => {
     <p>Jos et ole rekisteröitynyt palveluun, sinun ei tarvitse tehdä mitään.</p>
     <p>Voit kuitenkin aina ottaa meihin yhteyttä, jos epäilet, että sähköpostiasi käytetään väärin.</p>
     <p>Kohdataan  <span>&#128420;</span></p>`
-    sendMail(user.email, 'Aihe: Kohdataan / Rekisteröityminen', emailToSend)
+    sendMail(user.email, 'Kohdataan / Rekisteröityminen', emailToSend)
     return res.status(201).send({
       success: true,
       message: 'Email verification link sent',
