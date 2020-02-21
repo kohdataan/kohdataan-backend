@@ -21,17 +21,16 @@ export const handleEmailVerificationRequest = async (req, res) => {
     if (!verificationUuid) {
       verificationUuid = await EmailVerificationUuid.create({ userId: user.id })
     }
-    const emailToSent = `Hei!<br>
-    Kiitos rekisteröitymisestäsi Kohdataan-palveluun.<br>
-    <a href="${process.env.FRONTEND_URL}/login/${
+    const emailToSend = `<p>Hei!</p>
+    <p>Kiitos rekisteröitymisestäsi Kohdataan-palveluun.</p>
+    <p><a href="${process.env.FRONTEND_URL}/login/${
       verificationUuid.uuid
-    }/">Tästä linkistä</a> pääset vahvistamaan sähköpostisi ja kirjautumaan palveluun.<br>
-    Jos tarvitset apua rekisteröitymisessä tai kirjautumisessa, vastaa tähän sähköpostiin ja kerro lisää.<br>
-    Jos et ole rekisteröitynyt palveluun, sinun ei tarvitse tehdä mitään.<br>
-    Voit kuitenkin aina ottaa meihin yhteyttä, jos epäilet, että sähköpostiasi käytetään väärin.<br>
-    <br>
-    Kohdataan`
-    sendMail(user.email, 'Kohdataan / kirjautuminen', emailToSent)
+    }/">Tästä linkistä</a> pääset vahvistamaan sähköpostisi ja kirjautumaan palveluun.</p>
+    <p>Jos tarvitset apua rekisteröitymisessä tai kirjautumisessa, vastaa tähän sähköpostiin ja kerro lisää.</p>
+    <p>Jos et ole rekisteröitynyt palveluun, sinun ei tarvitse tehdä mitään.</p>
+    <p>Voit kuitenkin aina ottaa meihin yhteyttä, jos epäilet, että sähköpostiasi käytetään väärin.</p>
+    <p>Kohdataan  <span>&#128420;</span></p>`
+    sendMail(user.email, 'Aihe: Kohdataan / Rekisteröityminen', emailToSend)
     return res.status(201).send({
       success: true,
       message: 'Email verification link sent',
