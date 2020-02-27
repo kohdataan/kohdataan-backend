@@ -83,10 +83,9 @@ export const forgot = async (req, res) => {
     }
     const createdToken = await PasswordResetUuid.create({ userId: user.id })
     const emailToSend = `<p>Hei!</p>
-    <p>Olet pyytänyt Kohdataan-palvelun salasanan palautusta.</p>
     <p><a href="${process.env.FRONTEND_URL}/reset-password/${
       createdToken.uuid
-    }/">Tästä linkistä</a> pääset vaihtamaan salasanasi.</p>
+    }/">Tästä linkistä</a> pääset vaihtamaan salasanasi Kohdataan-palveluun.</p>
     <p>Jos tarvitset apua salasanan vaihtamisessa, vastaa tähän sähköpostiin ja kerro lisää.</p>
     <p>Jos et ole pyytänyt salasanan palautusta, sinun ei tarvitse tehdä mitään.</p>
     <p>Voit kuitenkin aina ottaa meihin yhteyttä, jos epäilet, että sähköpostiasi käytetään väärin.</p>
