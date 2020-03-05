@@ -198,3 +198,37 @@ export const reset = async (req, res) => {
     })
   }
 }
+
+export const checkIfResetUsed = async (req, res) => {
+  const { uuid } = req.body
+
+  try {
+    // Check the token is still valid and if so update 'used' value
+    // If the token is not valid, throw an error
+    const passwordResetEntry = await PasswordResetUuid.findOne({
+      where: { uuid },
+    })
+    if (!passwordResetEntry) {
+      res.status(400).send({
+        success: false,
+        message: 'Could not find password reset entry with given uuid',
+      })
+    }
+    const givenTime = Number(process.env.PASSWORD_RESET_TIME)
+    const currentTime = new Date().getTime()
+    const tokenTime = passwordResetEntry.createdAt.getTime()
+    if (currentTime - tokenTime > givenTime || passwordResetEntry.used) {
+      throw new Error('Given token has expired or has been used')
+    }
+    res.status(200).send({
+      success: true,
+      message: 'Reset entry not yet used',
+    })
+  } catch (err) {
+    res.status(500).send({
+      success: false,
+      message: 'Something went wrong',
+      error: err.message,
+    })
+  }
+}
