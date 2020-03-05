@@ -76,16 +76,14 @@ export const forgot = async (req, res) => {
   try {
     const user = await User.findOne({ where: { email } })
     if (!user) {
-      res.status(400).send({
+      return res.status(400).send({
         success: false,
         message: 'Could not find account with that email',
       })
     }
     const createdToken = await PasswordResetUuid.create({ userId: user.id })
     const emailToSend = `<p>Hei!</p>
-    <p><a href="${process.env.FRONTEND_URL}/reset-password/${
-      createdToken.uuid
-    }/">Tästä linkistä</a> pääset vaihtamaan salasanasi Kohdataan-palveluun.</p>
+    <p><a href="${process.env.FRONTEND_URL}/reset-password/${createdToken.uuid}/">Tästä linkistä</a> pääset vaihtamaan salasanasi Kohdataan-palveluun.</p>
     <p>Jos tarvitset apua salasanan vaihtamisessa, vastaa tähän sähköpostiin ja kerro lisää.</p>
     <p>Jos et ole pyytänyt salasanan palautusta, sinun ei tarvitse tehdä mitään.</p>
     <p>Voit kuitenkin aina ottaa meihin yhteyttä, jos epäilet, että sähköpostiasi käytetään väärin.</p>
@@ -209,7 +207,7 @@ export const checkIfResetUsed = async (req, res) => {
       where: { uuid },
     })
     if (!passwordResetEntry) {
-      res.status(400).send({
+      return res.status(400).send({
         success: false,
         message: 'Could not find password reset entry with given uuid',
       })
