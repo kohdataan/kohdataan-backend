@@ -4,11 +4,12 @@
 
 docker-compose down
 rm -rf volumes/db
+rm -rf volumes/mattermost/data
 docker-compose up -d
 
 cd db/dumps/
 
-sleep 50
+sleep 60
 
 docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan
 docker exec -i kohdataan-backend_db_1 createdb -U mmuser database_test
