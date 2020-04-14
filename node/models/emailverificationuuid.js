@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'There is already an entry for this user',
         },
       },
+      used: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
     },
     {}
   )
