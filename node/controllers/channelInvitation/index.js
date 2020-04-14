@@ -23,7 +23,9 @@ export const getChannelInvitations = async (req, res) => {
 
   try {
     // Set the axios header token
-    axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
+    axios.defaults.headers.common.Authorization = `Bearer ${
+      process.env.MASTER_TOKEN
+    }`
 
     // get a user that has linked all its interests
     const userInterests = await User.findOne({
@@ -116,7 +118,7 @@ export const getChannelInvitations = async (req, res) => {
 
     let newChannels = []
     // This keeps all the to-be-generated channel names to avoid duplicates
-    let newChannelNames = []
+    const newChannelNames = []
 
     // Check if we found enough new channels
     if (channelsData.length < 5) {
@@ -144,7 +146,11 @@ export const getChannelInvitations = async (req, res) => {
       // Wait for new channels to be made
       newChannels = await Promise.all(newChannels)
       // Get the data values from axios returned object
-      newChannels = newChannels.map(newChannel => newChannel.data)
+      newChannels = newChannels.map(newChannel => {
+        const newChannelData = newChannel.data
+        newChannelData.purpose = {}
+        return newChannelData
+      })
     } else {
       channelsData = channelsData.slice(0, 5)
     }
