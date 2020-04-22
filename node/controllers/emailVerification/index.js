@@ -57,6 +57,15 @@ export const handleEmailVerification = async (req, res) => {
         message: 'Given uuid does not match any stored uuids',
       })
     }
+
+    // This returns 200 true so that if user accidentally refreshes page with this token it does not complain.
+    if (verificationUuid.used) {
+      return res.status(200).send({
+        success: true,
+        message: 'Verification token already used',
+      })
+    }
+
     await User.update(
       {
         emailVerified: true,
@@ -67,7 +76,9 @@ export const handleEmailVerification = async (req, res) => {
         },
       }
     )
-    await verificationUuid.destroy()
+    await verificationUuid.update({
+      used: true,
+    })
     return res.status(200).send({
       success: true,
       message: 'User email verified',
