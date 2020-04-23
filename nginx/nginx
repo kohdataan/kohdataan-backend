@@ -6,7 +6,7 @@ map $http_x_forwarded_proto $proxy_x_forwarded_proto {
 server {
     listen 9090;
 
-    location ~ /api/v[0-9]+/(users/)?websocket$ {
+    location ~ /api {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
         client_max_body_size 50M;
@@ -23,7 +23,6 @@ server {
 
     location / {
         gzip on;
-
         client_max_body_size 50M;
         proxy_set_header Connection "";
         proxy_set_header Host $http_host;
