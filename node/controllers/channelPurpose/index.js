@@ -36,9 +36,10 @@ export const resetUserChannelsPurpose = async (req, res) => {
       ) {
         // Get all mattermost users currently in given channel
         const axiosUsersInChannelData = await axios.get(
-          `${mattermostUrl}/users`,
-          {
-            in_channel: channel.id,
+          `${mattermostUrl}/users`, {
+            params: {
+              in_channel: channel.id,
+            }
           }
         )
         // Get a list of promises that each return users with their interests
