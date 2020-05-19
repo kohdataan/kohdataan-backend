@@ -83,7 +83,7 @@ export const getChannelInvitations = async (req, res) => {
     channelsData = await Promise.all(channelsData)
 
     // Filter away channels that are too full
-    channelsData = channelsData.filter(channel => channel.memberCount < 8)
+    channelsData = channelsData.filter(channel => channel.memberCount < 12)
 
     // Make a cache, so that we do not need to calculate how well channel suits user every time in a sort
     // Values here are the sum of channel interests from channel purpose that are shared with users interests
