@@ -49,7 +49,7 @@ const deleteUsersTimed = () => {
             console.log('User will be removed:', mmuser)
             const randomEmail = `${uuidv4()}@deleted.fi`
             // Change email to random
-            await updateMattermostUser(mmuser.id, null, randomEmail)
+            await updateMattermostUser(mmuser.id, null, null, randomEmail)
             // Deactivate mm account
             axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
             await axios.delete(`${mattermostUrl}/users/${mmuser.id}`)
