@@ -19,5 +19,9 @@ router.patch(
   passport.authenticate('jwt'),
   channelPurposeCtrl.removeUserInterestsFromPurpose
 )
+router.patch(
+  '/resetAllChannels',
+  channelPurposeCtrl.resetPurposeForAllChannels
+)
 
 export default router
