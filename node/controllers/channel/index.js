@@ -27,8 +27,8 @@ export const getChannelUsers = async (req, res) => {
     const usersResponse = await axios.post(`${mattermostUrl}/users/ids`, ids)
     const users = usersResponse.data
     const userDetails = users.map(user => {
-      const { id, username, email, nickname, delete_at } = user
-      return { id, username, email, nickname, delete_at }
+      const { id, username, email, nickname, delete_at, position } = user
+      return { id, username, email, nickname, delete_at, position }
     })
     return res.status(200).send({
       success: true,

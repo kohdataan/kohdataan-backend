@@ -262,9 +262,9 @@ export const addUser = async (req, res) => {
   }
 }
 
-export const updateMattermostUser = async (mmid, username, nickname, email) => {
+export const updateMattermostUser = async (mmid, username, nickname, email, position) => {
   axios.defaults.headers.common.Authorization = `Bearer ${process.env.MASTER_TOKEN}`
-  const newData = { username, nickname, email }
+  const newData = { username, nickname, email, position }
   return await axios.put(`${mattermostUrl}/users/${mmid}/patch`, {
     ...newData,
   })
@@ -392,6 +392,7 @@ export const deleteUserImmediately = async (req, res) => {
 export const deleteUser = async (req, res) => {
   // This only adds deleteAt timestamp to node-user
   const { id } = req.params
+  const { mmid } = req.body
   try {
     // Add deleteAt timestamp to user
     const affectedRows = await User.update(
@@ -404,6 +405,8 @@ export const deleteUser = async (req, res) => {
         },
       }
     )
+    // update position attribute to be deleted 
+    await updateMattermostUser(mmid, null, null, null, "deleted")
     res.status(200).send({
       success: true,
       deleted: affectedRows,
@@ -420,6 +423,7 @@ export const deleteUser = async (req, res) => {
 export const abortDeleteUser = async (req, res) => {
   // This removes the deleteAt timestamp from node-user
   const { id } = req.params
+  const { mmid } = req.body
   try {
     const affectedRows = await User.update(
       {
@@ -431,6 +435,7 @@ export const abortDeleteUser = async (req, res) => {
         },
       }
     )
+    await updateMattermostUser(mmid, null, null, null, "")
     res.status(200).send({
       success: true,
       restored: affectedRows,
