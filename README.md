@@ -204,6 +204,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/KaroliinaM"><img src="https://avatars1.githubusercontent.com/u/22050953?v=4" width="100px;" alt=""/><br /><sub><b>KaroliinaM</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/commits?author=KaroliinaM" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/jheiska"><img src="https://avatars1.githubusercontent.com/u/22741213?v=4" width="100px;" alt=""/><br /><sub><b>jheiska</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/commits?author=jheiska" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/osavisaari"><img src="https://avatars0.githubusercontent.com/u/21077799?v=4" width="100px;" alt=""/><br /><sub><b>osavisaari</b></sub></a><br /><a href="#projectManagement-osavisaari" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://kuvatarina.fi"><img src="https://avatars3.githubusercontent.com/u/1239475?v=4" width="100px;" alt=""/><br /><sub><b>Tero Avellan</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/issues?q=author%3Atavellan" title="Bug reports">🐛</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=tavellan" title="Documentation">📖</a> <a href="#infra-tavellan" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
