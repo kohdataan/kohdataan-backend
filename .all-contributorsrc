@@ -111,6 +111,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "osavisaari",
+      "name": "osavisaari",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/21077799?v=4",
+      "profile": "https://github.com/osavisaari",
+      "contributions": [
+        "projectManagement"
+      ]
     }
   ],
   "contributorsPerLine": 7,
