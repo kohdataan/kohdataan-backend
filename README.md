@@ -186,9 +186,20 @@ Voit myös tehdä ehdotuksia uusiksi toteutettaviksi ominaisuuksiksi projektiin 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://github.com/synyker"><img src="https://avatars2.githubusercontent.com/u/1566005?v=4" width="100px;" alt="Jonne Airaksinen"/><br /><sub><b>Jonne Airaksinen</b></sub></a><br /><a href="#infra-synyker" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td><td align="center"><a href="https://github.com/petrutsi"><img src="https://avatars1.githubusercontent.com/u/671675?v=4" width="100px;" alt="petrutsi"/><br /><sub><b>petrutsi</b></sub></a><br /><a href="#infra-petrutsi" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=petrutsi" title="Code">💻</a></td><td align="center"><a href="https://github.com/Miapurho"><img src="https://avatars3.githubusercontent.com/u/49512615?v=4" width="100px;" alt="Mia Purho"/><br /><sub><b>Mia Purho</b></sub></a><br /><a href="#ideas-Miapurho" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=Miapurho" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/tanjarasanen"><img src="https://avatars2.githubusercontent.com/u/49152094?v=4" width="100px;" alt="tanjarasanen"/><br /><sub><b>tanjarasanen</b></sub></a><br /><a href="#ideas-tanjarasanen" title="Ideas, Planning, & Feedback">🤔</a></td></tr></table>
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/synyker"><img src="https://avatars2.githubusercontent.com/u/1566005?v=4" width="100px;" alt=""/><br /><sub><b>Jonne Airaksinen</b></sub></a><br /><a href="#infra-synyker" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://github.com/petrutsi"><img src="https://avatars1.githubusercontent.com/u/671675?v=4" width="100px;" alt=""/><br /><sub><b>petrutsi</b></sub></a><br /><a href="#infra-petrutsi" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=petrutsi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Miapurho"><img src="https://avatars3.githubusercontent.com/u/49512615?v=4" width="100px;" alt=""/><br /><sub><b>Mia Purho</b></sub></a><br /><a href="#ideas-Miapurho" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/kohdataan/kohdataan-backend/commits?author=Miapurho" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/tanjarasanen"><img src="https://avatars2.githubusercontent.com/u/49152094?v=4" width="100px;" alt=""/><br /><sub><b>tanjarasanen</b></sub></a><br /><a href="#ideas-tanjarasanen" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/TerriFin"><img src="https://avatars0.githubusercontent.com/u/32302869?v=4" width="100px;" alt=""/><br /><sub><b>TerriFin</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/commits?author=TerriFin" title="Code">💻</a></td>
+  </tr>
+</table>
 
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
