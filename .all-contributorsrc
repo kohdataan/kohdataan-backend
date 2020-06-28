@@ -64,6 +64,16 @@
         "code",
         "review"
       ]
+    },
+    {
+      "login": "larenala",
+      "name": "larenala",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33627243?v=4",
+      "profile": "https://github.com/larenala",
+      "contributions": [
+        "code",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
