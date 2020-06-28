@@ -201,6 +201,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/rovaniemi"><img src="https://avatars2.githubusercontent.com/u/21308995?v=4" width="100px;" alt=""/><br /><sub><b>Mauri Karlin</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/commits?author=rovaniemi" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/jannetimonen"><img src="https://avatars2.githubusercontent.com/u/48553524?v=4" width="100px;" alt=""/><br /><sub><b>jannetimonen</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/commits?author=jannetimonen" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/KaroliinaM"><img src="https://avatars1.githubusercontent.com/u/22050953?v=4" width="100px;" alt=""/><br /><sub><b>KaroliinaM</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/commits?author=KaroliinaM" title="Code">💻</a></td>
   </tr>
 </table>
 
