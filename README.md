@@ -198,6 +198,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Pninja"><img src="https://avatars0.githubusercontent.com/u/23714794?v=4" width="100px;" alt=""/><br /><sub><b>Pinja Kuosmanen</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/commits?author=Pninja" title="Code">💻</a> <a href="https://github.com/kohdataan/kohdataan-backend/pulls?q=is%3Apr+reviewed-by%3APninja" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/larenala"><img src="https://avatars2.githubusercontent.com/u/33627243?v=4" width="100px;" alt=""/><br /><sub><b>larenala</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/commits?author=larenala" title="Code">💻</a> <a href="https://github.com/kohdataan/kohdataan-backend/pulls?q=is%3Apr+reviewed-by%3Alarenala" title="Reviewed Pull Requests">👀</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/rovaniemi"><img src="https://avatars2.githubusercontent.com/u/21308995?v=4" width="100px;" alt=""/><br /><sub><b>Mauri Karlin</b></sub></a><br /><a href="https://github.com/kohdataan/kohdataan-backend/commits?author=rovaniemi" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
