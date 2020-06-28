@@ -120,6 +120,17 @@
       "contributions": [
         "projectManagement"
       ]
+    },
+    {
+      "login": "tavellan",
+      "name": "Tero Avellan",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1239475?v=4",
+      "profile": "https://kuvatarina.fi",
+      "contributions": [
+        "bug",
+        "doc",
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
