@@ -2,39 +2,53 @@
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
-## Projektin tausta ja tavoitteet
+## Somettamalla uutta kohtaamista eli Kohdataan-hanke
 
-Projektissa kehitämme ja toteutamme yhdessä uutta saavutettavaa somepalvelua, jossa on helppo tutustua uusiin ihmisiin.
+### Tausta ja tavoitteet
 
-Tavoitteena on luoda palvelu, jossa on turvallinen ja myönteinen ilmapiiri, jossa ketään ei kiusata, ja jossa ketään ei jätetä yksin. Palvelussa tuetaan kohtaamista ja vuorovaikutusta, jotta kaikilla olisi mahdollisuus tutustua omanhenkisiin ihmisiin, ja myös ylläpitää kaverisuhteitaan.
+Jokaisella on tarve tulla kuulluksi ja hyväksytyksi, tarve kuulua johonkin. Meillä on tarve jakaa ajatuksiamme ja elämäämme, tarve tuntea olevamme jollekin tärkeä. Se miten hyvin tarpeet toteutuvat, vaikuttaa itsetuntoomme, mielenterveyteemme ja hyvinvointiimme. Ystävät ja sosiaalinen kanssakäyminen vastaavat näihin tarpeisiin. Joka viides suomalainen kokee yksinäisyyttä jossain vaiheessa elämää, ja joka kymmenes on jatkuvasti yksinäinen. Erityistä tukea tarvitsevat suomalaiset kokevat yksinäisyyttä vielä useammin. Siksi on tärkeää luoda uusia mahdollisuuksia vuorovaikutukseen ja sosiaaliseen kanssakäymiseen.
 
-Palvelu on avoin kaikille yli 15-vuotiaille nuorille ja aikuisille. Palvelun toteutuksessa otetaan huomioon käyttäjien erilaiset tarpeet saavutettavuuden ja helppokäyttöisyyden osalta, ja palvelussa voi myös viestiä erilaisin keinoin. Palvelu toteutetaan web-sovelluksena ensisijaisesti mobiililaitteille, mutta palvelua voi käyttää myös muilla laitteilla.
+Palvelun kehittäminen käynnistettiin keväällä 2018 [Kohdataan-hackathonissa](https://kohdataan.fi/hackathon/), jossa haastettiin eri alojen osaajia innovoimaan ja ideoimaan tulevaisuuden somepalvelua. Ideoista kehitettiin ja työstettiin yhdessä käyttäjien ja kumppaneiden kanssa konsepti, jonka tekninen toteuttaminen aloitettiin keväällä 2019. **[Kohdataan-some](https://kohdataan.fi/) julkaistiin toukokuussa 2020** ja se on aktiivisessa käytössä jo nyt.
 
-Palvelu ja sen tekninen yhteiskehittäminen liittyy Somettamalla uutta kohtaamista eli [Kohdataan-hankkeeseen](https://kohdataan.fi/), jossa tavoitteena on yksinäisyyden vähentäminen somen keinoin.
+Palvelussa on otettu huomioon erilaiset tarpeet ja toiveet saavutettavuuden ja helppokäyttöisyyden osalta. Palvelussa voi esimerkiksi viestiä erilaisin keinoin. Tavoitteena on luoda palvelu, jossa on turvallinen ja myönteinen ilmapiiri, jossa ketään ei kiusata, ja jossa ketään ei jätetä yksin. Palvelussa tuetaan kohtaamista ja vuorovaikutusta, jotta kaikilla olisi mahdollisuus tutustua omanhenkisiin ihmisiin, ja myös ylläpitää kaverisuhteitaan. Palvelu on avoin kaikille yli 15-vuotiaille nuorille ja aikuisille.
 
-Palvelun kehittäminen käynnistettiin keväällä 2018 Kohdataan-hackathonissa, jossa haastettiin eri alojen osaajia innovoimaan ja ideoimaan tulevaisuuden somepalvelua. Ideoista on työstetty yhdessä käyttäjien ja kumppaneiden kanssa konsepti, jonka kehittämistä ja toteuttamista on jatkettu keväällä 2019. Palvelu julkaistaan syksyllä 2019.
+Kohdataan-palvelu on kehitetty [Kehitysvammaliiton](https://www.kehitysvammaliitto.fi/) ja [Mieli ry:n](https://www.mieli.fi/) yhteishankkeessa, jossa tavoitteena on yksinäisyyden vähentäminen somen keinoin. Hanketta rahoittaa Sosiaali- ja terveysjärjestöjen avustuskeskus [STEA](https://www.stea.fi/).
 
-Palvelun toteutuksessa keskeistä on käyttäjälähtöisyys. Myös tekniseen toteutukseen on luotu yhteiskehittämisen malli, jossa palvelua kehitetään yhteistyössä paitsi käyttäjien, myös kaikkien palvelusta kiinnostuneiden ohjelmistokehittäjien ja muiden osaajien kanssa. Avoimuus ja yhdessä tekeminen, samoin uusien toimintatapojen kokeileminen on koko hankkeen ytimessä. Yhteiskehittämisestä saadaan myös tärkeää lisäresurssia palvelun toteutukseen.
+### Yhteiskehittäminen ja koordinointi
 
-Pääset tutustumaan projektin ajantasaiseen designiin [Zeplinissä](https://app.zeplin.io/project/5cb591097f5deba21424eb89/). Saat tämän avulla kokonaisvaltaisen kuvan hankkeen tavoittelemasta lopputuloksesta.
+Kohdataan-palvelu on kehitetty yhdessä käyttäjien kanssa ja toteutuksessa kaikilla tasoilla keskeistä on käyttäjälähtöisyys. Myös tekniseen toteutukseen on luotu [yhteiskehittämisen malli](http://kohdataan.fi/yhteiskehittaminen/), jossa palvelua kehitetään yhteistyössä paitsi käyttäjien, myös kaikkien palvelusta kiinnostuneiden ohjelmistokehittäjien ja muiden osaajien kanssa. Avoimuus ja yhdessä tekeminen, samoin uusien toimintatapojen kokeileminen on koko hankkeen ytimessä. Yhteiskehittämisestä saadaan myös tärkeää lisäresurssia palvelun toteutukseen.
 
-Kohdataan-hanke on [Kehitysvammaliiton](https://www.kehitysvammaliitto.fi/) ja [Mielenterveysseuran](https://www.mielenterveysseura.fi/) yhteishanke.
+Palvelun kehittämiseen voit osallistua olit sitten ohjelmistoalan opiskelija tai rautainen ammattilainen. Osallistumalla voit saada kokemusta ja kehittää omaa osaamistasi, tai antaa osaamisesi ja panoksesi tärkeän palvelun rakentamiseen. Voit osallistua yksin, tai haastaa mukaan kaverisi tai kollegasi ja osallistua porukalla. Jokaisen panos on tärkeä!
 
-Hanketta rahoittaa Sosiaali- ja terveysjärjestöjen avustuskeskus [STEA](https://www.stea.fi/).
+Palvelun kehittäminen tapahtuu GitHubissa. Kaikki palveluun liittyvä koodi ja graafinen aineisto on ja tulee olemaan vapaasti saatavilla ([MIT-lisenssi](https://github.com/kohdataan/kohdataan-backend/blob/master/LICENSE)). Käyttöliittymäsuunnitelma löytyy [Zeplinistä](https://app.zeplin.io/project/5cb591097f5deba21424eb89/).
 
-Teknisenä kumppanina ja yhteiskehittämisen koordinaattorina hankkeessa toimii [Perfektio](https://www.perfektio.fi/).
+Palvelun teknisestä koordinoinnista 2019-2020 on vastannut [Perfektio](https://www.perfektio.fi/) ja muusta hallinnoinnista [Kehitysvammaliitto](https://www.kehitysvammaliitto.fi/). Jos haluat tietää lisää palvelusta, voit lähettää meille sähköpostia osoitteeseen [kohdataan@kohdataan.fi](mailto:kohdataan@kohdataan.fi).
 
-## Projektin asennus ja kehitysympäristön pystytys
+## Osallistuminen ja GitHub-projekti
 
-### Backend
+Palvelun kehittäminen tapahtuu kahdessa git-repossa:
+- [Taustapalvelut (kohdataan-backend):](https://github.com/kohdataan/kohdataan-backend) PostgreSQL-tietokanta, Mattermost-viestipalvelu, Node-taustasovellus ja Nginx-välipalvelin
+- [Käyttöliittymä (kohdataan-frontend):](https://github.com/kohdataan/kohdataan-frontend) Mattermost Redux ja React Web-sovellus
 
-#### Asennus
+![Kohdataan arkkitehtuuri](https://github.com/kohdataan/kohdataan-backend/blob/master/documentation/kohdataan-architecture.png?raw=true "Kohdataan arkkitehtuuri")
 
-Jos kehität projektia windows -koneella, on sinun syytä lukea [ohjeet](./windows.md) ennen jatkamista.
+### Projektin asennus ja kehitysympäristön pystytys (kohdataan-backend)
 
-Saadaksesi projektin kehitysympäristön pystyyn, sinun täytyy asentaa [Docker Compose](https://docs.docker.com/compose/install/).
+#### Vaatimukset ja huomiot eri kehitysympäristölle
 
-Asennuksen jälkeen projekti lähtee käyntiin ajamalla seuraavat komennot:
+Testi- ja tuotantoympäristönä toimii [Ubuntu Linux 18.04.(LTS)](https://releases.ubuntu.com/18.04/). Tästä syystä on suositeltavaa, että kehitystyö tehdään samankaltaisessa unix-ympäristössä. Suosittelemme käyttämään unix -pohjaista (esim. Linux tai macOS) käyttöjärjestelmää kehittämiseen.
+
+Kehitys-, testi ja tuotantoympäristö asentuu [Docker-kontteihin](https://www.docker.com/), jota varten sinun tulee asentaa [Docker Engine ja Docker Compose](https://docs.docker.com/compose/install/).
+
+**HUOMIO macOS-käyttäjät!** *Kun luot uusia tiedostoja ja hakemistoja projektiin, kiinnitä erityistä huomiota nimeämiseen. Linuxissa käytetään oletuksena isot ja pienet kirjaimet erotteleva tiedostojärjestelmää (ext4), kun taas macOS ei oletusarvoisesti erottele isoja ja pieniä kirjaimia tiedostojärjestelmässä (HFS+).* Esimerkiksi jos meillä on hakemisto nimeltään */node/controllers/email**v**erification/* ja haemme koodissa sen näin `import * as emailVerification from '../../controllers/emailVerification'`. Tämä toimii hyvin macOS-ympäristössä, mutta Linux-ympäristössä tämä aiheuttaa virheilmoituksen. Hakemiston nimen tulee olla oikeaoppisesti */node/controllers/email**V**erification/*.
+
+**HUOMIO Windows-käyttäjät!** Projektin kehittäminen Windows -ympäristössä on hivenen haastavampaa kuin unix -ympäristössä, mutta kehittäminen onnistuu myös Windows -ympäristössä.
+- [Ohjeet Windows -ympäristössä asentamiseen](./windows.md)
+- Toinen tapa on luoda erillinen virtuaalinen Linux-kehitysympäristö esim. hyödyntäen Oraclen [VirtualBoxia](https://www.virtualbox.org/), jolloin kehittäminen tapahtuu aidosti unix-ympäristössä.
+
+#### Lataaminen GitHubista ja ensikäymnnistys
+
+Luo ensin hakemisto, jossa haluat kehitystyötä tehdä. Esim. */opt/sites/kohdataan/*. Asennuksen jälkeen projekti lähtee käyntiin antamalla seuraavat komennot edellä luodussa hakemistossa:
 
 ```bash
 git clone https://github.com/kohdataan/kohdataan-backend.git
@@ -43,14 +57,30 @@ docker-compose build
 docker-compose up
 ```
 
-#### Pakettien lisäys
+Käynnistyksen yhteysessä tulee virheilmoituksia esim. käyttöoikeuksiin ja puuttuviin konfigurattiotiedostoihin liittyen. 
 
-Jos lisäät projektiin uusia npm-paketteja:
+#### Mattermost config
 
-- Lisää paketti `node/package.json`-tiedostoon
-- Aja `docker-compose build && docker-compose up` asentaaksesi uudet npm-paketit
-- Kun palvelu on pystyssä, aja `docker-compose run node license-checker > npm-license-list.txt`
-  - Tämä päivittää käytettyjen npm-pakettien ja niiden lisenssien listan
+Mattermostin config-tiedostoon täytyy käydä tekemässä myös muutama muutos, jotta frontti ja mattermost-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin. Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Käyttöliittymästä ne löytyvät puolestaan system consolen alta.
+
+Muutettavat kentät:
+
+```
+"ServiceSettings": {
+  "SiteURL": "http://localhost:9090",
+  ...
+  "AllowCorsFrom": "http://localhost:3000 http://localhost:9090",
+  "CorsAllowCredentials": true,
+  "CorsDebug": true,
+  "EnableUserAccessTokens": true,
+  ...
+  },
+"TeamSettings": {
+  "EnableTeamCreation": true,
+  "EnableUserCreation": true,
+  "EnableOpenServer": true,
+  },
+```
 
 #### Tietokanta
 
@@ -87,43 +117,51 @@ username: dev
 password: devtest
 ```
 
-#### Mattermost config
+#### Node .env
 
-Mattermostin config-tiedostoon täytyy käydä tekemässä myös muutama muutos, jotta frontti ja mattermost-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin. Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Käyttöliittymästä ne löytyvät puolestaan system consolen alta.
+Jotta saada muodostettua yhteys taustapalvelun ja käyttöliittymän välille, tulee taustapalvelu konfiguroida. Tätä varten ympäristömuuttujille on tiedosto .env hakemistossa *[kohdataan-backend/node/](https://github.com/kohdataan/kohdataan-backend/tree/master/node)*.
 
-Muutettavat kentät:
-
+```bash
+NODE_ENV=development
+PORT=8080
+MASTER_TOKEN=<MATTERMOST_MASTER_TOKEN>
+TEAM_ID=<MATTERMOST_TEAM_ID>
+MATTERMOST_URL=http://mattermost:8000/api/v4
+FRONTEND_URL=http://localhost:3000
+JWT_SECRET=<JSON_Web_Token>
+PASSWORD_RESET_TIME=10800000
+EMAIL_USER=<GMAIL_usename>
+EMAIL_PASS=<GMAIL_password>
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=465
+EMAIL_SECURE=true
 ```
-"ServiceSettings": {
-  "SiteURL": "http://localhost:9090",
-  ...
-  "AllowCorsFrom": "http://localhost:3000 http://localhost:9090",
-  "CorsAllowCredentials": true,
-  "CorsDebug": true,
-  "EnableUserAccessTokens": true,
-  ...
-  },
-"TeamSettings": {
-  "EnableTeamCreation": true,
-  "EnableUserCreation": true,
-  "EnableOpenServer": true,
-  },
-```
+
+Muuttujat MASTER_TOKEN ja TEAM_ID löytyvät tietokantadumpeista tai [Mattermostin Web-käyttöliittymästä](http://localhost:9090). [JWT_SECRET](https://jwt.io/) täytyy generoida itse. Mikä luot tyhjän Mattermost-asennuksen, MASTER_TOKEN täytyy genroida erikseen pääkäyttäjälle. TEAM_ID on sen tiimin ID, jota haluat käyttää palvelun kanavien ja käyttäjien luomiseen.
+
+Sähköpostia varten käytetään erillistä SMTP-palvelinta. Testikäytössä voit antaa vaikka omat GMAIL-tunnuksesi. 
 
 #### Ongelmatilanteet
 
-Mikäli backendin kanssa ilmenee ongelmia, esimerkiksi ajaessa docker-compose up, voivat ensihätään auttaa komennot:
+Mikäli esim. node-kontti ei käynnisty ja tiedosto package.json on muuttunut, tai backendiin on lisätty uusia moduleja, kontissa voi ilmetä cachesta johtuvia ongelmia. Tällöin on hyvä tyhjentää järjestelmä rakentaa kontit uudelleen.
 
+Seuraava komento poistaa KAIKKI kontit:
 ```bash
 docker system prune
 docker-compose build --no-cache
 ```
 
-## Dokumentaatio ja arkkitehtuuri
+Yksittäisiä kontteja voi poistaa komennolla:
+```bash
+docker-compose rm <KONTN_NIMI>
+```
+Konttien nimet:
+- db
+- mattermost
+- nginx
+- node
 
-![Kohdataan arkkitehtuuri](documentation/kohdataan-architecture.png?raw=true "Kohdataan arkkitehtuuri")
-
-## Projektiin osallistuminen
+HUOM! Komento ei poista levyjä hakemistosta */kohdataan-backend/volumes*, jonka takia voidaan suorittaa suoraan komento `sudo docker-compose build && sudo docker-compose up -d`
 
 ### Backlog ja kehityksen kulku
 
@@ -141,8 +179,6 @@ Slackin lisäksi projektiin liittyvää kommunikaatiota on myös GitHubissa Pull
 
 Projektissa on käytössä [ESLint](https://github.com/eslint/eslint) ja [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) pienin muutoksin.
 
-#### Linting
-
 Jos halaut ajaa lintterin docker-kontin sisällä, aja seuraava komento:
 
 ```bash
@@ -154,6 +190,15 @@ Jos haluat, että eslint toimii omassa editorissasi, niin tällöin npm-pakettie
 ```bash
 npm ci
 ```
+
+#### Pakettien lisäys
+
+Jos lisäät projektiin uusia npm-paketteja:
+
+- Lisää paketti `node/package.json`-tiedostoon
+- Aja `docker-compose build && docker-compose up` asentaaksesi uudet npm-paketit
+- Kun palvelu on pystyssä, aja `docker-compose run node license-checker > npm-license-list.txt`
+  - Tämä päivittää käytettyjen npm-pakettien ja niiden lisenssien listan
 
 ### Testaaminen
 
