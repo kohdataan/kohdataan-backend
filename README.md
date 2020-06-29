@@ -8,7 +8,7 @@
 
 Jokaisella on tarve tulla kuulluksi ja hyväksytyksi, tarve kuulua johonkin. Meillä on tarve jakaa ajatuksiamme ja elämäämme, tarve tuntea olevamme jollekin tärkeä. Se miten hyvin tarpeet toteutuvat, vaikuttaa itsetuntoomme, mielenterveyteemme ja hyvinvointiimme. Ystävät ja sosiaalinen kanssakäyminen vastaavat näihin tarpeisiin. Joka viides suomalainen kokee yksinäisyyttä jossain vaiheessa elämää, ja joka kymmenes on jatkuvasti yksinäinen. Erityistä tukea tarvitsevat suomalaiset kokevat yksinäisyyttä vielä useammin. Siksi on tärkeää luoda uusia mahdollisuuksia vuorovaikutukseen ja sosiaaliseen kanssakäymiseen.
 
-Palvelun kehittäminen käynnistettiin keväällä 2018 [Kohdataan-hackathonissa](https://kohdataan.fi/hackathon/), jossa haastettiin eri alojen osaajia innovoimaan ja ideoimaan tulevaisuuden somepalvelua. Ideoista kehitettiin ja työstettiin yhdessä käyttäjien ja kumppaneiden kanssa konsepti, jonka tekninen toteuttaminen aloitettiin keväällä 2019. **[Kohdataan-some](https://kohdataan.fi/) julkaistiin toukokuussa 2020** ja se on aktiivisessa käytössä jo nyt.
+Palvelun kehittäminen käynnistettiin keväällä 2018 [Kohdataan-hackathonissa](https://kohdataan.fi/hackathon/), jossa haastettiin eri alojen osaajia innovoimaan ja ideoimaan tulevaisuuden somepalvelua. Ideoista kehitettiin ja työstettiin yhdessä käyttäjien ja kumppaneiden kanssa konsepti, jonka tekninen toteuttaminen aloitettiin keväällä 2019. **[Kohdataan-some](https://kohdataan.fi/) julkaistiin toukokuussa 2020** ja se on aktiivisessa käytössä.
 
 Palvelussa on otettu huomioon erilaiset tarpeet ja toiveet saavutettavuuden ja helppokäyttöisyyden osalta. Palvelussa voi esimerkiksi viestiä erilaisin keinoin. Tavoitteena on luoda palvelu, jossa on turvallinen ja myönteinen ilmapiiri, jossa ketään ei kiusata, ja jossa ketään ei jätetä yksin. Palvelussa tuetaan kohtaamista ja vuorovaikutusta, jotta kaikilla olisi mahdollisuus tutustua omanhenkisiin ihmisiin, ja myös ylläpitää kaverisuhteitaan. Palvelu on avoin kaikille yli 15-vuotiaille nuorille ja aikuisille.
 
@@ -153,7 +153,7 @@ docker-compose build --no-cache
 
 Yksittäisiä kontteja voi poistaa komennolla:
 ```bash
-docker-compose rm <KONTN_NIMI>
+docker-compose rm <KONTIN_NIMI>
 ```
 Konttien nimet:
 - db
