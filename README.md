@@ -40,13 +40,14 @@ Testi- ja tuotantoympäristönä toimii [Ubuntu Linux 18.04.(LTS)](https://relea
 
 Kehitys-, testi ja tuotantoympäristö asentuu [Docker-kontteihin](https://www.docker.com/), jota varten sinun tulee asentaa [Docker Engine ja Docker Compose](https://docs.docker.com/compose/install/).
 
-**HUOMIO macOS-käyttäjät!** *Kun luot uusia tiedostoja ja hakemistoja projektiin, kiinnitä erityistä huomiota nimeämiseen. Linuxissa käytetään oletuksena isot ja pienet kirjaimet erotteleva tiedostojärjestelmää (ext4), kun taas macOS ei oletusarvoisesti erottele isoja ja pieniä kirjaimia tiedostojärjestelmässä (HFS+).* Esimerkiksi jos meillä on hakemisto nimeltään */node/controllers/email**v**erification/* ja haemme koodissa sen näin `import * as emailVerification from '../../controllers/emailVerification'`. Tämä toimii hyvin macOS-ympäristössä, mutta Linux-ympäristössä tämä aiheuttaa virheilmoituksen. Hakemiston nimen tulee olla oikeaoppisesti */node/controllers/email**V**erification/*.
+**HUOMIO macOS-käyttäjät!** *Kun luot uusia tiedostoja ja hakemistoja projektiin, kiinnitä erityistä huomiota nimeämiseen. Linuxissa käytetään oletuksena isot ja pienet kirjaimet erottelevaa tiedostojärjestelmää (ext4), kun taas macOS ei oletusarvoisesti erottele isoja ja pieniä kirjaimia tiedostojärjestelmässä (HFS+).* 
+- Esimerkiksi jos meillä on hakemisto nimeltään */node/controllers/email**v**erification/* ja haemme koodissa sen näin `import * as emailVerification from '../../controllers/emailVerification'`. Tämä toimii hyvin macOS-ympäristössä, mutta Linux-ympäristössä tämä aiheuttaa virheilmoituksen. Hakemiston nimen tulee olla oikeaoppisesti */node/controllers/email**V**erification/*.
 
 **HUOMIO Windows-käyttäjät!** Projektin kehittäminen Windows -ympäristössä on hivenen haastavampaa kuin unix -ympäristössä, mutta kehittäminen onnistuu myös Windows -ympäristössä.
 - [Ohjeet Windows -ympäristössä asentamiseen](./windows.md)
 - Toinen tapa on luoda erillinen virtuaalinen Linux-kehitysympäristö esim. hyödyntäen Oraclen [VirtualBoxia](https://www.virtualbox.org/), jolloin kehittäminen tapahtuu aidosti unix-ympäristössä.
 
-#### Lataaminen GitHubista ja ensikäymnnistys
+#### Lataaminen GitHubista ja ensikäynnistys
 
 Luo ensin hakemisto, jossa haluat kehitystyötä tehdä. Esim. */opt/sites/kohdataan/*. Asennuksen jälkeen projekti lähtee käyntiin antamalla seuraavat komennot edellä luodussa hakemistossa:
 
@@ -59,9 +60,9 @@ docker-compose up
 
 Käynnistyksen yhteysessä tulee virheilmoituksia esim. käyttöoikeuksiin ja puuttuviin konfigurattiotiedostoihin liittyen. 
 
-#### Mattermost config
+#### Mattermost
 
-Mattermostin config-tiedostoon täytyy käydä tekemässä myös muutama muutos, jotta frontti ja mattermost-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin. Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Käyttöliittymästä ne löytyvät puolestaan system consolen alta.
+Mattermostin config-tiedostoon täytyy käydä tekemässä myös muutama muutos, jotta frontti ja mattermost-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin (jos CORS on käsitteenä vieras, lue lisää tietoa [täältä](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)). Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Käyttöliittymästä ne löytyvät puolestaan system consolen alta.
 
 Muutettavat kentät:
 
