@@ -47,7 +47,7 @@ Kehitys-, testi ja tuotantoympäristö asentuu [Docker-kontteihin](https://www.d
 - [Ohjeet Windows -ympäristössä asentamiseen](./windows.md)
 - Toinen tapa on luoda erillinen virtuaalinen Linux-kehitysympäristö esim. hyödyntäen Oraclen [VirtualBoxia](https://www.virtualbox.org/), jolloin kehittäminen tapahtuu aidosti unix-ympäristössä.
 
-#### Lataaminen GitHubista ja ensikäynnistys
+#### 1. Lataaminen GitHubista ja ensikäynnistys
 
 Luo ensin hakemisto, jossa haluat kehitystyötä tehdä (esim. */opt/sites/kohdataan/*). Tämän jälkeen ladataan (kloonataan) kohdataan-backend GitHubista:
 ```bash
@@ -75,30 +75,7 @@ docker-compose up
 
 Seuraavaksi avaa selain ja mene osoitteseen http://localhost:9090/. Mikäli eteesi tulee Mattermostin kirjautumisikkuna, asennus on tähän asti onnistunut.
 
-#### Mattermost
-
-Mattermostin config-tiedostoon (*kohdataan-backend/volumes/mattermost/config/config.json*) täytyy käydä tekemässä myös muutama muutos, jotta kohdataan-frontend-käyttöliittymä ja kohdataan-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin (jos CORS on käsitteenä vieras, lue lisää tietoa [täältä](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)). Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Käyttöliittymästä ne löytyvät puolestaan system consolen alta.
-
-Muutettavat kentät:
-
-```
-"ServiceSettings": {
-  "SiteURL": "http://localhost:9090",
-  ...
-  "AllowCorsFrom": "http://localhost:3000 http://localhost:9090",
-  "CorsAllowCredentials": true,
-  "CorsDebug": true,
-  "EnableUserAccessTokens": true,
-  ...
-  },
-"TeamSettings": {
-  "EnableTeamCreation": true,
-  "EnableUserCreation": true,
-  "EnableOpenServer": true,
-  },
-```
-
-#### Tietokanta (PostgreSQL)
+#### 2. Tietokanta (PostgreSQL)
 
 Tietokantadumpit löytyvät kansiosta db/dumps. Kantoja on kaksi, "kohdataan" ja "mattermost", joista ensimmäinen palvelee itse backendiä ja toinen Mattermostin sisäisiä toimintoja.
 
@@ -126,7 +103,30 @@ username: dev
 password: devtest
 ```
 
-#### Node (taustasovellus ja rajapinta)
+#### 3. Mattermost
+
+Mattermostin config-tiedostoon (*kohdataan-backend/volumes/mattermost/config/config.json*) täytyy käydä tekemässä myös muutama muutos, jotta kohdataan-frontend-käyttöliittymä ja kohdataan-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin (jos CORS on käsitteenä vieras, lue lisää tietoa [täältä](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)). Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Mattermostin käyttöliittymästä ne löytyvät puolestaan System consolen alta.
+
+Muutettavat kentät:
+
+```
+"ServiceSettings": {
+  "SiteURL": "http://localhost:9090",
+  ...
+  "AllowCorsFrom": "http://localhost:3000 http://localhost:9090",
+  "CorsAllowCredentials": true,
+  "CorsDebug": true,
+  "EnableUserAccessTokens": true,
+  ...
+  },
+"TeamSettings": {
+  "EnableTeamCreation": true,
+  "EnableUserCreation": true,
+  "EnableOpenServer": true,
+  },
+```
+
+#### 4. Node (taustasovellus ja rajapinta)
 
 Jotta saada muodostettua yhteys taustapalvelun ja käyttöliittymän välille, tulee taustapalvelu konfiguroida. Tätä varten ympäristömuuttujille on tiedosto .env hakemistossa *[kohdataan-backend/node/](https://github.com/kohdataan/kohdataan-backend/tree/master/node)*.
 
