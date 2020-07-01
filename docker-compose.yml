@@ -56,3 +56,4 @@ services:
     volumes:
       - ./node/:/usr/src/app/
       - /usr/src/app/node_modules/
+      - ./volumes/node/logs:/var/log/node:rw
