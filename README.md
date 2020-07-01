@@ -98,7 +98,7 @@ Muutettavat kentät:
   },
 ```
 
-#### Tietokanta
+#### Tietokanta (PostgreSQL)
 
 Tietokantadumpit löytyvät kansiosta db/dumps. Kantoja on kaksi, "kohdataan" ja "mattermost", joista ensimmäinen palvelee itse backendiä ja toinen Mattermostin sisäisiä toimintoja.
 
@@ -111,14 +111,7 @@ docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
 docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
 ```
 
-Tämän lisäksi kannattaa ajaa tarvittavat migraation sekä seedit. Komennot voi ajaa suoraan node-kontissa:
-
-```bash
-sequelize db:migrate
-sequelize db:seed:all
-```
-
-Tai suoraan konsolista
+Tämän lisäksi tulee ajaa tietokantoihin tulleet päivitykset:
 
 ```bash
 docker exec -i kohdataan-backend_node_1 sequelize db:migrate
@@ -133,7 +126,7 @@ username: dev
 password: devtest
 ```
 
-#### Node .env
+#### Node (taustasovellus ja rajapinta)
 
 Jotta saada muodostettua yhteys taustapalvelun ja käyttöliittymän välille, tulee taustapalvelu konfiguroida. Tätä varten ympäristömuuttujille on tiedosto .env hakemistossa *[kohdataan-backend/node/](https://github.com/kohdataan/kohdataan-backend/tree/master/node)*.
 
