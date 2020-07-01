@@ -49,20 +49,35 @@ Kehitys-, testi ja tuotantoympäristö asentuu [Docker-kontteihin](https://www.d
 
 #### Lataaminen GitHubista ja ensikäynnistys
 
-Luo ensin hakemisto, jossa haluat kehitystyötä tehdä. Esim. */opt/sites/kohdataan/*. Asennuksen jälkeen projekti lähtee käyntiin antamalla seuraavat komennot edellä luodussa hakemistossa:
-
+Luo ensin hakemisto, jossa haluat kehitystyötä tehdä (esim. */opt/sites/kohdataan/*). Tämän jälkeen ladataan (kloonataan) kohdataan-backend GitHubista:
 ```bash
 git clone https://github.com/kohdataan/kohdataan-backend.git
+```
+
+Siirrytään hakemistoon ja haetaan muut tiedostot suorittamalla build-komento:
+```bash
 cd kohdataan-backend
 docker-compose build
+```
+
+Tämän jälkeen luodaan Mattermostin konfiguraatiota varten hakemisto ja annetaan sille oikeudet: 
+```bash
+mkdir -p ./volumes/mattermost/{data,logs,config,plugins,client-plugins}
+sudo chown -R 2000:2000 ./volumes/mattermost/
+```
+
+- *HUOM! Edellä kuvattujen oikeuksien antaminen on oleellista Linux-ympäristössä, jossa docker-composea eri suoriteta oletuksena pääkäyttäjän tunnuksilla, mutta esim. macOS-ympäristössä oikeuksia ulkopuoliselle hakemistolle ei tarvitse välttämättä muuttaa (mikäli käyttäjän on admin-roolissa). Docker-kontin sisällä on mattermost-käyttäjä, jonka id on 2000. Tällä käyttäjällä tulee olla oikeudet kirjoittaa mattermost-hakemistoon.*
+
+Tämän jälkeen käynnistetään kaikki kontit:
+```bash
 docker-compose up
 ```
 
-Käynnistyksen yhteysessä tulee virheilmoituksia esim. käyttöoikeuksiin ja puuttuviin konfigurattiotiedostoihin liittyen. 
+Seuraavaksi avaa selain ja mene osoitteseen http://localhost:9090/. Mikäli eteesi tulee Mattermostin kirjautumisikkuna, asennus on tähän asti onnistunut.
 
 #### Mattermost
 
-Mattermostin config-tiedostoon täytyy käydä tekemässä myös muutama muutos, jotta frontti ja mattermost-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin (jos CORS on käsitteenä vieras, lue lisää tietoa [täältä](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)). Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Käyttöliittymästä ne löytyvät puolestaan system consolen alta.
+Mattermostin config-tiedostoon (*kohdataan-backend/volumes/mattermost/config/config.json*) täytyy käydä tekemässä myös muutama muutos, jotta kohdataan-frontend-käyttöliittymä ja kohdataan-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin (jos CORS on käsitteenä vieras, lue lisää tietoa [täältä](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)). Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Käyttöliittymästä ne löytyvät puolestaan system consolen alta.
 
 Muutettavat kentät:
 
