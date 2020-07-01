@@ -2,6 +2,7 @@ version: "2"
 
 services:
   db:
+    container_name: kohdataan-backend_db_1
     build: db
     ports:
       - "5432:5432"
@@ -17,6 +18,7 @@ services:
       - POSTGRES_DB=mattermost
 
   mattermost:
+    container_name: kohdataan-backend_mattermost_1
     build:
       context: mattermost
     restart: unless-stopped
@@ -36,6 +38,7 @@ services:
       #- MM_CONFIG=/mattermost/config/config.json
 
   nginx:
+    container_name: kohdataan-backend_nginx_1
     build: nginx
     ports:
       - "9090:9090"
@@ -48,6 +51,7 @@ services:
       #- /etc/localtime:/etc/localtime:ro
 
   node:
+    container_name: kohdataan-backend_node_1
     build: node
     ports:
       - "8080:8080"
