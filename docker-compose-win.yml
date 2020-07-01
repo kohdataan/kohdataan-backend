@@ -44,6 +44,7 @@ services:
     volumes:
       # This directory must have cert files if you want to enable SSL
       - ./volumes/nginx/cert:/cert:ro
+      - ./volumes/nginx/conf:/conf:ro
       #- /etc/localtime:/etc/localtime:ro
 
   node:
@@ -55,7 +56,8 @@ services:
     volumes:
       - ./node/:/usr/src/app/
       - /usr/src/app/node_modules/
-
+      - ./volumes/node/logs:/var/log/node:rw
+      
 volumes:
   postgres_database:
     external: true
