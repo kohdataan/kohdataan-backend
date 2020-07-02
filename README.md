@@ -27,7 +27,7 @@ Palvelun teknisestä koordinoinnista 2019-2020 on vastannut [Perfektio](https://
 ## Osallistuminen ja GitHub-projekti
 
 Palvelun kehittäminen tapahtuu kahdessa git-repossa:
-- [Taustapalvelut (kohdataan-backend):](https://github.com/kohdataan/kohdataan-backend) PostgreSQL-tietokanta, Mattermost-viestipalvelu, Node-taustasovellus ja Nginx-välipalvelin
+- [Taustapalvelut (kohdataan-backend):](https://github.com/kohdataan/kohdataan-backend) PostgreSQL-tietokanta, Mattermost-viestipalvelu, Node-taustasovellus ja Nginx-palvelin
 - [Käyttöliittymä (kohdataan-frontend):](https://github.com/kohdataan/kohdataan-frontend) Mattermost Redux ja React Web-sovellus
 
 ![Kohdataan arkkitehtuuri](https://github.com/kohdataan/kohdataan-backend/blob/master/documentation/kohdataan-architecture.png?raw=true "Kohdataan arkkitehtuuri")
@@ -77,9 +77,7 @@ Seuraavaksi avaa selain ja mene osoitteseen http://localhost:9090/. Mikäli etee
 
 #### 2. Tietokanta (PostgreSQL)
 
-Tietokantadumpit löytyvät kansiosta db/dumps. Kantoja on kaksi, "kohdataan" ja "mattermost", joista ensimmäinen palvelee itse backendiä ja toinen Mattermostin sisäisiä toimintoja.
-
-Kun palvelu on pystyssä, kantojen tuonti tapahtuu ajamalla db/dumps kansiossa seuraavat komennot:
+Tietokantadumpit löytyvät kansiosta db/dumps. Kantoja on kaksi, "kohdataan" ja "mattermost", joista ensimmäinen palvelee Node-sovellusta ja toinen Mattermost-sovellusta. Kun palvelu ovat käynnissä, kantojen tuonti tapahtuu suorittamalla db/dumps kansiossa seuraavat komennot:
 
 ```bash
 docker exec -i kohdataan-backend_db_1 createdb -U mmuser kohdataan
@@ -88,7 +86,7 @@ docker exec -i kohdataan-backend_db_1 psql -U mmuser kohdataan < kohdataan.pgsql
 docker exec -i kohdataan-backend_db_1 psql -U mmuser mattermost < mattermost.pgsql
 ```
 
-Tämän lisäksi tulee ajaa tietokantoihin tulleet päivitykset:
+Tämän lisäksi pitää suorittaa tietokantoihin tulleet päivitykset:
 
 ```bash
 docker exec -i kohdataan-backend_node_1 sequelize db:migrate
@@ -105,9 +103,9 @@ password: devtest
 
 #### 3. Mattermost
 
-Mattermostin config-tiedostoon (*kohdataan-backend/volumes/mattermost/config/config.json*) täytyy käydä tekemässä myös muutama muutos, jotta kohdataan-frontend-käyttöliittymä ja kohdataan-backend saadaan keskustelemaan keskenään. Nämä muutokset liittyvät lähinnä Mattermostin CORS-asetuksiin (jos CORS on käsitteenä vieras, lue lisää tietoa [täältä](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)). Tarvittavat asetukset voi käydä muuttamassa joko mattermostin omasta käyttöliittymästä, tai suoraan config.json -tiedostosta. Kun projekti on kertaalleen saatu pystyyn, tiedosto pitäisi löytyä volumesin alta seuraavasti: volumes/mattermost/config/config.json. Mattermostin käyttöliittymästä ne löytyvät puolestaan System consolen alta.
+Jotta käyttöliittymä (frontend) ja taustapalvelut saadaan keskustelemaan keskenään, täytyy Mattermostin asetustiedostoon (*kohdataan-backend/volumes/mattermost/config/config.json*) tehdä muutama muutos. Nämä liittyvät lähinnä Mattermostin CORS-asetuksiin (jos CORS on käsitteenä vieras, lue lisää tietoa [täältä](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)).
 
-Muutettavat kentät:
+Muutettavat kentät ovat seuraavat:
 
 ```
 "ServiceSettings": {
@@ -126,9 +124,14 @@ Muutettavat kentät:
   },
 ```
 
+Lopuksi lopeta ja käynnistä kontti uudelleen:
+```bash
+docker-compose restart mattermost
+```
+
 #### 4. Node (taustasovellus ja rajapinta)
 
-Jotta saada muodostettua yhteys taustapalvelun ja käyttöliittymän välille, tulee taustapalvelu konfiguroida. Tätä varten ympäristömuuttujille on tiedosto .env hakemistossa *[kohdataan-backend/node/](https://github.com/kohdataan/kohdataan-backend/tree/master/node)*.
+Hakemistoon *[kohdataan-backend/node/](https://github.com/kohdataan/kohdataan-backend/tree/master/node)* tulee luoda ympäristömuuttujille tiedosto **.env**. Se sisältää palveluiden osoitteita ja muun muassa sähköpostin asetukset. Sähköpostin lähettämistä varten käytetään erillistä SMTP-palvelinta. Testikäytössä voit antaa vaikka omat GMAIL-tunnuksesi.
 
 ```bash
 NODE_ENV=development
@@ -146,9 +149,23 @@ EMAIL_PORT=465
 EMAIL_SECURE=true
 ```
 
-Muuttujat MASTER_TOKEN ja TEAM_ID löytyvät tietokantadumpeista tai [Mattermostin Web-käyttöliittymästä](http://localhost:9090). [JWT_SECRET](https://jwt.io/) täytyy generoida itse. Mikä luot tyhjän Mattermost-asennuksen, MASTER_TOKEN täytyy genroida erikseen pääkäyttäjälle. TEAM_ID on sen tiimin ID, jota haluat käyttää palvelun kanavien ja käyttäjien luomiseen.
+- **MASTER_TOKEN** täytyy generoida erikseen pääkäyttäjälle [Mattermostin Web-käyttöliittymästä](http://localhost:9090) (jos et käytä testikantaa ja luot tyhjän Mattermost-asennuksen).
+- **TEAM_ID** on sen tiimin ID, jota haluat käyttää palvelun kanavien ja käyttäjien luomiseen.
+- **JWT_SECRET** täytyy generoida itse (se voi olla käytännössä mikä tahansa merkkijono).
 
-Sähköpostia varten käytetään erillistä SMTP-palvelinta. Testikäytössä voit antaa vaikka omat GMAIL-tunnuksesi. 
+- HUOM! Kehitystyötä varten muuttujat MASTER_TOKEN ja TEAM_ID löytyvät tietokantadumpeista, mutta voit hakea ne suoraan myös tietokannasta. Kirjaudutaan ensin kontin sisälle ja sen jälkeen PostgreSQL:n omalla clientilla haetaan tiedot:
+```bash
+docker exec -it kohdataan-backend_db_1 /bin/bash
+psql -U mmuser mattermost
+SELECT * FROM useraccesstokens;
+SELECT * FROM teams;
+```
+
+Lopuksi lopeta ja käynnistä kontti uudelleen:
+```bash
+docker-compose restart node
+```
+Seuraavaksi avaa selain ja mene osoitteseen http://localhost:9090/node_api/. Mikäli eteesi tulee teksti "Hello world", asennus on onnistunut.
 
 #### Ongelmatilanteet
 
