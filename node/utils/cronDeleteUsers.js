@@ -12,13 +12,6 @@ var CronJob = require('cron').CronJob
 var fs = require('fs')
 var util = require('util')
 var logFile = fs.createWriteStream('/var/log/node/node.log', { flags: 'a' })
-var logStdout = process.stdout
-
-console.log = function () {
-  logFile.write(util.format.apply(null, arguments) + '\n')
-  logStdout.write(util.format.apply(null, arguments) + '\n')
-}
-console.error = console.log
 
 // Set URL to Mattermost API.
 const mattermostUrl =
@@ -29,10 +22,20 @@ const cronExecTime =
   (process.env.CRON_EXEC_HOUR ? (process.env.CRON_EXEC_HOUR<=23 && process.env.CRON_EXEC_HOUR>=1 ? '0 '+process.env.CRON_EXEC_HOUR+' * * *' : '*/10 * * * *') : '*/10 * * * *')
 
 const deleteUsersTimed = () => {
+  // Start CronJob
   const job = new CronJob(
     cronExecTime,
     async () => {
       try {
+        // Write log to file
+        var logFile = fs.createWriteStream('/var/log/node/node.log', { flags: 'a' })
+        var logStdout = process.stdout
+        console.log = function () {
+          logFile.write(util.format.apply(null, arguments) + '\n')
+          logStdout.write(util.format.apply(null, arguments) + '\n')
+        }
+        console.error = console.log
+        // Start execution
         let timestampNow = new Date();
         console.log(timestampNow.toString()+': Starting scheduled user deletion process')
         const users = await User.findAll({
@@ -58,10 +61,10 @@ const deleteUsersTimed = () => {
           })
 
         let mmUsers = await Promise.all(promisesArr)
-   	    mmUsers = mmUsers.map(resp => resp.data)
+        mmUsers = mmUsers.map(resp => resp.data)
         console.log('Users to be permanently deleted: ', mmUsers)
-	      mmUsers.forEach(function(userOnHold) { 
-	      userOnHold.map(async mmuser => {
+        mmUsers.forEach(function(userOnHold) { 
+        userOnHold.map(async mmuser => {
             const randomEmail = `${uuidv4()}@deleted.fi`
             console.log('The user is permanently deleted: '+mmuser.id+' > '+randomEmail)
             // Change email to random
@@ -77,7 +80,7 @@ const deleteUsersTimed = () => {
             })
             console.log('Deleted user: '+randomEmail+'('+affectedRows+')')
           })
-	      })
+      })
       } catch (err) {
         console.log('error while deleting users', err)
       }
