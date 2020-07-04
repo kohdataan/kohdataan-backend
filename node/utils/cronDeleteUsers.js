@@ -11,7 +11,6 @@ const { Op } = require('sequelize')
 var CronJob = require('cron').CronJob
 var fs = require('fs')
 var util = require('util')
-var logFile = fs.createWriteStream('/var/log/node/node.log', { flags: 'a' })
 
 // Set URL to Mattermost API.
 const mattermostUrl =
@@ -28,8 +27,8 @@ const deleteUsersTimed = () => {
     async () => {
       try {
         // Write log to file
-        var logFile = fs.createWriteStream('/var/log/node/node.log', { flags: 'a' })
-        var logStdout = process.stdout
+        const logFile = fs.createWriteStream('/var/log/node/node.log', { flags: 'a' })
+        const logStdout = process.stdout
         console.log = function () {
           logFile.write(util.format.apply(null, arguments) + '\n')
           logStdout.write(util.format.apply(null, arguments) + '\n')
