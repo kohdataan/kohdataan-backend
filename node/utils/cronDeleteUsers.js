@@ -18,7 +18,7 @@ const mattermostUrl =
 
 // Set default time to execute: at every 10th minute.
 const cronExecTime =
-  (process.env.CRON_EXEC_HOUR ? (process.env.CRON_EXEC_HOUR<=23 && process.env.CRON_EXEC_HOUR>=1 ? '0 '+process.env.CRON_EXEC_HOUR+' * * *' : '*/10 * * * *') : '*/10 * * * *')
+  (process.env.CRON_EXEC_HOUR && process.env.CRON_EXEC_HOUR<=23 && process.env.CRON_EXEC_HOUR>=1 ? '0 '+process.env.CRON_EXEC_HOUR+' * * *' : '*/10 * * * *')
 
 const deleteUsersTimed = () => {
   // Start CronJob
