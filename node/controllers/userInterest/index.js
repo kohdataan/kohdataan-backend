@@ -4,7 +4,6 @@ const { UserInterest, User, Interest } = model
 
 export const getUserInterests = (req, res) => {
   const { id } = req.user.dataValues
-
   User.findAll({
     attributes: ['id'],
     where: {
@@ -37,7 +36,6 @@ export const getUserInterests = (req, res) => {
 
 export const getUserInterest = (req, res) => {
   const { username } = req.params
-
   User.findAll({
     attributes: ['id', 'username'],
     where: {

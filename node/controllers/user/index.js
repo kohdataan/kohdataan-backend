@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt'
 import axios from 'axios'
 import uuidv4 from 'uuid/v4'
 import db from '../../models'
+import calculateAge from '../../utils/calculateAge'
 
 const User = db.sequelize.model('User')
 const BlockedUser = db.sequelize.model('BlockedUser')
@@ -25,9 +26,37 @@ export const getUsers = (req, res) => {
     })
 }
 
-export const getUser = (req, res) => {
-  const { id } = req.params
+export const getAllMattermostUsers = async (req, res) => {
+  try {
+    axios.defaults.headers.common.Authorization = `Bearer ${
+      process.env.MASTER_TOKEN
+    }`
+    const mmProfiles = await axios.get(`${mattermostUrl}/users`)
+    const { data } = mmProfiles
+    const ids = data.map(user => user.id)
+    const usersResponse = await axios.post(`${mattermostUrl}/users/ids`, ids)
+    const users = usersResponse.data
+    const userDetails = users.map(user => {
+      const { id, username, nickname, delete_at, position } = user
+      return { id, username, nickname, delete_at, position }
+    })
+    console.log('user detais', userDetails)
+    return res.status(200).send({
+      success: true,
+      message: 'Mattermost users fetched',
+      userDetails,
+    })
+    } catch (e) {
+      console.log(e)
+      return res.status(500).send({
+        success: false,
+        message: 'Error while fetching mattermost profiles',
+      })
+    }
+}
 
+export const getMe = (req, res) => {
+  const { id } = req.params
   return User.findByPk(id, {
     include: [
       {
@@ -63,7 +92,7 @@ export const getUser = (req, res) => {
         last_name,
         location,
         description,
-        birthdate,
+        birthdate: user.showAge ? calculateAge(birthdate) : null,
         phoneNumber,
         profileReady,
         tutorialWatched,
@@ -85,8 +114,53 @@ export const getUser = (req, res) => {
     })
 }
 
+export const getUser = (req, res) => {
+  const { id } = req.params
+
+  return User.findByPk(id, {
+    include: [
+      {
+        model: BlockedUser,
+        attributes: ['blockedUser'],
+      },
+    ],
+  })
+    .then(user => {
+      const blockedUsers = user.BlockedUsers.map(
+        blockedUser => blockedUser.blockedUser
+      )
+      const {
+        nickname,
+        location,
+        description,
+        birthdate,
+        showAge,
+        showLocation,
+        deleteAt,
+      } = user
+      res.status(200).send({
+        nickname,
+        location: user.showLocation ? location : null,
+        description,
+        birthdate: user.showAge ? calculateAge(birthdate) : null,
+        showAge,
+        showLocation,
+        deleteAt,
+        blockedUsers,
+      })
+    })
+    .catch(err => {
+      res.status(500).send({
+        success: false,
+        message: 'Error getting user',
+        error: err,
+      })
+    })
+}
+
 export const getUserByUsername = (req, res) => {
   const { username } = req.params
+
   return User.findAll({
     where: { username },
     include: [
@@ -107,32 +181,20 @@ export const getUserByUsername = (req, res) => {
           location,
           description,
           birthdate,
-          phoneNumber,
-          profileReady,
-          tutorialWatched,
           showAge,
           showLocation,
           deleteAt,
-          emailVerified,
-          channelInvitationsAt,
-          imageUploaded,
         } = user[0]
         res.status(200).send({
           id,
           nickname,
-          location,
+          location: user[0].showLocation ? location : null,
           description,
-          birthdate,
-          phoneNumber,
-          profileReady,
-          tutorialWatched,
+          birthdate : user[0].showAge ? calculateAge(birthdate) : null,
           showAge,
           showLocation,
           deleteAt,
-          emailVerified,
-          channelInvitationsAt,
           blockedUsers,
-          imageUploaded,
         })
       } else {
         res.status(404).send({

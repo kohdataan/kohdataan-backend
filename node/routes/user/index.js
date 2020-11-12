@@ -6,7 +6,11 @@ const router = express.Router()
 
 router.get('/', passport.authenticate('jwt'), userCtrl.getUsers)
 
+router.get('/mm', passport.authenticate('jwt'), userCtrl.getAllMattermostUsers)
+
 router.post('/', userCtrl.addUser)
+
+router.get('/me/:id', passport.authenticate('jwt'), userCtrl.getMe)
 
 router.get('/:id', passport.authenticate('jwt'), userCtrl.getUser)
 
