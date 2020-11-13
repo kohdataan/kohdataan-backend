@@ -37,10 +37,9 @@ export const getAllMattermostUsers = async (req, res) => {
     const usersResponse = await axios.post(`${mattermostUrl}/users/ids`, ids)
     const users = usersResponse.data
     const userDetails = users.map(user => {
-      const { id, username, nickname, delete_at, position } = user
-      return { id, username, nickname, delete_at, position }
+      const { id, username, nickname, delete_at, position, roles } = user
+      return { id, username, nickname, delete_at, position, roles }
     })
-    console.log('user detais', userDetails)
     return res.status(200).send({
       success: true,
       message: 'Mattermost users fetched',
@@ -92,7 +91,7 @@ export const getMe = (req, res) => {
         last_name,
         location,
         description,
-        birthdate: user.showAge ? calculateAge(birthdate) : null,
+        birthdate: calculateAge(birthdate),
         phoneNumber,
         profileReady,
         tutorialWatched,
