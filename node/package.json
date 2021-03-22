@@ -23,7 +23,7 @@
     "morgan": "^1.9.1",
     "nodemon": "2.0.7",
     "nodemailer": "^6.4.2",
-    "passport": "0.4.0",
+    "passport": "0.4.1",
     "passport-jwt": "4.0.0",
     "passport-local": "1.0.0",
     "pg": "^7.14.0",
