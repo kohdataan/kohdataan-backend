@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt'
 import axios from 'axios'
-import uuidv4 from 'uuid/v4'
+import { v4 as uuidv4 } from 'uuid'
 import db from '../../models'
 import calculateAge from '../../utils/calculateAge'
 

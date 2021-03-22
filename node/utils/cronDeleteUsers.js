@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import model from '../models'
 import axios from 'axios'
 import moment from 'moment'
-import uuidv4 from 'uuid/v4'
+import { v4 as uuidv4 } from 'uuid'
 import { updateMattermostUser } from '../controllers/user'
 
 dotenv.config()
