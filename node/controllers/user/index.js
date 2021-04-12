@@ -55,7 +55,17 @@ export const getAllMattermostUsers = async (req, res) => {
 }
 
 export const getMe = (req, res) => {
-  const { id } = req.params
+
+  const { id } = req.user.dataValues
+  const queryId = req.params.id
+  // eslint-disable-next-line radix
+  if (parseInt(id) !== parseInt(queryId)) {
+    return res.status(401).send({
+      success: false,
+      message: 'Action forbidden',
+    })
+  }
+
   return User.findByPk(id, {
     include: [
       {
@@ -452,7 +462,17 @@ export const deleteUserImmediately = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
   // This only adds deleteAt timestamp to node-user
-  const { id } = req.params
+
+  const { id } = req.user.dataValues
+  const queryId = req.params.id
+  // eslint-disable-next-line radix
+  if (parseInt(id) !== parseInt(queryId)) {
+    return res.status(401).send({
+      success: false,
+      message: 'Action forbidden',
+    })
+  }
+
   const { mmid } = req.body
   try {
     // Add deleteAt timestamp to user

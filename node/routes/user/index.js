@@ -4,7 +4,7 @@ import * as userCtrl from '../../controllers/user'
 
 const router = express.Router()
 
-router.get('/', passport.authenticate('jwt'), userCtrl.getUsers)
+// router.get('/', passport.authenticate('jwt'), userCtrl.getUsers)
 
 router.get('/mm', passport.authenticate('jwt'), userCtrl.getAllMattermostUsers)
 
