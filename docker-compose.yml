@@ -56,7 +56,7 @@ services:
     ports:
       - "8080:8080"
     read_only: true
-    command: "npm start"
+    restart: unless-stopped
     volumes:
       - ./node/:/usr/src/app/
       - /usr/src/app/node_modules/
