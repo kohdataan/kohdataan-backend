@@ -1,5 +1,5 @@
 import express from 'express'
-import * as interestCtrl from '../../controllers/interest'
+import * as interestCtrl from '../../controllers/interest/index.js'
 
 const router = express.Router()
 

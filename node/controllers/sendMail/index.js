@@ -1,4 +1,4 @@
-import sendMail from '../../utils/mailSender'
+import sendMail from '../../utils/mailSender.js'
 
 // eslint-disable-next-line import/prefer-default-export
 export const sendMailToSupport = (req, res) => {

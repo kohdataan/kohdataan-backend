@@ -1,4 +1,4 @@
-import db from '../models'
+import db from '../models.js'
 
 const sentSms = db.sequelize.model('SentSms')
 

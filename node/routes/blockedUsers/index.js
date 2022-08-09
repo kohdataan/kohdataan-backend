@@ -1,6 +1,6 @@
 import express from 'express'
 import passport from 'passport'
-import * as blockedUsersCtrl from '../../controllers/blockedUsers'
+import * as blockedUsersCtrl from '../../controllers/blockedUsers/index.js'
 
 const router = express.Router()
 

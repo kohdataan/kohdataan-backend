@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 import http from 'http'
 import debug from 'debug'
-import app from './app'
+import app from './app.js'
 
-require('./passportConfig')
+import './passportConfig.js'
 
 debug('docker_web_app:server')
 

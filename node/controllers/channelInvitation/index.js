@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
-import db from '../../models'
-import generateChannelName from '../../utils/channelNameGenerator'
+import db from '../../models/index.js'
+import generateChannelName from '../../utils/channelNameGenerator.js'
 
 const User = db.sequelize.model('User')
 const Interest = db.sequelize.model('Interest')

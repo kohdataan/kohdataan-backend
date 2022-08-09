@@ -1,5 +1,5 @@
 import express from 'express'
-import * as channelCtrl from '../../controllers/channel'
+import * as channelCtrl from '../../controllers/channel/index.js'
 
 const router = express.Router()
 

@@ -1,10 +1,19 @@
-const fs = require('fs')
-const path = require('path')
-const { Sequelize } = require('sequelize')
+import { Sequelize } from 'sequelize'
 
-const basename = path.basename(__filename)
+/* Database models */
+import BlockedUser from './blockeduser.js'
+import EmailVerificationUuid from './emailverificationuuid.js'
+import Interest from './interest.js'
+import PasswordResetUuid from './passwordresetuuid.js'
+import SentSms from './sentsms.js'
+import User from './user.js'
+import UserInterest from './userinterest.js'
+
+/* Insert all active database models in the array */
+const models = [BlockedUser, EmailVerificationUuid, Interest, PasswordResetUuid, SentSms, User, UserInterest]
+
 const env = process.env.NODE_ENV || 'development'
-const configPath = require('../database/config/config.json')
+import configPath from '../database/config/config.json' assert { type: 'json' }
 
 const config = configPath[env]
 
@@ -23,14 +32,7 @@ if (config.use_env_variable) {
   )
 }
 
-fs.readdirSync(__dirname)
-  .filter(file => {
-    return (
-      file.indexOf('.') !== 0 && file !== basename && file.slice(-3) === '.js'
-    )
-  })
-  .forEach(file => {
-    const defineModel = require(path.join(__dirname, file))
+models.forEach(defineModel => {
     const model = defineModel(sequelize, Sequelize.DataTypes)
     db[model.name] = model
   })
@@ -44,4 +46,4 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize
 db.Sequelize = Sequelize
 
-module.exports = db
+export default db

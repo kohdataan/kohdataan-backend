@@ -2,8 +2,8 @@ import passport from 'passport'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import axios from 'axios'
-import db from '../../models'
-import sendMail from '../../utils/mailSender'
+import db from '../../models/index.js'
+import sendMail from '../../utils/mailSender.js'
 
 // The models here are retrieved through db because this way vscode knows they are sequelize models.
 const PasswordResetUuid = db.sequelize.model('PasswordResetUuid')

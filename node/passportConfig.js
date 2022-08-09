@@ -1,12 +1,15 @@
 import bcrypt from 'bcrypt'
-import model from './models'
+import model from './models/index.js'
 
 const { User } = model
 
-const passport = require('passport')
-const LocalStrategy = require('passport-local').Strategy
-const JWTStrategy = require('passport-jwt').Strategy
-const ExtractJWT = require('passport-jwt').ExtractJwt
+import passport from 'passport'
+import passportLocal from 'passport-local'
+import passportJwt from 'passport-jwt'
+
+const LocalStrategy = passportLocal.Strategy
+const JWTStrategy = passportJwt.Strategy
+const ExtractJWT = passportJwt.ExtractJwt
 
 passport.use(
   new LocalStrategy(

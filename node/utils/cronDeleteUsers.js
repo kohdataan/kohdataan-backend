@@ -1,16 +1,16 @@
 import dotenv from 'dotenv'
-import model from '../models'
+import model from '../models/index.js'
 import axios from 'axios'
 import moment from 'moment'
 import { v4 as uuidv4 } from 'uuid'
-import { updateMattermostUser } from '../controllers/user'
+import { updateMattermostUser } from '../controllers/user/index.js'
 
 dotenv.config()
 const { User } = model
-const { Op } = require('sequelize')
-var CronJob = require('cron').CronJob
-var fs = require('fs')
-var util = require('util')
+import { Op } from 'sequelize'
+import { CronJob } from 'cron'
+import fs from 'fs'
+import util from 'util'
 
 // Set URL to Mattermost API.
 const mattermostUrl =

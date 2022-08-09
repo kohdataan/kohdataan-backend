@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
 
-module.exports = (sequelize, DataTypes) => {
+export default (sequelize, DataTypes) => {
   const EmailVerificationUuid = sequelize.define(
     'EmailVerificationUuid',
     {

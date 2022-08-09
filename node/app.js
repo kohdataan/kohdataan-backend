@@ -4,8 +4,8 @@ import logger from 'morgan'
 import bodyParser from 'body-parser'
 import passport from 'passport'
 import cors from 'cors'
-import routes from './routes'
-import cronDeleteUsers from './utils/cronDeleteUsers'
+import routes from './routes/index.js'
+import cronDeleteUsers from './utils/cronDeleteUsers.js'
 
 dotenv.config()
 cronDeleteUsers()
