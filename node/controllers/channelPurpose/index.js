@@ -1,5 +1,5 @@
 import axios from 'axios'
-import db from '../../models'
+import db from '../../models/index.js'
 
 const User = db.sequelize.model('User')
 const Interest = db.sequelize.model('Interest')

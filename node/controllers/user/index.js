@@ -1,8 +1,8 @@
 import bcrypt from 'bcrypt'
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
-import db from '../../models'
-import calculateAge from '../../utils/calculateAge'
+import db from '../../models/index.js'
+import calculateAge from '../../utils/calculateAge.js'
 
 const User = db.sequelize.model('User')
 const BlockedUser = db.sequelize.model('BlockedUser')

@@ -1,5 +1,5 @@
 import express from 'express'
-import * as userQuestionCtrl from '../../controllers/userQuestion'
+import * as userQuestionCtrl from '../../controllers/userQuestion/index.js'
 
 const router = express.Router()
 

@@ -1,4 +1,4 @@
-import db from '../../models'
+import db from '../../models/index.js'
 
 const BlockedUsers = db.sequelize.model('BlockedUser')
 

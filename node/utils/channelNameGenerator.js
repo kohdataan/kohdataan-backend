@@ -1,4 +1,4 @@
-import groupNamesArr from '../assets/groupNames'
+import groupNamesArr from '../assets/groupNames.js'
 
 // Generate a channel name here
 export default (allChannels, newChannelNames) => {

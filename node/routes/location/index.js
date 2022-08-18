@@ -1,6 +1,6 @@
 import express from 'express'
 import passport from 'passport'
-import * as locationCtrl from '../../controllers/location'
+import * as locationCtrl from '../../controllers/location/index.js'
 
 const router = express.Router()
 

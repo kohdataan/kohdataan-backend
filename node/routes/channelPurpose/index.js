@@ -1,6 +1,6 @@
 import express from 'express'
 import passport from 'passport'
-import * as channelPurposeCtrl from '../../controllers/channelPurpose'
+import * as channelPurposeCtrl from '../../controllers/channelPurpose/index.js'
 
 const router = express.Router()
 
