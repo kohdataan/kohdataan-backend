@@ -1,4 +1,4 @@
-version: "2"
+version: "2.2"
 
 services:
   db:
@@ -52,7 +52,9 @@ services:
 
   node:
     container_name: kohdataan-backend_node_1
-    build: node
+    build:
+      context: node
+      network: host
     ports:
       - "8080:8080"
     read_only: true
