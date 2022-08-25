@@ -3,7 +3,9 @@ version: "2.2"
 services:
   db:
     container_name: kohdataan-backend_db_1
-    build: db
+    build:
+      context: db
+      network: host
     ports:
       - "5432:5432"
     read_only: true
