@@ -58,5 +58,5 @@ if [ "$1" = 'postgres' ]; then
   update_conf $wal_enable
 
   # Run the postgresql entrypoint
-  . /docker-entrypoint.sh
+  . /usr/local/bin/docker-entrypoint.sh
 fi
